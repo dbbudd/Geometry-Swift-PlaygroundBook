@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-public struct Pen{
+public struct Pen {
     public var penDown = true
     public let path = UIBezierPath()
     public var penColor = UIColor()
