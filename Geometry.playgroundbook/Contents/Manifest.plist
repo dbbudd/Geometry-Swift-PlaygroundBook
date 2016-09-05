@@ -11,7 +11,7 @@
 	<key>Description</key>
 	<string>Start learning Geometry with Swift 3.0.</string>
 	<key>ContentIdentifier</key>
-	<string>com.danielbudd.Geometry</string>
+	<string>com.danielbudd.Blackjack</string>
 	<key>DeploymentTarget</key>
 	<string>ios10.0</string>
 	<key>ImageReference</key>
