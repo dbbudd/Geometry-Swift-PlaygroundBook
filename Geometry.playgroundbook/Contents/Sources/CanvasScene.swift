@@ -1,5 +1,5 @@
 //
-//  CanvasScene.swift
+//  GridScene.swift
 //  Geometry
 //
 //  Created by Daniel Budd on 24/08/2016.
@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-public class CanvasScene : SKScene {
+public class GridScene : SKScene {
     public var canvas = SKSpriteNode(imageNamed: "bgGrid_light")
     
     override public func didMove(to view: SKView) {
@@ -23,4 +23,7 @@ public class CanvasScene : SKScene {
         super.update(currentTime)
     }
     
+    func addPen(pen: Pen){
+        self.addChild(Shape(pen:pen).node)
+    }
 }
