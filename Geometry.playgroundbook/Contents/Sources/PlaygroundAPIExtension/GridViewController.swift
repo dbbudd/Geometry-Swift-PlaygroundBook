@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-extension UIView {
+public extension UIView {
     
     func bindFrameToSuperviewBounds() {
         guard let superview = self.superview else {
@@ -39,23 +39,8 @@ class GridViewController: UIViewController {
         self.view.addSubview(self.gridPaper)
         self.gridPaper.bindFrameToSuperviewBounds()
         
-        let scene: CanvasScene = CanvasScene()
-        scene.backgroundColor = .clear
-        let viewSK: SKView = SKView()
-        viewSK.allowsTransparency = true
-        viewSK.backgroundColor = .clear
-        viewSK.presentScene(scene)
         
-        self.view.addSubview(viewSK)
-        viewSK.bindFrameToSuperviewBounds()
-        
-        var p:Pen = Pen()
-        
-        p.addLine(distance: 200)
-        
-        // Add our path to the canvas
-        addShape(pen:p)
-
+    
     }
     
     override var shouldAutorotate: Bool {
@@ -79,7 +64,7 @@ class GridViewController: UIViewController {
         return true
     }
     
-    private func addShape(pen: Pen){
+    public func add(_ pen: Pen){
         self.scene.addChild(ShapeSK(pen:pen).node)
     }
 }

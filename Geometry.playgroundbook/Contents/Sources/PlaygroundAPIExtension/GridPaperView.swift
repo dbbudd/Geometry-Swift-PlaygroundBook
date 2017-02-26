@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SpriteKit
 
 public class GridPaperView : UIView {
+    
+    let scene: CanvasScene = CanvasScene()
     
     public var shouldDrawMainLines: Bool = true {
         didSet {
@@ -50,6 +53,22 @@ public class GridPaperView : UIView {
         super.init(frame: CGRect.zero)
         self.contentMode = .redraw
         self.backgroundColor = .clear
+        
+        /*
+        self.scene.backgroundColor = .clear
+        let viewSK: SKView = SKView()
+        viewSK.ignoresSiblingOrder = true
+        viewSK.allowsTransparency = true
+        viewSK.backgroundColor = .clear
+        viewSK.presentScene(scene)
+        
+        self.addSubview(viewSK)
+        viewSK.bindFrameToSuperviewBounds()
+ */
+    }
+    
+    public func add(_ pen: Pen){
+        self.scene.addChild(ShapeSK(pen:pen).node)
     }
     
     required public init?(coder aDecoder: NSCoder) {

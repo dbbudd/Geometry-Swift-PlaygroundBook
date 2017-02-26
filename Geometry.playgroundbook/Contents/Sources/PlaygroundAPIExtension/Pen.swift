@@ -10,12 +10,20 @@ import SpriteKit
 
 public struct Pen {
     
-    public let path = UIBezierPath()
+    public var path = UIBezierPath()
     public var penColor = UIColor()
     public var fillColor = UIColor()
+    public var lineWidth = CGFloat()
     public var currentHeading: Double = 0.0
     public var position = CGPoint()
-    public var lineWidth: CGFloat = 3.0
+    
+    public init(){
+        self.position = CGPoint(x:0, y:0)
+        self.path.move(to: position)
+        self.penColor = UIColor.blue
+        self.fillColor = UIColor.clear
+        self.lineWidth = 3.0
+    }
     
     public func addLine(distance: Double){
         
