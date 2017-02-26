@@ -14,9 +14,9 @@ import SpriteKit
 _setup()
 
 func addShape(pen: Pen){
-    if let view = PlaygroundPage.current.liveView as? GridPaperView {
-        view.add(pen)
-    }
+    let view = PlaygroundPage.current.liveView as! GridPaperView
+    view.add(pen)
+    
 }
 
 

@@ -54,17 +54,17 @@ public class GridPaperView : UIView {
         self.contentMode = .redraw
         self.backgroundColor = .clear
         
-        /*
+        scene.scaleMode = .resizeFill
+        
         self.scene.backgroundColor = .clear
         let viewSK: SKView = SKView()
-        viewSK.ignoresSiblingOrder = true
         viewSK.allowsTransparency = true
         viewSK.backgroundColor = .clear
         viewSK.presentScene(scene)
         
         self.addSubview(viewSK)
         viewSK.bindFrameToSuperviewBounds()
- */
+        
     }
     
     public func add(_ pen: Pen){

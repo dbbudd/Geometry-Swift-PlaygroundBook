@@ -39,8 +39,6 @@ class GridViewController: UIViewController {
         self.view.addSubview(self.gridPaper)
         self.gridPaper.bindFrameToSuperviewBounds()
         
-        
-    
     }
     
     override var shouldAutorotate: Bool {
