@@ -16,9 +16,7 @@ _setup()
 func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
-    
 }
-
 
 //#-end-hidden-code
 //#-editable-code
