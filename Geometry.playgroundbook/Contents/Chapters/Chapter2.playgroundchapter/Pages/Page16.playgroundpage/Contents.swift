@@ -6,13 +6,11 @@
 import PlaygroundSupport
 import SpriteKit
 
-let scene: CanvasScene = CanvasScene(size:CGSize(width:2048, height:1536))
-let view: SKView = SKView(frame: CGRect(x:0, y:0, width:scene.size.width, height:scene.size.height))
-view.presentScene(scene)
-PlaygroundPage.current.liveView = view
+_setup()
 
 func addShape(pen: Pen){
-    scene.canvas.addChild(Shape(pen:pen).node)
+    let view = PlaygroundPage.current.liveView as! GridPaperView
+    view.add(pen)
 }
 //#-end-hidden-code
 //#-editable-code

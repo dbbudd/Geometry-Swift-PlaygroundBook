@@ -7,7 +7,7 @@
 //
 import SpriteKit
 
-public struct Shape{
+public struct ShapeSK {
     public let node = SKShapeNode()
     
     public init(pen: Pen){
