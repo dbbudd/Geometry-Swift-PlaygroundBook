@@ -11,23 +11,26 @@ import SpriteKit
 public struct Pen {
     
     public var path = UIBezierPath()
-    public var penColor = UIColor()
-    public var fillColor = UIColor()
-    public var lineWidth = CGFloat()
+    public var penColor = UIColor.blue
+    public var fillColor = UIColor.clear
+    public var lineWidth: CGFloat = 3.0
     public var currentHeading: Double = 0.0
-    public var position = CGPoint()
+    
+    public var position = CGPoint(x:0, y:0) {
+        didSet {
+            self.path.move(to: self.position)
+        }
+    }
     
     public init(){
-        self.position = CGPoint(x:0, y:0)
-        self.path.move(to: position)
-        self.penColor = UIColor.blue
-        self.fillColor = UIColor.clear
-        self.lineWidth = 3.0
+        defer {
+            self.position = CGPoint(x: 0, y: 0)
+        }
     }
     
     public func addLine(distance: Double){
         
-        let headingInRadians = self.currentHeading * (3.14159 / 180) //convert to radians
+        let headingInRadians = self.currentHeading * (Double.pi / 180) //convert to radians
         let dx = distance * cos(headingInRadians)
         let dy = distance * sin(headingInRadians)
         let currentX = Double(self.path.currentPoint.x)
@@ -38,7 +41,7 @@ public struct Pen {
     }
     
     public func move(distance: Double){
-        let headingInRadians = self.currentHeading * (3.14159 / 180) //convert to radians
+        let headingInRadians = self.currentHeading * (Double.pi / 180) //convert to radians
         let dx = distance * cos(headingInRadians)
         let dy = distance * sin(headingInRadians)
         let currentX = Double(self.path.currentPoint.x)
@@ -67,7 +70,6 @@ public struct Pen {
     public mutating func turn(degrees: Double){
         self.currentHeading = self.currentHeading + degrees
     }
-    
 }
 
 

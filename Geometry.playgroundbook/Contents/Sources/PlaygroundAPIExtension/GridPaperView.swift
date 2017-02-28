@@ -51,20 +51,21 @@ public class GridPaperView : UIView {
     
     public init() {
         super.init(frame: CGRect.zero)
-        self.contentMode = .redraw
+        //self.contentMode = .redraw
         self.backgroundColor = .clear
         
-        scene.scaleMode = .resizeFill
-        
+        self.scene.scaleMode = .resizeFill
         self.scene.backgroundColor = .clear
+        self.scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        
         let viewSK: SKView = SKView()
         viewSK.allowsTransparency = true
         viewSK.backgroundColor = .clear
         viewSK.presentScene(scene)
         
         self.addSubview(viewSK)
-        viewSK.bindFrameToSuperviewBounds()
         
+        viewSK.bindFrameToSuperviewBounds()
     }
     
     public func add(_ pen: Pen){
