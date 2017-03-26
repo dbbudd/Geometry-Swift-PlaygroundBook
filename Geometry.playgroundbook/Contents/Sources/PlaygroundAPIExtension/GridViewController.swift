@@ -37,13 +37,6 @@ class GridViewController: UIViewController {
         
         self.view.addSubview(self.gridPaper)
         self.gridPaper.bindFrameToSuperviewBounds()
-        
-        var pen = Pen()
-        
-        pen.addLine(distance: 200)
-        
-        // Add our path to the canvas
-        self.add(pen)
     }
     
     override var shouldAutorotate: Bool {

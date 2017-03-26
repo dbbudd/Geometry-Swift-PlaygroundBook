@@ -18,15 +18,16 @@ func addShape(pen: Pen){
     view.add(pen)
 }
 
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
-//#-editable-code
-//Create a new Pen()
 var p:Pen = Pen()
 
+//#-editable-code
 p.addLine(distance: 200)
-
-// Add our path to the canvas
-addShape(pen:p)
+p.addLine(distance: 200)
 //#-end-editable-code
+
+addShape(pen:p)
+
 
 
