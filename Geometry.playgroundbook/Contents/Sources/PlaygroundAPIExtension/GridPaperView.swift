@@ -11,6 +11,9 @@ import SpriteKit
 
 public class GridPaperView : UIView {
     
+    let xAxisLabel = GridPaperView.axisFactory(text: "X-Axis")
+    let yAxisLabel = GridPaperView.axisFactory(text: "Y-Axis")
+    
     let scene: CanvasScene = CanvasScene()
     
     public var shouldDrawMainLines: Bool = true {
@@ -66,6 +69,9 @@ public class GridPaperView : UIView {
         self.addSubview(viewSK)
         
         viewSK.bindFrameToSuperviewBounds()
+        
+        self.scene.addChild(self.xAxisLabel)
+        self.scene.addChild(self.yAxisLabel)
     }
     
     public func add(_ pen: Pen){
@@ -77,8 +83,12 @@ public class GridPaperView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func toggleAxisLabels() {
+        self.xAxisLabel.isHidden = !self.xAxisLabel.isHidden
+        self.yAxisLabel.isHidden = !self.yAxisLabel.isHidden
+    }
+    
     override public func draw(_ rect: CGRect) {
-        
         
         if self.shouldDrawMainLines {
             //Split this up so we could technically just draw a corner if needed
@@ -92,6 +102,9 @@ public class GridPaperView : UIView {
         if self.shouldDrawCenterLines {
             self.drawMiddleLines(dirtyRect: rect)
         }
+        
+        self.xAxisLabel.position = CGPoint(x: (rect.midX - 30), y: -15)
+        self.yAxisLabel.position = CGPoint(x: -30, y: (rect.midY - 20))
     }
     
     private func drawMiddleLines(dirtyRect: CGRect) {
@@ -112,6 +125,19 @@ public class GridPaperView : UIView {
         
         bezierPathY.lineWidth = (self.gridLineWidth * 2)
         bezierPathY.stroke()
+    }
+    
+    //THis should probably be in another file in the real world called something like SKLabelNodeFactory but because we're only in playground its probably ok
+    private static func axisFactory(text: String) -> SKLabelNode {
+        
+        //label for axis
+        let label: SKLabelNode = SKLabelNode(fontNamed: "AvenirNext")
+        label.text = text
+        label.fontSize = 14.0
+        label.fontColor = .gray
+        label.zPosition = -999
+        
+        return label
     }
     
     private func drawGridLinesFor(axis: Axis, direction: Direction, dirtyRect: CGRect) {
@@ -165,24 +191,6 @@ public class GridPaperView : UIView {
                 break
             }
         }
-        
-        //draw labels for axis
-        let xLabel: SKLabelNode = SKLabelNode(fontNamed: "AvenirNext")
-        xLabel.text = "X-AXIS"
-        xLabel.fontSize = 14.0
-        xLabel.fontColor = .gray
-        xLabel.position = CGPoint(x: (dirtyRect.midX - 30), y: -15)
-        xLabel.zPosition = -999
-        self.scene.addChild(xLabel)
-        
-        let yLabel: SKLabelNode = SKLabelNode(fontNamed: "AvenirNext")
-        yLabel.text = "Y-AXIS"
-        yLabel.fontSize = 14.0
-        yLabel.fontColor = .gray
-        yLabel.position = CGPoint(x: -30, y: (dirtyRect.midY - 20))
-        yLabel.zPosition = -999
-        self.scene.addChild(yLabel)
-        
     }
     
     private enum Axis {
