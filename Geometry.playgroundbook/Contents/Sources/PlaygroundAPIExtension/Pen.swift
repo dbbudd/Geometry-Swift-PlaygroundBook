@@ -9,7 +9,6 @@
 import SpriteKit
 
 public struct Pen {
-    
     public var path = UIBezierPath()
     public var penColor = UIColor.blue
     public var fillColor = UIColor.clear
@@ -27,7 +26,7 @@ public struct Pen {
             self.position = CGPoint(x: 0, y: 0)
         }
     }
-    
+
     public func addLine(distance: Double){
         
         let headingInRadians = self.currentHeading * (Double.pi / 180) //convert to radians

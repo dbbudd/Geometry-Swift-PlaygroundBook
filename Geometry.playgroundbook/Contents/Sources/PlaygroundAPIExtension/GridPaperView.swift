@@ -25,7 +25,7 @@ public class GridPaperView : UIView {
         }
     }
     
-    public var gridStrideSize: CGFloat = 15.0 {
+    public var gridStrideSize: CGFloat = 20.0 {
         didSet {
             setNeedsDisplay()
         }
@@ -92,7 +92,6 @@ public class GridPaperView : UIView {
         if self.shouldDrawCenterLines {
             self.drawMiddleLines(dirtyRect: rect)
         }
-        
     }
     
     private func drawMiddleLines(dirtyRect: CGRect) {
@@ -106,7 +105,7 @@ public class GridPaperView : UIView {
         bezierPathX.lineWidth = (self.gridLineWidth * 2)
         bezierPathX.stroke()
         
-        
+        //Draw Y line
         let bezierPathY = UIBezierPath()
         bezierPathY.move(to: CGPoint(x: 0, y: dirtyRect.midY))
         bezierPathY.addLine(to: CGPoint(x: dirtyRect.maxX, y: dirtyRect.midY))
@@ -166,6 +165,23 @@ public class GridPaperView : UIView {
                 break
             }
         }
+        
+        //draw labels for axis
+        let xLabel: SKLabelNode = SKLabelNode(fontNamed: "AvenirNext")
+        xLabel.text = "X-AXIS"
+        xLabel.fontSize = 14.0
+        xLabel.fontColor = .gray
+        xLabel.position = CGPoint(x: (dirtyRect.midX - 30), y: -15)
+        xLabel.zPosition = -999
+        self.scene.addChild(xLabel)
+        
+        let yLabel: SKLabelNode = SKLabelNode(fontNamed: "AvenirNext")
+        yLabel.text = "Y-AXIS"
+        yLabel.fontSize = 14.0
+        yLabel.fontColor = .gray
+        yLabel.position = CGPoint(x: -30, y: (dirtyRect.midY - 20))
+        yLabel.zPosition = -999
+        self.scene.addChild(yLabel)
         
     }
     
