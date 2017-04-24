@@ -1,7 +1,10 @@
-//: Write a single function `drawPolygon` that will draw any regular polygon. You should use parameters to set the number of sides annd the length of each side. The angle that you will need to turn for each shape can be found using the formula `360 / n` where `n` is the number of sides. Combine the use of this function with a loop to draw the image shown below.
+//: What happens if we have written a function to draw a square, but now we want to change the size of the square?
+//: We need to use parameter to tell the function how big to make our square.
 //:
-//: ![Image 1](Post5_1.jpg)
+//: ![Image 1](Post4_1.jpg)
 //:
+//: Run the program to see what it does.
+//: Add two lines to the program to draw two more squares - one with sides of 200 and one with sides of 300.
 //#-hidden-code
 import PlaygroundSupport
 import SpriteKit
@@ -23,4 +26,3 @@ p.turn(degrees: 90)
 // Add our path to the canvas
 addShape(pen: p)
 //#-end-editable-code
-

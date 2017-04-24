@@ -8,8 +8,9 @@
 	<string>Getting Started</string>
 	<key>Pages</key>
 	<array>
+		<string>Intro.cutscenepage</string>
 		<string>Page1.playgroundpage</string>
-		<string>Page2.playgroundpage</string>
+		<string>Page2.cutscenepage</string>
 		<string>Page3.playgroundpage</string>
 		<string>Page4.playgroundpage</string>
 		<string>Page5.playgroundpage</string>

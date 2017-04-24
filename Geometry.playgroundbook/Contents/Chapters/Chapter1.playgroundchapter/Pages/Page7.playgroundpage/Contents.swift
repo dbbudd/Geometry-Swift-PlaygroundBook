@@ -13,15 +13,17 @@ func addShape(pen: Pen){
     view.add(pen)
 }
 //#-end-hidden-code
-//#-editable-code
+
 //Create a new Pen()
 var p: Pen = Pen()
-        
+
+//#-editable-code
 p.addLine(distance: 100)
-p.turn(degrees: 90)
-        
+p.move(distance: 100)
+//#-end-editable-code
+
 // Add our path to the canvas
 addShape(pen: p)
-//#-end-editable-code
+
 
 

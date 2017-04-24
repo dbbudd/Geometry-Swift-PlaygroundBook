@@ -1,9 +1,12 @@
-//: Draw a letter A like in the image below with the following properties:
-//: * pen width of 5
-//: * line colour of red
-//: * fill colour of pink
+//: Write a program to draw a red cross where all of the sides are 50 long. Your program must also have a variable for the line thickness so you can easily change how thick the cross is drawn.
 //:
-//: ![Image 1](Post14_1.png)
+//: Here's an example of a red cross with line thickness 5:
+//:
+//: ![Cross 1](cross1.jpg)
+//:
+//: Here's an example of a red cross with line thickness 15:
+//:
+//: ![Cross 2](cross2.jpg)
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -26,4 +29,3 @@ p.turn(degrees: 90)
 // Add our path to the canvas
 addShape(pen: p)
 //#-end-editable-code
-

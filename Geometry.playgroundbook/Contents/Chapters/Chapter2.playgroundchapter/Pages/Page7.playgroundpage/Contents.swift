@@ -1,12 +1,6 @@
-//: Now let's fill in our shapes so they are solid.
-//: Copy the following code to create a new program.
+//: Draw a yellow diamond with a pen line width of 15, like in the image below.
 //:
-//: ![Image 1](Post7_1.jpg)
-//:
-//: Run the program to see what happens.
-//: In order to create a second shape which will be layered inside we must create a new pen object and fill it separately.  This means when designing patterns you must think about layering your shapes.
-//:
-//: ![Image 2](Post7_2.jpg)
+//: ![Image 1](Post6_1.jpg)
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -19,13 +13,11 @@ func addShape(pen: Pen){
     view.add(pen)
 }
 //#-end-hidden-code
-//#-editable-code
-//Create a new Pen()
+
 var p: Pen = Pen()
 
-p.addLine(distance: 100)
-p.turn(degrees: 90)
-
-// Add our path to the canvas
-addShape(pen: p)
+//#-editable-code
 //#-end-editable-code
+
+addShape(pen: p)
+

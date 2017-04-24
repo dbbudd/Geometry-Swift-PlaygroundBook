@@ -6,7 +6,7 @@
 import PlaygroundSupport
 import Foundation
 
-let solution = "p.addLine(distance: 200)"
+let solution = "p.turn(degrees: 90)"
 var successMessage = "SUCCESS!!!"
 var failureHints = "FAILURE"
 

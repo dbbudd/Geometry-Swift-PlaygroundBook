@@ -1,7 +1,10 @@
-//: Using functions and loops, write a program that will draw the Australian flag.
-//:
-//: ![Image 1](Post7_1.png)
-//:
+/*:
+ Denmark is Europe’s oldest kingdom and its flag – the oldest European flag – was officially adopted in 1625. The red flag with a white cross is known as the Dannebrog, or Danish Cloth.  The Nordic or Scandinavian cross is a symbol in a rectangular field, with the center of the cross shifted towards the hoist.  All of the Nordic countries except Greenland have adopted such flags in the modern period.  The cross design represents Christianity.
+*/
+//: ![Image 1](Denmark.png)
+/*:
+ **Create a function called `nordic()` which will draw flag of Denmark**
+ */
 //#-hidden-code
 import PlaygroundSupport
 import SpriteKit

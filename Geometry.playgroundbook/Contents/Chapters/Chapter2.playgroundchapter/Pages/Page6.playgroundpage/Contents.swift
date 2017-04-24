@@ -1,6 +1,6 @@
-//: Draw a yellow diamond with a pen line width of 15, like in the image below.
+//: Write a program to draw an upside down triangle that has red lines and a `lineWidth` of 3.0
 //:
-//: ![Image 1](Post6_1.jpg)
+//: ![Image 1](Post5_1.jpg)
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -14,12 +14,5 @@ func addShape(pen: Pen){
 }
 //#-end-hidden-code
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
-
-p.addLine(distance: 100)
-p.turn(degrees: 90)
-
-// Add our path to the canvas
-addShape(pen: p)
 //#-end-editable-code
+

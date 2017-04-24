@@ -1,9 +1,6 @@
-//: You've learned how to make the pen turn left, but we can also make the pen turn right.
-//: Just like before, if we insert a negative number rather then a positive one, it will manipulate the direction the pen rotates.
+//: Using multiple `Pen()` objects re-create the multiple squares in different colours.
 //:
-//: ![Image 1](Post2_1.jpg)
-//:
-//: Try guessing what this program will draw before running the example.
+//: ![Image 1](coloured_squares.PNG)
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -17,12 +14,4 @@ func addShape(pen: Pen){
 }
 //#-end-hidden-code
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
-
-p.addLine(distance: 100)
-p.turn(degrees: 90)
-
-// Add our path to the canvas
-addShape(pen: p)
 //#-end-editable-code

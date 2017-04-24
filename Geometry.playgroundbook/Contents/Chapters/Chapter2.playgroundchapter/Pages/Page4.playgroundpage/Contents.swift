@@ -1,9 +1,6 @@
-//: We can also change the width of the line that we are drawing.
+//: Create multiple squares by turning both ways.
 //:
-//: ![Image 1](Post4_1.jpg)
-//:
-//: Run the program to see what happens.
-//: Now change the program so that it uses a pen width of 10 and see what happens.
+//: ![Image 1](squares.png)
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -17,12 +14,5 @@ func addShape(pen: Pen){
 }
 //#-end-hidden-code
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
-
-p.addLine(distance: 100)
-p.turn(degrees: 90)
-
-// Add our path to the canvas
-addShape(pen: p)
 //#-end-editable-code
+

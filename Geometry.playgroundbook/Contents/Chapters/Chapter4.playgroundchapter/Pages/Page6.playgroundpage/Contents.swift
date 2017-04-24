@@ -1,6 +1,6 @@
-//: Using functions and loops, write a program that will draw the Union Jack.
+//: Write a single function `drawPolygon` that will draw any regular polygon. You should use parameters to set the number of sides annd the length of each side. The angle that you will need to turn for each shape can be found using the formula `360 / n` where `n` is the number of sides. Combine the use of this function with a loop to draw the image shown below.
 //:
-//: ![Image 1](Post6_1.png)
+//: ![Image 1](Post5_1.jpg)
 //:
 //#-hidden-code
 import PlaygroundSupport

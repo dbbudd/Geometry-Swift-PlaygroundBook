@@ -1,10 +1,21 @@
-//: Let's add some colour to our pictures.  Copy the following code to create a new program.
-//:
-//: ![Image 1](Post3_1.jpg)
-//:
-//: Run the program to see what happens.
-//: Now change the program so that it uses green lines instead.
-//:
+/*:
+ If we insert a negative number rather then a positive one, it will manipulate the direction of the `Pen()`.
+ - - -
+ ````
+ var p: Pen = Pen()
+ 
+ p.turn(degrees: 30)
+ p.addLine(distance: 100)
+ p.turn(degrees: -60)
+ p.addLine(distance: 100)
+ p.turn(degrees: 60)
+ p.addLine(distance: 100)
+ 
+ addShape(pen: p)
+ ````
+ **Try guessing what the code above will draw before copying and executing it**
+ */
+
 //#-hidden-code
 import PlaygroundSupport
 import SpriteKit
@@ -17,13 +28,4 @@ func addShape(pen: Pen){
 }
 //#-end-hidden-code
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
-
-p.addLine(distance: 100)
-p.turn(degrees: 90)
-
-// Add our path to the canvas
-addShape(pen: p)
 //#-end-editable-code
-

@@ -55,7 +55,7 @@ public class GridPaperView : UIView {
     public init() {
         super.init(frame: CGRect.zero)
         self.contentMode = .redraw
-        self.backgroundColor = .clear
+        self.backgroundColor = .white //change to .clear
         
         self.scene.scaleMode = .resizeFill
         self.scene.backgroundColor = .clear

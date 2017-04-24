@@ -1,6 +1,13 @@
-//: Draw a picture of the flag from Trinidad and Tobago (if you don't know where the country is google it!).
+//: Let's draw a 6-pointed snowflake with a thicker pen and some colour!
 //:
-//: ![Image 1](Post15_1.png)
+//: Write a program to:
+//: * Set the pen size to 5.
+//: * Set the pen colour to light blue
+//: * Draw a 6 pointed snowflake with arms 100 long 60 degrees between each arm.
+//:
+//: When it's finished, the result should look like this:
+//:
+//: ![Snowflake](snowflake.jpg)
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -23,4 +30,3 @@ p.turn(degrees: 90)
 // Add our path to the canvas
 addShape(pen: p)
 //#-end-editable-code
-

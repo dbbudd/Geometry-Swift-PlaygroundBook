@@ -1,6 +1,4 @@
-//: In the space below type the following code and see what it does.
-//:
-//: ![Image 1](Post3_1.jpg)
+//: Using the `addLine()` and `turn()` commands, write a program that will draw a right angle.
 //:
 //#-hidden-code
 import PlaygroundSupport
@@ -13,14 +11,14 @@ func addShape(pen: Pen){
     view.add(pen)
     
 }
+
 //#-end-hidden-code
+
+var p:Pen = Pen()
+
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
-
-p.addLine(distance: 100)
-p.turn(degrees: 90)
-
-// Add our path to the canvas
-addShape(pen: p)
 //#-end-editable-code
+
+addShape(pen:p)
+
+
