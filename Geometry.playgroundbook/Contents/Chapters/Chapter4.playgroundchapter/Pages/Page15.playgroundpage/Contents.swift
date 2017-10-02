@@ -3,7 +3,7 @@ From the middle of the nineteenth century, a growing Australian nationalism brou
  */
 //: ![Image 1](Australia.png)
 /*:
- **Using your functions you have previously created draw the Australian flag.  Note that the star under the Union Jack has seven points to represent the federation of colonies to form six states plus territories.**
+ **Using your functions you have previously created draw the Australian flag.  Note that the star under the Union Jack has seven points to represent the federation of colonies to form six states plus territories. All the functions should be called within a single function called `australia()` **
  */
 //#-hidden-code
 import PlaygroundSupport
@@ -15,15 +15,15 @@ func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
 }
+
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
+
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
+var p = Pen()
 
 p.addLine(distance: 100)
 p.turn(degrees: 90)
 
-// Add our path to the canvas
 addShape(pen: p)
 //#-end-editable-code
-

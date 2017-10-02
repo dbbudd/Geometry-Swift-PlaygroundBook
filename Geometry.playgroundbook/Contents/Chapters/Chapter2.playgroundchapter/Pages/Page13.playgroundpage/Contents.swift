@@ -10,15 +10,14 @@ func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
 }
+
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
-var p: Pen = Pen()
 
 //#-editable-code
 let size = 10.0
 
-p.addLine(distance: (10.0 * size))
-p.turn(degrees: 90)
+
 
 //#-end-editable-code
-addShape(pen: p)
 

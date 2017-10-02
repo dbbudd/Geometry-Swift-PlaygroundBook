@@ -1,4 +1,4 @@
-//: Often you want the penColor and the fillColor to be the same.
+//: Often you want the `penColor` and the `fillColor` to be the same.
 //: To create multiple shapes with different properties you must draw them one at a time using multiple `Pen()` objects.
 //:
 //: ![Image 1](Post8_1.png)
@@ -13,6 +13,8 @@ func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
 }
+
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
 //#-editable-code
 //#-end-editable-code

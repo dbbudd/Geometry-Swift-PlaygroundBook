@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Variables</string>
+	<string>Calculate</string>
 	<key>Version</key>
 	<string>1.0</string>
 	<key>CutsceneReference</key>
-	<string>variables.html</string>
+	<string>calculate.html</string>
 </dict>
 </plist>

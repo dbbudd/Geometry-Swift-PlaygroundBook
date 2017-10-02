@@ -12,5 +12,9 @@
 	<true/>
 	<key>PlaygroundLoggingMode</key>
 	<string>Off</string>
+	<key>NotReadyToCopyInstructions</key>
+	<string>...</string>
+	<key>ReadyToCopyInstructions</key>
+	<string>...</string>
 </dict>
 </plist>

@@ -1,5 +1,5 @@
 /*:
-Draw a filled in star
+Create a function called `star()`, which will create a filled star.
 */
 //: ![Image 1](Post16_1.jpg)
 //#-hidden-code
@@ -12,15 +12,15 @@ func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
 }
+
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
+
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
+var p = Pen()
 
 p.addLine(distance: 100)
 p.turn(degrees: 90)
 
-// Add our path to the canvas
 addShape(pen: p)
 //#-end-editable-code
-

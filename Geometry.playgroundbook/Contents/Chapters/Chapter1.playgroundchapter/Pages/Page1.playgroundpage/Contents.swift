@@ -2,7 +2,7 @@
  **Copy the code below and modify it so that a square is drawn**
  - - -
  ````
- var p: Pen = Pen()
+ var p = Pen()
  
  p.addLine(distance: 100)
  p.turn(degrees: 120)

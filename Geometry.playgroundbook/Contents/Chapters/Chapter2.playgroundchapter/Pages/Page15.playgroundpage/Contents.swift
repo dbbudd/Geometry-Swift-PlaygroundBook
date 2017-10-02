@@ -1,7 +1,7 @@
 //: Let's draw a 6-pointed snowflake with a thicker pen and some colour!
 //:
 //: Write a program to:
-//: * Set the pen size to 5.
+//: * Set the pen size to 10.0.
 //: * Set the pen colour to light blue
 //: * Draw a 6 pointed snowflake with arms 100 long 60 degrees between each arm.
 //:
@@ -19,14 +19,16 @@ func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
 }
+
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
+
+var p = Pen()
 //#-editable-code
-//Create a new Pen()
-var p: Pen = Pen()
 
 p.addLine(distance: 100)
 p.turn(degrees: 90)
 
-// Add our path to the canvas
-addShape(pen: p)
 //#-end-editable-code
+addShape(pen: p)
+

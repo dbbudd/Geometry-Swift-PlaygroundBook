@@ -12,14 +12,15 @@ func addShape(pen: Pen){
     let view = PlaygroundPage.current.liveView as! GridPaperView
     view.add(pen)
 }
+
+makeAssessment(of: PlaygroundPage.current.text)
 //#-end-hidden-code
 
 //Create a new Pen()
-var p: Pen = Pen()
+var p = Pen()
 
 //#-editable-code
-p.addLine(distance: 100)
-p.move(distance: 100)
+p.addLine(distance: 25)
 //#-end-editable-code
 
 // Add our path to the canvas

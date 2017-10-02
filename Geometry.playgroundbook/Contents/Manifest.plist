@@ -2,20 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DevelopmentRegion</key>
+	<string>en</string>
 	<key>Version</key>
-	<string>1.0</string>
+	<string>3.0</string>
 	<key>ContentVersion</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>Name</key>
 	<string>Geometry</string>
 	<key>Description</key>
 	<string>Geometry with Swift Playgrounds</string>
 	<key>ContentIdentifier</key>
-	<string>com.danielbudd.Geometry</string>
+	<string>com.danielbudd.playgroundbook.Geometry</string>
 	<key>DeploymentTarget</key>
 	<string>ios10.0</string>
 	<key>ImageReference</key>
 	<string>cover.png</string>
+	<key>SwiftVersion</key>
+	<string>3.0</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>
