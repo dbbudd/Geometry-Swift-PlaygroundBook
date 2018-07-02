@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TemplatePageFilename</key>
+	<string>Template.plagroundpage</string>
+	<key>Name</key>
+	<string>Turning Corners</string>
+	<key>Version</key>
+	<string>1.0</string>
+	<key>CutsceneReference</key>
+	<string>turning.html</string>
+</dict>
+</plist>

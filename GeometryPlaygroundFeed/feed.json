@@ -1,0 +1,33 @@
+{
+  "title": "Geometry with Swift Playground",
+  "subtitle": "Learn to code in Swift with Geometry",
+  "publisherName": "Daniel Budd",
+  "feedIdentifier": "com.danielbudd.geometry",
+  "contactURL": "http://www.danielbudd.com.au",
+  "formatVersion": "1.0",
+  "documents": [
+    {
+      "title": "Geometry",
+      "overviewSubtitle": "Geometry with Swift Playgrounds",
+      "description": "Learn to code visually with the context of Geometry",
+      "contentIdentifier": "com.danielbudd.playgroundbook.Geometry",
+      "contentVersion": "1.2",
+      "url": "Geometry.playgroundbook.zip",
+      "publishedDate": "2017-10-25T12:00:00+00:00",
+      "lastUpdatedDate": "2017-11-22T13:00:00+00:00",
+      "thumbnailURL": "images/thumbnail.png",
+      "bannerImageURL": "images/banner.png",
+      "additionalInformation": [
+        {
+          "name": "Languages",
+          "value": "English"
+        }
+      ],
+      "previewImageURLs": [
+        "images/preview-1.png",
+        "images/preview-2.png",
+        "images/preview-3.png"
+      ]
+    }
+  ]
+}
