@@ -37,6 +37,7 @@ public struct Pen {
         
         self.path.addLine(to: CGPoint(x: currentX + dx, y: currentY + dy))
         self.path.stroke()
+
     }
     
     public func move(distance: Double){
@@ -49,6 +50,8 @@ public struct Pen {
         self.path.move(to: CGPoint(x: currentX + dx, y: currentY + dy))
         self.path.stroke()
     }
+    
+    
     
     public func goto(dx: Double, dy: Double){
         let currentX = Double(self.path.currentPoint.x)
@@ -69,6 +72,17 @@ public struct Pen {
     public mutating func turn(degrees: Double){
         self.currentHeading = self.currentHeading + degrees
     }
+    
+    public func currentPosition() -> CGPoint{
+        let position = self.path.currentPoint
+        
+        return position
+    }
+    
+    public func drawCircle(radius: CGFloat){
+        self.path.addArc(withCenter: self.path.currentPoint, radius: radius, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
+    }
+    
 }
 
 

@@ -10,9 +10,18 @@ import SpriteKit
 
 public class CanvasScene : SKScene {
     
+    /*func addShape(pen: Pen){
+        self.addChild(ShapeSK(pen: pen).node)
+    
+    }*/
+    
+    
     override public func didMove(to view: SKView) {
         super.didMove(to: view)
+        
+        
     }
+    
     
     override public func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
