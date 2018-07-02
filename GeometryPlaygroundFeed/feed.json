@@ -9,14 +9,16 @@
     {
       "title": "Geometry",
       "overviewSubtitle": "Geometry with Swift Playgrounds",
+      "detailSubtitle": "Learn Geometry with Swift Playgrounds",
       "description": "Learn to code visually with the context of Geometry",
+      "difficultyLevel": "beginner",
       "contentIdentifier": "com.danielbudd.playgroundbook.Geometry",
       "contentVersion": "1.2",
-      "url": "https://github.com/dbbudd/Geometry-Swift-PlaygroundBook/blob/master/GeometryPlaygroundFeed/Geometry.playgroundbook.zip",
-      "publishedDate": "2017-10-25T12:00:00+00:00",
-      "lastUpdatedDate": "2017-11-22T13:00:00+00:00",
-      "thumbnailURL": "images/thumbnail.png",
-      "bannerImageURL": "images/banner.png",
+      "url": "https://github.com/dbbudd/Geometry-Swift-PlaygroundBook/blob/master/GeometryPlaygroundFeed/docs/Geometry.playgroundbook.zip",
+      "publishedDate": "2018-06-25T12:00:00+00:00",
+      "lastUpdatedDate": "2018-06-26T12:00:00+00:00",
+      "bannerImageURL": "images/banner_2x.png",
+      "thumbnailURL": "images/geometry_2x.png",
       "additionalInformation": [
         {
           "name": "Languages",
