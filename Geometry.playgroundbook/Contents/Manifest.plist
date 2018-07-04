@@ -7,13 +7,13 @@
 	<key>Version</key>
 	<string>3.0</string>
 	<key>ContentVersion</key>
-	<string>1.3</string>
+	<string>2.0</string>
 	<key>Name</key>
 	<string>Geometry</string>
 	<key>Description</key>
 	<string>Geometry with Swift Playgrounds</string>
 	<key>ContentIdentifier</key>
-	<string>com.danielbudd.playgroundbook.Geometry</string>
+	<string>io.github.dbbudd.Geometry</string>
 	<key>DeploymentTarget</key>
 	<string>ios10.0</string>
 	<key>ImageReference</key>
