@@ -5,9 +5,9 @@
 	<key>DevelopmentRegion</key>
 	<string>en</string>
 	<key>Version</key>
-	<string>3.0</string>
+	<string>4.0</string>
 	<key>ContentVersion</key>
-	<string>2.0</string>
+	<string>3.0</string>
 	<key>Name</key>
 	<string>Geometry</string>
 	<key>Description</key>
@@ -15,11 +15,11 @@
 	<key>ContentIdentifier</key>
 	<string>io.github.dbbudd.Geometry</string>
 	<key>DeploymentTarget</key>
-	<string>ios10.0</string>
+	<string>ios11.0</string>
 	<key>ImageReference</key>
 	<string>cover.png</string>
 	<key>SwiftVersion</key>
-	<string>3.0</string>
+	<string>4.0</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>
