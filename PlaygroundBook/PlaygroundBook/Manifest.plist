@@ -2,25 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>DevelopmentRegion</key>
+	<string>en</string>
 	<key>Version</key>
 	<string>4.0</string>
-	<key>ContentIdentifier</key>
-	<string>$(PLAYGROUND_BOOK_CONTENT_IDENTIFIER)</string>
 	<key>ContentVersion</key>
-	<string>$(PLAYGROUND_BOOK_CONTENT_VERSION)</string>
-	<key>DevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>DeploymentTarget</key>
-	<string>$(PLAYGROUND_BOOK_DEPLOYMENT_TARGET_FOR_MANIFEST)</string>
-	<key>SwiftVersion</key>
-	<string>$(SWIFT_VERSION)</string>
+	<string>3.0</string>
 	<key>Name</key>
 	<string>Geometry</string>
+	<key>Description</key>
+	<string>Geometry with Swift Playgrounds</string>
+	<key>ContentIdentifier</key>
+	<string>io.github.dbbudd.Geometry</string>
+	<key>DeploymentTarget</key>
+	<string>ios11.0</string>
 	<key>ImageReference</key>
 	<string>cover.png</string>
+	<key>SwiftVersion</key>
+	<string>4.0</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>
+		<string>Chapter2.playgroundchapter</string>
+		<string>Chapter3.playgroundchapter</string>
+		<string>Chapter4.playgroundchapter</string>
+		<string>Chapter5.playgroundchapter</string>
 	</array>
 </dict>
 </plist>

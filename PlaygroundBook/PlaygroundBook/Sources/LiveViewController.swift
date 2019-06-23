@@ -9,16 +9,39 @@
 import UIKit
 import PlaygroundSupport
 
+public extension UIView {
+
+    func bindFrameToSuperviewBounds() {
+        guard let superview = self.superview else {
+            print("Error! `superview` was nil – call `addSubview(view: UIView)` before calling `bindFrameToSuperviewBounds()` to fix this.")
+            return
+        }
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        superview.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": self]))
+        superview.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": self]))
+    }
+
+}
+
 @objc(Book_Sources_LiveViewController)
 public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
-    
-    //DANIEL ADDED THIS
+
+    let gridPaper = GridPaperView()
+
     override public func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.black
+
+        self.view.backgroundColor = .white
+        self.gridPaper.translatesAutoresizingMaskIntoConstraints = false
+
+        self.view.addSubview(self.gridPaper)
+        self.gridPaper.bindFrameToSuperviewBounds()
     }
-    
+
+    public func add(_ pen: Pen){
+        self.gridPaper.scene.addChild(ShapeSK(pen:pen).node)
+    }
     
     
     /*
