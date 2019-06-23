@@ -9,6 +9,8 @@
 import UIKit
 import PlaygroundSupport
 
+//CODE IN HERE BECOMES CONTENT.SWIFT IN THE BOOK
+
 public extension UIView {
 
     func bindFrameToSuperviewBounds() {

@@ -19,7 +19,7 @@
 	<key>ImageReference</key>
 	<string>cover.png</string>
 	<key>SwiftVersion</key>
-	<string>4.0</string>
+	<string>5.0</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>
