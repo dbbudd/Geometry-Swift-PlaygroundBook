@@ -131,7 +131,7 @@ public class GridPaperView : UIView {
     private static func axisFactory(text: String) -> SKLabelNode {
         
         //label for axis
-        let label: SKLabelNode = SKLabelNode(fontNamed: "AvenirNext")
+        let label: SKLabelNode = SKLabelNode(fontNamed: "HelveticaNeue")
         label.text = text
         label.fontSize = 14.0
         label.fontColor = .gray
