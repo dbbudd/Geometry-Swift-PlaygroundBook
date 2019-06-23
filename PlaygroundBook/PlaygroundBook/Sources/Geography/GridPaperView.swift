@@ -14,7 +14,7 @@ public class GridPaperView : UIView {
     let xAxisLabel = GridPaperView.axisFactory(text: "X-Axis")
     let yAxisLabel = GridPaperView.axisFactory(text: "Y-Axis")
     
-    let scene: CanvasScene = CanvasScene()
+    let scene = CanvasScene()
     
     public var shouldDrawMainLines: Bool = true {
         didSet {
