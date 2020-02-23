@@ -83,6 +83,33 @@ public struct Pen {
         self.path.addArc(withCenter: self.path.currentPoint, radius: radius, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
     }
     
+    //Function enabling us to use drawArc() by Anders Randler
+    public mutating func addArc(radius: Double, angle: Double){
+        let currentX = Double(self.path.currentPoint.x)
+        let currentY = Double(self.path.currentPoint.y)
+        if angle < 0 {
+            let toCenterInRadians = (90 - currentHeading) * (.pi / 180)
+            let dx = radius * cos(toCenterInRadians)
+            let dy = -radius * sin(toCenterInRadians)
+            let centerX = currentX + dx
+            let centerY = currentY + dy
+            let startAngle = (90 + currentHeading) * (.pi / 180)
+            let endAngle = (90 + currentHeading + angle) * (.pi / 180)
+            currentHeading += angle
+            self.path.addArc(withCenter: CGPoint(x: centerX, y: centerY), radius: CGFloat(radius), startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: false)
+        } else {
+            let toCenterInRadians = (90 + currentHeading) * (.pi / 180)
+            let dx = radius * cos(toCenterInRadians)
+            let dy = radius * sin(toCenterInRadians)
+            let centerX = currentX + dx
+            let centerY = currentY + dy
+            let startAngle = (-90 + currentHeading) * (.pi / 180)
+            let endAngle = (-90 + currentHeading + angle) * (.pi / 180)
+            currentHeading += angle
+            self.path.addArc(withCenter: CGPoint(x: centerX, y: centerY), radius: CGFloat(radius), startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true)
+        }
+    }
+    
 }
 
 
