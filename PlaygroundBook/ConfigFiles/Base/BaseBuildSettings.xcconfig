@@ -14,18 +14,10 @@
 // By default, the supporting content is stored in the SupportingContent directory next to the xcodeproj.
 SUPPORTING_CONTENT_DIR = $(PROJECT_DIR)/SupportingContent/
 
-// The path to the directory containing the Swift Playgrounds frameworks (i.e. PlaygroundSupport and PlaygroundBluetooth).
-// By default, these are stored in the PlaygroundsFrameworks directory in the supporting content directory.
-PLAYGROUNDS_FRAMEWORKS_DIR = $(SUPPORTING_CONTENT_DIR)/PlaygroundsFrameworks/$(PLATFORM_NAME)/
-
 // The path to the directory containing other supporting frameworks.
 // These are not usable in the Playground Book sources, but are usable in (and used by) LiveViewTestApp.
 // By default, these are stored in the OtherFrameworks directory in the supporting content directory.
 OTHER_FRAMEWORKS_DIR = $(SUPPORTING_CONTENT_DIR)/OtherFrameworks/$(PLATFORM_NAME)/
-
-// Ensure we include PLAYGROUNDS_FRAMEWORKS_DIR in the system frameworks search path.
-// All targets should be able to import the Swift Playgrounds frameworks.
-SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(PLAYGROUNDS_FRAMEWORKS_DIR)" $(inherited)
 
 // Since Swift Playgrounds only supports 64-bit devices, this project can only be built for 64-bit devices as well.
 ARCHS = $(ARCHS_STANDARD_64_BIT)

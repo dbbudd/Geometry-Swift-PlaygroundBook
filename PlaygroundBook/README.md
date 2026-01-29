@@ -13,7 +13,7 @@ In support of this, there are three targets in this Xcode project:
 - **Book_Sources**: Compiles the book-level auxiliary sources module, allowing book-level sources to be developed with full editor integration
 - **LiveViewTestApp**: Produces an app which uses the `Book_Sources` module to show the live view similarly to how it would be shown in Swift Playgrounds
 
-This project includes the PlaygroundSupport and PlaygroundBluetooth frameworks from Swift Playgrounds to allow the Book_Sources and LiveViewTestApp targets to take full advantage of those APIs. The supporting content included with this template, including these frameworks, requires Xcode 10.2 to build. Attempting to use this template with another version of Xcode may result in build errors.
+This project builds with Swift 6 and uses SwiftUI for the LiveViewTestApp target so the Xcode build no longer depends on bundled Swift Playgrounds frameworks.
 
 For more information about the playground book file format, see the *[Swift Playgrounds authoring documentation](https://developer.apple.com/go/?id=swift-playgroundbook-authoring)*.
 
@@ -81,8 +81,6 @@ This Xcode project does not support syntax highlighting, code completion, live i
 
 This Xcode project includes support for testing your playground book's live view. This testing support assumes that the live view for your playground book is implemented in the book-level auxiliary sources. If it is implemented elsewhere (i.e. in chapter- or page-level auxiliary sources, or in a page's `Contents.swift` or `LiveView.swift` file), then it cannot easily be tested using this mechanism.
 
-To test your live view, run the LiveViewTestApp app. This app, which works both on iPad and in the iOS Simulator, is capable of displaying a live view in a manner similar to how Swift Playgrounds would display it. Most notably, LiveViewTestApp will correctly configure the live view safe area layout guides exposed by the PlaygroundSupport framework.
+To test your live view, run the LiveViewTestApp app. This app, which works both on iPad and in the iOS Simulator, is capable of displaying a live view in a manner similar to how Swift Playgrounds would display it.
 
-To configure your live view, implement the `setUpLiveView()` method in `AppDelegate.swift`. This should return a `UIView` or `UIViewController` which is ready to be used as the live view.
-
-By default, LiveViewTestApp will run your live view in full screen. LiveViewTestApp is also able to run your live view in a side-by-side view (as if it were in Swift Playgrounds with the source code editor either next to or below the live view). To enable this, make the `liveViewConfiguration` property in `AppDelegate.swift` return `.sideBySide` instead of `.fullScreen`.
+To configure your live view, update `instantiateLiveViewController()` in `PlaygroundBook/Sources/LiveViewSupport.swift` so it returns the desired `UIViewController`.

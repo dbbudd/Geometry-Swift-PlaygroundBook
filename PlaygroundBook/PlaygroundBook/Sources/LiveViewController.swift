@@ -7,7 +7,9 @@
 //
 
 import UIKit
+#if canImport(PlaygroundSupport)
 import PlaygroundSupport
+#endif
 
 //CODE IN HERE BECOMES CONTENT.SWIFT IN THE BOOK
 
@@ -27,7 +29,7 @@ public extension UIView {
 }
 
 @objc(Book_Sources_LiveViewController)
-public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
+public class LiveViewController: UIViewController {
 
     let gridPaper = GridPaperView()
 
@@ -61,9 +63,15 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     }
     */
 
+    #if canImport(PlaygroundSupport)
     public func receive(_ message: PlaygroundValue) {
         // Implement this method to receive messages sent from the process running Contents.swift.
         // This method is *required* by the PlaygroundLiveViewMessageHandler protocol.
         // Use this method to decode any messages sent as PlaygroundValue values and respond accordingly.
     }
+    #endif
 }
+
+#if canImport(PlaygroundSupport)
+extension LiveViewController: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {}
+#endif
