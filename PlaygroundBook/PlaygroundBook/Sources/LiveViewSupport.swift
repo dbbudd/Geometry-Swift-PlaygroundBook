@@ -6,12 +6,14 @@
 //
 
 import UIKit
+#if canImport(PlaygroundSupport)
 import PlaygroundSupport
+#endif
 
-/// Instantiates a new instance of a live view.
+/// Instantiates a new instance of a live view controller.
 ///
 /// By default, this loads an instance of `LiveViewController` from `LiveView.storyboard`.
-public func instantiateLiveView() -> PlaygroundLiveViewable {
+public func instantiateLiveViewController() -> LiveViewController {
     let storyboard = UIStoryboard(name: "LiveView", bundle: nil)
 
     guard let viewController = storyboard.instantiateInitialViewController() else {
@@ -25,3 +27,9 @@ public func instantiateLiveView() -> PlaygroundLiveViewable {
     return liveViewController
 }
 
+#if canImport(PlaygroundSupport)
+/// Instantiates a new instance of a live view for Swift Playgrounds.
+public func instantiateLiveView() -> PlaygroundLiveViewable {
+    instantiateLiveViewController()
+}
+#endif
