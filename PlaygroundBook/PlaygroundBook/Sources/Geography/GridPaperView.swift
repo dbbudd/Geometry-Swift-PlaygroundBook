@@ -15,6 +15,9 @@ public class GridPaperView : UIView {
     let yAxisLabel = GridPaperView.axisFactory(text: "Y-Axis")
     
     let scene = CanvasScene()
+    private let inputContainerView = UIView()
+    private let inputStackView = UIStackView()
+    private var inputCount = 0
     
     public var shouldDrawMainLines: Bool = true {
         didSet {
@@ -67,6 +70,7 @@ public class GridPaperView : UIView {
         viewSK.presentScene(scene)
         
         self.addSubview(viewSK)
+        self.configureInputContainer()
         
         viewSK.bindFrameToSuperviewBounds()
         
@@ -76,6 +80,37 @@ public class GridPaperView : UIView {
     
     public func add(_ pen: Pen){
         self.scene.addChild(ShapeSK(pen:pen).node)
+    }
+
+    @discardableResult
+    public func addInputField(defaultValue: String) -> UITextField {
+        inputCount += 1
+        inputContainerView.isHidden = false
+
+        let label = UILabel()
+        label.text = "Input \(inputCount)"
+        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.textColor = .darkGray
+
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.text = defaultValue
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
+        textField.font = UIFont.systemFont(ofSize: 14)
+        textField.backgroundColor = .white
+
+        let rowStack = UIStackView(arrangedSubviews: [label, textField])
+        rowStack.axis = .horizontal
+        rowStack.alignment = .center
+        rowStack.spacing = 8
+        rowStack.distribution = .fill
+
+        label.setContentHuggingPriority(.required, for: .horizontal)
+        textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
+
+        inputStackView.addArrangedSubview(rowStack)
+        return textField
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -105,6 +140,35 @@ public class GridPaperView : UIView {
         
         self.xAxisLabel.position = CGPoint(x: (rect.midX - 30), y: -15)
         self.yAxisLabel.position = CGPoint(x: -30, y: (rect.midY - 20))
+    }
+
+    private func configureInputContainer() {
+        inputContainerView.translatesAutoresizingMaskIntoConstraints = false
+        inputContainerView.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
+        inputContainerView.layer.cornerRadius = 8
+        inputContainerView.layer.borderWidth = 1
+        inputContainerView.layer.borderColor = UIColor(white: 0.85, alpha: 1.0).cgColor
+        inputContainerView.isHidden = true
+
+        inputStackView.translatesAutoresizingMaskIntoConstraints = false
+        inputStackView.axis = .vertical
+        inputStackView.spacing = 8
+        inputStackView.alignment = .fill
+        inputStackView.distribution = .fill
+        inputStackView.layoutMargins = UIEdgeInsets(top: 8, left: 10, bottom: 8, right: 10)
+        inputStackView.isLayoutMarginsRelativeArrangement = true
+
+        inputContainerView.addSubview(inputStackView)
+        self.addSubview(inputContainerView)
+
+        NSLayoutConstraint.activate([
+            inputContainerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 12),
+            inputContainerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
+            inputStackView.leadingAnchor.constraint(equalTo: inputContainerView.leadingAnchor),
+            inputStackView.trailingAnchor.constraint(equalTo: inputContainerView.trailingAnchor),
+            inputStackView.topAnchor.constraint(equalTo: inputContainerView.topAnchor),
+            inputStackView.bottomAnchor.constraint(equalTo: inputContainerView.bottomAnchor)
+        ])
     }
     
     private func drawMiddleLines(dirtyRect: CGRect) {
