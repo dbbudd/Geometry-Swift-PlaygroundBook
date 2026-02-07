@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>[함수](glossary://function)가 실행되면 캐릭터가 보석을 먼저 수집한 다음, 앞으로 이동하고 스위치를 작동시켜야 합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

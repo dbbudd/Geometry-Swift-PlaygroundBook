@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>코드를 실행하고 Byte가 처음 실수한 부분을 확인해 보세요. 변경해야 하는 코드의 첫 줄은 이런 방법으로 찾습니다.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

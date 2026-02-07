@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Esistono tre scale principali in questo livello. Usa una funzione che faccia in modo che il tuo personaggio arrivi fino in cima a ogni scala, azioni l’interruttore e torni giù.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

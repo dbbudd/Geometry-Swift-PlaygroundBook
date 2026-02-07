@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>嘗試使用[虛擬碼](glossary://pseudocode)來規畫要如何通過這個關卡。思考可以使用哪些技巧，並找到出發點。想出策略後，開始編寫和測試你的程式碼。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

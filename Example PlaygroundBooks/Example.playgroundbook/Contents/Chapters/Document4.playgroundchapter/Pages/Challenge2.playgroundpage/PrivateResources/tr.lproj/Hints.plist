@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Karedeki herhangi bir karoda mücevher, açık düğme veya kapalı düğme olabilir. Önce, tek bir karoda her olasılığı denetlemek için `checkTile()` adında bir fonksiyon yaz.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sd:accessibility_extension.column_row_announcement</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Verden består av %#@lu_columns@ og %#@lu_rows@.</string>
+		<key>lu_columns</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>%lu kolonne</string>
+			<key>other</key>
+			<string>%lu kolonner</string>
+		</dict>
+		<key>lu_rows</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>%lu rad</string>
+			<key>other</key>
+			<string>%lu rader</string>
+		</dict>
+	</dict>
+	<key>sd:accessibility_extension.goalDescription</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@lu_goals@</string>
+		<key>lu_goals</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>Målet er: </string>
+			<key>other</key>
+			<string>Målene er: </string>
+		</dict>
+	</dict>
+	<key>sd:chapter2.challenge1.inefficientSuccessMessage</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Du er godt i gang med å løse oppgaven, men du kan gjøre koden din enda mer effektiv! %#@lu_commands@, men du kan løse denne oppgaven med 16 eller færre kommandoer. Du gjør koden mer effektiv ved å [definere](glossary://define) en funksjon som du kan gjenbruke, og deretter [kalle](glossary://call) den i koden. Du kan også gå videre til [**Neste side**](@next) hvis du vil.</string>
+		<key>lu_commands</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>Du har brukt %lu kommandoer</string>
+			<key>other</key>
+			<string>Du har brukt %lu kommandoer</string>
+		</dict>
+	</dict>
+	<key>sd:chapter2.challenge1.noCustomFunctionSuccessMessage</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>### Gratulerer!
+
+Du løste oppgaven, men du brukte %#@lu_commands@! Prøv å løse oppgaven ved å definere din egen [funksjon](glossary://function) ved hjelp av `func name() {}`, og deretter kalle den. Da trenger du ikke å bruke like mange kommandoer, og koden blir enklere å lese. Du kan også gå til [**Neste side**](@next) hvis du vil.</string>
+		<key>lu_commands</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>%lu kommando</string>
+			<key>other</key>
+			<string>%lu kommandoer</string>
+		</dict>
+	</dict>
+	<key>sd:chapter2.challenge2.inefficientSolutionSuccessMessage</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@lu_commands@, men du kan løse denne oppgaven med bare tolv. Én måte å skrive kortere og mer lettlest kode på, er å definere en funksjon som utfører flere kommandoer etter bare ett kall.</string>
+		<key>lu_commands</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>Du har brukt %lu kommando</string>
+			<key>other</key>
+			<string>Du har brukt %lu kommandoer</string>
+		</dict>
+	</dict>
+	<key>sd:chapter2.challenge2.noCustomFunctionSuccessMessage</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>### Du nærmer deg!
+
+Du fant en løsning på oppgaven, men du [definerte](glossary://define) ikke din egen funksjon. Du brukte %#@lu_commands@, men du kan løse oppgaven med færre kodelinjer ved å bruke et gjenbrukbart sett med kode i en funksjon. Prøv å definere din egen [funksjon](glossary://function) ved hjelp av `func name() {}`, og gi den et sett med kommandoer. Kall deretter funksjonen for å løse oppgaven. Da trenger du ikke å bruke like mange kommandoer, og koden blir også enklere å lese.</string>
+		<key>lu_commands</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>%lu kommando</string>
+			<key>other</key>
+			<string>%lu kommandoer</string>
+		</dict>
+	</dict>
+	<key>sd:chapter4.challenge2.missingForLoopSuccessMessage</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Oi da!
+Du løste oppgaven, men du glemte å bruke en [for-løkke](glossary://for%%20loop). %#@lu_lines_of_code@, men med en for-løkke ville du trengt bare 12.
+
+Du kan prøve igjen eller gå videre.
+
+[**Neste side**](@next)</string>
+		<key>lu_lines_of_code</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>Du kjørte %lu kodelinje</string>
+			<key>other</key>
+			<string>Du kjørte %lu kodelinjer</string>
+		</dict>
+	</dict>
+	<key>sd:chapter6.exercise2.partialSuccessMessage</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>### Nesten! 
+Du løste oppgaven, men du brukte ikke en `while`-løkke. %#@lu_lines_of_code@, men hvis du hadde brukt en `while`-løkke, kunne du ha løst den med bare 4!</string>
+		<key>lu_lines_of_code</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>Du brukte %lu kodelinje for å løse denne oppgaven</string>
+			<key>other</key>
+			<string>Du brukte %lu kodelinjer for å løse denne oppgaven</string>
+		</dict>
+	</dict>
+	<key>sd:chapter8.exercise2.partialSuccess</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Godt jobbet med å hente steiner, men det ser ut til at du ikke økte variabelen `gemCounter` på riktig måte. %#@lu_collected_gems@, men variabelen `gemCounter` har verdien `%lu`. 
+
+Hver gang du kaller `collectGem()`, må du sørge for at du legger `1` til verdien som lagres av `gemCounter`.</string>
+		<key>lu_collected_gems</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>Du hentet `%lu` stein</string>
+			<key>other</key>
+			<string>Du hentet `%lu` steiner</string>
+		</dict>
+	</dict>
+	<key>sd:gems_collected.%lu out of %lu gems collected</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%lu av %#@lu_total_gems@</string>
+		<key>lu_total_gems</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>%lu stein hentet</string>
+			<key>other</key>
+			<string>%lu steiner hentet</string>
+		</dict>
+	</dict>
+	<key>sd:switches_opened.%lu out of %lu switches opened</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%lu av %#@lu_total_switches@</string>
+		<key>lu_total_switches</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>one</key>
+			<string>%lu bryter åpnet</string>
+			<key>other</key>
+			<string>%lu brytere åpnet</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저 첫 번째 타일로 이동한 다음, `if` 구문을 사용하여 캐릭터가 닫혀 있는 스위치 위에 있는지 확인하세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

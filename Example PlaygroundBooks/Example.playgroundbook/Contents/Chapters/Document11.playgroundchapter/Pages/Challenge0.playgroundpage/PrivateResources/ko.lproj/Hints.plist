@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>잊지 마세요, `move(distance: Int)`와 `turnLock(up: Bool, numberOfTimes: Int)` 메소드를 모두 사용하여 이 퍼즐을 해결할 수도 있습니다.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

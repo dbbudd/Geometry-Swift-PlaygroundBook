@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저 `move` 함수를 [정의](glossary://define) 하세요. 함수 안에 `distance` 값을 사용하여 루프 실행 횟수를 결정하는 `for` 루프를 작성합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

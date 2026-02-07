@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Hämta stenen och flytta sedan Byte till reglaget (rutan på toppen av den andra trappan, nära mitten av världen). Använd sedan kommandot `toggleSwitch()` för att växla reglaget.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

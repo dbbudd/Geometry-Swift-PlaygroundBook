@@ -1,0 +1,3861 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundValue",
+        "printedName": "PlaygroundValue",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "array",
+            "printedName": "array",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> ([PlaygroundSupport.PlaygroundValue]) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([PlaygroundSupport.PlaygroundValue]) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PlaygroundSupport.PlaygroundValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PlaygroundValue",
+                            "printedName": "PlaygroundSupport.PlaygroundValue",
+                            "usr": "s:17PlaygroundSupport0A5ValueO"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO5arrayyACSayACGcACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO5arrayyACSayACGcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dictionary",
+            "printedName": "dictionary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> ([Swift.String : PlaygroundSupport.PlaygroundValue]) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.String : PlaygroundSupport.PlaygroundValue]) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : PlaygroundSupport.PlaygroundValue]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PlaygroundValue",
+                            "printedName": "PlaygroundSupport.PlaygroundValue",
+                            "usr": "s:17PlaygroundSupport0A5ValueO"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO10dictionaryyACSDySSACGcACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO10dictionaryyACSDySSACGcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "string",
+            "printedName": "string",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> (Swift.String) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO6stringyACSScACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO6stringyACSScACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> (Foundation.Data) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Data) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO4datayAC10Foundation4DataVcACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO4datayAC10Foundation4DataVcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "date",
+            "printedName": "date",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> (Foundation.Date) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Date) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO4dateyAC10Foundation4DateVcACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO4dateyAC10Foundation4DateVcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "integer",
+            "printedName": "integer",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> (Swift.Int) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO7integeryACSicACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO7integeryACSicACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "floatingPoint",
+            "printedName": "floatingPoint",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> (Swift.Double) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO13floatingPointyACSdcACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO13floatingPointyACSdcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "boolean",
+            "printedName": "boolean",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundValue.Type) -> (Swift.Bool) -> PlaygroundSupport.PlaygroundValue",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> PlaygroundSupport.PlaygroundValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundValue.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A5ValueO7booleanyACSbcACmF",
+            "mangledName": "$s17PlaygroundSupport0A5ValueO7booleanyACSbcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17PlaygroundSupport0A5ValueO",
+        "mangledName": "$s17PlaygroundSupport0A5ValueO",
+        "moduleName": "PlaygroundSupport",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundLiveViewSafeAreaContainer",
+        "printedName": "PlaygroundLiveViewSafeAreaContainer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "liveViewSafeAreaGuide",
+            "printedName": "liveViewSafeAreaGuide",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UILayoutGuide",
+                "printedName": "UIKitCore.UILayoutGuide",
+                "usr": "c:objc(cs)UILayoutGuide"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerP04livedeF5GuideSo08UILayoutI0Cvp",
+            "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerP04livedeF5GuideSo08UILayoutI0Cvp",
+            "moduleName": "PlaygroundSupport",
+            "protocolReq": true,
+            "declAttributes": [
+              "Available",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILayoutGuide",
+                    "printedName": "UIKitCore.UILayoutGuide",
+                    "usr": "c:objc(cs)UILayoutGuide"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerP04livedeF5GuideSo08UILayoutI0Cvg",
+                "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerP04livedeF5GuideSo08UILayoutI0Cvg",
+                "moduleName": "PlaygroundSupport",
+                "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer>",
+                "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "liveViewSafeAreaGuide",
+            "printedName": "liveViewSafeAreaGuide",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UILayoutGuide",
+                "printedName": "UIKitCore.UILayoutGuide",
+                "usr": "c:objc(cs)UILayoutGuide"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo6UIViewCRbzrlE04livedeF5GuideSo08UILayoutJ0Cvp",
+            "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo6UIViewCRbzrlE04livedeF5GuideSo08UILayoutJ0Cvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILayoutGuide",
+                    "printedName": "UIKitCore.UILayoutGuide",
+                    "usr": "c:objc(cs)UILayoutGuide"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo6UIViewCRbzrlE04livedeF5GuideSo08UILayoutJ0Cvg",
+                "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo6UIViewCRbzrlE04livedeF5GuideSo08UILayoutJ0Cvg",
+                "moduleName": "PlaygroundSupport",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKitCore.UIView, τ_0_0 : PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer>",
+                "sugared_genericSig": "<Self where Self : UIKitCore.UIView, Self : PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "liveViewSafeAreaGuide",
+            "printedName": "liveViewSafeAreaGuide",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UILayoutGuide",
+                "printedName": "UIKitCore.UILayoutGuide",
+                "usr": "c:objc(cs)UILayoutGuide"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo16UIViewControllerCRbzrlE04livedeF5GuideSo08UILayoutK0Cvp",
+            "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo16UIViewControllerCRbzrlE04livedeF5GuideSo08UILayoutK0Cvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UILayoutGuide",
+                    "printedName": "UIKitCore.UILayoutGuide",
+                    "usr": "c:objc(cs)UILayoutGuide"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo16UIViewControllerCRbzrlE04livedeF5GuideSo08UILayoutK0Cvg",
+                "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerPAASo16UIViewControllerCRbzrlE04livedeF5GuideSo08UILayoutK0Cvg",
+                "moduleName": "PlaygroundSupport",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKitCore.UIViewController, τ_0_0 : PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer>",
+                "sugared_genericSig": "<Self where Self : UIKitCore.UIViewController, Self : PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17PlaygroundSupport0A25LiveViewSafeAreaContainerP",
+        "mangledName": "$s17PlaygroundSupport0A25LiveViewSafeAreaContainerP",
+        "moduleName": "PlaygroundSupport",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundLiveViewMessageHandler",
+        "printedName": "PlaygroundLiveViewMessageHandler",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "liveViewMessageConnectionOpened",
+            "printedName": "liveViewMessageConnectionOpened()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerP04livedE16ConnectionOpenedyyF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerP04livedE16ConnectionOpenedyyF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "liveViewMessageConnectionClosed",
+            "printedName": "liveViewMessageConnectionClosed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerP04livedE16ConnectionClosedyyF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerP04livedE16ConnectionClosedyyF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundValue",
+                "printedName": "PlaygroundSupport.PlaygroundValue",
+                "usr": "s:17PlaygroundSupport0A5ValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerP7receiveyyAA0A5ValueOF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerP7receiveyyAA0A5ValueOF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "liveViewMessageConnectionOpened",
+            "printedName": "liveViewMessageConnectionOpened()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerPAAE04livedE16ConnectionOpenedyyF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerPAAE04livedE16ConnectionOpenedyyF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "liveViewMessageConnectionClosed",
+            "printedName": "liveViewMessageConnectionClosed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerPAAE04livedE16ConnectionClosedyyF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerPAAE04livedE16ConnectionClosedyyF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundValue",
+                "printedName": "PlaygroundSupport.PlaygroundValue",
+                "usr": "s:17PlaygroundSupport0A5ValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerPAAE7receiveyyAA0A5ValueOF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerPAAE7receiveyyAA0A5ValueOF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundValue",
+                "printedName": "PlaygroundSupport.PlaygroundValue",
+                "usr": "s:17PlaygroundSupport0A5ValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerPAAE4sendyyAA0A5ValueOF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerPAAE4sendyyAA0A5ValueOF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewMessageHandler>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerP",
+        "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerP",
+        "moduleName": "PlaygroundSupport",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundRemoteLiveViewProxy",
+        "printedName": "PlaygroundRemoteLiveViewProxy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvp",
+            "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundRemoteLiveViewProxyDelegate",
+                        "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate",
+                        "usr": "s:17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvg",
+                "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvg",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundRemoteLiveViewProxyDelegate",
+                        "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate",
+                        "usr": "s:17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvs",
+                "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvs",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvM",
+                "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC8delegateAA0acdeF8Delegate_pSgvM",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "liveViewMessageConnectionOpened",
+            "printedName": "liveViewMessageConnectionOpened()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC04liveE23MessageConnectionOpenedyyF",
+            "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC04liveE23MessageConnectionOpenedyyF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "liveViewMessageConnectionClosed",
+            "printedName": "liveViewMessageConnectionClosed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC04liveE23MessageConnectionClosedyyF",
+            "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC04liveE23MessageConnectionClosedyyF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundValue",
+                "printedName": "PlaygroundSupport.PlaygroundValue",
+                "usr": "s:17PlaygroundSupport0A5ValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC7receiveyyAA0A5ValueOF",
+            "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC7receiveyyAA0A5ValueOF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "playgroundLiveViewRepresentation",
+            "printedName": "playgroundLiveViewRepresentation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundLiveViewRepresentation",
+                "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC010playgrounddE14RepresentationAA0adeH0Ovp",
+            "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC010playgrounddE14RepresentationAA0adeH0Ovp",
+            "moduleName": "PlaygroundSupport",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundLiveViewRepresentation",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                    "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC010playgrounddE14RepresentationAA0adeH0Ovg",
+                "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC010playgrounddE14RepresentationAA0adeH0Ovg",
+                "moduleName": "PlaygroundSupport",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC",
+        "mangledName": "$s17PlaygroundSupport0A19RemoteLiveViewProxyC",
+        "moduleName": "PlaygroundSupport",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "PlaygroundLiveViewMessageHandler",
+            "printedName": "PlaygroundLiveViewMessageHandler",
+            "usr": "s:17PlaygroundSupport0A22LiveViewMessageHandlerP",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewMessageHandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PlaygroundLiveViewable",
+            "printedName": "PlaygroundLiveViewable",
+            "usr": "s:17PlaygroundSupport0A12LiveViewableP",
+            "mangledName": "$s17PlaygroundSupport0A12LiveViewableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundRemoteLiveViewProxyDelegate",
+        "printedName": "PlaygroundRemoteLiveViewProxyDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "remoteLiveViewProxyConnectionClosed",
+            "printedName": "remoteLiveViewProxyConnectionClosed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundRemoteLiveViewProxy",
+                "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxy",
+                "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP06remotedeF16ConnectionClosedyyAA0acdeF0CF",
+            "mangledName": "$s17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP06remotedeF16ConnectionClosedyyAA0acdeF0CF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remoteLiveViewProxy",
+            "printedName": "remoteLiveViewProxy(_:received:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundRemoteLiveViewProxy",
+                "printedName": "PlaygroundSupport.PlaygroundRemoteLiveViewProxy",
+                "usr": "s:17PlaygroundSupport0A19RemoteLiveViewProxyC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundValue",
+                "printedName": "PlaygroundSupport.PlaygroundValue",
+                "usr": "s:17PlaygroundSupport0A5ValueO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP06remotedeF0_8receivedyAA0acdeF0C_AA0A5ValueOtF",
+            "mangledName": "$s17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP06remotedeF0_8receivedyAA0acdeF0C_AA0A5ValueOtF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate>",
+            "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP",
+        "mangledName": "$s17PlaygroundSupport0A27RemoteLiveViewProxyDelegateP",
+        "moduleName": "PlaygroundSupport",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundPage",
+        "printedName": "PlaygroundPage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "current",
+            "printedName": "current",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundPage",
+                "printedName": "PlaygroundSupport.PlaygroundPage",
+                "usr": "s:17PlaygroundSupport0A4PageC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC7currentACvpZ",
+            "mangledName": "$s17PlaygroundSupport0A4PageC7currentACvpZ",
+            "moduleName": "PlaygroundSupport",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundPage",
+                    "printedName": "PlaygroundSupport.PlaygroundPage",
+                    "usr": "s:17PlaygroundSupport0A4PageC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC7currentACvgZ",
+                "mangledName": "$s17PlaygroundSupport0A4PageC7currentACvgZ",
+                "moduleName": "PlaygroundSupport",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "text",
+            "printedName": "text",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC4textSSvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC4textSSvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC4textSSvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC4textSSvg",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userModuleNames",
+            "printedName": "userModuleNames",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC15userModuleNamesSaySSGvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC15userModuleNamesSaySSGvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC15userModuleNamesSaySSGvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC15userModuleNamesSaySSGvg",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "listSourceFiles",
+            "printedName": "listSourceFiles(inUserModule:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC15listSourceFiles12inUserModuleSaySSGSS_tF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC15listSourceFiles12inUserModuleSaySSGSS_tF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getText",
+            "printedName": "getText(forSourceFile:inUserModule:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC7getText13forSourceFile12inUserModuleSSSgSS_SStF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC7getText13forSourceFile12inUserModuleSSSgSS_SStF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "keyValueStore",
+            "printedName": "keyValueStore",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundKeyValueStore",
+                "printedName": "PlaygroundSupport.PlaygroundKeyValueStore",
+                "usr": "s:17PlaygroundSupport0A13KeyValueStoreC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC13keyValueStoreAA0a3KeyeF0Cvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC13keyValueStoreAA0a3KeyeF0Cvp",
+            "moduleName": "PlaygroundSupport",
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundKeyValueStore",
+                    "printedName": "PlaygroundSupport.PlaygroundKeyValueStore",
+                    "usr": "s:17PlaygroundSupport0A13KeyValueStoreC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC13keyValueStoreAA0a3KeyeF0Cvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13keyValueStoreAA0a3KeyeF0Cvg",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ExecutionMode",
+            "printedName": "ExecutionMode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "run",
+                "printedName": "run",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.ExecutionMode.Type) -> PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExecutionMode",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                        "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ExecutionMode",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                            "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO3runyA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO3runyA2EmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "runFaster",
+                "printedName": "runFaster",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.ExecutionMode.Type) -> PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExecutionMode",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                        "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ExecutionMode",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                            "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO9runFasteryA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO9runFasteryA2EmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "runFastest",
+                "printedName": "runFastest",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.ExecutionMode.Type) -> PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExecutionMode",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                        "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ExecutionMode",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                            "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO10runFastestyA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO10runFastestyA2EmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "step",
+                "printedName": "step",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.ExecutionMode.Type) -> PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExecutionMode",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                        "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ExecutionMode",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                            "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO4stepyA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO4stepyA2EmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "stepSlowly",
+                "printedName": "stepSlowly",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.ExecutionMode.Type) -> PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ExecutionMode",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                        "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ExecutionMode",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                            "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO10stepSlowlyyA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO10stepSlowlyyA2EmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExecutionMode",
+                    "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExecutionMode",
+                    "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO2eeoiySbAE_AEtFZ",
+                "moduleName": "PlaygroundSupport",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO9hashValueSivp",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO9hashValueSivp",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO9hashValueSivg",
+                    "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO9hashValueSivg",
+                    "moduleName": "PlaygroundSupport",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO4hash4intoys6HasherVz_tF",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO",
+            "mangledName": "$s17PlaygroundSupport0A4PageC13ExecutionModeO",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "executionMode",
+            "printedName": "executionMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExecutionMode",
+                "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC13executionModeAC09ExecutionE0Ovp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC13executionModeAC09ExecutionE0Ovp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ExecutionMode",
+                    "printedName": "PlaygroundSupport.PlaygroundPage.ExecutionMode",
+                    "usr": "s:17PlaygroundSupport0A4PageC13ExecutionModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC13executionModeAC09ExecutionE0Ovg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC13executionModeAC09ExecutionE0Ovg",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "needsIndefiniteExecution",
+            "printedName": "needsIndefiniteExecution",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvg",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvs",
+                "mangledName": "$s17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvs",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvM",
+                "mangledName": "$s17PlaygroundSupport0A4PageC24needsIndefiniteExecutionSbvM",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "finishExecution",
+            "printedName": "finishExecution()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Never",
+                "printedName": "Swift.Never",
+                "usr": "s:s5NeverO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC15finishExecutions5NeverOyF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC15finishExecutions5NeverOyF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "liveView",
+            "printedName": "liveView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PlaygroundSupport.PlaygroundLiveViewable?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundLiveViewable",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewable",
+                    "usr": "s:17PlaygroundSupport0A12LiveViewableP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundLiveViewable",
+                        "printedName": "PlaygroundSupport.PlaygroundLiveViewable",
+                        "usr": "s:17PlaygroundSupport0A12LiveViewableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvg",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundLiveViewable",
+                        "printedName": "PlaygroundSupport.PlaygroundLiveViewable",
+                        "usr": "s:17PlaygroundSupport0A12LiveViewableP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvs",
+                "mangledName": "$s17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvs",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvM",
+                "mangledName": "$s17PlaygroundSupport0A4PageC8liveViewAA0A12LiveViewable_pSgvM",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setLiveView",
+            "printedName": "setLiveView(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC11setLiveViewyyxAA0aE8ViewableRzlF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC11setLiveViewyyxAA0aE8ViewableRzlF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewable>",
+            "sugared_genericSig": "<IncomingView where IncomingView : PlaygroundSupport.PlaygroundLiveViewable>",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLiveView",
+            "printedName": "setLiveView(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC11setLiveViewyyx7SwiftUI0F0RzlF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC11setLiveViewyyx7SwiftUI0F0RzlF",
+            "moduleName": "PlaygroundSupport",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<IncomingView where IncomingView : SwiftUI.View>",
+            "intro_Macosx": "10.15",
+            "intro_iOS": "13.0",
+            "intro_tvOS": "13.0",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "Available",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "wantsFullScreenLiveView",
+            "printedName": "wantsFullScreenLiveView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvg",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvs",
+                "mangledName": "$s17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvs",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvM",
+                "mangledName": "$s17PlaygroundSupport0A4PageC23wantsFullScreenLiveViewSbvM",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "PageNavigation",
+            "printedName": "PageNavigation",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "previous",
+                "printedName": "previous",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.PageNavigation.Type) -> PlaygroundSupport.PlaygroundPage.PageNavigation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PageNavigation",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                        "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PageNavigation",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                            "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO8previousyA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC0C10NavigationO8previousyA2EmF",
+                "moduleName": "PlaygroundSupport"
+              },
+              {
+                "kind": "Var",
+                "name": "next",
+                "printedName": "next",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.PageNavigation.Type) -> PlaygroundSupport.PlaygroundPage.PageNavigation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PageNavigation",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                        "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PageNavigation",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                            "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO4nextyA2EmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC0C10NavigationO4nextyA2EmF",
+                "moduleName": "PlaygroundSupport"
+              },
+              {
+                "kind": "Var",
+                "name": "pageReference",
+                "printedName": "pageReference",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.PageNavigation.Type) -> (Swift.String) -> PlaygroundSupport.PlaygroundPage.PageNavigation",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> PlaygroundSupport.PlaygroundPage.PageNavigation",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PageNavigation",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                            "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(reference: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PageNavigation",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                            "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO13pageReferenceyAESS_tcAEmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC0C10NavigationO13pageReferenceyAESS_tcAEmF",
+                "moduleName": "PlaygroundSupport"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO",
+            "mangledName": "$s17PlaygroundSupport0A4PageC0C10NavigationO",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "navigateTo",
+            "printedName": "navigateTo(page:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PageNavigation",
+                "printedName": "PlaygroundSupport.PlaygroundPage.PageNavigation",
+                "usr": "s:17PlaygroundSupport0A4PageC0C10NavigationO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC10navigateTo4pageyAC0C10NavigationO_tF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC10navigateTo4pageyAC0C10NavigationO_tF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showGlossaryEntry",
+            "printedName": "showGlossaryEntry(named:at:in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreFoundation.CGRect?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKitCore.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKitCore.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC17showGlossaryEntry5named2at2inySS_So6CGRectVSgSo6UIViewCSgtF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC17showGlossaryEntry5named2at2inySS_So6CGRectVSgSo6UIViewCSgtF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openPlayground",
+            "printedName": "openPlayground(withContentIdentifier:toPageAtIndex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC04openA021withContentIdentifier02toC7AtIndexySS_SiSgtF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC04openA021withContentIdentifier02toC7AtIndexySS_SiSgtF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openApplication",
+            "printedName": "openApplication(withBundleIdentifier:iTunesItemIdentifier:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17PlaygroundSupport0A4PageC15openApplication20withBundleIdentifier010iTunesItemH0ySS_SiSgtF",
+            "mangledName": "$s17PlaygroundSupport0A4PageC15openApplication20withBundleIdentifier010iTunesItemH0ySS_SiSgtF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "AssessmentStatus",
+            "printedName": "AssessmentStatus",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "pass",
+                "printedName": "pass",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.AssessmentStatus.Type) -> (Swift.String?) -> PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String?) -> PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssessmentStatus",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                            "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(message: Swift.String?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssessmentStatus",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                            "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO4passyAESSSg_tcAEmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC16AssessmentStatusO4passyAESSSg_tcAEmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "fail",
+                "printedName": "fail",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PlaygroundSupport.PlaygroundPage.AssessmentStatus.Type) -> ([Swift.String], Swift.String?) -> PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "([Swift.String], Swift.String?) -> PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssessmentStatus",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                            "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(hints: [Swift.String], solution: Swift.String?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[Swift.String]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssessmentStatus",
+                            "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                            "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO4failyAESaySSG_SSSgtcAEmF",
+                "mangledName": "$s17PlaygroundSupport0A4PageC16AssessmentStatusO4failyAESaySSG_SSSgtcAEmF",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO",
+            "mangledName": "$s17PlaygroundSupport0A4PageC16AssessmentStatusO",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "assessmentStatus",
+            "printedName": "assessmentStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssessmentStatus",
+                    "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                    "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvp",
+            "mangledName": "$s17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssessmentStatus",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                        "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvg",
+                "mangledName": "$s17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvg",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssessmentStatus",
+                        "printedName": "PlaygroundSupport.PlaygroundPage.AssessmentStatus",
+                        "usr": "s:17PlaygroundSupport0A4PageC16AssessmentStatusO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvs",
+                "mangledName": "$s17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvs",
+                "moduleName": "PlaygroundSupport",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvM",
+                "mangledName": "$s17PlaygroundSupport0A4PageC16assessmentStatusAC010AssessmentE0OSgvM",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17PlaygroundSupport0A4PageC",
+        "mangledName": "$s17PlaygroundSupport0A4PageC",
+        "moduleName": "PlaygroundSupport",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundLiveViewRepresentation",
+        "printedName": "PlaygroundLiveViewRepresentation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "view",
+            "printedName": "view",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundLiveViewRepresentation.Type) -> (UIKitCore.UIView) -> PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKitCore.UIView) -> PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundLiveViewRepresentation",
+                        "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                        "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKitCore.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundLiveViewRepresentation",
+                        "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                        "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO4viewyACSo6UIViewCcACmF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewRepresentationO4viewyACSo6UIViewCcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "viewController",
+            "printedName": "viewController",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PlaygroundSupport.PlaygroundLiveViewRepresentation.Type) -> (UIKitCore.UIViewController) -> PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKitCore.UIViewController) -> PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundLiveViewRepresentation",
+                        "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                        "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKitCore.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundLiveViewRepresentation",
+                        "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                        "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO14viewControlleryACSo06UIViewG0CcACmF",
+            "mangledName": "$s17PlaygroundSupport0A22LiveViewRepresentationO14viewControlleryACSo06UIViewG0CcACmF",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO",
+        "mangledName": "$s17PlaygroundSupport0A22LiveViewRepresentationO",
+        "moduleName": "PlaygroundSupport",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundLiveViewable",
+        "printedName": "PlaygroundLiveViewable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "playgroundLiveViewRepresentation",
+            "printedName": "playgroundLiveViewRepresentation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundLiveViewRepresentation",
+                "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A12LiveViewableP010playgroundC18ViewRepresentationAA0acfG0Ovp",
+            "mangledName": "$s17PlaygroundSupport0A12LiveViewableP010playgroundC18ViewRepresentationAA0acfG0Ovp",
+            "moduleName": "PlaygroundSupport",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundLiveViewRepresentation",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                    "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A12LiveViewableP010playgroundC18ViewRepresentationAA0acfG0Ovg",
+                "mangledName": "$s17PlaygroundSupport0A12LiveViewableP010playgroundC18ViewRepresentationAA0acfG0Ovg",
+                "moduleName": "PlaygroundSupport",
+                "genericSig": "<τ_0_0 where τ_0_0 : PlaygroundSupport.PlaygroundLiveViewable>",
+                "sugared_genericSig": "<Self where Self : PlaygroundSupport.PlaygroundLiveViewable>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17PlaygroundSupport0A12LiveViewableP",
+        "mangledName": "$s17PlaygroundSupport0A12LiveViewableP",
+        "moduleName": "PlaygroundSupport",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PlaygroundSupport"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaygroundKeyValueStore",
+        "printedName": "PlaygroundKeyValueStore",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "current",
+            "printedName": "current",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundKeyValueStore",
+                "printedName": "PlaygroundSupport.PlaygroundKeyValueStore",
+                "usr": "s:17PlaygroundSupport0A13KeyValueStoreC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17PlaygroundSupport0A13KeyValueStoreC7currentACvpZ",
+            "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreC7currentACvpZ",
+            "moduleName": "PlaygroundSupport",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundKeyValueStore",
+                    "printedName": "PlaygroundSupport.PlaygroundKeyValueStore",
+                    "usr": "s:17PlaygroundSupport0A13KeyValueStoreC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A13KeyValueStoreC7currentACvgZ",
+                "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreC7currentACvgZ",
+                "moduleName": "PlaygroundSupport",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PlaygroundSupport.PlaygroundValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundValue",
+                    "printedName": "PlaygroundSupport.PlaygroundValue",
+                    "usr": "s:17PlaygroundSupport0A5ValueO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSScip",
+            "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSScip",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundValue?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSScig",
+                "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSScig",
+                "moduleName": "PlaygroundSupport",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "PlaygroundSupport.PlaygroundValue?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PlaygroundValue",
+                        "printedName": "PlaygroundSupport.PlaygroundValue",
+                        "usr": "s:17PlaygroundSupport0A5ValueO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSScis",
+                "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSScis",
+                "moduleName": "PlaygroundSupport",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSSciM",
+                "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreCyAA0aD0OSgSSciM",
+                "moduleName": "PlaygroundSupport",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17PlaygroundSupport0A13KeyValueStoreC",
+        "mangledName": "$s17PlaygroundSupport0A13KeyValueStoreC",
+        "moduleName": "PlaygroundSupport",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIView",
+        "printedName": "UIView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "playgroundLiveViewRepresentation",
+            "printedName": "playgroundLiveViewRepresentation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundLiveViewRepresentation",
+                "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So6UIViewC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0befG0Ovp",
+            "mangledName": "$sSo6UIViewC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0befG0Ovp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundLiveViewRepresentation",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                    "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So6UIViewC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0befG0Ovg",
+                "mangledName": "$sSo6UIViewC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0befG0Ovg",
+                "moduleName": "PlaygroundSupport",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIView",
+        "moduleName": "UIKitCore",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIView",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKitCore.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingSequence",
+            "printedName": "_KeyValueCodingAndObservingSequence",
+            "usr": "s:10Foundation35_KeyValueCodingAndObservingSequenceP",
+            "mangledName": "$s10Foundation35_KeyValueCodingAndObservingSequenceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PlaygroundLiveViewable",
+            "printedName": "PlaygroundLiveViewable",
+            "usr": "s:17PlaygroundSupport0A12LiveViewableP",
+            "mangledName": "$s17PlaygroundSupport0A12LiveViewableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIViewController",
+        "printedName": "UIViewController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "playgroundLiveViewRepresentation",
+            "printedName": "playgroundLiveViewRepresentation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundLiveViewRepresentation",
+                "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So16UIViewControllerC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0cfgH0Ovp",
+            "mangledName": "$sSo16UIViewControllerC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0cfgH0Ovp",
+            "moduleName": "PlaygroundSupport",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PlaygroundLiveViewRepresentation",
+                    "printedName": "PlaygroundSupport.PlaygroundLiveViewRepresentation",
+                    "usr": "s:17PlaygroundSupport0A22LiveViewRepresentationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So16UIViewControllerC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0cfgH0Ovg",
+                "mangledName": "$sSo16UIViewControllerC17PlaygroundSupportE32playgroundLiveViewRepresentationAC0cfgH0Ovg",
+                "moduleName": "PlaygroundSupport",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIViewController",
+        "moduleName": "UIKitCore",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIViewController",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKitCore.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingSequence",
+            "printedName": "_KeyValueCodingAndObservingSequence",
+            "usr": "s:10Foundation35_KeyValueCodingAndObservingSequenceP",
+            "mangledName": "$s10Foundation35_KeyValueCodingAndObservingSequenceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "PlaygroundLiveViewable",
+            "printedName": "PlaygroundLiveViewable",
+            "usr": "s:17PlaygroundSupport0A12LiveViewableP",
+            "mangledName": "$s17PlaygroundSupport0A12LiveViewableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Name",
+        "printedName": "Name",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "playgroundPageExecutionModeDidChange",
+            "printedName": "playgroundPageExecutionModeDidChange",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So18NSNotificationNamea17PlaygroundSupportE36playgroundPageExecutionModeDidChangeABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea17PlaygroundSupportE36playgroundPageExecutionModeDidChangeABvpZ",
+            "moduleName": "PlaygroundSupport",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So18NSNotificationNamea17PlaygroundSupportE36playgroundPageExecutionModeDidChangeABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea17PlaygroundSupportE36playgroundPageExecutionModeDidChangeABvgZ",
+                "moduleName": "PlaygroundSupport",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "c:@T@NSNotificationName",
+        "moduleName": "Foundation",
+        "declAttributes": [
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "Sendable"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSString",
+                    "printedName": "Foundation.NSString",
+                    "usr": "c:objc(cs)NSString"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_SwiftNewtypeWrapper",
+            "printedName": "_SwiftNewtypeWrapper",
+            "usr": "s:s20_SwiftNewtypeWrapperP",
+            "mangledName": "$ss20_SwiftNewtypeWrapperP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundLiveViewSafeArea.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1614,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 672,
+      "length": 23,
+      "value": "\"com.apple.Playgrounds\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 26,
+      "value": "\"ExecutionExtension.print\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 8543,
+      "length": 69,
+      "value": "\"playgroundSharedDataDirectory is not supported in Swift Playgrounds\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 10761,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "Array",
+      "offset": 11186,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "Array",
+      "offset": 11432,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 17044,
+      "length": 40,
+      "value": "\"PlaygroundPageNeedsIndefiniteExecution\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16894,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 19669,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 19957,
+      "length": 34,
+      "value": "\"PlaygroundPageLiveViewController\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 20079,
+      "length": 24,
+      "value": "\"PlaygroundPageLiveView\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "Dictionary",
+      "offset": 20189,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 22856,
+      "length": 39,
+      "value": "\"PlaygroundPageWantsFullScreenLiveView\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "BooleanLiteral",
+      "offset": 22695,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 39522,
+      "length": 50,
+      "value": "\"PlaygroundPageExecutionModeDidChangeNotification\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 39872,
+      "length": 61,
+      "value": "\"PlaygroundPageNeedsIndefiniteExecutionDidChangeNotification\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 40090,
+      "length": 43,
+      "value": "\"PlaygroundPageFinishExecutionNotification\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 40274,
+      "length": 45,
+      "value": "\"PlaygroundPageLiveViewDidChangeNotification\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 40533,
+      "length": 48,
+      "value": "\"PlaygroundPageWantsFullScreenLiveViewDidChange\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 40760,
+      "length": 36,
+      "value": "\"PlaygroundPageRequestsToHandleLink\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundPage.swift",
+      "kind": "StringLiteral",
+      "offset": 40982,
+      "length": 41,
+      "value": "\"PlaygroundPageAssessmentStatusDidChange\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundKeyValueStore.swift",
+      "kind": "Dictionary",
+      "offset": 1046,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger\/SerenityLogger-64\/PlaygroundSupport\/PlaygroundSupport\/PlaygroundKeyValueStore.swift",
+      "kind": "StringLiteral",
+      "offset": 2165,
+      "length": 34,
+      "value": "\"PlaygroundKeyValueStoreDidChange\""
+    }
+  ]
+}

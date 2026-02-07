@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Tänk på mönstren för placeringen av reglage. Hur kan du dra nytta av mönstren för att skriva funktioner som löser små problem, och sedan kombinera dem för att lösa det större problemet?</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

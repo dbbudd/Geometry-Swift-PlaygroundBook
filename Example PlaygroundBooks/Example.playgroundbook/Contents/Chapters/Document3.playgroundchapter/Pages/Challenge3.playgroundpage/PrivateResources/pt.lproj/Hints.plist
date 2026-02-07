@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Existem três escadas principais para subir neste nível. Para cada escada, use uma função que mova o seu personagem para o topo, acione o controle e volte para baixo.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

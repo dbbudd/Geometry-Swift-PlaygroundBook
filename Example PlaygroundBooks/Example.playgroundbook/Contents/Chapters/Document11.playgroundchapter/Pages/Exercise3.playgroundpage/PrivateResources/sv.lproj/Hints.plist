@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Du kan röra vid en ruta för att se dess koordinatvärde. Sök rätt på platsen där du vill att experten ska starta och rör sedan vid rutan för att ta reda på vilka kolumn- och radvärden du ska överföra till metoden `place`.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

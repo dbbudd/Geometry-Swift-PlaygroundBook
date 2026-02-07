@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ประเภทที่มีค่า `true` หรือ `false` ตัวอย่างเช่น `9 &lt; 7` จะให้ค่าบูลีนเป็น `false` เพราะ `9` ไม่น้อยกว่า `7`</string>
+				<key>Title</key>
+				<string>บูลีน</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ประเภทที่จัดเก็บจำนวนเต็ม ซึ่งเป็นตัวเลขที่ไม่มีทศนิยม เช่น `10` หรือ `-42` </string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ประเภทที่จัดเก็บชุดอักขระ เช่น `"สวัสดีชาวโลก"` หรือ `"แมวเหมียวเต้นระบำ"`</string>
+				<key>Title</key>
+				<string>String</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ภาษาโปรแกรมของ Apple ที่ใช้เขียนแอปสำหรับ iPhone, iPad, Mac, Apple Watch และ Apple TV </string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>คำแนะนำหรือกฎแบบเป็นลำดับขั้นตอนสำหรับแก้ไขปัญหา ตัวอย่างเช่น รายการขั้นตอนต่างๆ ในการชงชาอาจเรียกได้ว่าเป็นอัลกอริทึม</string>
+				<key>Title</key>
+				<string>อัลกอริทึม</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ค่า input ที่ส่งผ่านไปในฟังก์ชั่นเพื่อปรับแต่งลักษณะการทำงานของฟังก์ชั่น ตัวอย่างเช่น ในการเรียกใช้ฟังก์ชั่น `move(distance: 3)` ตัวเลข `3` คืออาร์กิวเมนต์ที่กำหนดจำนวนช่องในการเคลื่อนที่</string>
+				<key>Title</key>
+				<string>อาร์กิวเมนต์</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ต่างๆ เช่น `+`, `-`, `*` หรือ `/` ที่ใช้ในการคำนวณทางคณิตศาสตร์ขั้นพื้นฐานกับตัวเลขตั้งแต่หนึ่งตัวขึ้นไป ตัวอย่างเช่น  `42 / 7` และ `17 - 5` ก็ใช้ตัวดำเนินการคำนวณ</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการคำนวณ</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>คอลเลกชั่นที่จัดเก็บรายการประเภทเดียวกันโดยเรียงตามลำดับรายการเดียวกันอาจปรากฏได้หลายครั้งในตำแหน่งที่แตกต่างกัน ตัวอย่างเช่น `highScores = [37, 34, 29, 29, 26]` เป็นอาร์เรย์ของจำนวนเต็ม</string>
+				<key>Title</key>
+				<string>อาร์เรย์</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>การทำงานที่กำหนดค่าของตัวแปรหรือค่าคงที่</string>
+				<key>Title</key>
+				<string>การกำหนดค่า</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ `=` ที่ใช้ในการตั้งค่าของตัวแปร ตัวอย่างเช่น `greeting = "สวัสดี"` จะตั้งค่า `greeting` เป็น “สวัสดี”</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการกำหนดค่า</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ข้อผิดพลาดในโค้ดที่ป้องกันไม่ให้แอปพลิเคชันทำงานตามที่คาดไว้ 
+</string>
+				<key>Title</key>
+				<string>บั๊ก</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สั่งโปรแกรมให้รันฟังก์ชั่น ตัวอย่างเช่น การเรียกใช้ฟังก์ชั่น `moveForward()` ในโค้ดของคุณจะสั่งให้โปรแกรมดำเนินการการทำงานที่กำหนดในฟังก์ชั่นนั้น</string>
+				<key>Title</key>
+				<string>เรียกใช้</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>การเขียนคำสั่ง โครงสร้างโค้ด และอัลกอริทึมเพื่อสร้างโปรแกรมคอมพิวเตอร์
+</string>
+				<key>Title</key>
+				<string>การเขียนโค้ด</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>โค้ดที่แจ้งให้แอปพลิเคชันดำเนินการทำงานบางอย่าง 
+</string>
+				<key>Title</key>
+				<string>คำสั่ง</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์อย่างเช่น `==`, `!=`, `&lt;`, `&gt;`, `&lt;=` หรือ `&gt;=` ที่ใช้เปรียบเทียบระหว่างค่าสองค่า คุณสามารถใช้ตัวดำเนินการเปรียบเทียบในเงื่อนไขของชุดคำสั่ง `if` หรือ `while` loop ได้ เพื่อให้ได้ค่าบูลีนที่ระบุว่าการเปรียบเทียบเป็น `true` หรือไม่ ตัวอย่างเช่น `6 &gt; 8` เปรียบเทียบ `6` กับ `8` แล้วจะได้ `false`</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการเปรียบเทียบ</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ขั้นตอนของการรวมส่วนเล็กๆ ของโปรแกรมเพื่อแก้ไขปัญหาที่ใหญ่กว่า 
+</string>
+				<key>Title</key>
+				<string>การทำงานร่วมกัน</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ตัวดำเนินการที่นำเท่ากับ (การกำหนดค่าของตัวแปร) มารวมกับการดำเนินการอย่างอื่น เช่น การบวกหรือการลบ ตัวอย่างเช่น ถ้าค่าปัจจุบันของ `a` คือ `1` การใช้ `a += 3` จะบวก `3` กับ `1` แล้วกำหนดผลลัพธ์ให้เท่ากับ `a` ดังนั้นค่าของ `a` ในตอนนี้คือ `4`</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการกำหนดค่าแบบผสม</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>โค้ดที่จะรันก็ต่อเมื่อเงื่อนไขบางประการเป็นไปตามที่กำหนด ตัวอย่างเช่น ชุดคำสั่ง `if` และ `while` loop มีโค้ดที่ทำงานผ่านเงื่อนไข ซึ่งจะรันก็ต่อเมื่อเงื่อนไข if หรือ while เป็น `true` เท่านั้น </string>
+				<key>Title</key>
+				<string>โค้ดที่ทำงานผ่านเงื่อนไข</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>คอนเทนเนอร์ที่มีชื่อซึ่งจัดเก็บค่าที่ไม่สามารถเปลี่ยนแปลงได้</string>
+				<key>Title</key>
+				<string>ค่าคงที่</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ค้นหาและแก้ไขข้อผิดพลาดในโค้ดที่ป้องกันไม่ให้แอปพลิเคชันทำงานอย่างถูกต้อง </string>
+				<key>Title</key>
+				<string>แก้บั๊ก</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ส่วนของโค้ดที่สร้างสิ่งใหม่ในแอปพลิเคชันของคุณ เช่น ฟังก์ชั่น ตัวแปร หรือประเภทที่กำหนดเอง ตัวอย่างเช่น `let planet = "Earth"` ประกาศค่าคงที่ใหม่ `planet` และให้ค่าเป็น `"Earth"`</string>
+				<key>Title</key>
+				<string>การประกาศ</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ขั้นตอนของการแยกปัญหาใหญ่ๆ ให้เล็กลง ให้เป็นชิ้นส่วนที่สามารถจัดการได้ง่ายยิ่งขึ้น </string>
+				<key>Title</key>
+				<string>การแยกย่อย</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ระบุค่าหรือการทำงานที่ชัดเจนของชิ้นส่วนของโค้ดที่สร้างใหม่ เช่น ฟังก์ชั่น ตัวแปร หรือประเภทแบบกำหนดเอง ตัวอย่างเช่น คุณกำหนดฟังก์ชั่นโดยการระบุชุดคำสั่งภายในฟังก์ชั่นเพื่อสั่งให้ฟังก์ชั่นทำงาน</string>
+				<key>Title</key>
+				<string>กำหนด</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>รูปแบบหนึ่งของไวยากรณ์ที่ใช้เข้าถึงคุณสมบัติหรือเรียกใช้วิธีการของชื่อแทนประเภท ตัวอย่างเช่น `expert.toggleSwitch()` เรียกใช้ `toggleSwitch()` method บนชื่อแทนประเภท `expert` </string>
+				<key>Title</key>
+				<string>จุด</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกสุดท้ายของโค้ดในชุดคำสั่ง `if` บล็อกของ `else` จะรันถ้าเงื่อนไขทั้งหมดที่อยู่ในชุดคำสั่ง `if` เป็น `false` </string>
+				<key>Title</key>
+				<string>บล็อก else</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกของโค้ดในชุดคำสั่ง `if` ที่ใช้ตรวจสอบเงื่อนไขที่ไม่ถูกตรวจสอบโดยบล็อก `if` หรือ บล็อก `else if` อื่นๆ</string>
+				<key>Title</key>
+				<string>บล็อก else if</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ประเภทที่กำหนดชุดของค่าที่ไม่ซ้ำกัน แต่สัมพันธ์กัน ซึ่งเรียกว่า *เคสการกำหนดตัวแปรขึ้นมาใช้เอง* ตัวอย่างเช่น การกำหนดตัวแปรขึ้นมาใช้เอง `Direction` จะกำหนดเคสสำหรับทิศทางเข็มทิศ `north`, `south`, `east` และ `west` เมื่อกำหนดตัวแปรขึ้นมาใช้เองแล้วกำหนดให้เท่ากับตัวแปรหรือค่าคงที่ คุณจะต้องเลือกเพียงเคสเดียวจากเคสทั้งหมดเสมอ เช่น `let compassDirection: Direction = .north`</string>
+				<key>Title</key>
+				<string>การกำหนดตัวแปรขึ้นมาใช้เอง</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกของโค้ดที่ซ้ำกัน ซึ่งรันตามจำนวนครั้งที่กำหนด </string>
+				<key>Title</key>
+				<string>for loop</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ชุดคำสั่งที่มีชื่อซึ่งสามารถรันได้ในเวลาที่ต้องการ</string>
+				<key>Title</key>
+				<string>ฟังก์ชั่น</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกแรกของโค้ดในชุดคำสั่ง `if` บล็อก `if` จะรันถ้าเงื่อนไขที่อยู่ในชุดคำสั่ง `if` เป็น `true` </string>
+				<key>Title</key>
+				<string>บล็อก if</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>โครงสร้างโค้ดที่ใช้รันโค้ดโดยอิงจากค่าของเงื่อนไขตั้งแต่หนึ่งรายการขึ้นไป โค้ดบล็อกแรกในชุดคำสั่ง `if` คือบล็อก `if` และในชุดคำสั่ง `if` ยังอาจมีบล็อกอื่นๆ ที่ให้การตรวจสอบเพิ่มเติมอีกด้วย เช่น บล็อก `else` และ บล็อก `else if`</string>
+				<key>Title</key>
+				<string>ชุดคำสั่ง if</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ตัวเลขที่แสดงถึงตำแหน่งของรายการในอาร์เรย์ </string>
+				<key>Title</key>
+				<string>ดัชนี</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ข้อผิดพลาดที่เกิดจากการพยายามเข้าถึงอาร์เรย์โดยใช้ดัชนีที่อยู่นอกระยะของอาร์เรย์นั้น ตัวอย่างเช่น ดัชนี `2` อยู่นอกระยะของอาร์เรย์ต่อไปนี้: `[17, 42]`</string>
+				<key>Title</key>
+				<string>ข้อผิดพลาดดัชนีอยู่นอกระยะ</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>การสร้างชื่อแทนประเภทของประเภทใหม่ ซึ่งรวมถึงการตั้งค่าเริ่มต้นของคุณสมบัติของตัวแปรของประเภท </string>
+				<key>Title</key>
+				<string>การสร้างค่าเริ่มต้น</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกของโค้ด (loop) ที่ซ้ำกัน ซึ่งซ้อนอยู่ใน (outer) loop อื่น</string>
+				<key>Title</key>
+				<string>inner loop</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ค่าของประเภทบางประเภท ตัวอย่างเช่น ใน `let greenPortal = Portal()` จะมี `greenPortal` ที่เป็นชื่อแทนประเภทของประเภท `Portal`</string>
+				<key>Title</key>
+				<string>ชื่อแทนประเภท</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>การทำขั้นตอนซ้ำ เช่น การดำเนินการการทำงานเดียวกันบนรายการแต่ละรายการในอาร์เรย์</string>
+				<key>Title</key>
+				<string>การทำซ้ำ</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ตัวแปรที่มีการประกาศภายในฟังก์ชั่น, loop หรือชุดคำสั่งอื่นๆ โดยตัวแปรภายในจะไม่สามารถเข้าถึงได้จากภายนอกโค้ดที่มีการกำหนดตัวแปรเหล่านั้นไว้</string>
+				<key>Title</key>
+				<string>ตัวแปรภายใน</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ (`&amp;&amp;`) ที่รวมค่าบูลีนสองค่าเข้าด้วยกัน ซึ่งทั้งสองค่าจะต้องเป็น true เพื่อให้โค้ดทั้งหมดเป็น true ตัวอย่างเช่น `a &amp;&amp; b` จะเป็น true เมื่อ `a` และ `b` เป็น `true`</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการตรรกะ AND</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ (`!`) ที่กลับค่าบูลีนของส่วนของโค้ด ตัวอย่างเช่น ถ้า `a` เป็น `true` ดังนั้น `!a` ก็จะเป็น `false`</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการตรรกะ NOT</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ (||) ที่รวมค่าบูลีนสองค่าเข้าด้วยกัน โดยจะต้องมีอย่างน้อยหนึ่งค่าที่เป็นจริงเพื่อให้โค้ดทั้งหมดเป็นจริง ตัวอย่างเช่น a || b จะเป็นจริงถ้า a หรือ b เป็นจริง (หรือเมื่อทั้งสองค่าเป็นจริง) 
+</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการตรรกะ OR</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ต่างๆ เช่น `&amp;&amp;`, `||` หรือ `!` ที่แก้ไขหรือรวมค่าตรรกะบูลีน `true` และ `false`</string>
+				<key>Title</key>
+				<string>ตัวดำเนินการตรรกะ</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกของโค้ดที่มีการเรียกใช้ซ้ำตามจำนวนครั้งที่กำหนด (เช่น `for` loop) หรือจนกว่าจะตรงตามเงื่อนไข (เช่น `while` loop)</string>
+				<key>Title</key>
+				<string>loop</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ฟังก์ชั่น หรือชุดของคำสั่ง ที่มีการกำหนดภายใน[ประเภท](glossary://type)</string>
+				<key>Title</key>
+				<string>วิธีการ</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>วางบล็อกของโค้ด (หรือ loop) ที่ทำซ้ำรายการหนึ่งภายในอีกรายการหนึ่ง</string>
+				<key>Title</key>
+				<string>การซ้อนโค้ด</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>สัญลักษณ์ เช่น `+`, `-` หรือ `&amp;&amp;` ที่แสดงถึงการทำงานกับค่าตั้งแต่หนึ่งค่าขึ้นไป ตัวอย่างเช่น ใน `1 + 2` ตัวดำเนินการบวก (`+`) จะบวกตัวเลข `1` กับ `2` </string>
+				<key>Title</key>
+				<string>ตัวดำเนินการ</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกของโค้ด (loop) ที่ซ้ำกัน ซึ่งมี (inner) loop อื่นอยู่ภายใน</string>
+				<key>Title</key>
+				<string>outer loop</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ชื่อของค่า input ของฟังก์ชั่นที่ใช้ในการกำหนดฟังก์ชั่น ตัวอย่างเช่น ใน `move(distance: Int)` นั้น `distance` เป็นพารามิเตอร์ที่ใช้ค่าประเภท Int</string>
+				<key>Title</key>
+				<string>พารามิเตอร์</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ชุดของข้อกำหนดหรือข้อมูลที่ซ้ำกัน 
+</string>
+				<key>Title</key>
+				<string>รูปแบบ</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ตัวแปร (คอนเทนเนอร์ที่มีชื่อและจัดเก็บค่า) ที่มีการกำหนดภายในประเภท</string>
+				<key>Title</key>
+				<string>คุณสมบัติ</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>คำอธิบายอัลกอริทึมที่คนทั่วไปสามารถอ่านเข้าใจได้ ซึ่งปกติจะเขียนโดยใช้ภาษาและโค้ดที่ใช้ในชีวิตประจำวัน 
+</string>
+				<key>Title</key>
+				<string>ซูโดโค้ด</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ลักษณะเฉพาะของโค้ดที่ทำให้สามารถใช้โค้ดได้ในสถานการณ์ที่แตกต่างกันภายในโปรแกรม 
+</string>
+				<key>Title</key>
+				<string>ความสามารถในการนำมาใช้ใหม่</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>กฎที่มักใช้เพื่อสร้างอัลกอริทึมสำหรับแก้ปัญหาเขาวงกต ซึ่งจะช่วยพาตัวละครออกจากเขาวงกตโดยให้เคลื่อนที่ชิดกำแพงทางด้านขวามือของตัวละคร</string>
+				<key>Title</key>
+				<string>กฎมือขวา</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>ข้อมูลของตัวแปร โปรแกรม หรือระบบที่ถูกจัดเก็บในเวลาที่กำหนด</string>
+				<key>Title</key>
+				<string>สถานะ</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>โครงสร้าง เช่น loop หรือชุดคำสั่ง `if` ที่จัดระเบียบโค้ดในโปรแกรม</string>
+				<key>Title</key>
+				<string>ชุดคำสั่ง</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>กฎสำหรับการเขียนโค้ดที่คอมพิวเตอร์สามารถเข้าใจและรันได้</string>
+				<key>Title</key>
+				<string>ไวยากรณ์</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>การจัดกลุ่มคุณสมบัติ (คุณสมบัติเด่น) และวิธีการ (ลักษณะการทำงาน) ที่มีชื่อของข้อมูลประเภทหนึ่ง</string>
+				<key>Title</key>
+				<string>ประเภท</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>คอนเทนเนอร์ที่มีชื่อซึ่งจัดเก็บค่าที่สามารถเปลี่ยนแปลงได้ </string>
+				<key>Title</key>
+				<string>ตัวแปร</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>บล็อกของโค้ดที่จะรันตราบใดที่เงื่อนไขที่กำหนดเป็น `true` เมื่อเงื่อนไขเปลี่ยนเป็น `false` แล้ว loop นั้นจะหยุดรัน </string>
+				<key>Title</key>
+				<string>while loop</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>เค้าโครงของวัตถุ เช่น เพชร สวิตช์ หรือบล็อก ในโลกปริศนา โดยจะมีการใช้ไวร์เฟรมเพื่อระบุความเป็นไปได้ที่วัตถุจะแสดงในลักษณะสุ่มทุกๆ ครั้งที่มีการรันปริศนา</string>
+				<key>Title</key>
+				<string>ไวร์เฟรม</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

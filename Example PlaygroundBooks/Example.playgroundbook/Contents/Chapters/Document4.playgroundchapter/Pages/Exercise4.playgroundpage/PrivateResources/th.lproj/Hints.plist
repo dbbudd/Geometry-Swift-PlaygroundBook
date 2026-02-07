@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>มี [ฟังก์ชั่น](glossary://function)ที่ตั้งค่าให้คุณแล้ว ดังนั้นสิ่งที่คุณต้องทำคือวางชุดคำสั่ง `if else` ภายในฟังก์ชั่นนั้น</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

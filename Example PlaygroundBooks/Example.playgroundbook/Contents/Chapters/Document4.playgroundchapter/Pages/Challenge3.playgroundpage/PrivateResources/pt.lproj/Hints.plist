@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Ao longo do caminho central, sempre que você alcança uma joia, uma escada leva para baixo à direita. Sempre que você alcança um controle fechado, há outra joia à esquerda.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

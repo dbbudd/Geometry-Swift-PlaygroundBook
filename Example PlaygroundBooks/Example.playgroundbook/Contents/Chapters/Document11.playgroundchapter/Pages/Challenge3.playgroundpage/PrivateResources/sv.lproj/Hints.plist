@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Prova att använda [pseudokod](glossary://pseudocode) för att kartlägga hur du vill lösa det här pusslet. Tänk igenom vilka färdigheter du kan använda och hitta en utgångspunkt. När strategin är klar börjar du skriva och testa koden.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

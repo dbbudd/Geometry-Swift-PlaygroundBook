@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Prova a usare lo [pseudocodice](glossary://pseudocode) per identificare il modo in cui vuoi completare il livello. Rifletti sulle possibili tecniche da usare e trova un punto di partenza. Quando hai individuato una strategia, scrivi il codice relativo e provalo.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

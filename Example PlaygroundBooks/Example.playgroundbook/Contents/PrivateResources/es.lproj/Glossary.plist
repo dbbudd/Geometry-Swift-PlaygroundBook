@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Tipo de dato que solo puede tener uno de dos valores: `true` —verdadero— o `false` —falso—. Por ejemplo, `9 &lt; 7` devuelve un valor booleano `false` porque `9` no es menor que `7`.</string>
+				<key>Title</key>
+				<string>booleano</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Tipo de dato que almacena un número entero (es decir, un número que carece de decimales), como `10` o `-42`. </string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Tipo de dato que almacena una sucesión de caracteres, como `"hola, mundo"` o `"gatitos bailarines"`.</string>
+				<key>Title</key>
+				<string>cadena</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Lenguaje de programación de Apple. Se utiliza para escribir apps para el iPhone, el iPad, el Mac, el Apple Watch y el Apple TV. </string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Conjunto de instrucciones o reglas paso a paso para resolver un problema dado. Por ejemplo, una lista de pasos para preparar un café podría considerarse un algoritmo.</string>
+				<key>Title</key>
+				<string>algoritmo</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Valor de entrada o comienzo dentro de una función que permite personalizar su comportamiento. Por ejemplo, en la llamada a la función `move(distance: 3)`, `3` es un argumento que especifica el número de veces que hay que desplazarse.</string>
+				<key>Title</key>
+				<string>argumento</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo, como `+`, `-`, `*` o `/`, que realiza una operación matemática básica sobre uno o más números. Por ejemplo, las expresiones `42 / 7` y `17 - 5` utilizan operadores aritméticos.</string>
+				<key>Title</key>
+				<string>operador aritmético</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Colección que almacena una lista ordenada de elementos del mismo tipo. Un elemento puede aparecer varias veces en distintas posiciones. Por ejemplo, `highScores = [37, 34, 29, 29, 26]` —puntuaciones altas— sería un vector de enteros.</string>
+				<key>Title</key>
+				<string>vector</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Acción que establece el valor de una variable o de una constante.</string>
+				<key>Title</key>
+				<string>asignación</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo `=` que sirve para establecer el valor de una variable. Por ejemplo, `saludo = "hola"` asigna el valor "hola" a la variable `saludo`.</string>
+				<key>Title</key>
+				<string>operador de asignación</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Error en el código que impide que una aplicación se ejecute como se supone que debería hacerlo. 
+</string>
+				<key>Title</key>
+				<string>error</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Decir a un programa que ejecute una función. Por ejemplo, llamar a la función `moveForward()` en el código le dice al programa que ejecute las acciones definidas en esa función.</string>
+				<key>Title</key>
+				<string>llamada</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Acción de componer comandos, estructuras de códigos y algoritmos para crear un programa informático.</string>
+				<key>Title</key>
+				<string>programar</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Código que dice a una aplicación que realice una acción determinada. 
+</string>
+				<key>Title</key>
+				<string>comando</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo, como `==`, `!=`, `&lt;`, `&gt;`, `&lt;=` o `&gt;=`, que compara dos valores. El operador de comparación puede utilizarse en una condición de una sentencia `if` —si— o en un bucle `while` para devolver un valor booleano que indique si la comparación es `true` —verdadera—. Por ejemplo, la expresión `6 &gt; 8` compara `6` con `8` y devuelve `false` —falsa—.</string>
+				<key>Title</key>
+				<string>operador de comparación</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>El proceso de combinar fragmentos más pequeños de un programa para resolver un problema más grande. 
+</string>
+				<key>Title</key>
+				<string>composición</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Operador que combina una operación de asignación (establecer el valor de una variable) con una operación aritmética, como una suma o una resta. Por ejemplo, si el valor actual de `a` es `1`, la expresión `a += 3` sumaría `3` y `1` y asignaría el resultado a `a`, de modo que el valor de `a` pasaría a ser `4`.</string>
+				<key>Title</key>
+				<string>operador de asignación compuesto</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Código que solo se ejecuta cuando se cumplen determinadas condiciones. Por ejemplo, las sentencias `if` —si— y los bucles `while` contienen código condicional que solo se ejecuta si o mientras una condición sea `true` —verdadera—.</string>
+				<key>Title</key>
+				<string>código condicional</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Contenedor que tiene un nombre y almacena un valor que no se puede cambiar.</string>
+				<key>Title</key>
+				<string>constante</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Encontrar y corregir errores de código que impiden que una aplicación se ejecute correctamente. </string>
+				<key>Title</key>
+				<string>depurar</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Fragmento de código que crea algo nuevo en la aplicación, como puede ser una función, una variable o un tipo de dato personalizado. Por ejemplo, `let planeta = “Tierra”` declara una constante nueva, `planeta`, y le asigna el valor `“Tierra”`.</string>
+				<key>Title</key>
+				<string>declaración</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>El proceso de dividir un problema complejo en problemas más pequeños y fáciles de resolver.</string>
+				<key>Title</key>
+				<string>descomposición</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Acción de proporcionar el valor o comportamiento explícito de un bloque de código recién creado, como puede ser una función, una variable o un tipo de dato personalizado. Por ejemplo, defines una función proporcionando un conjunto de comandos dentro de la función para decirle lo que tiene que hacer.</string>
+				<key>Title</key>
+				<string>definir</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Forma de sintaxis que sirve para acceder a las propiedades o llamar a los métodos de una instancia. Por ejemplo, `expert.toggleSwitch()` —experto activa/desactiva interruptor— llama al método `toggleSwitch()` —activar/desactivar interruptor— en la instancia `expert` —experto—. </string>
+				<key>Title</key>
+				<string>notación punto</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>El último bloque de código de una sentencia `if` —si—. El bloque `else` —si_no— se ejecuta si todas las condiciones de la sentencia `if` son `false` —falsas—. </string>
+				<key>Title</key>
+				<string>bloque else</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bloque de código dentro de una sentencia `if` —si— que sirve para verificar una condición no verificada por el bloque `if` o cualquier otro bloque `else if` —si_no-si—.</string>
+				<key>Title</key>
+				<string>bloque else if</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Tipo de dato que define un conjunto de valores únicos, pero relacionados, llamados *casos de enumeración*. Por ejemplo, la enumeración `Direction` —dirección— definiría casos para cada punto cardinal: `north` —norte—, `south` —sur—, `east` —este— y `west` —oeste—. Al asignar una enumeración a una variable o a una constante, siempre se elige uno de sus casos; por ejemplo, `let compassDirection: Direction = .north`.</string>
+				<key>Title</key>
+				<string>enumeración</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bloque de código repetitivo que se ejecuta un número de veces determinado.</string>
+				<key>Title</key>
+				<string>bucle for</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Conjunto de comandos con un nombre que pueden ejecutarse siempre que sea necesario.</string>
+				<key>Title</key>
+				<string>función</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>El primer bloque de código de una sentencia `if` —si—. El bloque `if` se ejecuta si la condición de la sentencia `if` es `true` —verdadera—. </string>
+				<key>Title</key>
+				<string>bloque if</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Estructura de código que sirve para ejecutar código en base al valor de una o más condiciones. El primer bloque de código de una sentencia `if` —si— es el bloque `if`. Una sentencia `if` también puede contener otros bloques que generen evaluaciones adicionales, como un bloque `else` —si_no— o un bloque `else if` —si_no-si—.</string>
+				<key>Title</key>
+				<string>sentencia if</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Número que representa la posición de un elemento en un vector. </string>
+				<key>Title</key>
+				<string>índice</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Error provocado al intentar acceder a un vector utilizando un índice que está fuera de su rango. Por ejemplo, el índice `2` está fuera del rango del siguiente vector: `[17, 42]`.</string>
+				<key>Title</key>
+				<string>error de índice fuera de rango</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Acción de crear una instancia nueva de un tipo de dato, lo que incluye establecer valores iniciales para cualquiera de las propiedades de ese tipo.</string>
+				<key>Title</key>
+				<string>inicialización</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bloque de código repetitivo (un bucle) que está anidado dentro de otro bucle (externo).</string>
+				<key>Title</key>
+				<string>bucle interno</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Valor de un tipo de dato concreto. Por ejemplo, en `let greenPortal = Portal()`, `greenPortal` —portal verde— es una instancia de tipo `Portal`.</string>
+				<key>Title</key>
+				<string>instancia</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Acción de repetir un proceso; por ejemplo, realizar la misma acción en todos los elementos de un vector.</string>
+				<key>Title</key>
+				<string>iteración</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Variable declarada dentro de una función, bucle o cualquier otra sentencia. No es posible acceder a las variables locales desde fuera del código en el que están definidas.</string>
+				<key>Title</key>
+				<string>variable local</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo (`&amp;&amp;`) que combina dos valores booleanos donde ambos deben ser verdaderos para que el resultado sea verdadero. Por ejemplo, `a &amp;&amp; b` solo es verdadero si tanto `a` como `b` son `true` —verdaderos—.</string>
+				<key>Title</key>
+				<string>operador lógico Y</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo (`!`) que invierte el valor booleano de un fragmento de código. Por ejemplo, si `a` es `true` —verdadero—, entonces `!a` es `false` —falso—.</string>
+				<key>Title</key>
+				<string>operador lógico NO</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo (||) que combina dos valores booleanos donde solo uno de ellos debe ser verdadero para que el resultado sea verdadero. Por ejemplo, a || b es verdadero si uno de los dos, a o b, es verdadero (o si ambos son verdaderos). 
+</string>
+				<key>Title</key>
+				<string>operador lógico O</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo, como `&amp;&amp;`, `||` o `!`, que modifica o combina los valores booleanos `true` —verdadero— y `false` —falso—.</string>
+				<key>Title</key>
+				<string>operador lógico</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bloque de código que se repite un número de veces determinado (por ejemplo, un bucle `for`) o hasta que se cumpla cierta condición (por ejemplo, un bucle `while`).</string>
+				<key>Title</key>
+				<string>bucle</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Función, o conjunto de comandos, definida dentro de un [tipo de datos](glossary://type).</string>
+				<key>Title</key>
+				<string>método</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Acción de colocar un bloque de código repetitivo (o bucle) dentro de otro.</string>
+				<key>Title</key>
+				<string>anidamiento</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Símbolo, como `+`, `-` o `&amp;&amp;`, que representa una acción en uno o más valores. Por ejemplo, en `1 + 2`, el operador aditivo (`+`) suma los números `1` y `2`. </string>
+				<key>Title</key>
+				<string>operador</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bloque de código repetitivo (un bucle) que contiene otro bucle (interno).</string>
+				<key>Title</key>
+				<string>bucle externo</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Nombre de un valor de entrada o comienzo de una función que se utiliza en la definición de la función. Por ejemplo, en `move(distance: Int)`, `distance` es un parámetro que toma un valor de tipo Int.</string>
+				<key>Title</key>
+				<string>parámetro</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Conjunto de cosas o de datos que se repite. 
+</string>
+				<key>Title</key>
+				<string>patrón</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Una variable (un contenedor que tiene un nombre y almacena un valor) definida dentro de un tipo de dato.</string>
+				<key>Title</key>
+				<string>propiedad</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Descripción de un algoritmo comprensible por humanos, por lo general escrito en una mezcla de lenguaje natural y código.</string>
+				<key>Title</key>
+				<string>pseudocódigo</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Propiedad del código que permite utilizarlo en distintas situaciones dentro de un mismo programa. 
+</string>
+				<key>Title</key>
+				<string>reutilización o reusabilidad</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Una regla que suele servir para diseñar algoritmos para salir de laberintos y que consiste en que un personaje recorra un laberinto sin separarse nunca de la pared que está a su derecha.</string>
+				<key>Title</key>
+				<string>regla de la mano derecha</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>La información relativa a una variable, programa o sistema almacenada en un momento dado.</string>
+				<key>Title</key>
+				<string>estado</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Estructura, como puede ser un bucle o sentencia `if` —si—, que organiza el código de un programa.</string>
+				<key>Title</key>
+				<string>sentencia</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Conjunto de reglas para escribir código que los ordenadores pueden interpretar y ejecutar.</string>
+				<key>Title</key>
+				<string>sintaxis</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Agrupación de propiedades (características) y métodos (comportamientos) de una clase de datos designada mediante un nombre.</string>
+				<key>Title</key>
+				<string>tipo</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Contenedor que tiene un nombre y almacena un valor que se puede cambiar. </string>
+				<key>Title</key>
+				<string>variable</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bloque de código que se ejecuta mientras una condición dada sea `true` —verdadera—. Cuando la condición cambia a `false` —falsa—, el bucle deja de ejecutarse.</string>
+				<key>Title</key>
+				<string>bucle while</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>El contorno de un elemento, como puede ser una gema, un interruptor o un bloque, del rompecabezas. Una malla de alambre se utiliza para indicar la posibilidad de que el elemento pueda aparecer aleatoriamente cada vez que el rompecabezas se ejecuta.</string>
+				<key>Title</key>
+				<string>malla de alambre</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

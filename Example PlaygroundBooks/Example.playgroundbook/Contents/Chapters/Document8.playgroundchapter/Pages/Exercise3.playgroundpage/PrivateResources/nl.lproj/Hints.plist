@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>De code moet worden uitgevoerd zolang de waarde van `gemCounter` kleiner is dan 7. Voor het schrijven van de voorwaarde in je `while`-lus moet je de [vergelijkingsoperator](glossary://comparison%20operator) `&lt;` gebruiken.
+
+(gemCounter = teller edelstenen)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

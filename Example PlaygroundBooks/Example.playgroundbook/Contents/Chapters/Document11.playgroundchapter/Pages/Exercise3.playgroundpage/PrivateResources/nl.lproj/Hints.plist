@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Je kunt een tegel aanraken om de coördinaten ervan weer te geven. Ga naar de locatie waar je wilt dat de expert begint en raak de tegel aan om te zien welke kolom- en rijwaarde je moet doorgeven aan de methode `place`.
+
+(place = plaats)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

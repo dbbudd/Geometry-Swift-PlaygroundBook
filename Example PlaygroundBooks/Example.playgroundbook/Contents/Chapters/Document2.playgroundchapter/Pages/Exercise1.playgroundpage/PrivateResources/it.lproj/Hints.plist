@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Per iniziare, avanza fino alla casella in cui il personaggio deve girare a destra, quindi usa una combinazione di comandi esistenti per girare in quella direzione.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Se giri a sinistra il numero di volte necessario, alla fine avrai fatto un giro completo.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

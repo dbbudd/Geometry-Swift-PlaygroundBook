@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>[宣告](glossary://declaration)一個[變數](glossary://variable)來追蹤你收集了多少顆寶石，並與 `totalGems` [常數](glossary://constant)做比較，以決定何時停止收集。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

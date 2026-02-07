@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>เมื่อ**ไม่มี**เพชรบนแพลตฟอร์มด้านบนสุด บันไดจะขยายจากช่องนั้น ใช้เงื่อนไข \"ถ้าตัวละครของคุณไม่ได้อยู่บนช่องที่มีเพชร\" เพื่อกำหนดสิ่งที่ควรทำในสถานการณ์เช่นนั้น</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

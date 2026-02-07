@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>首先，讓你的角色穿過藍色傳送門，到達傳送門另一頭的寶石處。你可能需要關閉藍色傳送門才能取得兩顆寶石。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

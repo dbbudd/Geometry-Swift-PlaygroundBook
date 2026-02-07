@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>擁有 `true` 值或 `false` 值的類型。例如，`9 &lt; 7` 傳回布林值 `false`，因為 `9` 不小於 `7`。</string>
+				<key>Title</key>
+				<string>布林值</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於儲存整數（無小數的數字）的類型，例如 `10` 或 `-42`。</string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於儲存一系列角色的類型，如 `"hello, world"` 或 `"dancing kittens"`。</string>
+				<key>Title</key>
+				<string>String</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Apple 的程式設計語言，用於編寫 iPhone、iPad、Mac、Apple Watch 和 Apple TV 的 App。</string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於解決問題的一組依循指示或規則。例如，泡茶的一系列步驟可視為一種演算法。</string>
+				<key>Title</key>
+				<string>演算法</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>傳入函數以自訂其動作的輸入值。例如，在名為 `move(distance: 3)` 的函數中，`3` 是用來指定移動多少空間的引數。</string>
+				<key>Title</key>
+				<string>引數</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>如 `+`、`-`、`*` 或 `/` 的符號，用來依據一個或多個數字執行基本數學運算。例如 `42 / 7` 和 `17 - 5` 使用了算術運算子。</string>
+				<key>Title</key>
+				<string>算術運算子</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>儲存依序排列之同類項目的集合。同一個項目可以在不同的位置出現多次。例如 `highScores = [37, 34, 29, 29, 26]` 是一個整數陣列。</string>
+				<key>Title</key>
+				<string>陣列</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>設定變數或常數值的動作。</string>
+				<key>Title</key>
+				<string>指定值</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`=` 符號用於設定變數的值。例如 `greeting = "hello"` 會將 `greeting` 的值設為 "hello"。</string>
+				<key>Title</key>
+				<string>指定值運算子</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>程式碼中阻止應用程式按照預期執行的錯誤。 
+</string>
+				<key>Title</key>
+				<string>程式錯誤</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>指示程式來執行函數。例如，在程式碼中呼叫 `moveForward()` 會指示程式執行該函數中定義的動作。</string>
+				<key>Title</key>
+				<string>呼叫</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>編寫指令、程式碼架構和演算法以建立電腦程式的動作。
+</string>
+				<key>Title</key>
+				<string>程式設計</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>告訴應用程式要執行特定動作的程式碼。 
+</string>
+				<key>Title</key>
+				<string>指令</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>例如 `==`、`!=`、`&lt;`、`&gt;`、`&lt;=` 或 `&gt;=` 的符號，用於比較兩個值。比較運算子用於 `if` 語句或 `while` 迴圈的條件中，傳回的布林值表示比較結果是否為 `true`。例如，`6 &gt; 8` 將 `6` 和 `8` 進行比較，並傳回 `false`。</string>
+				<key>Title</key>
+				<string>比較運算子</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>合併程式的各個小部分進而解決大問題的過程。
+</string>
+				<key>Title</key>
+				<string>組合</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>合併指定值（設定變數的值）和另一個運算（如加法或減法）的運算子。例如，若 `a` 的現有值為 `1`，使用 `a += 3` 將在 `1` 的基礎上加 `3`，並將結果指定到 `a`，因此 `a` 現在的值為 `4`。</string>
+				<key>Title</key>
+				<string>複合指定值運算子</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>只有當滿足特定的條件時才會執行的程式碼。例如 `if` 語句和 `while` 迴圈包含只有在條件為 `true` 時才執行的條件碼。</string>
+				<key>Title</key>
+				<string>條件碼</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一種已命名的容器，用於儲存不可變值。</string>
+				<key>Title</key>
+				<string>常數</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>找出並修正程式碼中讓應用程式無法正確執行的問題。 </string>
+				<key>Title</key>
+				<string>除錯</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>在應用程式中建立新內容的一段程式碼，如函數、變數或自訂類型。例如 `let planet = "Earth"` 宣告一個新常數 `planet`，並給它一個 `"Earth"` 的值。</string>
+				<key>Title</key>
+				<string>宣告</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>將大問題分解成更易管理的小問題的過程。</string>
+				<key>Title</key>
+				<string>分解</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>為新建立的一段程式碼（如函數、變數或自訂類型）提供確切的值或動作。例如，透過在函數內提供一組指令來指示函數應該如何執行，藉此定義函數。</string>
+				<key>Title</key>
+				<string>定義</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一種語法形式，用於存取實例的屬性或呼叫實例的方法。例如 `expert.toggleSwitch()` 呼叫 `expert` 實例上的 `toggleSwitch()` 方法。</string>
+				<key>Title</key>
+				<string>點記法</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`if` 語句中的最後一個程式碼區塊。若 `if` 語句中的所有條件為 `false` 時，即會執行 `else` 區塊。</string>
+				<key>Title</key>
+				<string>else 區塊</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`if` 語句中的一個程式碼區塊，用於檢查未被 `if` 區塊或任何其他 `else if` 區塊檢查的條件。</string>
+				<key>Title</key>
+				<string>else if 區塊</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於定義一組稱為*列舉用例*的唯一但相關的值的類型。例如 `Direction` 列舉定義了每個基本方向的用例：`north`、`south`、`east` 和 `west`。將列舉指定到變數或常數時，會總是選擇其中一個用例；例如 `let compassDirection: Direction = .north`。</string>
+				<key>Title</key>
+				<string>列舉</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>執行一定次數的重複程式碼區塊。</string>
+				<key>Title</key>
+				<string>for 迴圈</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一組已命名的指令，需要時即可執行。</string>
+				<key>Title</key>
+				<string>函數</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`if` 語句中的第一個程式碼區塊。若 `if` 語句中的條件為 `true` 時，即會執行 `if` 區塊。</string>
+				<key>Title</key>
+				<string>if 區塊</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用來依據一個或多個條件值執行程式碼的程式碼結構。`if` 語句中的第一個程式碼區塊是 `if` 區塊。`if` 語句可能還包含進行額外檢查的其他區塊，例如 `else` 區塊和 `else if` 區塊。</string>
+				<key>Title</key>
+				<string>if 語句</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>代表陣列中項目位置的數字。</string>
+				<key>Title</key>
+				<string>索引</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>嘗試使用陣列範圍外的索引存取陣列時導致的錯誤。例如，索引 `2` 在陣列 `[17, 42]` 的範圍之外。</string>
+				<key>Title</key>
+				<string>索引越界錯誤</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>建立類型新實例的動作，包含為類型的任何屬性設定初始值。</string>
+				<key>Title</key>
+				<string>初始化</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>嵌套在另一個（外）迴圈中的重複程式碼區塊（迴圈）。</string>
+				<key>Title</key>
+				<string>內迴圈</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一個特定類型的值。例如，在 `let greenPortal = Portal()` 中，`greenPortal` 是 `Portal` 類型的實例。</string>
+				<key>Title</key>
+				<string>實例</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>重複某個過程的動作，如對陣列中的每個項目執行相同的動作。</string>
+				<key>Title</key>
+				<string>反覆運算</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>在函數、迴圈或其他語句內部宣告的變數。區域變數不能在其定義的程式碼外存取。</string>
+				<key>Title</key>
+				<string>區域變數</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於合併兩個布林值的符號 (`&amp;&amp;`)，兩個值必須都為真，整段程式碼才為真。例如，只有在 `a` 和 `b` 均為 `true` 時，`a &amp;&amp; b` 才為真。</string>
+				<key>Title</key>
+				<string>邏輯 AND 運算子</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於反轉一段程式碼的布林值的符號 (`!`)。例如，如果 `a` 為 `true`，則 `!a` 為 `false`。</string>
+				<key>Title</key>
+				<string>邏輯 NOT 運算子</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>用於合併兩個布林值的符號 (||)，其中有一個值必須為真，整段程式碼才為真。例如，只有在 a 或 b 為真（或均為真）時，a || b 才為真。</string>
+				<key>Title</key>
+				<string>邏輯 OR 運算子</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>例如 `&amp;&amp;`、`||` 或 `!` 的符號，用於修改或合併布林邏輯值 `true` 和 `false`。</string>
+				<key>Title</key>
+				<string>邏輯運算子</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>重複執行一定次數（如 `for` 迴圈）或重複執行直至滿足條件（如 `while` 迴圈）的程式碼區塊。</string>
+				<key>Title</key>
+				<string>迴圈</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>在[類型](glossary://type)內部定義的一種函數或一組指令。</string>
+				<key>Title</key>
+				<string>方法</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>在一個程式碼區塊（或迴圈）內部放置另一個重複的程式碼區塊（或迴圈）。</string>
+				<key>Title</key>
+				<string>嵌套</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>如 `+`、`-` 或 `&amp;&amp;` 的符號，代表在一個或多個值上的操作。例如，在 `1 + 2` 中，加法運算子 (`+`) 將數字 `1` 和 `2` 相加。</string>
+				<key>Title</key>
+				<string>運算子</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>包含另一個（內）迴圈的重複程式碼區塊（迴圈）。</string>
+				<key>Title</key>
+				<string>外迴圈</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>函數輸入值的名稱，用於函數的定義中。例如，在 `move(distance: Int)` 中，`distance` 是使用 Int 值的參數。</string>
+				<key>Title</key>
+				<string>參數</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一組重複的情況或資料。 
+</string>
+				<key>Title</key>
+				<string>模式</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>在類型內部定義的一種變數（用於儲存值的已命名的容器）。</string>
+				<key>Title</key>
+				<string>屬性</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>讓人類可以閱讀的演算法描述，通常混合日常用語和程式碼一起編寫。 
+</string>
+				<key>Title</key>
+				<string>虛擬碼</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>程式碼的一種特性，允許在程式中的不同情況下使用程式碼。 
+</string>
+				<key>Title</key>
+				<string>可重用性</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一種規則，通常用於產生破解迷宮的演算法，可引導你的角色順著其右側的牆壁走出迷宮。</string>
+				<key>Title</key>
+				<string>右手規則</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一定時間內變數、程式或系統所儲存的資訊。</string>
+				<key>Title</key>
+				<string>狀態</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>如迴圈或 `if` 語句的結構，用於組織程式中的程式碼。</string>
+				<key>Title</key>
+				<string>語句</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>編寫電腦可以理解並執行之程式碼的規則。</string>
+				<key>Title</key>
+				<string>語法</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>某種資料的屬性（特徵）和方法（動作）所構成的命名群組。</string>
+				<key>Title</key>
+				<string>類型</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>一種已命名的容器，用於儲存可變值。</string>
+				<key>Title</key>
+				<string>變數</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>指定條件為 `true` 時執行的一個程式碼區塊。當條件更改為 `false` 時，迴圈即停止執行。</string>
+				<key>Title</key>
+				<string>while 迴圈</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>關卡世界中項目（如寶石、開關或磚塊）的外框。線框用於指示每次關卡執行時可能隨機出現的項目。</string>
+				<key>Title</key>
+				<string>線框</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

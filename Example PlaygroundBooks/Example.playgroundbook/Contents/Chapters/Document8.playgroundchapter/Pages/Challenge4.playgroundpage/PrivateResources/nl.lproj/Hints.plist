@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Met `totalGems` wordt het totale aantal edelstenen aangegeven dat in het raadsel wordt gegenereerd. Gebruik deze [constante](glossary://constant) in combinatie met een [variabele](glossary://variable) voor het tellen van het aantal edelstenen om te bepalen wanneer je kunt stoppen met het verzamelen van edelstenen.
+
+(totalGems = totaal aantal edelstenen)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

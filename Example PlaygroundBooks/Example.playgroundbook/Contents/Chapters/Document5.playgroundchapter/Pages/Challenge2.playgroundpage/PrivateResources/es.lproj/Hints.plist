@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>En primer lugar, piensa en posibles soluciones para este reto. Utiliza código condicional y operadores lógicos para crear las reglas que debe seguir el personaje para desplazarse por el rompecabezas. Después, escribe el código y pruébalo. Si no lo consigues a la primera, vuelve a probar.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

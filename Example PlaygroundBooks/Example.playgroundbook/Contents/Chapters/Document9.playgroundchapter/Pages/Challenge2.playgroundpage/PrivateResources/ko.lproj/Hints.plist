@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>퍼즐을 자세히 살펴보고 지금까지 배운 기술 중 퍼즐을 해결하는 데 도움이 될만한 기술을 알아내 보세요. 해결 방법에는 여러 가지가 있습니다. 생각나는 아이디어를 실행해 보세요!</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

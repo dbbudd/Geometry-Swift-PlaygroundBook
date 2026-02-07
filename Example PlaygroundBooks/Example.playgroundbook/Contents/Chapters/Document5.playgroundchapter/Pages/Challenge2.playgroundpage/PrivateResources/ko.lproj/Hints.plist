@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저, 이번 도전 과제의 해결 방안을 생각해 보세요. 조건 코드와 논리 연산자를 사용하여 퍼즐 세상에서 캐릭터가 움직이는 방법에 대한 규칙을 생성합니다. 그런 다음, 코드를 작성해 테스트해 보세요! 한 번에 성공하지 못했어도 계속 시도해 보세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

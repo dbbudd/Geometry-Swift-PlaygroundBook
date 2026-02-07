@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Chapters</key>
+	<array>
+		<string>Document1.playgroundchapter</string>
+		<string>Document3.playgroundchapter</string>
+		<string>Document4.playgroundchapter</string>
+		<string>Document5.playgroundchapter</string>
+		<string>Document8.playgroundchapter</string>
+		<string>Document9.playgroundchapter</string>
+		<string>Document10.playgroundchapter</string>
+		<string>Document2.playgroundchapter</string>
+		<string>Document11.playgroundchapter</string>
+	</array>
+	<key>ContentIdentifier</key>
+	<string>com.apple.playgrounds.getstartedwithcode</string>
+	<key>ContentVersion</key>
+	<string>1.0.0</string>
+	<key>DeploymentTarget</key>
+	<string>ios14.0</string>
+	<key>DevelopmentRegion</key>
+	<string>en</string>
+	<key>EnableConsole</key>
+	<false/>
+	<key>ImageReference</key>
+	<string>HoC_2.png</string>
+	<key>MinimumSwiftPlaygroundsVersion</key>
+	<string>4.0</string>
+	<key>Name</key>
+	<string>Name</string>
+	<key>SupportsDarkMode</key>
+	<true/>
+	<key>SupportsMacIdiom</key>
+	<true/>
+	<key>SwiftVersion</key>
+	<string>5.8</string>
+	<key>UserAutoImportedAuxiliaryModules</key>
+	<array>
+		<string>Book</string>
+	</array>
+	<key>UserModuleMode</key>
+	<string>Disabled</string>
+	<key>Version</key>
+	<string>7.1</string>
+</dict>
+</plist>

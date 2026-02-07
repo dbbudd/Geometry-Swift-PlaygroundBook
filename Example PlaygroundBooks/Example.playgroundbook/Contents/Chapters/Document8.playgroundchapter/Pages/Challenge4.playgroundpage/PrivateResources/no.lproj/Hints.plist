@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>`totalGems` tilsvarer det totale antallet steiner som genereres i oppgaven. Bruk denne [konstanten](glossary://constant) sammen med en [variabel](glossary://variable) som teller steinene, til å finne ut når du skal slutte å hente steiner.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

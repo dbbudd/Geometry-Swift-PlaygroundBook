@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Per iniziare, devi definire la funzione `turnLock` (gira la serratura) perché usi il [parametro](glossary://parameter) `up` per comunicare all’esperto in quale direzione girare la serratura. Usa poi `numberOfTimes` (numero di volte) per impostare il numero di volte per cui girare la serratura.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

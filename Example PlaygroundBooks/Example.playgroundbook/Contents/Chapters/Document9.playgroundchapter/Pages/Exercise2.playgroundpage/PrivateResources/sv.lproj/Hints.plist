@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Börja med att teleportera figuren genom den blå portalen för att nå stenarna vid den motsatta portalen. Du kanske måste avaktivera den blå portalen för att komma åt båda stenarna.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

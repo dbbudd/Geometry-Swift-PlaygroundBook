@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저, 잠금 장치를 돌릴 방향을 전문가에게 알려주는 `up` [매개변수](glossary://parameter)를 사용하도록 `turnLock` 함수를 정의하세요. 그런 다음, `numberOfTimes`을 사용하여 잠금 장치를 돌릴 횟수를 설정합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

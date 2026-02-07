@@ -7,7 +7,7 @@
 //
 import SpriteKit
 
-public struct ShapeSK {
+@MainActor public struct ShapeSK {
     public let node = SKShapeNode()
     
     public init(pen: Pen){
@@ -18,3 +18,4 @@ public struct ShapeSK {
         self.node.lineWidth = pen.lineWidth
     }
 }
+

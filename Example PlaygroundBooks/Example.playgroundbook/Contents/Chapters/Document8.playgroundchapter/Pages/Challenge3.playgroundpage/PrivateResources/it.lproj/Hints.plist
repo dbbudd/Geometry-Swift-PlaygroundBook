@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Nella prima piattaforma apparirà un numero casuale di gemme. Controlla ogni casella e aumenta la variabile relativa al conteggio delle gemme per tenere traccia del numero di gemme che raccogli.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

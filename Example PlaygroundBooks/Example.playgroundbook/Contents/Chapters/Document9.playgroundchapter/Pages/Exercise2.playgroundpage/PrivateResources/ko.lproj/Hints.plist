@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저 반대쪽 포털에 있는 보석으로 이동할 수 있도록 파란색 포털을 통해 텔레포트합니다. 파란색 포털을 비활성화해야 보석 두 개를 모두 수집할 수 있어요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

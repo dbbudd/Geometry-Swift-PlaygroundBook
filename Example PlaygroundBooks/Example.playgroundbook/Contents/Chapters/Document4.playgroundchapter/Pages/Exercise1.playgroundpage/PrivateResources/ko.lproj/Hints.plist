@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>잊지 마세요, 스위치가 있는 위치로 이동하고 스위치의 상태를 확인해야 합니다. 닫혀 있는 상태면 열어놓으세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

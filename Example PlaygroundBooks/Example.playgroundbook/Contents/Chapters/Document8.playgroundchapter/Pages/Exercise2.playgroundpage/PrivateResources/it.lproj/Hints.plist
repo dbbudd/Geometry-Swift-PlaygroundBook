@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Il tuo personaggio dovrebbe raccogliere tutte le gemme del mondo mentre tu dovresti tenere traccia del numero di gemme raccolte. Per ogni gemma che raccogli, aumenta `gemCounter` di uno.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

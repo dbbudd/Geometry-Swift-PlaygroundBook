@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Önce, bu meydan okuma için kullanabileceğin bazı olası çözümleri düşün. Karakterinin bulmaca dünyasında nasıl dolaşacağını belirleyen kurallar yaratmak için koşullu kodları ve mantıksal işleçleri kullan. Sonra kodunu yazıp onu test et! İlk seferde başarılı olmazsan tekrar tekrar dene.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

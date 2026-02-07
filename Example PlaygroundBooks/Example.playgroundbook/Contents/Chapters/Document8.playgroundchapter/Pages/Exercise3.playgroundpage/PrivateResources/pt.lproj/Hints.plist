@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Você precisa executar o código enquanto o valor de `gemCounter` for menor que 7. Terá que usar o [operador de comparação](glossary://comparison%20operator) `&lt;` para escrever a condição no loop `while`.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

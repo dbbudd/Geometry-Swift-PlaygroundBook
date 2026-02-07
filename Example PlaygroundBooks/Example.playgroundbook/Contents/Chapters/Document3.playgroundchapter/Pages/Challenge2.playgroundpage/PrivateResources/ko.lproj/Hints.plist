@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저, 퍼즐을 살펴보세요. 패턴을 바로 알아채기는 약간 어렵습니다. 일단, 루프를 만들기 전에 퍼즐의 한 부분을 풀어보세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

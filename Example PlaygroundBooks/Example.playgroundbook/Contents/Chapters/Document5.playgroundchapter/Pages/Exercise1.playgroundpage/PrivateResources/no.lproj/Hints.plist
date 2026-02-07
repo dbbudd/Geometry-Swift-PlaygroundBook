@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Når det **ikke** er en stein på den øverste plattformen, går det en trapp fra den ruten. Bruk betingelsen «hvis figuren IKKE står på en stein» til å bestemme hva som skal skje i den situasjonen.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

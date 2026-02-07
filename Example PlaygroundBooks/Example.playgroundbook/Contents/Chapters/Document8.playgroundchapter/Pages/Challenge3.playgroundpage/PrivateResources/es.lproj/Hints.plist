@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>En la primera plataforma aparece un número de gemas aleatorio. Verifica todas las baldosas e incrementa una variable de recuento de gemas para ver cuántas recoges.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

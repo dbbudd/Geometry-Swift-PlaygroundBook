@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>ก่อนอื่นให้เพิ่มชุดคำสั่ง `if` เพื่อตรวจสอบว่าตัวละครของคุณอยู่บนช่องที่มีเพชรหรือไม่ จากนั้นเลือก `&amp;&amp;` ในแถบทางลัดเพื่อเพิ่มเงื่อนไขในการตรวจสอบว่าตัวละครของคุณถูกปิดกั้นทางด้านซ้ายหรือไม่</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

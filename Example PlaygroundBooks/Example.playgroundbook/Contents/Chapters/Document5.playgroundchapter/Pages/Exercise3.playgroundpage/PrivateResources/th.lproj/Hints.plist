@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>เพิ่มชุดคำสั่ง `if` ไว้ภายใน `for` loop แล้วเพิ่มเงื่อนไขแรกของคุณ ในแถบทางลัด ให้เลือกตัวดำเนินการ `||` แล้วเพิ่มเงื่อนไขที่สองของคุณ นอกจากนี้ ให้คุณสร้างบล็อก `else` เพื่อเคลื่อนที่ตัวละครของคุณไปข้างหน้าถ้าทั้งสองเงื่อนไขนั้นเป็น false</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

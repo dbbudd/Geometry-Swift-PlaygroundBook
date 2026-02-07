@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>첫 번째 발판에서 보석이 임의로 나타납니다. 각 타일을 확인하고 보석 개수를 세는 변수의 값을 증가시켜 보석 수집 개수를 세어 보세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

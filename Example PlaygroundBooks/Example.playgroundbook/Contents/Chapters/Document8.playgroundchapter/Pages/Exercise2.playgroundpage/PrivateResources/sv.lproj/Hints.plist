@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Din figur ska hämta alla stenarna i världen och du måste håll koll på hur många den har hämtat. Öka `gemCounter` med en sten för varje sten som hämtas.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

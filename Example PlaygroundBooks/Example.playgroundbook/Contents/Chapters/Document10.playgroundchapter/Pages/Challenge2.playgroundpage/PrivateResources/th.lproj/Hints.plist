@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>ทำเหมือนที่คุณเคยทำในปริศนาที่แล้ว คือให้[สร้างค่าเริ่มต้น](glossary://initialization)กับตัวละครและผู้เชี่ยวชาญของคุณก่อน แล้วเรียกใช้[วิธีการ](glossary://method)บน[ชื่อแทนประเภท](glossary://instance)เหล่านั้นเพื่อแก้ปริศนา</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

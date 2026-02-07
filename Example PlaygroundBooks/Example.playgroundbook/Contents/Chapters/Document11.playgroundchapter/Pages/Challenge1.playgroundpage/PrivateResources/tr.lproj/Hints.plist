@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Bu bulmacayı çözebilmen için uzmanını bulmaca dünyasına yerleştirmen gerekir. `Expert` tipinde bir örneğe [ilk değer atayıp](glossary://initialization) ardından bulmaca dünyasına örneği nereye yerleştirmek istediğini söyle.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Colete a joia e mova o Byte para o controle (na casa após a segunda escada, próximo ao centro do mundo). Depois, use o comando `toggleSwitch()` para acionar o controle.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

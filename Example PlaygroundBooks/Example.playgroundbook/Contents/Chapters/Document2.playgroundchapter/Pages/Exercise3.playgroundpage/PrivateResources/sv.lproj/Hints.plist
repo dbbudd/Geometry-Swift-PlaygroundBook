@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Börja med att definiera funktionen `solveStair()` för att gå uppför en trappa, hämta en sten, vända om och gå tillbaka till mitten.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

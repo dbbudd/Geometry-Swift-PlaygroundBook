@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Voeg eerst een `if`-instructie toe om te controleren of je figuurtje op een edelsteen staat. Selecteer vervolgens `&amp;&amp;` in het snelmenu om een voorwaarde toe te voegen die controleert of je figuurtje aan de linkerkant wordt geblokkeerd.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

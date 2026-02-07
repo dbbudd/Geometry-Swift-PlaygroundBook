@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Per iniziare, fai muovere Byte su per la rampa, quindi fai in modo che giri a sinistra, azioni l’interruttore e cammini fino al portale.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

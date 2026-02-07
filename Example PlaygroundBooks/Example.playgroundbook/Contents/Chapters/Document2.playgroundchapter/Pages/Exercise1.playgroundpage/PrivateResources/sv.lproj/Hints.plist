@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Börja med att flytta till rutan där figuren ska vända sig åt höger. Använd sedan en kombination av befintliga kommandon för att vända figuren i den riktningen.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Om du vänder dig åt vänster tillräckligt många gånger har du vänt dig ett helt varv till slut.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

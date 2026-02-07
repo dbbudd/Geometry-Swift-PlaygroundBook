@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Eerst moet je de functie `turnLock` zo definiëren dat de [parameter](glossary://parameter) `up` wordt gebruikt om de expert te laten weten in welke richting het slot moet worden omgedraaid. Gebruik vervolgens `numberOfTimes` om in te stellen hoe vaak het slot moet worden omgedraaid.
+
+(turnLock = draai slot om, numberOfTimes = aantal keren)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>首先，思考這項挑戰中一些可能的解決方法。使用條件碼和邏輯運算子，建立你的角色如何在世界中行走的規則。然後編寫你的程式碼並進行測試！如果第一次沒成功，那就多試幾次吧。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>`totalGems`은 퍼즐에서 생성되는 보석의 전체 개수를 표시합니다. 보석 개수를 세는 [변수](glossary://variable)와 이 [상수](glossary://constant)를 함께 사용하여 보석 수집을 멈출 때를 결정할 수 있습니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

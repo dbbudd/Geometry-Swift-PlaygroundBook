@@ -1,0 +1,30 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LiveViewHost
+// swift-module-flags-ignorable: -enable-bare-slash-regex -user-module-version 64
+@_exported import LiveViewHost
+import PlaygroundSupport
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class AppDelegate : UIKit.UIResponder, UIKit.UIApplicationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc open func application(_ application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]? = nil) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func setUpLiveView() -> PlaygroundSupport.PlaygroundLiveViewable
+  @_Concurrency.MainActor(unsafe) open var liveViewConfiguration: LiveViewHost.LiveViewConfiguration {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+public enum LiveViewConfiguration {
+  case fullScreen
+  case sideBySide
+  public static func == (a: LiveViewHost.LiveViewConfiguration, b: LiveViewHost.LiveViewConfiguration) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension LiveViewHost.LiveViewConfiguration : Swift.Equatable {}
+extension LiveViewHost.LiveViewConfiguration : Swift.Hashable {}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Primeiro, pense em algumas soluções possíveis para este desafio. Use código condicional e operadores lógicos para criar regras para a movimentação do personagem pelo mundo do puzzle. Em seguida, escreva o código e teste‑o! Se você não tiver sucesso logo na primeira vez, tente de novo, e de novo.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

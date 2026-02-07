@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>`collectGemTurnAround()` 함수를 다른 명령과 함께 사용하여 `solveRow()` 함수를 [정의](glossary://define)하세요.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

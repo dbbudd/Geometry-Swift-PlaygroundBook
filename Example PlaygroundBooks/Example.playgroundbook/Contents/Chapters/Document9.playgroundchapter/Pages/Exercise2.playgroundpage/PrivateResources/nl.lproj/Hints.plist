@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Teleporteer eerst je figuurtje door het blauwe portaal om de edelstenen te bereiken bij het andere blauwe portaal. Mogelijk moet je het blauwe portaal deactiveren om beide edelstenen te kunnen bereiken.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

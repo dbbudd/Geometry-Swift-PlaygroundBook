@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Vergeet niet dat je zowel de methode `move(distance: Int)` als de methode `turnLock(up: Bool, numberOfTimes: Int)` kunt gebruiken om dit raadsel op te lossen.
+
+(move = verplaats, distance = afstand, turnLock = draai slot om, up = omhoog, numberOfTimes = aantal keren)
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

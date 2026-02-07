@@ -1,0 +1,164 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PlaygroundSupport
+// swift-module-flags-ignorable: -enable-bare-slash-regex -user-module-version 64
+import Foundation
+@_exported import PlaygroundSupport
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import os.log
+import os
+public enum PlaygroundValue {
+  case array([PlaygroundSupport.PlaygroundValue])
+  case dictionary([Swift.String : PlaygroundSupport.PlaygroundValue])
+  case string(Swift.String)
+  case data(Foundation.Data)
+  case date(Foundation.Date)
+  case integer(Swift.Int)
+  case floatingPoint(Swift.Double)
+  case boolean(Swift.Bool)
+}
+public protocol PlaygroundLiveViewSafeAreaContainer : AnyObject {
+  @available(iOS, deprecated: 13.0, message: "Use UIView.safeAreaLayoutGuide now.")
+  var liveViewSafeAreaGuide: UIKit.UILayoutGuide { get }
+}
+extension PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer where Self : UIKit.UIView {
+  public var liveViewSafeAreaGuide: UIKit.UILayoutGuide {
+    get
+  }
+}
+extension PlaygroundSupport.PlaygroundLiveViewSafeAreaContainer where Self : UIKit.UIViewController {
+  public var liveViewSafeAreaGuide: UIKit.UILayoutGuide {
+    get
+  }
+}
+public protocol PlaygroundLiveViewMessageHandler : AnyObject {
+  func liveViewMessageConnectionOpened()
+  func liveViewMessageConnectionClosed()
+  func receive(_ message: PlaygroundSupport.PlaygroundValue)
+}
+extension PlaygroundSupport.PlaygroundLiveViewMessageHandler {
+  public func liveViewMessageConnectionOpened()
+  public func liveViewMessageConnectionClosed()
+  public func receive(_ message: PlaygroundSupport.PlaygroundValue)
+  public func send(_ message: PlaygroundSupport.PlaygroundValue)
+}
+@_hasMissingDesignatedInitializers public class PlaygroundRemoteLiveViewProxy : PlaygroundSupport.PlaygroundLiveViewMessageHandler, PlaygroundSupport.PlaygroundLiveViewable {
+  weak public var delegate: PlaygroundSupport.PlaygroundRemoteLiveViewProxyDelegate?
+  public func liveViewMessageConnectionOpened()
+  public func liveViewMessageConnectionClosed()
+  public func receive(_ message: PlaygroundSupport.PlaygroundValue)
+  @available(*, deprecated, message: "Don't use this property; PlaygroundRemoteLiveViewProxy cannot provide a traditional playgroundLiveViewRepresentation")
+  public var playgroundLiveViewRepresentation: PlaygroundSupport.PlaygroundLiveViewRepresentation {
+    get
+  }
+  @objc deinit
+}
+public protocol PlaygroundRemoteLiveViewProxyDelegate : AnyObject {
+  func remoteLiveViewProxyConnectionClosed(_ remoteLiveViewProxy: PlaygroundSupport.PlaygroundRemoteLiveViewProxy)
+  func remoteLiveViewProxy(_ remoteLiveViewProxy: PlaygroundSupport.PlaygroundRemoteLiveViewProxy, received message: PlaygroundSupport.PlaygroundValue)
+}
+@_inheritsConvenienceInitializers @available(*, unavailable, message: "_PlaygroundSupportFramework is not available for use in user code")
+@objc(_PlaygroundSupportFramework) public class _PlaygroundSupportFramework : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(*, unavailable, message: "playgroundSharedDataDirectory is not supported in Swift Playgrounds")
+public let playgroundSharedDataDirectory: Foundation.URL
+@_hasMissingDesignatedInitializers final public class PlaygroundPage {
+  public static let current: PlaygroundSupport.PlaygroundPage
+  final public var text: Swift.String {
+    get
+  }
+  final public var userModuleNames: [Swift.String] {
+    get
+  }
+  final public func listSourceFiles(inUserModule moduleName: Swift.String) -> [Swift.String]
+  final public func getText(forSourceFile sourceFile: Swift.String, inUserModule userModuleName: Swift.String) -> Swift.String?
+  @available(*, deprecated, message: "Use `PlaygroundKeyValueStore.current` instead")
+  final public var keyValueStore: PlaygroundSupport.PlaygroundKeyValueStore {
+    get
+  }
+  public enum ExecutionMode {
+    case run
+    case runFaster
+    case runFastest
+    case step
+    case stepSlowly
+    public static func == (a: PlaygroundSupport.PlaygroundPage.ExecutionMode, b: PlaygroundSupport.PlaygroundPage.ExecutionMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var executionMode: PlaygroundSupport.PlaygroundPage.ExecutionMode {
+    get
+  }
+  final public var needsIndefiniteExecution: Swift.Bool {
+    get
+    set
+  }
+  final public func finishExecution() -> Swift.Never
+  final public var liveView: PlaygroundSupport.PlaygroundLiveViewable? {
+    get
+    set
+  }
+  final public func setLiveView<IncomingView>(_ newLiveView: IncomingView) where IncomingView : PlaygroundSupport.PlaygroundLiveViewable
+  @available(macOS 10.15, iOS 13.0, tvOS 13.0, *)
+  final public func setLiveView<IncomingView>(_ newLiveView: IncomingView) where IncomingView : SwiftUI.View
+  final public var wantsFullScreenLiveView: Swift.Bool {
+    get
+    set
+  }
+  public enum PageNavigation {
+    case previous
+    case next
+    case pageReference(reference: Swift.String)
+  }
+  final public func navigateTo(page: PlaygroundSupport.PlaygroundPage.PageNavigation)
+  final public func showGlossaryEntry(named glossaryEntryName: Swift.String, at location: CoreFoundation.CGRect?, in view: UIKit.UIView?)
+  final public func openPlayground(withContentIdentifier contentIdentifier: Swift.String, toPageAtIndex pageIndex: Swift.Int? = nil)
+  final public func openApplication(withBundleIdentifier bundleIdentifier: Swift.String, iTunesItemIdentifier: Swift.Int? = nil)
+  public enum AssessmentStatus {
+    case pass(message: Swift.String?)
+    case fail(hints: [Swift.String], solution: Swift.String?)
+  }
+  final public var assessmentStatus: PlaygroundSupport.PlaygroundPage.AssessmentStatus? {
+    get
+    set(value)
+  }
+  @objc deinit
+}
+public enum PlaygroundLiveViewRepresentation {
+  case view(UIKit.UIView)
+  case viewController(UIKit.UIViewController)
+}
+public protocol PlaygroundLiveViewable {
+  var playgroundLiveViewRepresentation: PlaygroundSupport.PlaygroundLiveViewRepresentation { get }
+}
+extension UIKit.UIView : PlaygroundSupport.PlaygroundLiveViewable {
+  @_Concurrency.MainActor(unsafe) public var playgroundLiveViewRepresentation: PlaygroundSupport.PlaygroundLiveViewRepresentation {
+    get
+  }
+}
+extension UIKit.UIViewController : PlaygroundSupport.PlaygroundLiveViewable {
+  @_Concurrency.MainActor(unsafe) public var playgroundLiveViewRepresentation: PlaygroundSupport.PlaygroundLiveViewRepresentation {
+    get
+  }
+}
+extension Foundation.NSNotification.Name {
+  public static let playgroundPageExecutionModeDidChange: Foundation.Notification.Name
+}
+@_hasMissingDesignatedInitializers public class PlaygroundKeyValueStore {
+  public static let current: PlaygroundSupport.PlaygroundKeyValueStore
+  public subscript(key: Swift.String) -> PlaygroundSupport.PlaygroundValue? {
+    get
+    set(value)
+  }
+  @objc deinit
+}
+extension PlaygroundSupport.PlaygroundPage.ExecutionMode : Swift.Equatable {}
+extension PlaygroundSupport.PlaygroundPage.ExecutionMode : Swift.Hashable {}

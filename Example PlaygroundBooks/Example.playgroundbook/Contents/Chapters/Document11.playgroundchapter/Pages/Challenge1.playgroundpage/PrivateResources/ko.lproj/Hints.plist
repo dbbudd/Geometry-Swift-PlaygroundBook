@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>이 퍼즐을 해결하기 전에 전문가를 퍼즐 세상에 놓아야 합니다. `Expert` 유형의 인스턴스를 [초기화](glossary://initialization)한 다음 퍼즐 세상에서 해당 인스턴스를 놓을 위치를 지정하세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

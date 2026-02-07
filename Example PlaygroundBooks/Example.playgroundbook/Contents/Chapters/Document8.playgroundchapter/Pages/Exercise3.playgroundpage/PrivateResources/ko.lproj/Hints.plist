@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>`gemCounter`가 7이 되기 전까지 코드를 계속 실행해야 합니다. `&lt;` [비교 연산자](glossary://comparison%20operator)를 사용하여 `while` 루프의 조건식을 작성해야 합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

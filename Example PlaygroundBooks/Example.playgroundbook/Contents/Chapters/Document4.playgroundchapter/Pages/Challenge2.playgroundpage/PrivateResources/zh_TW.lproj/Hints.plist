@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>正方形中的每個磚塊都可能有寶石、打開或關閉的開關。首先，編寫一個名為 `checkTile()` 的函數以檢查每個磚塊上可能出現的物品。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

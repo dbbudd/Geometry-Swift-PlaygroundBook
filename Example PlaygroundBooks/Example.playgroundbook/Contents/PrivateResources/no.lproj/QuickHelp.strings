@@ -1,0 +1,816 @@
+/*
+Turns the character left.
+*/
+"Commands.turnLeft()" = "Snur figuren til venstre.";
+
+/*
+Turns the character right.
+*/
+"Commands.turnRight()" = "Snur figuren til høyre.";
+
+/*
+Moves the character forward one tile.
+*/
+"Commands.moveForward()" = "Flytter figuren fremover én rute.";
+
+/*
+Instructs the character to toggle a switch on the current tile.
+*/
+"Commands.toggleSwitch()" = "Gir figuren beskjed om å veksle en bryter på den gjeldende ruten.";
+
+/*
+Instructs the character to collect a gem on the current tile.
+*/
+"Commands.collectGem()" = "Gir figuren beskjed om å hente en stein i den gjeldende ruten.";
+
+/*
+Condition that checks if the character is on a tile with an open switch on it.
+*/
+"Commands.isOnOpenSwitch" = "Betingelse som kontrollerer om figuren står på en rute som har en åpen bryter.";
+
+/*
+Condition that checks if the character is on a tile with a closed switch on it.
+*/
+"Commands.isOnClosedSwitch" = "Betingelse som kontrollerer om figuren står på en rute som har en lukket bryter.";
+
+/*
+Condition that checks if the character is on a tile with a gem on it.
+*/
+"Commands.isOnGem" = "Betingelse som kontrollerer om figuren står på en rute som inneholder en stein.";
+
+/*
+Condition that checks if the character is blocked from moving forward in the current direction.
+*/
+"Commands.isBlocked" = "Betingelse som kontrollerer om figuren er blokkert, slik at den ikke kan flyttes fremover i den aktuelle retningen.";
+
+/*
+Condition that checks if the character is blocked on the right.
+*/
+"Commands.isBlockedRight" = "Betingelse som kontrollerer om figuren er blokkert til høyre.";
+
+/*
+Condition that checks if the character is blocked on the left.
+*/
+"Commands.isBlockedLeft" = "Betingelse som kontrollerer om figuren er blokkert til venstre.";
+
+/*
+Instructs the character to jump up or down onto the block the character is facing.
+If the current tile and the tile the character is facing are the same height, the character simply jumps forward one tile.
+*/
+"Commands.jump()" = "Gir figuren beskjed om å hoppe opp eller ned til blokken som figuren er vendt mot.\nHvis den aktuelle ruten og ruten som figuren er vendt mot, er på samme høyde, hopper figuren ganske enkelt fremover en rute.";
+
+/*
+ Generates a random integer (whole number) in the given range.
+
+ - Parameter from: The lowest value that the random number can have.
+ - Parameter to: The highest value that the random number can have.
+*/
+"randomInt(from:to:)" = " Genererer et tilfeldig heltall i det angitte intervallet.\n\n – Parameter from: Den laveste verdien det tilfeldige tallet kan ha.\n – Parameter to: Den høyeste verdien det tilfeldige tallet kan ha.";
+
+/*
+Generates a random boolean value: `true` or `false`.
+*/
+"randomBool()" = "Genererer en tilfeldig boolsk verdi: `true` eller `false`.";
+
+/*
+The direction facing north in the world.
+*/
+"north" = "Retningen som er vendt mot nord i verdenen.";
+
+/*
+The direction facing south in the world.
+*/
+"south" = "Retningen som er vendt mot sør i verdenen.";
+
+/*
+The direction facing east in the world.
+*/
+"east" = "Retningen som er vendt mot øst i verdenen.";
+
+/*
+The direction facing west in the world.
+*/
+"west" = "Retningen som er vendt mot vest i verdenen.";
+
+/*
+An enumeration of the directions in the world: `north`, `south`, `east` and `west`.
+*/
+"Direction" = "En oppregning av himmelretningene: `north`, `south`, `east` og `west`.";
+
+/*
+All instances of gems, switches, portals, blocks, characters, and experts are of type `Item`, allowing you to use these instances in methods such as `place(item:at:)` and `removeItems(at:)`.
+*/
+"Item" = "Alle instanser av steiner, brytere, portaler, blokker, figurer og eksperter er av typen `Item`. Det betyr at du kan bruke disse instansene i metoder som `place(item:at:)` og `removeItems(at:)`.";
+
+/*
+The type representing a platform that can be moved up or down using a lock.
+*/
+"Platform" = "Typen som representerer en plattform som kan flyttes oppover eller nedover ved hjelp av en lås.";
+
+/*
+Creates a platform on the specified level with the specified platform lock. The platform can then be placed in the world.
+- parameters:
+    - onLevel: The level above the floor the platform should start on. If left out, the level is 2.
+    - controlledBy: The platform lock that controls the platform.
+*/
+"Platform(onLevel:controlledBy:)" = "Skaper en plattform med den angitte plattformlåsen på det angitte nivået. Plattformen kan deretter plasseres i verdenen.\n- parameters:\n    - onLevel: Nivået over gulvet som plattformen skal starte på. Hvis den utelates, er nivået 2.\n    - controlledBy: Plattformlåsen som styrer plattformen.";
+
+/*
+Creates a platform on the specified level. The platform can then be placed in the world.
+ - parameters:
+     - onLevel: The level above the floor the platform should start on. If left out, the level is 2.
+*/
+"Platform(onLevel:)" = "Skaper en plattform på det angitte nivået. Plattformen kan deretter plasseres i verdenen.\n - parameters:\n     - onLevel: Nivået over gulvet som plattformen skal starte på. Hvis den utelates, er nivået 2.";
+
+/*
+The type representing the different characters that can be present and move about in the world.
+*/
+"Actor" = "Typen som representerer de forskjellige figurene som kan være til stede og flytte rundt i verdenen.";
+
+/*
+ Creates a character (or actor) with the specified name. The character can then be placed in the world.
+
+ Example usage:
+ ````
+ let blu = Character(name: .blu)
+ ````
+
+ - Parameter name: The name of the character chosen from the `CharacterName` enumeration. If you leave out `name`, the saved character will be used.
+*/
+"Actor(name:)" = " Oppretter en figur (eller skuespiller) med det angitte navnet. Deretter kan figuren plasseres i verdenen.\n\n Eksempel på bruk:\n ````\n let blu = Character(name: .blu)\n ````\n\n - Parameter name: Navnet på figuren, valgt fra oppregningen `CharacterName`. Hvis du ikke inkluderer `name`, brukes den lagrede figuren.";
+
+/*
+Instructs the character to jump forward and either up or down one block. 
+
+If the block the character is facing is one block higher than the block the character is standing on, the character will jump on top of it.
+If the block the character is facing is one block lower than the block the character is standing on, the character will jump down to that block.
+*/
+"Actor.jump()" = "Gir figuren beskjed om å hoppe fremover og enten opp eller ned én rute. \n\nHvis blokken som figuren er vendt mot, er én blokk høyere enn blokken figuren står på, hopper figuren opp på den.\nHvis blokken som figuren er vendt mot, er én blokk lavere enn blokken figuren står på, hopper figuren ned til den.";
+
+/*
+Moves the character forward by a certain number of tiles, as determined by the `distance` parameter value.
+
+Example usage:
+````
+move(distance: 3)
+// Moves forward three tiles.
+````
+
+- parameters:
+   - distance: Takes an `Int` value specifying the number of times to call `moveForward()`.
+*/
+"Actor.move(distance:)" = "Flytter figuren fremover et bestemt antall ruter, som bestemt av parameterverdien `distance`.\n\nEksempel på bruk:\n````\nmove(distance: 3)\n// Flytter fremover tre ruter.\n````\n\n- parameters:\n   - distance: Tar en `Int`-verdi som angir hvor mange ganger `moveForward()` skal kalles.";
+
+/*
+Moves the character forward one tile.
+*/
+"Actor.moveForward()" = "Flytter figuren fremover én rute.";
+
+/*
+Turns the character left.
+*/
+"Actor.turnLeft()" = "Snur figuren til venstre.";
+
+/*
+Turns the character right.
+*/
+"Actor.turnRight()" = "Snur figuren til høyre.";
+
+/*
+Instructs the character to collect a gem on the current tile.
+*/
+"Actor.collectGem()" = "Gir figuren beskjed om å hente en stein i den gjeldende ruten.";
+
+/*
+Instructs the character to toggle a switch on the current tile.
+*/
+"Actor.toggleSwitch()" = "Gir figuren beskjed om å veksle en bryter på den gjeldende ruten.";
+
+/*
+Condition that checks if the character is blocked from moving forward in the current direction.
+*/
+"Actor.isBlocked" = "Betingelse som kontrollerer om figuren er blokkert, slik at den ikke kan flyttes fremover i den aktuelle retningen.";
+
+/*
+Condition that checks whether the character is blocked on the left.
+*/
+"Actor.isBlockedLeft" = "Betingelse som kontrollerer om figuren er blokkert til venstre.";
+
+/*
+Condition that checks whether the character is blocked on the right.
+*/
+"Actor.isBlockedRight" = "Betingelse som kontrollerer om figuren er blokkert til høyre.";
+
+/*
+Condition that checks whether the character is currently on a tile with that contains a WorldNode of a specific type.
+*/
+"Actor.isOnItem" = "Betingelse som kontrollerer om figuren står på en rute som inneholder en verdensnode av en bestemt type.";
+
+/*
+Condition that checks whether the character is on a tile with a gem on it.
+*/
+"Actor.isOnGem" = "Betingelse som kontrollerer om figuren står på en rute som inneholder en stein.";
+
+/*
+Condition that checks whether the character is on a tile with an open switch on it.
+*/
+"Actor.isOnOpenSwitch" = "Betingelse som kontrollerer om figuren står på en rute som inneholder en åpen bryter.";
+
+/*
+Condition that checks whether the character is on a tile with a closed switch on it.
+*/
+"Actor.isOnClosedSwitch" = "Betingelse som kontrollerer om figuren står på en rute som har en lukket bryter.";
+
+/*
+Causes the character to bust out a fancy move.
+*/
+"Actor.danceLikeNoOneIsWatching()" = "Får figuren til å ta et dansetrinn.";
+
+/*
+The character receives a burst of energy, turning it up by several notches.
+*/
+"Actor.turnUp()" = "Figuren får et energistøt og vris opp flere knepp.";
+
+/*
+The character starts to feel real funky, breaking it down for all to witness.
+*/
+"Actor.breakItDown()" = "Figuren begynner å føle det og slipper seg løs foran alle.";
+
+/*
+The character feels a bit bummed.
+*/
+"Actor.grumbleGrumble()" = "Figuren er litt irritert.";
+
+/*
+The character feels a wave of horror.
+*/
+"Actor.argh()" = "Figuren er skrekkslagen.";
+
+/*
+The character performs a head scratch.
+*/
+"Actor.headScratch()" = "Figuren klør seg i hodet.";
+
+/*
+The character hits a metaphorical wall.
+*/
+"Actor.bumpIntoWall()" = "Figuren går inn i en metaforisk vegg.";
+
+/*
+Specifies a location (column, row) in a grid of columns and rows.
+*/
+"Coordinate" = "Angir et sted (kolonne, rad) i et rutenett med kolonner og rader.";
+
+/*
+ Creates a coordinate specifying a column and a row within a grid.
+
+ Example usage:
+ ````
+ let position = Coordinate(column: 4, row: 2)
+ ````
+
+ - Parameter column: The column for the coordinate.
+ - Parameter row: The row for the coordinate.
+*/
+"Coordinate(column{Int}:row{Int}:)" = " Oppretter en koordinat ved å angi en kolonne og en rad i et rutenett.\n\n Eksempel på bruk:\n ````\n let position = Coordinate(column: 4, row: 2)\n ````\n\n - Parameter column: Koordinatens kolonne.\n - Parameter row: Koordinatens rad.";
+
+/*
+All instances of water blocks are of type 'Water'. Water can be placed only at a coordinate where all existing blocks have been removed.
+*/
+"Water" = "Alle instanser av vannblokker er av typen \'Water\'. Vann kan bare plasseres på en koordinat der alle eksisterende blokker har blitt fjernet.";
+
+/*
+Creates a water block that can be placed in the world.
+*/
+"Water()" = "Skaper en vannblokk som kan plasseres i verdenen.";
+
+/*
+All gems in the puzzle world are of type `Gem`. Gems may be collected by an instance of the `Character` or `Expert` type, using the `collectGem()` method.
+*/
+"Gem" = "Alle steinene i oppgaveverdenen er av typen `Gem`. Steiner kan hentes av en instans av typen `Character` eller `Expert` ved hjelp av metoden `collectGem()`.";
+
+/*
+Creates a gem that can be placed in the world.
+*/
+"Gem()" = "Oppretter en stein som kan plasseres i verdenen.";
+
+/*
+GridWorld contains all methods and properties of the puzzle world itself, including methods such as `place(item:at:)` and `removeItems(at:)`, and properties such as `allPossibleCoordinates`.
+*/
+"GridWorld" = "GridWorld inneholder alle metoder og egenskaper som tilhører selve oppgaveverdenen, inkludert metoder som `place(item:at:)` og `removeItems(at:)`, og egenskaper som `allPossibleCoordinates`.";
+
+/*
+Returns all the possible coordinates within the grid.
+*/
+"GridWorld.allPossibleCoordinates" = "Returnerer alle mulige koordinater i rutenettet.";
+
+/*
+Returns the items present at the given coordinates
+*/
+"GridWorld.existingItems(at:)" = "Returnerer objektene som finnes på de gitte koordinatene.";
+
+/*
+Returns all existing items at any possible coordinates.
+*/
+"GridWorld.existingItems(ofType:)" = "Returnerer alle eksisterende objekter på alle mulige koordinater.";
+
+/*
+Returns the first occurrence of the specified type at the given coordinates.
+*/
+"GridWorld.existingItem(ofType:at{Coordinate}:)" = "Returnerer den første forekomsten av den angitte typen på de gitte koordinatene.";
+
+/*
+Returns all nodes with the provided identifier that exist at the given coordinates.
+*/
+"GridWorld.existingItems(ofType:at{[Coordinate]}:)" = "Returnerer alle noder med den angitte indikatoren som finnes på de gitte koordinatene.";
+
+/*
+Returns all nodes except the provided identifiers that exist at the specified coordinates.
+*/
+"GridWorld.excludingNodes(ofTypes:at:)" = "Returnerer alle nodene bortsett fra de angitte identifikatorene som finnes på de angitte koordinatene.";
+
+/*
+Method that places an item at a coordinate in the puzzle world.
+
+Example usage:
+````
+place(Gem(), at: Coordinate(column: 3, row: 5))
+// Places an instance of type `Gem` at coordinate (3, 5).
+````
+
+- parameters:
+   - item: Takes an input conforming to type `Item`, such as a `Gem`, `Switch`, `Character`, or `Expert`.
+   - facing: Takes an enumeration value of type `Direction`, including `.north`, `.south`, `.east`, or `.west`.
+   - coordinate: Takes an instance of type `Coordinate`, specifying a location in the puzzle world.
+*/
+"GridWorld.place(_:facing:at:)" = "Metode som plasserer et objekt på en koordinat i oppgaveverdenen.\n\nEksempel på bruk:\n````\nplace(Gem(), at: Coordinate(column: 3, row: 5))\n// Plasserer en instans av typen `Gem` på koordinaten (3, 5).\n````\n\n- parameters:\n   - item: Tar inndata som samsvarer med typen `Item`, for eksempel `Gem`, `Switch`, `Character` eller `Expert`.\n   - facing: Tar en oppregningsverdi av typen `Direction`, inkludert `.north`, `.south`, `.east` eller `.west`.\n   - coordinate: Tar en instans av typen `Coordinate` som angir et sted i oppgaveverdenen.";
+
+/*
+Method that places an item at an array of coordinates in the puzzle world.
+
+Example usage:
+````
+place(Expert(), facing: .east, at: row(3))
+// Places an instance of type `Expert` facing east at each coordinate in row 3 of the puzzle world.
+````
+
+- parameters:
+   - item: Takes an input conforming to type `Item`, such as a `Gem`, `Switch`, `Character`, or `Expert`.
+   - facing: Takes an enumeration value of type `Direction`, including `.north`, `.south`, `.east`, or `.west`.
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.place(nodeOfType:facing:at:)" = "Metode som plasserer et objekt på en matrise med koordinater i oppgaveverdenen.\n\nEksempel på bruk:\n````\nplace(Expert(), facing: .east, at: row(3))\n// Plasserer en instans av typen `Expert` vendt mot øst ved koordinaten i rad 3 i oppgaveverdenen.\n````\n\n- parameters:\n   - item: Tar inndata som samsvarer med typen `Item`, for eksempel `Gem`, `Switch`, `Character` eller `Expert`.\n   - facing: Tar en oppretningsverdi av typen `Direction`, inkludert `.north`, `.south`, `.east` eller `.west`.\n   - coordinates: Tar en matrise av typen `Coordinate` som angir en liste med steder i oppgaveverdenen.";
+
+/*
+Method that places a bidirectional portal into the puzzle world.
+
+Example usage:
+````
+place(Portal(color: .green), between: Coordinate(column: 2, row: 2), and: Coordinate(column: 4, row: 4))
+// Places a pair of portals, one at coordinate (2, 2) and another at (4, 4).
+````
+- parameters:
+   - portal: Takes an instance of type `Portal`.
+   - start: Takes an instance of type `Coordinate`, specifying the starting location of the portal.
+- end: Takes an instance of type `Coordinate`, specifying the ending location of the portal.
+*/
+"GridWorld.place(_:between:and:)" = "Metode som plasserer en toveis portal i oppgaveverdenen.\n\nEksempel på bruk:\n````\nplace(Portal(color: .green), between: Coordinate(column: 2, row: 2), and: Coordinate(column: 4, row: 4))\n// Plasserer to portaler – én på koordinaten (2, 2), og én på koordinaten (4, 4).\n````\n- parameters:\n   - portal: Tar en instans av typen `Portal`.\n   - start: Tar en instans av typen `Coordinate` som angir startstedet for portalen.\n- end: Tar en instans av typen `Coordinate` som angir sluttstedet for portalen.";
+
+/*
+Removes all items at the provided coordinates, leaving a big hole in your world.
+
+Example usage:
+````
+remove(at: allPossibleCoordinates)
+// Removes all items at every coordinate in the map.
+````
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.removeItems(at{[Coordinate]}:)" = "Fjerner alle objekter på de angitte koordinatene, slik at det blir et stort hull i verdenen.\n\nEksempel på bruk:\n````\nremove(at: allPossibleCoordinates)\n// Fjerner alle objekter på alle koordinatene på kartet.\n````\n\n- parameters:\n   - coordinates: Tar en matrise av typen `Coordinate` som angir en liste med steder i oppgaveverdenen.";
+
+/*
+Removes all items at the provided coordinate, leaving a big hole in your world.
+
+Example usage:
+````
+remove(at: Coordinate(column: 3, row: 3))
+// Removes all items at coordinate (3, 3).
+````
+
+- parameters:
+   - coordinate: Takes an instance of type `Coordinate`, specifying a location in the puzzle world.
+*/
+"GridWorld.removeItems(at{Coordinate}:)" = "Fjerner alle objekter på den angitte koordinaten, slik at det blir et stort hull i verdenen.\n\nEksempel på bruk:\n````\nremove(at: Coordinate(column: 3, row: 3))\n// Fjerner alle objekter på koordinaten (3, 3).\n````\n\n- parameters:\n   - coordinate: Tar en instans av typen `Coordinate` som angir et sted i oppgaveverdenen.";
+
+/*
+Returns all coordinates in the specified column.
+
+Example usage:
+````
+column(2)
+// Returns all coordinates in column 2.
+````
+- parameters:
+   - col: A column of the puzzle world, specified with an `Int` value.
+*/
+"GridWorld.column(_:)" = "Returnerer alle koordinatene i den angitte kolonnen.\n\nEksempel på bruk:\n````\ncolumn(2)\n// Returnerer alle koordinater i kolonne 2.\n````\n- parameters:\n   - col: En kolonne i oppgaveverdenen, som angis med en `Int`-verdi.";
+
+/*
+Returns all coordinates in the specified row.
+
+Example usage:
+````
+row(3)
+// Returns all coordinates in row 3.
+````
+- parameters:
+   - row: A row of the puzzle world, specified with an `Int` value.
+*/
+"GridWorld.row(_:)" = "Returnerer alle koordinater i den angitte raden.\n\nEksempel på bruk:\n````\nrow(3)\n// Returnerer alle koordinater i rad 3.\n````\n- parameters:\n   - row: En rad i oppgaveverdenen, som angis med en `Int`-verdi.";
+
+/*
+Returns all coordinates in the specified columns.
+
+Example usage:
+````
+coordinates(inColumns: [2,3,4])
+// Returns all coordinates in columns 2, 3, and 4.
+````
+- parameters:
+   - columns: Specifies the array of columns in the puzzle world.
+*/
+"GridWorld.coordinates(inColumns:)" = "Returnerer alle koordinater i den angitte kolonnen.\n\nEksempel på bruk:\n````\ncoordinates(inColumns: [2,3,4])\n// Returnerer alle koordinater i kolonnene 2, 3 og 4.\n````\n- parameters:\n   - columns: Spesifiserer matrisen med kolonner i oppgaveverdenen.";
+
+/*
+Returns all coordinates in the specified rows.
+
+Example usage:
+````
+coordinates(inRows: [1,5,9])
+// Returns all coordinates in rows 1, 5, and 9.
+````
+- parameters:
+   - rows: Specifies the array of rows in the puzzle world.
+*/
+"GridWorld.coordinates(inRows:)" = "Returnerer alle koordinater i de angitte radene.\n\nEksempel på bruk:\n````\ncoordinates(inRows: [1,5,9])\n// Returnerer alle koordinater i radene 1, 5 og 9.\n````\n:\n   - rows: Spesifiserer matrisen med rader i oppgaveverdenen.";
+
+/*
+ Returns the coordinates within the intersection between the specified columns and rows.
+ 
+ Example usage:
+````
+ coordinatesBetween(inColumns: [0], intersectingRows: 0...2)
+// Returns (0, 0), (0, 1), (0, 2).
+ coordinatesBetween(inColumns: [1, 2], intersectingRows: [0, 3])
+// Returns (1, 0), (2, 0), (1, 3), (2, 3).
+````
+ - parameters:
+    - columns: Specifies the array of columns in the puzzle world.
+    - rows: Specifies the array of intersecting rows in the puzzle world.
+*/
+"GridWorld.coordinates(inColumns:intersectingRows)" = "Returnerer koordinatene innenfor krysningspunktet mellom de angitte kolonnene og radene.\n\n Eksempel på bruk:\n````\n coordinatesBetween(inColumns: [0], intersectingRows: 0...2)\n// Returnerer (0, 0), (0, 1), (0, 2).\n coordinatesBetween(inColumns: [1, 2], intersectingRows: [0, 3])\n// Returnerer (1, 0), (2, 0), (1, 3), (2, 3).\n````\n - parameters:\n    - columns: Spesifiserer matrisen med kolonner i oppgaveverdenen.\n    - rows: Spesifiserer matrisen med kryssende rader i oppgaveverdenen.";
+
+/*
+ Returns the height of a stack of blocks at a given coordinate.
+ 
+ Example usage:
+````
+height(at: Coordinate(column: 3, row: 3))
+// Returns the height of a stack of blocks at (3, 3).
+````
+ - parameters:
+    - coordinate: Takes an input of type `Coordinate`, specifying a location in the puzzle world.
+*/
+"GridWorld.height(at:)" = " Returnerer høyden på en stabel med blokker på en gitt koordinat.\n \n Eksempel på bruk:\n````\nheight(at: Coordinate(column: 3, row: 3))\n// Returnerer høyden på en stabel med blokker ved (3, 3).\n````\n - parameters:\n    - coordinate: Tar inndata av typen `Coordinate`, som angir et sted i oppgaveverdenen.";
+
+/*
+Method that returns the gems present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.existingGems(at:)" = "Metode som returnerer steinene som finnes i en matrise med gitte koordinater.\n\n- parameters:\n   - coordinates: Tar en matrise av typen `Coordinate`, som spesifiserer en liste med steder i oppgaveverdenen.";
+
+/*
+Method that returns the switches present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.existingSwitches(at:)" = "Metode som returnerer bryterne som finnes i en matrise med gitte koordinater.\n\n- parameters:\n   - coordinates: Tar en matrise av typen `Coordinate`, som spesifiserer en liste med steder i oppgaveverdenen.";
+
+/*
+Method that returns the characters present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.existingCharacters(at:)" = "Metode som returnerer figurene som finnes i en matrise med gitte koordinater.\n\n- parameters:\n   - coordinates: Tar en matrise av typen `Coordinate`, som spesifiserer en liste med steder i oppgaveverdenen.";
+
+/*
+Method that returns the experts present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.existingExperts(at:)" = "Metode som returnerer ekspertene som finnes i en matrise med gitte koordinater.\n\n- parameters:\n   - coordinates: Tar en matrise av typen `Coordinate`, som spesifiserer en liste med steder i oppgaveverdenen.";
+
+/*
+Method that returns the blocks present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world.
+*/
+"GridWorld.existingBlocks(at:)" = "Metode som returnerer blokkene som finnes i en matrise med gitte koordinater.\n\n- parameters:\n   - coordinates: Tar en matrise av typen `Coordinate`, som spesifiserer en liste med steder i oppgaveverdenen.";
+
+/*
+Method that returns the number of blocks present at a single coordinate.
+*/
+"GridWorld.numberOfBlocks(at:)" = "Metode som returnerer det antall blokker som finnes på én koordinat.";
+
+/*
+Method that returns the top block on a stack of blocks.
+*/
+"GridWorld.topBlock(at:)" = "Metode som returnerer den øverste blokken i en stabel med blokker.";
+
+/*
+Method that returns the water present in an array of given coordinates.
+*/
+"GridWorld.existingWater(at:)" = "Metode som returnerer vannet som finnes i en matrise med gitte koordinater.";
+
+/*
+Method that places multiple blocks into the puzzle world, using an array of coordinates.
+*/
+"GridWorld.placeBlocks(at:)" = "Metode som plasserer flere blokker i oppgaveverdenen ved hjelp av en matrise med koordinater.";
+
+/*
+Method that places multiple water tiles into the puzzle world, using an array of coordinates.
+*/
+"GridWorld.placeWater(at:)" = "Metode som plasserer flere vannruter i oppgaveverdenen ved hjelp av en matrise med koordinater.";
+
+/*
+Method that places multiple gems into the puzzle world, using an array of coordinates.
+*/
+"GridWorld.placeGems(at:)" = "Metode som plasserer flere steiner i oppgaveverdenen ved hjelp av en matrise med koordinater.";
+
+/*
+Method that places an item into the puzzle world.
+ 
+ Example usage:
+ ````
+ place(Gem(), atColumn: 0, row: 0)
+ // Places an instance of type `Gem` at coordinate (0, 0).
+ ````
+ - parameters:
+    - item: Takes an input conforming to type `Item`, such as `Gem`, `Switch`, `Character`, or `Expert`.
+    - column: Takes an `Int` specifying a column of the puzzle world.
+    - row: Takes an `Int` specifying a row of the puzzle world.
+*/
+"GridWorld.place(_:atColumn:row:)" = "Metode som plasserer et objekt i oppgaveverdenen.\n \n Eksempel på bruk:\n ````\n place(Gem(), atColumn: 0, row: 0)\n // Plasserer en instans av typen `Gem` på koordinaten (0, 0).\n ````\n - parameters:\n    - item: Tar inndata som samsvarer med typen `Item`, for eksempel `Gem`, `Switch`, `Character` eller `Expert`.\n    - column: Tar en `Int`-verdi som angir en kolonne i oppgaveverdenen.\n    - row: Tar en `Int`-verdi som angir en rad i oppgaveverdenen.";
+
+/*
+Method that places an item facing a certain direction into the puzzle world.
+
+Example usage:
+````
+place(Character(), facing: .north, atColumn: 3, row: 2)
+// Places an instance of type `Character`, facing north at coordinate (3, 2).
+````
+- parameters:
+   - item: Takes an input conforming to type `Item`, such as a `Gem`, `Switch`, `Character`, or `Expert`.
+   - facing: Takes an enumeration value of type `Direction`, including `.north`, `.south`, `.east`, or `.west`.
+   - column: Takes an `Int` specifying a column of the puzzle world.
+   - row: Takes an `Int` specifying a row of the puzzle world.
+*/
+"GridWorld.plac(_:facing:atColumn:row:)" = "Metode som plasserer et objekt vendt i en bestemt retning i oppgaveverdenen.\n\nEksempel på bruk:\n````\nplace(Character(), facing: .north, atColumn: 3, row: 2)\n// Plasserer en instans av typen `Character` vendt nordover på koordinaten (3, 2).\n````\n- parameters:\n   - item: Tar inndata som samsvarer med typen `Item`, for eksempel `Gem`, `Switch`, `Character` eller `Expert`.\n   - facing: Tar en oppregningsverdi av typen `Direction`, inkludert `.north`, `.south`, `.east` eller `.west`.\n   - column: Tar en `Int`-verdi som angir en kolonne i oppgaveverdenen.\n   - row: Tar en `Int`-verdi som angir en rad i oppgaveverdenen.";
+
+/*
+Method that places a portal into the puzzle world.
+
+Example usage:
+````
+place(Portal(color: .green), atStartColumn: 2, startRow: 2, atEndColumn: 4, endRow: 4)
+// Places a pair of portals, one at coordinate (2, 2) and another at (4, 4).
+````
+- parameters:
+   - portal: Takes an instance of type `Portal`.
+   - atStartColumn: Takes an `Int` specifying the starting column of the portal.
+   - startRow: Takes an `Int` specifying the starting row of the portal.
+   - atEndColumn: Takes an `Int` specifying the ending column of the portal.
+   - endRow: Takes an `Int` specifying the ending row of the portal.
+*/
+"GridWorld.plac(_:atStartColumn:startRow:atEndColumn:endRow:)" = "Metode som plasserer en portal i oppgaveverdenen.\n\nEksempel på bruk:\n````\nplace(Portal(color: .green), atStartColumn: 2, startRow: 2, atEndColumn: 4, endRow: 4)\n// Plasserer et par portaler, den ene på koordinaten (2, 2), og den andre på (4, 4).\n````\n- parameters:\n   - portal: Tar en instans av typen `Portal`.\n   - atStartColumn: Tar en `Int` som angir startkolonnen for portalen.\n   - startRow: Tar en `Int` som angir startraden for portalen.\n   - atEndColumn: Tar en `Int` som angir sluttkolonnen for portalen.\n   - endRow: Tar en `Int` som angir sluttraden for portalen.";
+
+/*
+Method that removes all items located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+remove(atColumn: 1, row: 3)
+// Removes all items at coordinate (1, 3).
+````
+- parameters:
+   - column: Takes an `Int` specifying a column of the puzzle world.
+   - row: Takes an `Int` specifying a row of the puzzle world.
+*/
+"GridWorld.removeItems(atColumn:row:)" = "Metode som fjerner alle objekter på angitte koordinater i oppgaveverdenen.\n\nEksempel på bruk:\n````\nremove(atColumn: 1, row: 3)\n// Fjerner alle objekter på koordinaten (1, 3).\n````\n- parameters:\n   - column: Tar en `Int`-verdi som angir en kolonne i oppgaveverdenen.\n   - row: Tar en `Int`-verdi som angir en rad i oppgaveverdenen.";
+
+/*
+Method that removes the top block located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+removeBlock(atColumn: 1, row: 3)
+// Removes the top block located at coordinate (1, 3).
+````
+- parameters:
+    - column: Takes an `Int` specifying a column of the puzzle world.
+    - row: Takes an `Int` specifying a row of the puzzle world.
+*/
+"GridWorld.removeBlock(atColumn:row:)" = "Metode som fjerner den øverste blokken på angitte koordinater i oppgaveverdenen.\n\nEksempel på bruk:\n````\nremoveBlock(atColumn: 1, row: 3)\n// Fjerner den øverste blokken på koordinaten (1, 3).\n````\n- parameters:\n    - column: Tar en `Int`-verdi som angir en kolonne i oppgaveverdenen.\n    - row: Tar en `Int`-verdi som angir en rad i oppgaveverdenen.";
+
+/*
+Method that removes the top block located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+removeBlock(at: Coordinate(column: 1, row: 3))
+// Removes the top block located at coordinate (1, 3).
+````
+- parameters:
+    - at: Takes a `Coordinate` specifying a location in the puzzle world.
+*/
+"GridWorld.removeBlock(at:)" = "Metode som fjerner den øverste blokken på angitte koordinater i oppgaveverdenen.\n\nEksempel på bruk:\n````\nremoveBlock(at: Coordinate(column: 1, row: 3))\n// Fjerner den øverste blokken på koordinaten (1, 3).\n````\n- parameters:\n    - at: Tar `Coordinate` som angir et sted i oppgaveverdenen.";
+
+/*
+Method that removes all the blocks located at specified coordinates in the puzzle world.
+
+Example usage:
+````
+removeAllBlocks(at: Coordinate(column: 1, row: 3))
+// Removes all of the blocks located at coordinate (1, 3).
+````
+- parameters:
+    - at: Takes a `Coordinate` specifying a location in the puzzle world.
+*/
+"GridWorld.removeAllBlocks(at:)" = "Metode som fjerner alle blokkene på angitte koordinater i oppgaveverdenen.\n\nEksempel på bruk:\n````\nremoveAllBlocks(at: Coordinate(column: 1, row: 3))\n// Fjerner alle blokkene på koordinaten (1, 3).\n````\n- parameters:\n    - at: Tar `Coordinate` som angir et sted i oppgaveverdenen.";
+
+/*
+Removes all the blocks located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+removeAllBlocks(atColumn: 1, row: 3)
+// Removes all of the blocks located at coordinate (1, 3).
+````
+- parameters:
+    - atColumn: Takes an `Int` specifying a column of the puzzle world.
+    - row: Takes an `Int` specifying a row of the puzzle world.
+*/
+"GridWorld.removeAllBlocks(atColumn:row:)" = "Fjerner alle blokkene på angitte koordinater i oppgaveverdenen.\n\nEksempel på bruk:\n````\nremoveAllBlocks(atColumn: 1, row: 3)\n// Fjerner alle blokkene på koordinaten (1, 3).\n````\n- parameters:\n    - atColumn: Tar en `Int`-verdi som angir en kolonne i oppgaveverdenen.\n    - row: Tar en `Int`-verdi som angir en rad i oppgaveverdenen.";
+
+/*
+The type representing the expert; capable of turning locks.
+*/
+"Expert" = "Typen som representerer eksperten som kan vri låser.";
+
+/*
+Method that turns a lock up, causing all linked platforms to rise by the height of one block.
+*/
+"Expert.turnLockUp()" = "Metode som vrir en lås oppover, slik at alle lenkede plattformer stiger med høyden av én blokk.";
+
+/*
+Method that turns a lock down, causing all linked platforms to fall by the height of one block.
+*/
+"Expert.turnLockDown()" = "Metode som vrir en lås nedover, slik at alle lenkede plattformer faller med høyden av én blokk.";
+
+/*
+    Method that turns a lock up or down a certain number of times.
+
+     Example usage:
+     ````
+     turnLock(up: false, numberOfTimes: 3)
+     // Turns the lock down three times.
+     
+     turnLock(up: true, numberOfTimes: 4)
+     // Turns the lock up four times.
+     ````
+     
+     - parameters:
+        - up: Takes a Boolean specifying whether the lock should be turned up (`true`) or down (`false`).
+        - numberOfTimes: Takes an `Int` specifying the number of times to turn the lock.
+*/
+"Expert.turnLock(up:numberOfTimes:)" = "    Metode som vrir en lås oppover eller nedover et bestemt antall ganger.\n\n     Eksempel på bruk:\n     ````\n     turnLock(up: false, numberOfTimes: 3)\n     // Vrir låsen nedover tre ganger.\n     \n     turnLock(up: true, numberOfTimes: 4)\n     // Vrir låsen oppover fire ganger.\n     ````\n     \n     - parameters:\n        - up: Lar en boolsk verdi angi om låsen skal vris opp (`true`) eller ned (`false`).\n        - numberOfTimes: Tar en `Int`-verdi som angir hvor mange ganger låsen skal vris.";
+
+/*
+A platform lock moves all instances of type `Platform` associated with the lock either up or down when an instance of type `Expert` calls the `turnLockUp()` or `turnLockDown()` method.
+*/
+"PlatformLock" = "En plattformlås flytter alle instanser av typen `Platform` som er assosiert med låsen, enten opp eller ned når en instans av typen `Expert` kaller metoden `turnLockUp()` eller `turnLockDown()`.";
+
+/*
+ Creates a platform lock with the specified color. The platform lock can then can be placed in the world.
+
+ Example usage:
+ ````
+ let lock = PlatformLock(color: .green)
+ ````
+
+ - Parameter color: The color of the platform lock.
+*/
+"PlatformLock(color:)" = " Skaper en plattformlås med den angitte fargen. Plattformlåsen kan deretter plasseres i verdenen.\n\n Eksempel på bruk:\n ````\n let lock = PlatformLock(color: .green)\n ````\n\n - Parameter color: Fargen på plattformlåsen.";
+
+/*
+All blocks in the puzzle world are of type `Block`. When placed on the same coordinate, blocks stack on top of each other, increasing the height of the stack.
+*/
+"Block" = "Alle blokker i oppgaveverdenen er av typen `Block`. Hvis flere blokker plasseres på samme koordinat, stables de oppå hverandre, slik at stabelen blir høyere.";
+
+/*
+Creates a block that can be placed in the world.
+*/
+"Block()" = "Oppretter en blokk som kan plasseres i verdenen.";
+
+/*
+An instance of type `Wall` will act as a barrier along one edge of a block, preventing a character or expert from moving through it.
+*/
+"Wall" = "En instans av typen `Wall` fungerer som en barriere langs den ene siden av en blokk og forhindrer at en figur eller ekspert passerer gjennom den.";
+
+/*
+Creates an instance of `Wall` that can be placed in the world.
+*/
+"Wall()" = "Skaper en instans av `Wall` som kan plasseres i verdenen.";
+
+/*
+ Creates a wall with the specified edges. The wall can then can be placed in the world.
+
+ Example usage:
+ ````
+ let wall = Wall(edges: [.bottom, .top])
+ ````
+
+ - Parameter edges: The set of edges for the wall.
+*/
+"Wall(edges:)" = " Skaper en vegg med de angitte ytre kantene. Deretter kan veggen plasseres i verdenen.\n\n Eksempel på bruk:\n ````\n let wall = Wall(edges: [.bottom, .top])\n ````\n\n - Parameter edges: Veggens ytre kanter.";
+
+/*
+An instance of type `Stair` allows a character or expert to move up or down one unit of height in the puzzle world, using the `moveForward()` command.
+*/
+"Stair" = "Med en instans av typen `Stair` kan en figur eller ekspert flytte oppover eller nedover én høydeenhet i oppgaveverdenen ved hjelp av kommandoen `moveForward()`.";
+
+/*
+Creates a stair that can be placed in the world.
+*/
+"Stair()" = "Oppretter en trapp som kan plasseres i verdenen.";
+
+/*
+An instance of type `Switch` may be toggled either open or closed. An instance of type `Character` or `Expert` can reverse the state of the switch by standing on the switch and using the `toggleSwitch()` command.
+*/
+"Switch" = "En instans av typen `Switch` kan veksles, slik at den blir åpen eller lukket. En instans av typen `Character` eller `Expert` kan veksle statusen for en bryter ved å stå på den og bruke kommandoen `toggleSwitch()`.";
+
+/*
+ Creates a switch with the specified state. The switch can then can be placed in the world.
+
+ Example usage:
+ ````
+ let switch = Switch(open: true)
+ ````
+
+ - Parameter open: The initial state of the switch. If left out, the switch is not open.
+*/
+"Switch(open:)" = " Oppretter en bryter med den angitte statusen. Bryteren kan deretter plasseres i verdenen.\n\n Eksempel på bruk:\n ````\n let switch = Switch(open: true)\n ````\n\n - Parameter open: Den innledende statusen for bryteren. Hvis den utelates, er ikke bryteren åpen.";
+
+/*
+Creates a switch that can be placed in the world.
+*/
+"Switch()" = "Oppretter en bryter som kan plasseres i verdenen.";
+
+/*
+A portal is one of the items that can be placed in the world. It teleports Byte from one place to another, with Byte facing the same direction going in and out.
+*/
+"Portal" = "En portal er ett av objektene som kan plasseres i verdenen. Den teleporterer Byte fra ett sted til et annet, og Byte er vendt i samme retning på vei inn i og ut av portalen.";
+
+/*
+State of the portal. An active portal transports a character that moves onto it, while an inactive portal does not. Portals are active by default.
+*/
+"isActive" = "Portalens status. En aktiv portal transporterer en figur som flytter til den, mens en inaktiv portal ikke gjør det. Portaler er aktive som standard.";
+
+/*
+ Creates a portal with the specified color. The portal can then can be placed in the world.
+
+ Example usage:
+ ````
+ let portal = Portal(color: .green)
+ ````
+
+ - Parameter color: The color to use for the portal.
+*/
+"Portal(color:)" = " Skaper en portal med den angitte fargen. Portalen kan deretter plasseres i verdenen.\n\n Eksempel på bruk:\n ````\n let portal = Portal(color: .green)\n ````\n\n - Parameter color: Fargen som skal brukes på portalen.";
+
+/*
+ Moves the character forward by a certain number of tiles, as determined by the `distance` parameter value.
+
+ - Parameter distance: The number of tiles to move.
+*/
+"Commands.move(distance:)" = " Flytter figuren fremover et bestemt antall ruter, som bestemt av parameterverdien`distance`.\n\n - Parameter distance: Antall ruter figuren skal flyttes.";
+

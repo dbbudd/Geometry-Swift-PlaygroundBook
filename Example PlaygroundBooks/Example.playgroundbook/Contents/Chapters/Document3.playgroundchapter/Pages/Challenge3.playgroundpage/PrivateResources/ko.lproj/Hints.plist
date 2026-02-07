@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>이 단계에서는 큰 계단이 3개가 있습니다. 각 계단을 만날 때마다 캐릭터가 꼭대기로 올라가 스위치를 작동시키고 다시 내려오도록 하는 함수를 사용하세요.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

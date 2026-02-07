@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Quando **non** c’è una gemma in cima alla piattaforma, da quella casella viene fuori una scala. Usa la condizione “Se il personaggio NON si trova su una gemma” per stabilire cosa fare in quella situazione.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

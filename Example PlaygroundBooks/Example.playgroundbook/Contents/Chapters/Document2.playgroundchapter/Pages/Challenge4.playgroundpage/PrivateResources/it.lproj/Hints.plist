@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Pensa agli schemi del posizionamento degli interruttori. In che modo puoi sfruttare gli schemi per scrivere le funzioni necessarie a risolvere dei problemi di piccole dimensioni e poi unirli per risolvere un problema più grande?</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

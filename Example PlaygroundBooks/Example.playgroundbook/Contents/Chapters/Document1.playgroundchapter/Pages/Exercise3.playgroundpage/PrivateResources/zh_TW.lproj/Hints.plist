@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>收集寶石，然後讓 Byte 走到開關處（靠近世界中央，第二段階梯上方的磚塊）。然後使用 `toggleSwitch()` 指令切換開關。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

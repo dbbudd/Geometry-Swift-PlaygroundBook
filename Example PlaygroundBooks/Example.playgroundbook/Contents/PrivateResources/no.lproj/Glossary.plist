@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En type som har en verdi som er enten `true` eller `false`. For eksempel gir `9 &lt; 7` den boolske verdien `false` fordi `9` ikke er mindre enn `7`.</string>
+				<key>Title</key>
+				<string>Boolsk</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En type som lagrer et heltall, altså et tall uten desimaler, for eksempel `10` eller `-42`. </string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En type som lagrer en serie med tegn, for eksempel `"hei verden"` eller `"dansende katter"`.</string>
+				<key>Title</key>
+				<string>String</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Apples programmeringsspråk som brukes til å skrive apper for iPhone, iPad, Mac, Apple Watch og Apple TV. </string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et sett med trinnvise instruksjoner eller regler for å løse et problem. For eksempel kan en liste over trinnene som kreves for å lage en kopp te, betraktes som en algoritme.</string>
+				<key>Title</key>
+				<string>algoritme</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En inndataverdi som overføres til en funksjon for å tilpasse oppførselen dens. I for eksempel funksjonskallet `move(distance: 3)` er `3` et argument som angir hvor mange trinn som skal flyttes.</string>
+				<key>Title</key>
+				<string>argument</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol, som `+`, `-`, `*` eller `/`, som utfører en grunnleggende matematisk beregning av ett eller flere tall. `42 / 7` og `17 - 5` er eksempler der aritmetiske operatorer brukes.</string>
+				<key>Title</key>
+				<string>aritmetisk operator</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En samling som lagrer en liste med objekter av samme type i rekkefølge. Det samme objektet kan vises flere ganger på forskjellige steder. For eksempel er `highScores = [37, 34, 29, 29, 26]` en matrise med heltall.</string>
+				<key>Title</key>
+				<string>matrise</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En handling som fastsetter verdien for en variabel eller konstant.</string>
+				<key>Title</key>
+				<string>tildeling</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Symbolet `=` brukes til å angi verdien for en variabel. For eksempel angir `greeting = "hei"` at verdien for `greeting` er «hei».</string>
+				<key>Title</key>
+				<string>tildelingsoperator</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kodefeil som forhindrer at en app kjøres som forventet. 
+</string>
+				<key>Title</key>
+				<string>bugg</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>For å gi et program beskjed om å kjøre en funksjon. Hvis du for eksempel kaller funksjonen `moveForward()` i koden din, får programmet beskjed om å utføre handlingene som er definert i den funksjonen.</string>
+				<key>Title</key>
+				<string>kall</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Å sette sammen kommandoer, kodestrukturer og algoritmer for å lage et datamaskinprogram.
+</string>
+				<key>Title</key>
+				<string>koding</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kode som ber en app om å utføre en bestemt handling. 
+</string>
+				<key>Title</key>
+				<string>kommando</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol, som `==`, `!=`, `&lt;`, `&gt;`, `&lt;=` eller `&gt;=`, som brukes til å sammenligne to verdier. Sammenligningsoperatoren kan brukes i en betingelse i et `if`-uttrykk eller en `while`-løkke for å returnere en boolsk verdi som viser om en sammenligning er `true`. For eksempel: `6 &gt; 8` sammenligner `6` med `8` og returnerer `false`.</string>
+				<key>Title</key>
+				<string>sammenligningsoperator</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Prosessen med å kombinere små deler av et program for å løse et større problem. 
+</string>
+				<key>Title</key>
+				<string>komposisjon</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En operator som kombinerer tildeling (angir verdien for en variabel) med en annen operasjon, for eksempel addisjon eller subtraksjon. Hvis for eksempel den gjeldende verdien for `a` er `1` og du bruker `a += 3`, legges `3` sammen med `1` og summen tildeles til `a`, slik at verdien på `a` nå er `4`.</string>
+				<key>Title</key>
+				<string>sammensatt tildelingsoperator</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kode som bare kjøres når bestemte betingelser oppfylles. For eksempel inneholder `if`-uttrykk og `while`-løkker betinget kode som bare kjøres hvis eller mens en betingelse er `true`. </string>
+				<key>Title</key>
+				<string>betinget kode</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En navngitt beholder som lagrer en verdi som ikke kan endres.</string>
+				<key>Title</key>
+				<string>konstant</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Å finne og fikse feil i kode som forhindrer at en app kjører som den skal. </string>
+				<key>Title</key>
+				<string>debugging</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kodesnutt som lager noe nytt i appen, for eksempel en funksjon, variabel eller tilpasset type. For eksempel deklarerer `let planet = "Earth"` en ny konstant, `planet`, og gir den verdien `"Earth"`.</string>
+				<key>Title</key>
+				<string>deklarasjon</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Prosessen med å dele opp et stort problem i mindre, mer letthåndterlige deler. </string>
+				<key>Title</key>
+				<string>oppdeling</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Å oppgi en eksplisitt verdi eller oppførsel i en ny kodesnutt, for eksempel en funksjon, variabel eller tilpasset type. Du kan for eksempel definere en funksjon ved å angi et sett med kommandoer inni funksjonen som forteller hva den skal gjøre.</string>
+				<key>Title</key>
+				<string>definere</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En type syntaks som brukes til å få tilgang til egenskaper eller kalle metodene i en instans. For eksempel kaller `expert.toggleSwitch()` metoden `toggleSwitch()` i instansen `expert`. </string>
+				<key>Title</key>
+				<string>punktnotasjon</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Den siste kodeblokken i et `if`-uttrykk. `else`-blokken kjøres hvis alle betingelsene i `if`-uttrykket er `false`. </string>
+				<key>Title</key>
+				<string>else-blokk</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kodeblokk i et `if`-uttrykk som brukes til å kontrollere en betingelse som ikke kontrolleres av `if`-blokken eller noen andre `else if`-blokker.</string>
+				<key>Title</key>
+				<string>else if-blokk</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En type som definerer et sett med unike, men nærliggende verdier som kalles *oppregningstilfeller*. For eksempel så definerer `Direction` oppregningstilfeller for hver himmelretning: `north`, `south`, `east` og `west`. Når du tildeler en oppregning til en variabel eller konstant, velger du alltid bare ett av tilfellene, for eksempel, `let compassDirection: Direction = .north`.</string>
+				<key>Title</key>
+				<string>oppregning</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En blokk med gjentatt kode som kjøres et bestemt antall ganger. </string>
+				<key>Title</key>
+				<string>for-løkke</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et navngitt sett med kommandoer som kan kjøres ved behov.</string>
+				<key>Title</key>
+				<string>funksjon</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Den første kodeblokken i et `if`-uttrykk. `if`-blokken kjøres hvis betingelsen i `if`-uttrykket er `true`. </string>
+				<key>Title</key>
+				<string>if-blokk</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kodestruktur som brukes til å kjøre kode basert på én eller flere betingelser. Den første kodeblokken i et `if`-uttrykk er `if`-blokken. Et `if`-uttrykk kan også inneholde andre blokker med ytterligere kontroller, for eksempel en `else`-blokk og `else if`-blokk.</string>
+				<key>Title</key>
+				<string>if-uttrykk</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et tall som representerer plasseringen av et objekt i en matrise. </string>
+				<key>Title</key>
+				<string>indeks</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En feil som forårsakes av å forsøke å bruke en matrise med en indeks som ligger utenfor matrisens intervall. Indeksen `2` ligger for eksempel utenfor intervallet for følgende matrise: `[17, 42]`.</string>
+				<key>Title</key>
+				<string>indeks utenfor matrisen-feil</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Å opprette en ny instans av en type, noe som omfatter å angi innledende verdier for egenskaper hos typen. </string>
+				<key>Title</key>
+				<string>initiering</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En gjentakende kodeblokk (en løkke) som er nøstet inni en annen (utvendig) løkke.</string>
+				<key>Title</key>
+				<string>innvendig løkke</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En verdi for en bestemt type. I `let greenPortal = Portal()` er for eksempel `greenPortal` en instans av typen `Portal`.</string>
+				<key>Title</key>
+				<string>instans</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Å gjenta en prosess, for eksempel å utføre samme handling på hvert objekt i en matrise.</string>
+				<key>Title</key>
+				<string>iterasjon</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En variabel som er deklarert i en funksjon, løkke eller et annet uttrykk. Lokale variabler kan ikke brukes utenfor koden der de er definert.</string>
+				<key>Title</key>
+				<string>lokal variabel</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol (`&amp;&amp;`) som kombinerer to boolske verdier der begge verdiene må være sanne for at den overordnede koden skal være sann. For eksempel er `a &amp;&amp; b` bare sant når både `a` og `b` er `true`.</string>
+				<key>Title</key>
+				<string>logisk OG-operator</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol (`!`) som inverterer den boolske verdien til en kodesnutt. For eksempel er `!a` `false` hvis `a` er `true`.</string>
+				<key>Title</key>
+				<string>logisk IKKE-operator</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol (||) som kombinerer to boolske verdier der bare én verdi må være sann for at den overordnede koden skal være sann. For eksempel er a || b sant når enten a eller b er sann (eller når begge er sanne). 
+</string>
+				<key>Title</key>
+				<string>logisk ELLER-operator</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol, for eksempel `&amp;&amp;`, `||` eller `!`, som endrer eller kombinerer de boolske, logiske verdiene `true` og `false`.</string>
+				<key>Title</key>
+				<string>logisk operator</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kodeblokk som gjentas et bestemt antall ganger (for eksempel en `for`-løkke) eller til en betingelse oppfylles (for eksempel en `while`-løkke).</string>
+				<key>Title</key>
+				<string>løkke</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En funksjon, altså et sett med kommandoer, som er definert inni en [type](glossary://type).</string>
+				<key>Title</key>
+				<string>metode</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Å plassere én repeterende kodeblokk (eller løkke) inni en annen.</string>
+				<key>Title</key>
+				<string>nøste</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et symbol, for eksempel `+`, `-` eller `&amp;&amp;`, som representerer en handling på én eller flere verdier. I `1 + 2` adderer for eksempel addisjonsoperatoren (`+`) tallene `1` og `2`. </string>
+				<key>Title</key>
+				<string>operator</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En gjentakende kodeblokk (en løkke) som inneholder en annen (innvendig) løkke.</string>
+				<key>Title</key>
+				<string>utvendig løkke</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Navnet på en inndataverdi til en funksjon, som brukes i definisjonen av funksjonen. I for eksempel `move(distance: Int)` er `distance` en parameter som tar en verdi av typen Int.</string>
+				<key>Title</key>
+				<string>parameter</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et repeterende sett med forhold eller data. 
+</string>
+				<key>Title</key>
+				<string>mønster</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En variabel (en navngitt beholder som lagrer en verdi) som er definert inni en type.</string>
+				<key>Title</key>
+				<string>egenskap</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En beskrivelse av en algoritme, som kan leses av mennesker. Skrives vanligvis med en blanding av hverdagsspråk og kode. 
+</string>
+				<key>Title</key>
+				<string>pseudokode</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Et kjennetegn hos kode som gjør at den kan brukes i forskjellige situasjoner inni et program. 
+</string>
+				<key>Title</key>
+				<string>gjenbrukbarhet</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En regel som vanligvis brukes til å skape algoritmer som løser labyrinter, og som veileder en figur gjennom en labyrint ved å følge veggen til høyre for figuren.</string>
+				<key>Title</key>
+				<string>høyrehåndsregelen</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Den lagrede informasjonen hos en variabel, et program eller et system ved et gitt tidspunkt.</string>
+				<key>Title</key>
+				<string>status</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En struktur, for eksempel en løkke eller et `if`-uttrykk, som organiserer kode i et program.</string>
+				<key>Title</key>
+				<string>uttrykk</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Reglene for å skrive kode som datamaskiner kan forstå og kjøre.</string>
+				<key>Title</key>
+				<string>syntaks</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En navngitt gruppering av egenskaper (funksjonene) og metoder (oppførslene) hos en datatype.</string>
+				<key>Title</key>
+				<string>type</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En navngitt beholder som lagrer en verdi som kan endres. </string>
+				<key>Title</key>
+				<string>variabel</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kodeblokk som kjøres så lenge en gitt betingelse er `true`. Når betingelsen endres til `false`, slutter løkken å kjøre. </string>
+				<key>Title</key>
+				<string>while-løkke</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>En kontur av et objekt, som en edelsten, en bryter eller en blokk, i puslespillverdenen. En trådramme brukes til å indikere at objektet kan dukke opp tilfeldig hver gang puslespillet kjøres.</string>
+				<key>Title</key>
+				<string>trådramme</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

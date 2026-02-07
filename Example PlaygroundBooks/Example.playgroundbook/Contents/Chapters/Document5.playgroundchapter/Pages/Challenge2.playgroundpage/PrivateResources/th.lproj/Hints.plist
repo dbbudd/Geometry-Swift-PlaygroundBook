@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>ก่อนอื่นให้คิดทบทวนวิธีการแก้ไขปัญหาที่เป็นไปได้สำหรับด่านนี้ ใช้โค้ดที่ทำงานผ่านเงื่อนไขและตัวดำเนินการตรรกะในการสร้างกฎเพื่อกำหนดวิธีการเคลื่อนที่ของตัวละครของคุณในโลก จากนั้นเขียนโค้ดของคุณและลองทดสอบ! ถ้าคุณทำไม่สำเร็จในครั้งแรก ให้ลองไปเรื่อยๆ</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

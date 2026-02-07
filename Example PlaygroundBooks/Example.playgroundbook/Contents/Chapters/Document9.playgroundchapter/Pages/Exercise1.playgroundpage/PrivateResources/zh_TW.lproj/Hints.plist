@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>首先，你必須將 `greenPortal` 的 `isActive` [屬性](glossary://property)設為 `false`。否則，每次嘗試到達開關處時，你的角色都會被傳送走。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

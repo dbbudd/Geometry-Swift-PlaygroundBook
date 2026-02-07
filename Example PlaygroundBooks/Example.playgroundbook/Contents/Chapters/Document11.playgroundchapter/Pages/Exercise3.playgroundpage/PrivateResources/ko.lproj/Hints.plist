@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>타일을 터치하면 타일의 좌표 값을 볼 수 있습니다. 전문가를 놓으려는 위치를 찾고, 타일을 터치하여 열 값과 행 값을 찾은 다음, `place` 메소드에 전달하세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

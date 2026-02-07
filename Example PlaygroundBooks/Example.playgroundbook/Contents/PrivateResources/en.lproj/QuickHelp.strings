@@ -1,0 +1,287 @@
+bplist00ﬂm	
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÅÇÉÑÖÜáàâqäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ§∞±Å≤≥¥µ∂∑±†∏π∫ªºΩærø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘_.GridWorld.existingItem(ofType:at{Coordinate}:)_GridWorld.existingWater(at:)_GridWorld.placeGems(at:)_Commands.turnRight()_Actor.isBlocked_PlatformLock(color:)_ Actor.danceLikeNoOneIsWatching()Teast_&GridWorld.removeItems(at{Coordinate}:)_1GridWorld.existingItems(ofType:at{[Coordinate]}:)XSwitch()_$GridWorld.removeBlock(atColumn:row:)Usouth_GridWorld.placeBlocks(at:)_Actor.breakItDown()_GridWorld.numberOfBlocks(at:)_GridWorld.coordinates(inRows:)_GridWorld.existingGems(at:)_Commands.isOnOpenSwitch_Actor.collectGem()_(GridWorld.removeAllBlocks(atColumn:row:)TWall_GridWorld.existingBlocks(at:)_Commands.isOnClosedSwitch_!Coordinate(column{Int}:row{Int}:)_Commands.jump()UWaterWStair()_Actor.turnRight()_&GridWorld.place(nodeOfType:facing:at:)YGridWorldWWater()SGem_GridWorld.removeAllBlocks(at:)VSwitch_Commands.isBlockedLeft_randomInt(from:to:)VExpert\Actor.jump()_!GridWorld.existingCharacters(at:)ZCoordinate_Actor.bumpIntoWall()^Actor.turnUp()_&GridWorld.plac(_:facing:atColumn:row:)XPlatform]Switch(open:)WBlock()_Expert.turnLockUp()_Actor.move(distance:)\Wall(edges:)TItem_Actor.turnLeft()_ GridWorld.existingItems(ofType:)_Actor.isBlockedRight_(GridWorld.removeItems(at{[Coordinate]}:)_Commands.moveForward()]Actor.isOnGem\Actor.argh()_1GridWorld.coordinates(inColumns:intersectingRows)Twest_ GridWorld.place(_:atColumn:row:)_GridWorld.existingSwitches(at:)_GridWorld.column(_:)_Platform(onLevel:)UGem()_%GridWorld.excludingNodes(ofTypes:at:)^Actor.isOnItem_Actor.moveForward()Unorth_Actor.toggleSwitch()_Commands.collectGem()_GridWorld.place(_:between:and:)_GridWorld.existingExperts(at:)VWall()_Platform(onLevel:controlledBy:)_GridWorld.topBlock(at:)YDirection_Commands.toggleSwitch()_Commands.turnLeft()_Actor.isOnOpenSwitch_Actor.headScratch()_Commands.isOnGem_GridWorld.removeBlock(at:)UStair_!GridWorld.coordinates(inColumns:)UActor_Commands.isBlocked\PlatformLock_ GridWorld.allPossibleCoordinates_Actor.isOnClosedSwitch^Portal(color:)_Commands.isBlockedRight_GridWorld.height(at:)_GridWorld.row(_:)_GridWorld.existingItems(at:)_"Expert.turnLock(up:numberOfTimes:)_<GridWorld.plac(_:atStartColumn:startRow:atEndColumn:endRow:)_GridWorld.placeWater(at:)_$GridWorld.removeItems(atColumn:row:)_Expert.turnLockDown()\randomBool()\Actor(name:)UBlockVPortalXisActive_Commands.move(distance:)_Actor.isBlockedLeft_Actor.grumbleGrumble()_GridWorld.place(_:facing:at:)_LReturns the first occurrence of the specified type at the given coordinates._GMethod that returns the water present in an array of given coordinates._VMethod that places multiple gems into the puzzle world, using an array of coordinates._Turns the character right.__Condition that checks if the character is blocked from moving forward in the current direction._„ Creates a platform lock with the specified color. The platform lock can then can be placed in the world.
+
+ Example usage:
+ ````
+ let lock = PlatformLock(color: .green)
+ ````
+
+ - Parameter color: The color of the platform lock._.Causes the character to bust out a fancy move._'The direction facing east in the world._1Removes all items at the provided coordinate, leaving a big hole in your world.
+
+Example usage:
+````
+remove(at: Coordinate(column: 3, row: 3))
+// Removes all items at coordinate (3, 3).
+````
+
+- parameters:
+   - coordinate: Takes an instance of type `Coordinate`, specifying a location in the puzzle world._SReturns all nodes with the provided identifier that exist at the given coordinates._1Creates a switch that can be placed in the world._\Method that removes the top block located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+removeBlock(atColumn: 1, row: 3)
+// Removes the top block located at coordinate (1, 3).
+````
+- parameters:
+    - column: Takes an `Int` specifying a column of the puzzle world.
+    - row: Takes an `Int` specifying a row of the puzzle world._(The direction facing south in the world._XMethod that places multiple blocks into the puzzle world, using an array of coordinates._MThe character starts to feel real funky, breaking it down for all to witness._HMethod that returns the number of blocks present at a single coordinate._ﬂReturns all coordinates in the specified rows.
+
+Example usage:
+````
+coordinates(inRows: [1,5,9])
+// Returns all coordinates in rows 1, 5, and 9.
+````
+- parameters:
+   - rows: Specifies the array of rows in the puzzle world._¿Method that returns the gems present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._NCondition that checks if the character is on a tile with an open switch on it._=Instructs the character to collect a gem on the current tile._[Removes all the blocks located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+removeAllBlocks(atColumn: 1, row: 3)
+// Removes all of the blocks located at coordinate (1, 3).
+````
+- parameters:
+    - atColumn: Takes an `Int` specifying a column of the puzzle world.
+    - row: Takes an `Int` specifying a row of the puzzle world._ÑAn instance of type `Wall` will act as a barrier along one edge of a block, preventing a character or expert from moving through it._¬Method that returns the blocks present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._OCondition that checks if the character is on a tile with a closed switch on it._ Creates a coordinate specifying a column and a row within a grid.
+
+ Example usage:
+ ````
+ let position = Coordinate(column: 4, row: 2)
+ ````
+
+ - Parameter column: The column for the coordinate.
+ - Parameter row: The row for the coordinate._ÕInstructs the character to jump up or down onto the block the character is facing.
+If the current tile and the tile the character is facing are the same height, the character simply jumps forward one tile._àAll instances of water blocks are of type 'Water'. Water can be placed only at a coordinate where all existing blocks have been removed._0Creates a stair that can be placed in the world._GMethod that places an item at an array of coordinates in the puzzle world.
+
+Example usage:
+````
+place(Expert(), facing: .east, at: row(3))
+// Places an instance of type `Expert` facing east at each coordinate in row 3 of the puzzle world.
+````
+
+- parameters:
+   - item: Takes an input conforming to type `Item`, such as a `Gem`, `Switch`, `Character`, or `Expert`.
+   - facing: Takes an enumeration value of type `Direction`, including `.north`, `.south`, `.east`, or `.west`.
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._æGridWorld contains all methods and properties of the puzzle world itself, including methods such as `place(item:at:)` and `removeItems(at:)`, and properties such as `allPossibleCoordinates`._6Creates a water block that can be placed in the world._öAll gems in the puzzle world are of type `Gem`. Gems may be collected by an instance of the `Character` or `Expert` type, using the `collectGem()` method._8Method that removes all the blocks located at specified coordinates in the puzzle world.
+
+Example usage:
+````
+removeAllBlocks(at: Coordinate(column: 1, row: 3))
+// Removes all of the blocks located at coordinate (1, 3).
+````
+- parameters:
+    - at: Takes a `Coordinate` specifying a location in the puzzle world._‘An instance of type `Switch` may be toggled either open or closed. An instance of type `Character` or `Expert` can reverse the state of the switch by standing on the switch and using the `toggleSwitch()` command._>Condition that checks if the character is blocked on the left._» Generates a random integer (whole number) in the given range.
+
+ - Parameter from: The lowest value that the random number can have.
+ - Parameter to: The highest value that the random number can have._;The type representing the expert; capable of turning locks._gInstructs the character to jump forward and either up or down one block. 
+
+If the block the character is facing is one block higher than the block the character is standing on, the character will jump on top of it.
+If the block the character is facing is one block lower than the block the character is standing on, the character will jump down to that block._∆Method that returns the characters present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._ASpecifies a location (column, row) in a grid of columns and rows._'The character hits a metaphorical wall._KThe character receives a burst of energy, turning it up by several notches._XMethod that places an item facing a certain direction into the puzzle world.
+
+Example usage:
+````
+place(Character(), facing: .north, atColumn: 3, row: 2)
+// Places an instance of type `Character`, facing north at coordinate (3, 2).
+````
+- parameters:
+   - item: Takes an input conforming to type `Item`, such as a `Gem`, `Switch`, `Character`, or `Expert`.
+   - facing: Takes an enumeration value of type `Direction`, including `.north`, `.south`, `.east`, or `.west`.
+   - column: Takes an `Int` specifying a column of the puzzle world.
+   - row: Takes an `Int` specifying a row of the puzzle world._KThe type representing a platform that can be moved up or down using a lock._Û Creates a switch with the specified state. The switch can then can be placed in the world.
+
+ Example usage:
+ ````
+ let switch = Switch(open: true)
+ ````
+
+ - Parameter open: The initial state of the switch. If left out, the switch is not open._0Creates a block that can be placed in the world._]Method that turns a lock up, causing all linked platforms to rise by the height of one block._Moves the character forward by a certain number of tiles, as determined by the `distance` parameter value.
+
+Example usage:
+````
+move(distance: 3)
+// Moves forward three tiles.
+````
+
+- parameters:
+   - distance: Takes an `Int` value specifying the number of times to call `moveForward()`._— Creates a wall with the specified edges. The wall can then can be placed in the world.
+
+ Example usage:
+ ````
+ let wall = Wall(edges: [.bottom, .top])
+ ````
+
+ - Parameter edges: The set of edges for the wall._æAll instances of gems, switches, portals, blocks, characters, and experts are of type `Item`, allowing you to use these instances in methods such as `place(item:at:)` and `removeItems(at:)`._Turns the character left._7Returns all existing items at any possible coordinates._DCondition that checks whether the character is blocked on the right._<Removes all items at the provided coordinates, leaving a big hole in your world.
+
+Example usage:
+````
+remove(at: allPossibleCoordinates)
+// Removes all items at every coordinate in the map.
+````
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._%Moves the character forward one tile._JCondition that checks whether the character is on a tile with a gem on it._%The character feels a wave of horror._‹ Returns the coordinates within the intersection between the specified columns and rows.
+ 
+ Example usage:
+````
+ coordinatesBetween(inColumns: [0], intersectingRows: 0...2)
+// Returns (0, 0), (0, 1), (0, 2).
+ coordinatesBetween(inColumns: [1, 2], intersectingRows: [0, 3])
+// Returns (1, 0), (2, 0), (1, 3), (2, 3).
+````
+ - parameters:
+    - columns: Specifies the array of columns in the puzzle world.
+    - rows: Specifies the array of intersecting rows in the puzzle world._'The direction facing west in the world._´Method that places an item into the puzzle world.
+ 
+ Example usage:
+ ````
+ place(Gem(), atColumn: 0, row: 0)
+ // Places an instance of type `Gem` at coordinate (0, 0).
+ ````
+ - parameters:
+    - item: Takes an input conforming to type `Item`, such as `Gem`, `Switch`, `Character`, or `Expert`.
+    - column: Takes an `Int` specifying a column of the puzzle world.
+    - row: Takes an `Int` specifying a row of the puzzle world._ƒMethod that returns the switches present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._—Returns all coordinates in the specified column.
+
+Example usage:
+````
+column(2)
+// Returns all coordinates in column 2.
+````
+- parameters:
+   - col: A column of the puzzle world, specified with an `Int` value._ÃCreates a platform on the specified level. The platform can then be placed in the world.
+ - parameters:
+     - onLevel: The level above the floor the platform should start on. If left out, the level is 2._.Creates a gem that can be placed in the world._ZReturns all nodes except the provided identifiers that exist at the specified coordinates._uCondition that checks whether the character is currently on a tile with that contains a WorldNode of a specific type._(The direction facing north in the world._?Instructs the character to toggle a switch on the current tile._Method that places a bidirectional portal into the puzzle world.
+
+Example usage:
+````
+place(Portal(color: .green), between: Coordinate(column: 2, row: 2), and: Coordinate(column: 4, row: 4))
+// Places a pair of portals, one at coordinate (2, 2) and another at (4, 4).
+````
+- parameters:
+   - portal: Takes an instance of type `Portal`.
+   - start: Takes an instance of type `Coordinate`, specifying the starting location of the portal.
+- end: Takes an instance of type `Coordinate`, specifying the ending location of the portal._√Method that returns the experts present on an array of given coordinates.
+
+- parameters:
+   - coordinates: Takes an array of type `Coordinate`, specifying a list of locations in the puzzle world._>Creates an instance of `Wall` that can be placed in the world._-Creates a platform on the specified level with the specified platform lock. The platform can then be placed in the world.
+- parameters:
+    - onLevel: The level above the floor the platform should start on. If left out, the level is 2.
+    - controlledBy: The platform lock that controls the platform._7Method that returns the top block on a stack of blocks._SAn enumeration of the directions in the world: `north`, `south`, `east` and `west`._SCondition that checks whether the character is on a tile with an open switch on it._&The character performs a head scratch._ECondition that checks if the character is on a tile with a gem on it._.Method that removes the top block located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+removeBlock(at: Coordinate(column: 1, row: 3))
+// Removes the top block located at coordinate (1, 3).
+````
+- parameters:
+    - at: Takes a `Coordinate` specifying a location in the puzzle world._ñAn instance of type `Stair` allows a character or expert to move up or down one unit of height in the puzzle world, using the `moveForward()` command._ÓReturns all coordinates in the specified columns.
+
+Example usage:
+````
+coordinates(inColumns: [2,3,4])
+// Returns all coordinates in columns 2, 3, and 4.
+````
+- parameters:
+   - columns: Specifies the array of columns in the puzzle world.__The type representing the different characters that can be present and move about in the world._∏A platform lock moves all instances of type `Platform` associated with the lock either up or down when an instance of type `Expert` calls the `turnLockUp()` or `turnLockDown()` method._5Returns all the possible coordinates within the grid._TCondition that checks whether the character is on a tile with a closed switch on it._“ Creates a portal with the specified color. The portal can then can be placed in the world.
+
+ Example usage:
+ ````
+ let portal = Portal(color: .green)
+ ````
+
+ - Parameter color: The color to use for the portal._?Condition that checks if the character is blocked on the right._, Returns the height of a stack of blocks at a given coordinate.
+ 
+ Example usage:
+````
+height(at: Coordinate(column: 3, row: 3))
+// Returns the height of a stack of blocks at (3, 3).
+````
+ - parameters:
+    - coordinate: Takes an input of type `Coordinate`, specifying a location in the puzzle world._≈Returns all coordinates in the specified row.
+
+Example usage:
+````
+row(3)
+// Returns all coordinates in row 3.
+````
+- parameters:
+   - row: A row of the puzzle world, specified with an `Int` value._2Returns the items present at the given coordinates_Ò    Method that turns a lock up or down a certain number of times.
+
+     Example usage:
+     ````
+     turnLock(up: false, numberOfTimes: 3)
+     // Turns the lock down three times.
+     
+     turnLock(up: true, numberOfTimes: 4)
+     // Turns the lock up four times.
+     ````
+     
+     - parameters:
+        - up: Takes a Boolean specifying whether the lock should be turned up (`true`) or down (`false`).
+        - numberOfTimes: Takes an `Int` specifying the number of times to turn the lock._[Method that places a portal into the puzzle world.
+
+Example usage:
+````
+place(Portal(color: .green), atStartColumn: 2, startRow: 2, atEndColumn: 4, endRow: 4)
+// Places a pair of portals, one at coordinate (2, 2) and another at (4, 4).
+````
+- parameters:
+   - portal: Takes an instance of type `Portal`.
+   - atStartColumn: Takes an `Int` specifying the starting column of the portal.
+   - startRow: Takes an `Int` specifying the starting row of the portal.
+   - atEndColumn: Takes an `Int` specifying the ending column of the portal.
+   - endRow: Takes an `Int` specifying the ending row of the portal._]Method that places multiple water tiles into the puzzle world, using an array of coordinates._EMethod that removes all items located at specific coordinates in the puzzle world.
+
+Example usage:
+````
+remove(atColumn: 1, row: 3)
+// Removes all items at coordinate (1, 3).
+````
+- parameters:
+   - column: Takes an `Int` specifying a column of the puzzle world.
+   - row: Takes an `Int` specifying a row of the puzzle world.__Method that turns a lock down, causing all linked platforms to fall by the height of one block._4Generates a random boolean value: `true` or `false`._; Creates a character (or actor) with the specified name. The character can then be placed in the world.
+
+ Example usage:
+ ````
+ let blu = Character(name: .blu)
+ ````
+
+ - Parameter name: The name of the character chosen from the `CharacterName` enumeration. If you leave out `name`, the saved character will be used._ûAll blocks in the puzzle world are of type `Block`. When placed on the same coordinate, blocks stack on top of each other, increasing the height of the stack._†A portal is one of the items that can be placed in the world. It teleports Byte from one place to another, with Byte facing the same direction going in and out._íState of the portal. An active portal transports a character that moves onto it, while an inactive portal does not. Portals are active by default._† Moves the character forward by a certain number of tiles, as determined by the `distance` parameter value.
+
+ - Parameter distance: The number of tiles to move._CCondition that checks whether the character is blocked on the left._!The character feels a bit bummed._Method that places an item at a coordinate in the puzzle world.
+
+Example usage:
+````
+place(Gem(), at: Coordinate(column: 3, row: 5))
+// Places an instance of type `Gem` at coordinate (3, 5).
+````
+
+- parameters:
+   - item: Takes an input conforming to type `Item`, such as a `Gem`, `Switch`, `Character`, or `Expert`.
+   - facing: Takes an enumeration value of type `Direction`, including `.north`, `.south`, `.east`, or `.west`.
+   - coordinate: Takes an instance of type `Coordinate`, specifying a location in the puzzle world.  Â5Pgyê≥∏·EKh~ûø›˜7<\xúÆ¥º–˘07Pfmzû©¿œ¯-ERWjç§œËˆ7<_Åò≠≥€Í 5Wx°ª≈ﬂı"5RX|Çó§«‡Ô			!	5	T	y	∏	‘	˚
+
+ 
+-
+3
+:
+C
+^
+t
+ç
+≠
+¸Füº5_îÍ~©TüÅDï’4ªÄ“≈ï Sû_ò5qHâ T í!˝"∆#
+#4#Ç%ﬁ&,'"'U'µ(ÿ)¨*m*â*√+
+,J,r,ø,Á.«.Ò0†1g2;3
+3;3ò44;4}6ë7W7ò8…99Y9Ø9ÿ: ;R;Î<‹=>=˘>1>à?]?ü@œAóAÃC¡F FÄG…H+HbI°JBJÂKzLLcLá             ’              Nõ

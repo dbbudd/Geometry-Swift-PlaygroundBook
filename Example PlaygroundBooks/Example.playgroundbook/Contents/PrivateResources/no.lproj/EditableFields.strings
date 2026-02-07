@@ -1,0 +1,20 @@
+/* Placeholder text for initializing the 'Expert' at this point*/
+"Initialize your expert here" = "Initialiser eksperten din her";
+
+/* Placeholder text for entering in your code */
+"Enter the rest of your solution here" = "Oppgi resten av løsningen din her";
+
+/* Placeholder text in the code for where to enter commands */
+"Add commands to your function" = "Legg til kommandoer i funksjonen din";
+
+/* Placeholder text in the code for where to enter the condition for a while loop */
+"Enter your condition" = "Oppgi betingelsen din";
+
+/* Placeholder text for entering a function name */
+"funcName" = "funksjonsNavn";
+
+/* Placeholder text for entering a condition for a while loop */
+"Condition" = "Betingelse";
+
+/* Placeholder text in code for where to enter commands within a while loop */
+"Add commands to your loop" = "Legg til kommandoer i løkken din";

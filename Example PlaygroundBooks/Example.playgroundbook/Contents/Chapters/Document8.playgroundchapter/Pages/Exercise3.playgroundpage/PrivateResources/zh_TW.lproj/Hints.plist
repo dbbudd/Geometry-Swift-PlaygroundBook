@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>你需要在 `gemCounter` 少於 7 時執行程式碼。你將需要使用 `&lt;` [比較運算子](glossary://comparison%20operator)在 `while` 迴圈中編寫條件。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>ให้คิดถึงรูปแบบในการเปลี่ยนสวิตช์ คุณจะใช้ประโยชน์ของรูปแบบในการเขียนฟังก์ชั่นเพื่อแก้ไขปัญหาเล็กๆ และการผสมผสานฟังก์ชั่นเพื่อแก้ไขปัญหาที่ใหญ่ขึ้นได้อย่างไร</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

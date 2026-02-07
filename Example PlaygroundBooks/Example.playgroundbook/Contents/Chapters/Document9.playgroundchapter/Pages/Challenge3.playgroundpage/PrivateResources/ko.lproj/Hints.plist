@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>[변수](glossary://variable)를 [선언](glossary://declaration)하여 사용자가 수집한 보석의 수를 추적하고 `totalGems` [상수](glossary://constant)와 비교하여 중단 시간을 결정합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

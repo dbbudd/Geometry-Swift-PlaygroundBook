@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>보석을 수집한 다음, Byte를 스위치(두 번째 계단 상단에 있는 타일, 퍼즐 세상 중앙 근처에 있음)로 이동시킵니다. 그런 다음, `toggleSwitch()` 명령을 사용하여 스위치를 작동시키세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

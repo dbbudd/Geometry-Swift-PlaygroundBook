@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Net als in de vorige raadsels, [initialiseer](glossary://initialization) je eerst het figuurtje en de expert. Vervolgens roep je [methoden](glossary://method) voor die [instanties](glossary://instance) aan om het raadsel op te lossen.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

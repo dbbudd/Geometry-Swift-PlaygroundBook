@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Op het eerste platform verschijnt een willekeurig aantal edelstenen. Controleer elke tegel en tel het aantal edelstenen dat je verzamelt door een variabele te verhogen waarmee het aantal edelstenen wordt bijgehouden.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

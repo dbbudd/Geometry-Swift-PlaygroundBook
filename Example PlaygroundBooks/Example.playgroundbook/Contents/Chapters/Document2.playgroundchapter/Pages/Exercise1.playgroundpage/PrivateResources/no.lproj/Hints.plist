@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Begynn med å flytte til ruten der figuren skal snu seg til høyre, og bruk deretter en kombinasjon av eksisterende kommandoer for å snu figuren i den retningen.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Hvis du snur til venstre mange nok ganger, vil du til slutt snu deg helt rundt.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

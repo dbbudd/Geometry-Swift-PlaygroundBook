@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`true(참)` 또는 `false(거짓)` 값을 가지는 유형입니다. 예를 들어, `9 &lt; 7`은 `false(거짓)`라는 불리언 값을 반환합니다. `9`는 `7`보다 작지 않기 때문이죠.</string>
+				<key>Title</key>
+				<string>불리언</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>정수(`10` 또는 `-42`와 같이 소수점이 없는 숫자)를 저장하는 유형입니다. </string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`"헬로우 월드"` 또는 `"춤추는 고양이"`와 같은 일련의 문자를 저장하는 유형입니다.</string>
+				<key>Title</key>
+				<string>String</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Apple의 프로그래밍 언어로서 iPhone, iPad, Mac, Apple Watch, Apple TV용 앱을 만드는 데 사용됩니다. </string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>문제 해결을 위한 단계별 지침 또는 규칙입니다. 예를 들어, 차 한 잔을 끓이는 단계도 알고리즘이라 할 수 있죠.</string>
+				<key>Title</key>
+				<string>알고리즘</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>함수에 전달되어 함수의 동작을 수정하는 입력 값입니다. 예를 들어, `move(distance: 3)`이라는 함수에서 `3`은 움직여야하는 공간을 지정하는 인수입니다.</string>
+				<key>Title</key>
+				<string>인수</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>한 개 이상의 숫자에 기본적인 사칙 연산을 수행하는 `+`, `-`, `*`, `/`와 같은 기호입니다. 예를 들어, `42 / 7`과 `17 - 5`는 산술 연산자를 사용하고 있습니다.</string>
+				<key>Title</key>
+				<string>산술 연산자</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>동일한 유형의 항목을 순서대로 정리한 목록을 저장하는 모음입니다. 같은 항목은 다른 위치에 여러 번 나타날 수 있습니다. 예를 들어, `highScores = [37, 34, 29, 29, 26]`은 정수 배열입니다.</string>
+				<key>Title</key>
+				<string>배열</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>변수 또는 상수의 값을 설정하는 동작입니다.</string>
+				<key>Title</key>
+				<string>할당</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`=` 기호는 변수 값을 설정하는 데 사용됩니다. 예를 들어, `greeting = "hello"`는 `greeting`의 값을 “hello”로 설정합니다.</string>
+				<key>Title</key>
+				<string>할당 연산자</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>코드에 있는 오류 때문에 응용 프로그램이 제대로 실행되지 않는 문제입니다. 
+</string>
+				<key>Title</key>
+				<string>버그</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>함수 실행 명령입니다. 예를 들어, 코드에서 `moveForward()` 함수를 호출하도록 작성하면 프로그램이 해당 함수에 정의된 작업을 수행합니다.</string>
+				<key>Title</key>
+				<string>호출</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>명령, 코드 구조, 알고리즘을 구성하여 컴퓨터 프로그램을 생성하는 행위입니다.
+</string>
+				<key>Title</key>
+				<string>코딩</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>응용 프로그램이 특정 동작을 수행하도록 명령하는 코드입니다. 
+</string>
+				<key>Title</key>
+				<string>명령</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>두 가지 값을 비교하는 `==`, `!=`, `&lt;`, `&gt;`, `&lt;=`, `&gt;=`과 같은 기호입니다. 비교 연산자는 `if` 구문 또는 `while` 루프의 조건식에서 사용하여 비교 결과가 `true(참)`인지 나타내는 불리언 값을 반환합니다. 예를 들어, `6 &gt; 8`에서는 `6`을 `8`과 비교하고 `false(거짓)`를 반환합니다.</string>
+				<key>Title</key>
+				<string>비교 연산자</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>프로그램에 있는 작은 부분들을 조합하여 큰 문제를 해결하는 프로세스입니다. 
+</string>
+				<key>Title</key>
+				<string>구성</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>할당(변수 값을 설정하는 동작)과 더하기 또는 빼기와 같은 연산 작업을 조합하는 연산자입니다. 예를 들어, `a`의 현재 값이 `1`이면 `a += 3`은 `1`에 `3`을 더한 다음 결과를 `a`에 할당하게 되어 `a`의 값이 `4`가 됩니다.</string>
+				<key>Title</key>
+				<string>복합 할당 연산자</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>특정 조건식이 맞는 경우에만 작동하는 코드입니다. 예를 들어, `if` 구문 및 `while` 루프는 조건식이 `true`일 경우에만 작동하는 조건 코드를 포함합니다. </string>
+				<key>Title</key>
+				<string>조건 코드</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>이름이 지정된 컨테이너입니다. 저장되는 값은 변경할 수 없습니다.</string>
+				<key>Title</key>
+				<string>상수</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>응용 프로그램이 제대로 실행되지 않는 원인인 오류를 코드에서 찾아내어 수정하는 작업입니다. </string>
+				<key>Title</key>
+				<string>디버깅</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>응용 프로그램에 함수, 변수 또는 사용자 설정 유형과 같은 새로운 요소를 생성하는 코드입니다. 예를 들어 `let planet = “Earth”`는 새로운 상수인 `planet`을 생성하고 `”Earth”` 값을 지정합니다.</string>
+				<key>Title</key>
+				<string>선언</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>큰 문제를 관리가 쉬운 작은 부분으로 나누는 프로세스입니다. </string>
+				<key>Title</key>
+				<string>분해</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>함수, 변수, 사용자 정의 유형과 같은 새로 생성한 코드 항목의 특정 값이나 동작을 설정하는 작업입니다. 예를 들어, 함수를 정의하는 경우에는 수행해야 할 명령 세트를 함수 안에 넣습니다.</string>
+				<key>Title</key>
+				<string>정의</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>특성에 접근하거나 인스턴스의 메소드를 호출할 때 사용하는 구문법의 유형입니다. 예를 들어, `expert.toggleSwitch()`는 `expert` 인스턴스에 `toggleSwitch()` 메소드를 호출합니다. </string>
+				<key>Title</key>
+				<string>점 표기법</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`if` 구문의 마지막 코드 블록입니다. `if` 구문의 조건식이 모두 `false(거짓)`일 경우에 `else` 블록이 실행됩니다. </string>
+				<key>Title</key>
+				<string>else 블록</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`if` 블록이나 다른 `else if` 블록에서 확인하지 않은 조건식을 확인하는 데 사용되는 `if` 구문 안에 있는 코드입니다.</string>
+				<key>Title</key>
+				<string>else if 블록</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>관련있는 특정한 **열거형 케이스** 값을 정의하는 유형입니다. 예를 들어, `Direction` 열거형은 `north`, `south`, `east`, `west`처럼 각 방향마다 케이스를 정의합니다. 변수나 상수에 열거형을 지정하는 경우 항상 케이스 중 하나만을 선택해야 합니다. 예: `let compassDirection: Direction = .north`</string>
+				<key>Title</key>
+				<string>열거형</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>특정 횟수만큼 작동하는 반복 코드입니다. </string>
+				<key>Title</key>
+				<string>for 루프</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>필요할 때마다 실행할 수 있는 이름이 지정된 명령 세트입니다.</string>
+				<key>Title</key>
+				<string>함수</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`if` 구문의 첫 코드 블록입니다. `if` 구문의 조건식이 `true`일 경우에 `if` 블록이 실행됩니다. </string>
+				<key>Title</key>
+				<string>if 블록</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>한 가지 이상 조건식의 값에 기반한 코드를 실행하는 데 사용되는 코드 구조입니다. `if` 구문의 첫 번째 코드 블록은 `if` 블록입니다. `if` 구문은 `else` 블록 및 `else if` 블록처럼 조건식을 추가로 제공하는 다른 블록을 포함할 수 있습니다.</string>
+				<key>Title</key>
+				<string>if 구문</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>배열에 있는 항목의 위치를 나타내는 숫자입니다. </string>
+				<key>Title</key>
+				<string>인덱스</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>배열의 범위를 벗어나는 인덱스를 사용하여 접근을 시도하면 발생하는 오류입니다. 예를 들어, 인덱스 `2`는 `[17, 42]`와 같은 배열의 범위를 벗어납니다.</string>
+				<key>Title</key>
+				<string>인덱스 범위 초과 오류</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>유형의 속성에 대한 초기 값을 설정하는 것을 포함하여 유형의 인스턴스를 새로 생성하는 행위입니다. </string>
+				<key>Title</key>
+				<string>초기화</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>(외부) 루프 안에 내포되어 있는 반복되는 코드 블록(루프)입니다.</string>
+				<key>Title</key>
+				<string>내부 루프</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>특정 유형의 값입니다. 예를 들어, `let greenPortal = Portal()`에서 `greenPortal`은 `Portal` 유형의 인스턴스입니다.</string>
+				<key>Title</key>
+				<string>인스턴스</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>배열의 각 항목에 동일한 작업을 수행하는 것과 같이 프로세스를 반복하는 행위입니다.</string>
+				<key>Title</key>
+				<string>반복</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>함수, 루프, 기타 구문 내에서 선언된 변수입니다. 지역 변수는 정의된 코드 외부에서 접근할 수 없습니다.</string>
+				<key>Title</key>
+				<string>지역 변수</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>두 개의 불리언 값을 결합하는 기호(`&amp;&amp;`)입니다. 모든 값이 true(참)여야 전체 코드가 true(참)가 됩니다. 예를 들어, `a &amp;&amp; b`가 true(참)가 되려면 `a`와 `b` 모두 `true`(참)가 되어야 합니다.</string>
+				<key>Title</key>
+				<string>논리 연산자 AND</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>코드의 불리언 값을 반대로 변경하는 기호(`!`)입니다. 예를 들어 `a`가 `true(참)`인 경우 `!a`는 `false(거짓)`입니다.</string>
+				<key>Title</key>
+				<string>논리 연산자 NOT</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>두 개의 불리언 값을 결합하는 기호(||)입니다. 두 개 중 하나가 true(참)여야 전체 코드가 true(참)가 됩니다. 예를 들어, a || b가 true(참)가 되려면 a나 b 중 하나가 true(참)거나 모두 true(참)가 되어야 합니다. 
+</string>
+				<key>Title</key>
+				<string>논리 연산자 OR</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>불리언 논리 값 `true(참)` 및 `false(거짓)`를 수정하거나 조합하는 `&amp;&amp;`, `||`, `!`와 같은 기호입니다.</string>
+				<key>Title</key>
+				<string>논리 연산자</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`for` 루프처럼 특정 횟수만큼 반복되거나 `while` 루프처럼 조건식이 맞을 때까지 반복되는 코드입니다.</string>
+				<key>Title</key>
+				<string>루프</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>[유형](glossary://type) 안에서 정의된 함수 또는 명령 세트입니다.</string>
+				<key>Title</key>
+				<string>메소드</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>코드 또는 루프 블록 안에 있는 반복되는 코드 또는 루프를 추가하는 행위입니다.</string>
+				<key>Title</key>
+				<string>내포</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>한 개 이상의 값에 대한 작업을 나타내는 `+`, `-`, `&amp;&amp;`와 같은 기호입니다. 예를 들어, `1 + 2`에서 추가 연산자(`+`)는 숫자 `1`과 `2`를 더합니다. </string>
+				<key>Title</key>
+				<string>연산자</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>(내부) 루프를 또 하나 포함하는 반복되는 코드 블록(루프)입니다.</string>
+				<key>Title</key>
+				<string>외부 루프</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>함수에 대한 입력 값입니다. 함수를 정의할 때 사용합니다. 예를 들어, `move(distance: Int)` 함수에서 `distance`는 Int 유형 값을 받는 매개변수입니다.</string>
+				<key>Title</key>
+				<string>매개변수</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>반복되는 상황 또는 데이터 세트입니다. 
+</string>
+				<key>Title</key>
+				<string>패턴</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>유형 내에서 정의된 변수(값을 저장하는 이름이 지정된 컨테이너)입니다.</string>
+				<key>Title</key>
+				<string>속성</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>알고리즘에 대한 설명입니다. 누구나 읽고 이해할 수 있도록 일상적인 말과 간단한 코드로 작성됩니다. 
+</string>
+				<key>Title</key>
+				<string>의사 코드</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>프로그램 내의 다른 상황에서도 사용할 수 있게 하는 코드의 특성입니다. 
+</string>
+				<key>Title</key>
+				<string>재사용성</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>미로를 푸는 알고리즘을 생성하는 데 사용되는 규칙입니다. 캐릭터가 자신의 오른쪽에 있는 벽을 따라 움직이도록 계산되어 있습니다.</string>
+				<key>Title</key>
+				<string>오른손 법칙</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>변수, 프로그램 또는 시스템에 저장된 정보입니다.</string>
+				<key>Title</key>
+				<string>상태</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>프로그램에서 코드를 조직하는 루프 또는 `if` 구문과 같은 구조입니다.</string>
+				<key>Title</key>
+				<string>구문</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>컴퓨터가 이해하고 실행할 수 있는 코드 작성 규칙입니다.</string>
+				<key>Title</key>
+				<string>구문법</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>데이터 종류의 특성(기능) 및 메소드(동작)에 대한 이름이 지정된 그룹입니다.</string>
+				<key>Title</key>
+				<string>유형</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>이름이 지정된 컨테이너입니다. 저장되는 값은 변경할 수 있습니다. </string>
+				<key>Title</key>
+				<string>변수</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>주어진 조건이 `true(참)`인 동안 계속 작동하는 코드 블록입니다. 조건이 `false(거짓)`로 변경되는 경우 루프가 작동을 멈춥니다. </string>
+				<key>Title</key>
+				<string>while 루프</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>퍼즐 세상의 보석, 스위치, 블록과 같은 항목의 윤곽입니다. 와이어프레임은 퍼즐이 실행될 때마다 항목이 임의로 표시될 수 있는지에 대한 가능성을 나타내는 데 사용됩니다.</string>
+				<key>Title</key>
+				<string>와이어프레임</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

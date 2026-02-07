@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저, [의사 코드](glossary://pseudocode)를 통해 포털을 활성화하거나 비활성화하여 퍼즐을 해결할 방법을 계획해 보세요. 그런 다음, 코드를 작성하고 테스트합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

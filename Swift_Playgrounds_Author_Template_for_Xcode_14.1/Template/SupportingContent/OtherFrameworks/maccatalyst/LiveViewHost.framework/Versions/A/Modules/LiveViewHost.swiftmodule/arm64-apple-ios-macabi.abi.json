@@ -1,0 +1,566 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "LiveViewHost",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PlaygroundSupport",
+        "printedName": "PlaygroundSupport",
+        "declKind": "Import",
+        "moduleName": "LiveViewHost"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AppDelegate",
+        "printedName": "AppDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "application",
+            "printedName": "application(_:didFinishLaunchingWithOptions:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIApplication",
+                "printedName": "UIKitCore.UIApplication",
+                "usr": "c:objc(cs)UIApplication"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKitCore.UIApplication.LaunchOptionsKey : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[UIKitCore.UIApplication.LaunchOptionsKey : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LaunchOptionsKey",
+                        "printedName": "UIKitCore.UIApplication.LaunchOptionsKey",
+                        "usr": "c:@T@UIApplicationLaunchOptionsKey"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@LiveViewHost@objc(cs)AppDelegate(im)application:didFinishLaunchingWithOptions:",
+            "mangledName": "$s12LiveViewHost11AppDelegateC11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0l6LaunchK3KeyaypGSgtF",
+            "moduleName": "LiveViewHost",
+            "isOpen": true,
+            "objc_name": "application:didFinishLaunchingWithOptions:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpLiveView",
+            "printedName": "setUpLiveView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaygroundLiveViewable",
+                "printedName": "PlaygroundSupport.PlaygroundLiveViewable",
+                "usr": "s:17PlaygroundSupport0A12LiveViewableP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12LiveViewHost11AppDelegateC05setUpaB017PlaygroundSupport0hA8Viewable_pyF",
+            "mangledName": "$s12LiveViewHost11AppDelegateC05setUpaB017PlaygroundSupport0hA8Viewable_pyF",
+            "moduleName": "LiveViewHost",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "liveViewConfiguration",
+            "printedName": "liveViewConfiguration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LiveViewConfiguration",
+                "printedName": "LiveViewHost.LiveViewConfiguration",
+                "usr": "s:12LiveViewHost0aB13ConfigurationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LiveViewHost11AppDelegateC04liveB13ConfigurationAA0abG0Ovp",
+            "mangledName": "$s12LiveViewHost11AppDelegateC04liveB13ConfigurationAA0abG0Ovp",
+            "moduleName": "LiveViewHost",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LiveViewConfiguration",
+                    "printedName": "LiveViewHost.LiveViewConfiguration",
+                    "usr": "s:12LiveViewHost0aB13ConfigurationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LiveViewHost11AppDelegateC04liveB13ConfigurationAA0abG0Ovg",
+                "mangledName": "$s12LiveViewHost11AppDelegateC04liveB13ConfigurationAA0abG0Ovg",
+                "moduleName": "LiveViewHost",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AppDelegate",
+                "printedName": "LiveViewHost.AppDelegate",
+                "usr": "c:@M@LiveViewHost@objc(cs)AppDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@LiveViewHost@objc(cs)AppDelegate(im)init",
+            "mangledName": "$s12LiveViewHost11AppDelegateCACycfc",
+            "moduleName": "LiveViewHost",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@LiveViewHost@objc(cs)AppDelegate",
+        "mangledName": "$s12LiveViewHost11AppDelegateC",
+        "moduleName": "LiveViewHost",
+        "isOpen": true,
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKitCore.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingSequence",
+            "printedName": "_KeyValueCodingAndObservingSequence",
+            "usr": "s:10Foundation35_KeyValueCodingAndObservingSequenceP",
+            "mangledName": "$s10Foundation35_KeyValueCodingAndObservingSequenceP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LiveViewConfiguration",
+        "printedName": "LiveViewConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "fullScreen",
+            "printedName": "fullScreen",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LiveViewHost.LiveViewConfiguration.Type) -> LiveViewHost.LiveViewConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LiveViewConfiguration",
+                    "printedName": "LiveViewHost.LiveViewConfiguration",
+                    "usr": "s:12LiveViewHost0aB13ConfigurationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LiveViewHost.LiveViewConfiguration.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LiveViewConfiguration",
+                        "printedName": "LiveViewHost.LiveViewConfiguration",
+                        "usr": "s:12LiveViewHost0aB13ConfigurationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12LiveViewHost0aB13ConfigurationO10fullScreenyA2CmF",
+            "mangledName": "$s12LiveViewHost0aB13ConfigurationO10fullScreenyA2CmF",
+            "moduleName": "LiveViewHost",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sideBySide",
+            "printedName": "sideBySide",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(LiveViewHost.LiveViewConfiguration.Type) -> LiveViewHost.LiveViewConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LiveViewConfiguration",
+                    "printedName": "LiveViewHost.LiveViewConfiguration",
+                    "usr": "s:12LiveViewHost0aB13ConfigurationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "LiveViewHost.LiveViewConfiguration.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LiveViewConfiguration",
+                        "printedName": "LiveViewHost.LiveViewConfiguration",
+                        "usr": "s:12LiveViewHost0aB13ConfigurationO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12LiveViewHost0aB13ConfigurationO10sideBySideyA2CmF",
+            "mangledName": "$s12LiveViewHost0aB13ConfigurationO10sideBySideyA2CmF",
+            "moduleName": "LiveViewHost",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LiveViewConfiguration",
+                "printedName": "LiveViewHost.LiveViewConfiguration",
+                "usr": "s:12LiveViewHost0aB13ConfigurationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LiveViewConfiguration",
+                "printedName": "LiveViewHost.LiveViewConfiguration",
+                "usr": "s:12LiveViewHost0aB13ConfigurationO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12LiveViewHost0aB13ConfigurationO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12LiveViewHost0aB13ConfigurationO2eeoiySbAC_ACtFZ",
+            "moduleName": "LiveViewHost",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LiveViewHost0aB13ConfigurationO9hashValueSivp",
+            "mangledName": "$s12LiveViewHost0aB13ConfigurationO9hashValueSivp",
+            "moduleName": "LiveViewHost",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LiveViewHost0aB13ConfigurationO9hashValueSivg",
+                "mangledName": "$s12LiveViewHost0aB13ConfigurationO9hashValueSivg",
+                "moduleName": "LiveViewHost",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12LiveViewHost0aB13ConfigurationO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12LiveViewHost0aB13ConfigurationO4hash4intoys6HasherVz_tF",
+            "moduleName": "LiveViewHost",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12LiveViewHost0aB13ConfigurationO",
+        "mangledName": "$s12LiveViewHost0aB13ConfigurationO",
+        "moduleName": "LiveViewHost",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "LiveViewHost",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PlaygroundSupport",
+        "printedName": "PlaygroundSupport",
+        "declKind": "Import",
+        "moduleName": "LiveViewHost"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2480,
+      "length": 5,
+      "value": "254.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2486,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2511,
+      "length": 4,
+      "value": "75.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2516,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2529,
+      "length": 4,
+      "value": "38.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2534,
+      "length": 5,
+      "value": "255.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/AppDelegate.swift",
+      "kind": "FloatLiteral",
+      "offset": 2548,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/RootViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3837,
+      "length": 73,
+      "value": "\"Unsupported live view type \""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/RootViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 3909,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/RootViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 161,
+      "length": 18,
+      "value": "\"LiveViewHost.RootViewController\""
+    },
+    {
+      "filePath": "\/AppleInternal\/BuildRoot\/Library\/Caches\/com.apple.xbs\/Sources\/SerenityLogger_iOSMac\/SerenityLogger-64\/LiveViewHost\/LiveViewHost\/RootViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 4763,
+      "length": 25,
+      "value": "\"LiveViewHost.ViewHostingViewController\""
+    }
+  ]
+}

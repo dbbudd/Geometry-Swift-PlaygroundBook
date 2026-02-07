@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>명령을 입력해야 합니다. 먼저, 코드 편집 영역을 선택한 다음, `moveForward()` 및 `collectGem()`을 사용하여 퍼즐을 풀어보세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

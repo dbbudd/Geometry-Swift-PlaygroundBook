@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>嘗試不更改 `moveForward()` 指令，將 `else` 區塊保持原狀。轉而修改 `if` 區塊內部的指令。
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

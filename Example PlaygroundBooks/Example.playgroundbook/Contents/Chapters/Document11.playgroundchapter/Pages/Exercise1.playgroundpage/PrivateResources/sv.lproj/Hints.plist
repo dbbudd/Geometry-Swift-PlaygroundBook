@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Först måste du [definiera](glossary://define) funktionen `move`. I funktionen skriver du en `for`-loop som använder värdet `distance` till att avgöra hur många gånger loopen ska köras.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,326 @@
+/* missing_condition_after_while */
+"missing condition in a 'while' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du må legge til en betingelse i \'while\'-uttrykket.";
+
+/* expected_switch_expr */
+"expected expression in 'switch' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger et uttrykk i \'switch\'-uttrykket.";
+
+/* use_local_before_declaration */
+"use of local variable %0 before its declaration" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du må deklarere variabelen %0 før du bruker den.";
+
+/* could_not_find_tuple_member */
+"value of tuple type %0 has no member %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Tuppelverdi av typen %0 mangler medlem %1.";
+
+/* expected_expr_after_unary_operator */
+"expected expression after unary operator" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk etter unær operator.";
+
+/* extra_argument_labels */
+"extraneous argument label%select{|s}0 '%1' in %select{call|subscript}2" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Fremmed argumentetikett%select{|s}0 \'%1\' i %select{call|subscript}2.";
+
+/* instance_member_use_on_type */
+"instance member %1 cannot be used on type %0; did you mean to use a value of this type instead?" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Instansmedlem %1 kan ikke brukes på typen %0 – mente du egentlig å bruke en verdi av denne typen i stedet?";
+
+/* invalid_postfix_operator */
+"operator with postfix spacing cannot start a subexpression" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Operatorer med postfix-mellomrom kan ikke starte et deluttrykk.";
+
+/* expected_while_after_repeat_body */
+"expected 'while' after body of 'repeat' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en \'while\' etter et \'repeat\'-uttrykk.";
+
+/* expected_lbrace_after_else */
+"expected '{' after 'else'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en \'{\' etter et \'else\'-uttrykk.";
+
+/* expected_identifier_after_dot_expr */
+"expected identifier after '.' expression" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet en identifikator etter \'.\'";
+
+/* expected_rparen_expr_list */
+"expected ')' in expression list" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du mangler en \')\' i uttrykket ditt.";
+
+/* ambiguous_member_overload_set */
+"ambiguous reference to member %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Tvetydig referanse til medlem %0.";
+
+/* expected_type */
+"expected type" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet type.";
+
+/* expected_init_value */
+"expected initial value after '='" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en verdi etter \'=\'.";
+
+/* unexpected_separator */
+"unexpected '%0' separator" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uventet \'%0\'-skilletegn.";
+
+/* type_does_not_conform */
+"type %0 does not conform to protocol %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Typen %0 stemmer ikke overens med protokollen %1.";
+
+/* partial_application_of_function_invalid */
+"partial application of %select{function with 'inout' parameters|'mutating' method|'super.init' initializer chain|'self.init' initializer delegation}0 is not allowed" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Delvis bruk av %select{function with \'inout\' parameters|\'mutating\' method|\'super.init\' initializer chain|\'self.init\' initializer delegation}0 er ikke tillatt.";
+
+/* type_of_expression_is_ambiguous */
+"type of expression is ambiguous without more context" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uttrykkstypen er tvetydig uten mer kontekst.";
+
+/* ambiguous_decl_ref */
+"ambiguous use of %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Tvetydig bruk av %0.";
+
+/* wrong_argument_labels_overload */
+"argument labels '%0' do not match any available overloads" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Argumentetikettene \'%0\' passer ikke sammen med noe som er tilgjengelig. Sjekk funksjonen eller initiereren du prøver å kalle, og pass på å bruke riktige argumenter.";
+
+/* init_candidate_inaccessible */
+"%0 initializer is inaccessible due to '%select{private|fileprivate|internal|%error|%error}1' protection level" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Initiereren %0 er utilgjengelig på grunn av beskyttelsesnivået \'%select{private|fileprivate|internal|%error|%error}1\'.";
+
+/* expected_foreach_in */
+"expected 'in' after for-each pattern" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du må bruke en \'in\' etter et for-each-mønster.";
+
+/* expected_init_for_stmt */
+"expected initialization in a 'for' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet initiering i et \'for\'-uttrykk.";
+
+/* cannot_call_non_function_value */
+"cannot call value of non-function type %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke kalle verdi av ikke-funksjonstype %0.";
+
+/* availability_decl_unavailable_msg */
+"%0 is unavailable: %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: %0 er utilgjengelig: %1.";
+
+/* cannot_apply_lvalue_binop_to_subelement */
+"left side of mutating operator isn't mutable: %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Venstre side av muterende operator kan ikke dempes: %0.";
+
+/* wrong_argument_labels */
+"incorrect argument label%select{|s}0 in %select{call|subscript}3 (have '%1', expected '%2')" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Feil argumentetikett%select{|s}0 i %select{call|subscript}3 (har \'%1\', forventet \'%2\').";
+
+/* cannot_call_with_params */
+"cannot invoke %select{|initializer for type }2'%0' with an argument list of type '%1'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke påkalle %select{|initializer for type }2\'%0\' med en argumentliste av typen \'%1\'.";
+
+/* cannot_infer_type_for_pattern */
+"type annotation missing in pattern" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Typemerking mangler i mønsteret.";
+
+/* empty_switch_stmt */
+"'switch' statement body must have at least one 'case' or 'default' block" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: \'switch\'-uttrykk må ha minst én \'case\'- eller \'default\'-blokk.";
+
+/* lex_unterminated_string */
+"unterminated string literal" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uavsluttet strenglitteral.";
+
+/* parameter_unnamed */
+"unnamed parameters must be written with the empty name '_'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Parametre uten navn må skrives med det tomme navnet \'_\'.";
+
+/* expression_unused_lvalue */
+"expression resolves to an unused l-value" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uttrykket løses til en ubrukt I-verdi.";
+
+/* var_init_self_referential */
+"variable used within its own initial value" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du kan ikke bruke den samme variabelen til å angi opprinnelig verdi.";
+
+/* expected_semi_for_stmt */
+"expected ';' in 'for' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \';\' i \'for\'-uttrykk.";
+
+/* keyword_cant_be_identifier */
+"keyword '%0' cannot be used as an identifier here" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Nøkkelordet \'%0\' kan ikke brukes som en identifikator her.";
+
+/* expression_unused_function */
+"expression resolves to an unused function" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uttrykket leder til en ubrukt funksjon.";
+
+/* func_decl_without_brace */
+"expected '{' in body of function declaration" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'{\' i teksten til en funksjonsdeklarasjon.";
+
+/* statement_same_line_without_semi */
+"consecutive statements on a line must be separated by ';'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Konsekutive uttrykk på en linje må skilles med \';\'.";
+
+/* extra_argument_to_nullary_call */
+"argument passed to call that takes no arguments" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Argument sendt til et kall som ikke tar argumenter.";
+
+/* self_assignment_var */
+"assigning a variable to itself" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Tilordner en variabel til seg selv.";
+
+/* missing_argument_positional */
+"missing argument for parameter #%0 in call" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Manglende argument for parameter nr. %0 i kallet.";
+
+/* lex_single_quote_string */
+"single-quoted string literal found, use '\\\"'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Fant et litteral med enkelt anførselstegn – bruk «\\\"».";
+
+/* cannot_apply_binop_to_args */
+"binary operator '%0' cannot be applied to operands of type %1 and %2" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Binæroperatoren \'%0\' kan ikke brukes operander av typene %1 og %2.";
+
+/* value_of_metatype_type */
+"expected member name or constructor call after type name" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet en medlemsnavn eller konstruktørkall etter typenavn.";
+
+/* missing_condition_after_if */
+"missing condition in an 'if' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en betingelse i et \'if\'-uttrykk.";
+
+/* func_decl_without_paren */
+"expected '(' in argument list of function declaration" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'(\' i argumentlisten med funksjonsdeklarasjon.";
+
+/* could_not_find_type_member */
+"type %0 has no member %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Typen %0 har ikke noe medlem %1.";
+
+/* missing_parameter_type */
+"parameter requires an explicit type" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Parameteren krever en eksplisitt type.";
+
+/* lex_invalid_character */
+"invalid character in source file" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Ugyldig tegn i kildefilen.";
+
+/* expression_unused_closure */
+"closure expression is unused" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Closure-blokk-uttrykk er ikke brukt.";
+
+/* collection_literal_empty */
+"empty collection literal requires an explicit type" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Tomt samlingslitteral krever en eksplisitt type.";
+
+/* expected_separator */
+"expected '%0' separator" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'%0\'-skilletegn.";
+
+/* cannot_apply_binop_to_same_args */
+"binary operator '%0' cannot be applied to two %1 operands" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Binæroperatoren \'%0\' kan ikke brukes på to %1-operander.";
+
+/* ambiguous_operator_ref */
+"ambiguous use of operator %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Tvetydig bruk av operator %0.";
+
+/* expected_lbrace_after_switch */
+"expected '{' after 'switch' subject expression" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'{\' etter \'switch\'-subjektuttrykk.";
+
+/* expected_condition_if */
+"expected expression, var, or let in 'if' condition" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk, var, eller let i \'if\'-betingelsen.";
+
+/* expected_parameter_type */
+"expected parameter type following ':'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet parameternavn etter \':\'";
+
+/* illegal_semi_stmt */
+"';' statements are not allowed" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: \';\'-uttrykk er ikke tillatt.";
+
+/* expected_lbrace_after_for */
+"expected '{' in 'for' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'{\' i \'for\'-uttrykket.";
+
+/* var_pattern_in_var */
+"'%select{var|let}0' cannot appear nested inside another 'var' or 'let' pattern" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: \'%select{var|let}0\' kan ikke vises nøstet inni et annet \'var\'- eller \'let\'-mønster.";
+
+/* expected_expr_in_expr_list */
+"expected expression in list of expressions" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk i listen med uttrykk.";
+
+/* expected_identifier_in_decl */
+"expected identifier in %0 declaration" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet identifikator i %0-deklarasjonen.";
+
+/* lex_expected_digit_in_int_literal */
+"expected a digit after integer literal prefix" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet et tall etter litteralprefiks for et heltall.";
+
+/* invalid_redecl */
+"invalid redeclaration of %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Ugyldig redeklarasjon av %0.";
+
+/* types_not_convertible */
+"%1 is not %select{convertible to|a subtype of}0 %2" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: %1 er ikke %select{convertible to|a subtype of}0 %2.";
+
+/* cannot_convert_assign */
+"cannot assign value of type %0 to type %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke tilordne verdi av typen %0 til type %1.";
+
+/* assignment_lhs_not_lvalue */
+"cannot assign to immutable expression of type %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uttrykket av typen %0 er uforanderlig (det kan aldri endres), og du kan derfor ikke gi det en ny verdi.";
+
+/* expected_rbrace_in_brace_stmt */
+"expected '}' at end of brace statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'}\' på slutten av klammeparentesuttrykket.";
+
+/* lex_editor_placeholder */
+"editor placeholder in source file" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du må fylle ut denne plassholderen.";
+
+/* expected_prefix_operator */
+"unary operator cannot be separated from its operand" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Unæroperatoren kan ikke være adskilt fra operanden.";
+
+/* use_nonmatching_operator */
+"%0 is not a %select{binary|prefix unary|postfix unary}1 operator" = "Oi, her er det en feil. Sjekk koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: %0 er ikke en %select{binary|prefix unary|postfix unary}1-operator.";
+
+/* lex_unary_equal */
+"'=' must have consistent whitespace on both sides" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: \'=\' må ha samme antall mellomrom på begge sider.";
+
+/* expected_lbrace_after_if */
+"expected '{' after 'if' condition" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'{\' etter \'if\'-betingelse.";
+
+/* missing_argument_labels */
+"missing argument label%select{|s}0 '%1' in %select{call|subscript}2" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Manglende argumentetikett%select{|s}0 \'%1\' i %select{call|subscript}2.";
+
+/* cannot_subscript_with_index */
+"cannot subscript a value of type %0 with an index of type %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke bruke en indeksverdi av typen %0 med en indeks av typen %1.";
+
+/* cannot_call_with_no_params */
+"cannot invoke %select{|initializer for type }1'%0' with no arguments" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke påkalle %select{|initializer for type }1\'%0\' uten argumenter.";
+
+/* expected_lbrace_after_repeat */
+"expected '{' after 'repeat'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en \'{\' etter \'repeat\'.";
+
+/* expected_lbrace_after_while */
+"expected '{' after 'while' condition" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en \'{\' etter en \'while\'-betingelse.";
+
+/* repeated_identifier */
+"found an unexpected second identifier in %0 declaration; is there an accidental break?" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Fant en uventet ekstra identifikator i %0-deklarasjonen – er det et uventet brudd?";
+
+/* assignment_lhs_is_immutable_variable */
+"cannot assign to value: %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke tilordne til verdi %0.";
+
+/* cannot_convert_argument_value_protocol */
+"argument type %0 does not conform to expected type %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Argumenttypen %0 samsvarer ikke med den forventede typen %1.";
+
+/* expected_pattern */
+"expected pattern" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet mønster.";
+
+/* statement_begins_with_closure */
+"top-level statement cannot begin with a closure expression" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uttrykk på øverste nivå kan ikke starte med et closure-blokk-uttrykk.";
+
+/* expected_expr */
+"expected expression" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk.";
+
+/* expected_expr_after_operator */
+"expected expression after operator" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk etter operator.";
+
+/* expected_closure_rbrace */
+"expected '}' at end of closure" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet \'}\' på slutten av closure-blokk.";
+
+/* unresolved_member_no_inference */
+"reference to member %0 cannot be resolved without a contextual type" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Referanse til medlem %0 kan ikke løses uten en kontekstuell type.";
+
+/* unexpected_else_after_if */
+"unexpected 'else' immediately following 'if' condition" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Uventet \'else\' rett etter \'if-betingelsen.";
+
+/* use_unresolved_identifier */
+"use of unresolved %select{identifier|operator}1 %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Bruk av uløst %select{identifier|operator}1 %0.";
+
+/* use_undeclared_type */
+"use of undeclared type %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Bruk av udeklarert type %0.";
+
+/* parameter_curry_syntax_removed */
+"curried function declaration syntax has been removed; use a single parameter list" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Curryfunksjonsdeklarasjonssyntaks er fjernet – bruk kun én parameterliste.";
+
+/* expected_condition_while */
+"expected expression, var, or let in 'while' condition" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk, var, eller let i \'while\'-betingelsen.";
+
+/* use_of_equal_instead_of_equality */
+"use of '=' in a boolean context, did you mean '=='?" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du brukte \'=\', som er en oppgaveoperator i en boolsk sammenligningskontekst. Mente du \'==\'?";
+
+/* expected_cond_for_stmt */
+"expected condition in 'for' statement" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en betingelse i \'for\'-uttrykket.";
+
+/* expected_parameter_name */
+"expected parameter name followed by ':'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet parameternavn etterfulgt av \':\'";
+
+/* non_associative_adjacent_operators */
+"adjacent operators are in non-associative precedence group %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Operatorer ved siden av hverandre er i en ikke-assosiativ presedensgruppe %0.";
+
+/* expected_foreach_lbrace */
+"expected '{' to start the body of for-each loop" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du trenger en \'{\' på begynnelsen av teksten for en for-each-løkke.";
+
+/* invalid_force_unwrap */
+"cannot force unwrap value of non-optional type %0" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du kan ikke tvinge utpakkingsverdi av ikke-valgfri type %0.";
+
+/* extra_argument_positional */
+"extra argument in call" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Ekstra argument i kallet.";
+
+/* expected_foreach_container */
+"expected Sequence expression for for-each loop" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet sekvensuttrykk i for-each-løkke.";
+
+/* missing_argument_named */
+"missing argument for parameter %0 in call" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Manglende argument for parameter %0 i kallet.";
+
+/* extra_whitespace_period */
+"extraneous whitespace after '.' is not permitted" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Du kan ikke ha mellomrom etter \'.\'";
+
+/* extra_rbrace */
+"extraneous '}' at top level" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Ekstra \'}\' på øverste nivå.";
+
+/* could_not_find_value_member */
+"value of type %0 has no member %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Verdien av typen %0 har ikke noe medlem %1.";
+
+/* expected_expr_assignment */
+"expected expression in assignment" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet uttrykk i oppgaven.";
+
+/* cannot_convert_argument_value */
+"cannot convert value of type %0 to expected argument type %1" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Kan ikke konvertere verdi av typen %0 til den forventede argumenttypen %1.";
+
+/* expected_member_name */
+"expected member name following '.'" = "Oi, her er det en feil. Kontroller koden rundt denne linjen for å se om du kan fikse den.\n\nFeil: Forventet medlemsnavn etter \'.\'";

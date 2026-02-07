@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Voeg een `if`-instructie toe binnen de `for`-lus en voeg vervolgens je eerste voorwaarde toe. Selecteer de operator `||` in het snelmenu en voeg je tweede voorwaarde toe. Maak ook een `else`-blok om je figuurtje verder te laten gaan als beide voorwaarden onwaar zijn.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

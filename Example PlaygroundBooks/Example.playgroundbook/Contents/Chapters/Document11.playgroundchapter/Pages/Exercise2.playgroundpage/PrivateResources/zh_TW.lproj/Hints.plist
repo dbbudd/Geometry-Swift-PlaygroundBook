@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>首先，你需要定義 `turnLock` 函數，讓它使用 `up` [參數](glossary://parameter)來告訴專家朝哪個方向轉動鎖頭。然後使用 `numberOfTimes` 來設定轉動鎖頭的次數。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>캐릭터가 보석을 발견하면 `collectGem()`을 사용하고 닫혀있는 스위치를 발견하면 `toggleSwitch()`를 사용하도록 합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

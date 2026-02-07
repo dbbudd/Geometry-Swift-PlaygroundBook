@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>สังเกตไหมว่าชุดเพชรสี่เม็ดแต่ละชุดมีลักษณะเหมือนกันทุกอย่าง เขียนโค้ดขึ้นมาหนึ่งชุดเพื่อให้ทำงานกับชุดอื่นๆ ได้ทั้งหมด
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>보석 4개로 된 세트가 서로 동일하다는 점을 확인해 보세요. 세트 한 개에 맞는 코드를 작성하면 다른 세트에도 알맞게 작동합니다.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

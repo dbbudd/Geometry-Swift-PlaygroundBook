@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>在 `for` 迴圈中加入 `if` 語句，然後加入第一個條件。在快捷鍵列中選取 `||` 運算子並加入第二個條件。同時建立 `else` 區塊，當兩個條件均為偽時讓你的角色向前走。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

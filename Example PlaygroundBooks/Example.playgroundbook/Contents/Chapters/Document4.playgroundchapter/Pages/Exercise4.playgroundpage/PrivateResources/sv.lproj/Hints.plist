@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Det finns en [funktion](glossary://function) som är förberedd åt dig, så det enda du behöver göra är att lägga till ett `if else`-uttryck i den.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

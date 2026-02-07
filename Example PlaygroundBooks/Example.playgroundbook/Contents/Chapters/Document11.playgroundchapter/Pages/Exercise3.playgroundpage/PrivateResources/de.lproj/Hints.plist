@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Du kannst ein Feld berühren, um dessen Koordinatenwerte anzuzeigen. Finde den Ort, an dem dein Experte beginnen soll, und lege danach den Finger auf das betreffende Feld, um dessen Spalten- und Zeilenwert herauszufinden. Übergib diese Werte an die Methode `place`.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

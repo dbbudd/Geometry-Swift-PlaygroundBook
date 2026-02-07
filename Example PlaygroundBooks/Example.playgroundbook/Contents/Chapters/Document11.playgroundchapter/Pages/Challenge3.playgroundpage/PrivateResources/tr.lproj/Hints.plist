@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Bu bulmacayı nasıl çözmek istediğini planlamak için [sözde kod](glossary://pseudocode) kullanmayı dene. Hangi becerileri kullanabileceğini düşün ve bir başlangıç noktası bul. Bir strateji belirledikten sonra kodunu yazmaya ve test etmeye başla.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

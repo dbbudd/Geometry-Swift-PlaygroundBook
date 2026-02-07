@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een type dat de waarde `true` of `false` heeft. Bijvoorbeeld: `9 &lt; 7` retourneert de Booleaanse waarde `false` omdat `9` niet kleiner is dan `7`.</string>
+				<key>Title</key>
+				<string>Booleaanse waarde</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een type waarin een geheel getal (een getal zonder decimaal) is opgeslagen, zoals `10` of `-42`. </string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een type waarin een reeks tekens is opgeslagen, zoals `"hallo, wereld"` of `"dansende katten"`.</string>
+				<key>Title</key>
+				<string>String</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>De programmeertaal van Apple voor het schrijven van apps voor de iPhone, iPad, Mac, Apple Watch en Apple TV. </string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een stapsgewijze set instructies of regels voor het oplossen van een probleem. Bijvoorbeeld: een recept voor het maken van een taart zou je kunnen beschouwen als een algoritme.</string>
+				<key>Title</key>
+				<string>algoritme</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een invoerwaarde die wordt doorgegeven aan een functie om het gedrag ervan aan te passen. Bijvoorbeeld: in de functie-aanroep `move(distance: 3)` is `3` een argument waarmee het aantal posities van de verplaatsing wordt aangegeven.
+
+(move = verplaats, distance = afstand)</string>
+				<key>Title</key>
+				<string>argument</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool, zoals `+`, `-`, `*` of `/`, waarmee een eenvoudige wiskundige bewerking wordt uitgevoerd op een of meer getallen. Bijvoorbeeld:  `42 / 7` en `17 - 5` maken gebruik van rekenkundige operatoren.</string>
+				<key>Title</key>
+				<string>rekenkundige operator</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een verzameling waarin een geordende lijst met onderdelen van hetzelfde type wordt opgeslagen. Hetzelfde onderdeel kan meerdere keren op verschillende posities voorkomen. Bijvoorbeeld: `highScores = [37, 34, 29, 29, 26]` is een array met gehele getallen.
+
+(highScores = hoge scores)</string>
+				<key>Title</key>
+				<string>array</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een bewerking waarmee de waarde van een variabele of constante wordt ingesteld.</string>
+				<key>Title</key>
+				<string>toewijzing</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het symbool `=` wordt gebruikt om de waarde van een variabele in te stellen. Bijvoorbeeld: met `groet = "hallo"` stel je de waarde van `groet` in op "hallo".</string>
+				<key>Title</key>
+				<string>toewijzings­operator</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een programmeerfout waardoor een app niet goed werkt. 
+</string>
+				<key>Title</key>
+				<string>bug</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een programma opdracht geven om een functie uit te voeren. Bijvoorbeeld: door de functie `moveForward()` aan te roepen in je code geef je het programma opdracht om de acties uit te voeren die in die functie zijn gedefinieerd.
+
+(moveForward = ga vooruit)</string>
+				<key>Title</key>
+				<string>aanroepen</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het opstellen van commando's, codestructuren en algoritmen om een computerprogramma te maken.
+</string>
+				<key>Title</key>
+				<string>programmeren</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Code die een app opdracht geeft om een bepaalde bewerking uit te voeren. 
+</string>
+				<key>Title</key>
+				<string>commando</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool, zoals `==`, `!=`, `&lt;`, `&gt;`, `&lt;=` of `&gt;=`, dat wordt gebruikt om twee waarden te vergelijken. De vergelijkingsoperator kan worden gebruikt in een voorwaarde van een `if`-instructie of `while`-lus om een Booleaanse waarde te retourneren die aangeeft of een vergelijking `true` is. Bijvoorbeeld: `6 &gt; 8` vergelijkt `6` met `8` en retourneert `false`.</string>
+				<key>Title</key>
+				<string>vergelijkings­operator</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het combineren van kleine stukjes van een programma om een groter probleem op te lossen. 
+</string>
+				<key>Title</key>
+				<string>samenstelling</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een operator die toewijzing (het instellen van de waarde van een variabele) combineert met een andere bewerking, zoals optellen of aftrekken. Bijvoorbeeld: als `a` de waarde `1` heeft en je `a += 3` gebruikt, wordt `3` opgeteld bij `1` en wordt het resultaat toegewezen aan `a`, waardoor de waarde van `a` verandert in `4`.</string>
+				<key>Title</key>
+				<string>gecombineerde toewijzings­operator</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Code die wordt uitgevoerd wanneer er aan bepaalde voorwaarden is voldaan. Bijvoorbeeld: `if`-instructies en `while`-lussen bevatten voorwaardelijke code die alleen wordt uitgevoerd als of zolang een voorwaarde `true` is. </string>
+				<key>Title</key>
+				<string>voorwaardelijke code</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een benoemde container waarin een waarde is opgeslagen die niet kan worden gewijzigd.</string>
+				<key>Title</key>
+				<string>constante</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het zoeken en corrigeren van programmeerfouten die ervoor zorgen dat een app niet goed werkt. </string>
+				<key>Title</key>
+				<string>debuggen</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een stukje code waarmee je iets nieuws in je app introduceert, zoals een functie, variabele of aangepast type. Bijvoorbeeld: met `let planet = "Earth"` declareer je een nieuwe constante, `planet`, en ken je hieraan de waarde `"Earth"` toe.
+
+(planet = planeet, Earth = aarde)</string>
+				<key>Title</key>
+				<string>declaratie</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het opdelen van een groot probleem in kleinere, beter handelbare stukjes. </string>
+				<key>Title</key>
+				<string>ontleding</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>De expliciete waarde of het expliciete gedrag opgeven van een nieuw stukje code, zoals een functie, variabele of aangepast type. Bijvoorbeeld: je definieert de werking van een functie door een set commando's toe te voegen aan de functie.</string>
+				<key>Title</key>
+				<string>definiëren</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een soort syntaxis die wordt gebruikt om de eigenschappen te benaderen of de methoden aan te roepen van een instantie. Bijvoorbeeld: in `expert.toggleSwitch()` wordt de methode `toggleSwitch()` van de instantie `expert` aangeroepen. 
+
+(toggleSwitch = zet schakelaar om)</string>
+				<key>Title</key>
+				<string>puntnotatie</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het laatste blok code in een `if`-instructie. Het `else`-blok wordt uitgevoerd als alle voorwaarden in de `if`-instructie `false` zijn. </string>
+				<key>Title</key>
+				<string>else-blok</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een blok code in een `if`-instructie dat wordt gebruikt om een voorwaarde te controleren die niet wordt gecontroleerd door het `if`-blok of een ander `else if`-blok.</string>
+				<key>Title</key>
+				<string>else if-blok</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een type waarmee een set unieke maar gerelateerde waarden wordt gedefinieerd, de zogenaamde *opsommingsvariaties*. Bijvoorbeeld: met de opsomming `Direction` worden variaties gedefinieerd voor elke hoofdwindrichting: `north`, `south`, `east` en `west`. Wanneer je een opsomming aan een variabele of constante toekent, kies je altijd maar één van de variaties, bijvoorbeeld `let compassDirection: Direction = .north`.
+
+(Direction = richting, north = noorden, south = zuiden, east = oosten, west = westen, compassDirection = kompasrichting)</string>
+				<key>Title</key>
+				<string>opsomming</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een blok herhaalde code dat een bepaald aantal keren wordt uitgevoerd. </string>
+				<key>Title</key>
+				<string>for-lus</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een benoemde set commando's die op elk gewenst moment kan worden uitgevoerd.</string>
+				<key>Title</key>
+				<string>functie</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het eerste blok code in een `if`-instructie. Het `if`-blok wordt uitgevoerd als de voorwaarde in de `if`-instructie `true` is. </string>
+				<key>Title</key>
+				<string>if-blok</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een structuur die wordt gebruikt om code uit te voeren op basis van de waarde van een of meer voorwaarden. Het eerste blok code in een `if`-instructie is het `if`-blok. Een `if`-instructie kan ook andere blokken bevatten voor aanvullende toetsingen, zoals een `else`-blok en een `else if`-blok.</string>
+				<key>Title</key>
+				<string>if-instructie</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een getal waarmee de positie van een onderdeel in een array wordt aangegeven. </string>
+				<key>Title</key>
+				<string>index</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een fout die optreedt als er wordt geprobeerd om een array te benaderen via een index die buiten het bereik van die array ligt. Bijvoorbeeld: de index `2` ligt buiten het bereik van de array `[17, 42]`.</string>
+				<key>Title</key>
+				<string>index buiten bereik-fout</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een nieuwe instantie van een type aanmaken, waarbij de beginwaarden voor de eigenschappen van het type worden ingesteld. </string>
+				<key>Title</key>
+				<string>initialisatie</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een herhaald blok code (een lus) dat in een andere lus (buitenste lus) is genest.</string>
+				<key>Title</key>
+				<string>binnenste lus</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een waarde van een bepaald type. Bijvoorbeeld: in `let greenPortal = Portal()` is `greenPortal` een instantie van het type `Portal`.
+
+(greenPortal = groen portaal)</string>
+				<key>Title</key>
+				<string>instantie</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Het herhalen van een proces, zoals het uitvoeren van dezelfde bewerking voor elk onderdeel in een array.</string>
+				<key>Title</key>
+				<string>iteratie</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een variabele die is gedeclareerd in een functie, lus of andere instructie. Lokale variabelen zijn alleen toegankelijk vanuit de code waarbinnen ze zijn gedefinieerd.</string>
+				<key>Title</key>
+				<string>lokale variabele</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool (`&amp;&amp;`) waarmee twee Booleaanse waarden worden gecombineerd. De algehele code is alleen waar als beide waarden waar zijn. Bijvoorbeeld: `a &amp;&amp; b` is alleen waar wanneer zowel `a` als `b` waar zijn.</string>
+				<key>Title</key>
+				<string>logische AND-operator</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool (`!`) waarmee de Booleaanse waarde van een stukje code wordt omgekeerd. Bijvoorbeeld: als `a` de waarde `true` heeft, dan is`!⁠a` dus `false`.</string>
+				<key>Title</key>
+				<string>logische NOT-operator</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool (||) waarmee twee Booleaanse waarden worden gecombineerd. De algehele code is waar wanneer een van beide waarden waar is. Bijvoorbeeld: a || b is waar wanneer of a of b waar is (of wanneer beide waar zijn). 
+</string>
+				<key>Title</key>
+				<string>logische OR-operator</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool, zoals `&amp;&amp;`, `||` of `!`, waarmee de logische Booleaanse waarden `true` en `false` worden gewijzigd of gecombineerd.</string>
+				<key>Title</key>
+				<string>logische operator</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een blok code dat een bepaald aantal keren wordt herhaald (bijvoorbeeld een `for`-lus) of dat wordt herhaald totdat aan een voorwaarde is voldaan (bijvoorbeeld een `while`-lus).</string>
+				<key>Title</key>
+				<string>lus</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een functie of set commando's die in een [type](glossary://type) is gedefinieerd.</string>
+				<key>Title</key>
+				<string>methode</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een herhaald blok code (of lus) invoegen in een ander herhaald blok code.</string>
+				<key>Title</key>
+				<string>nesten</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een symbool, zoals `+`, `-` of `&amp;&amp;`, waarmee een bewerking wordt toegepast op een of meer waarden. Bijvoorbeeld: in `1 + 2` telt de operator (`+`) de getallen `1` en `2` bij elkaar op. </string>
+				<key>Title</key>
+				<string>operator</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een herhaald blok code (een lus) met daarin een andere lus (binnenste lus).</string>
+				<key>Title</key>
+				<string>buitenste lus</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>De naam van een invoerwaarde voor een functie die wordt gebruikt in de definitie van de functie. Bijvoorbeeld: in `move(distance: Int)` is `distance` een parameter die een waarde krijgt van het type Int.
+
+(move = verplaats, distance = afstand)</string>
+				<key>Title</key>
+				<string>parameter</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een herhaalde set omstandigheden of gegevens. 
+</string>
+				<key>Title</key>
+				<string>patroon</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een variabele (een benoemde container waarin een waarde is opgeslagen) die is gedefinieerd in een type.</string>
+				<key>Title</key>
+				<string>eigenschap</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een voor mensen leesbare beschrijving van een algoritme, meestal geschreven in een combinatie van natuurlijke taal en code. 
+</string>
+				<key>Title</key>
+				<string>pseudocode</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een kenmerk waarmee wordt aangeduid dat code in verschillende situaties binnen een programma kan worden gebruikt. 
+</string>
+				<key>Title</key>
+				<string>herbruikbaarheid</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een regel, meestal gebruikt voor het genereren van algoritmen voor doolhoven, waarmee een figuurtje uit een doolhof wordt geleid door de muur rechts aan te houden.</string>
+				<key>Title</key>
+				<string>rechterzijde­regel</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>De opgeslagen informatie van een variabele, programma of systeem op een bepaald moment.</string>
+				<key>Title</key>
+				<string>status</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een structuur, zoals een lus of `if`-instructie, waarmee code in een programma wordt georganiseerd.</string>
+				<key>Title</key>
+				<string>instructie</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>De regels voor het schrijven van code die door computers kan worden begrepen en uitgevoerd.</string>
+				<key>Title</key>
+				<string>syntaxis</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een benoemde, gegroepeerde set eigenschappen (de kenmerken) en methoden (het gedrag) van een soort gegevens.</string>
+				<key>Title</key>
+				<string>type</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een benoemde container waarin een waarde is opgeslagen die kan worden gewijzigd. </string>
+				<key>Title</key>
+				<string>variabele</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Een blok code dat wordt uitgevoerd zolang een opgegeven voorwaarde `true` is. Wanneer de voorwaarde in `false` verandert, wordt het uitvoeren van de lus gestopt. </string>
+				<key>Title</key>
+				<string>while-lus</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>De omtrek van een object, zoals een edelsteen, schakelaar of blok, in de virtuele wereld. Een draadmodel wordt gebruikt om de mogelijkheid aan te geven dat het object op een willekeurige plaats kan verschijnen wanneer het raadsel wordt uitgevoerd.</string>
+				<key>Title</key>
+				<string>draadmodel</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

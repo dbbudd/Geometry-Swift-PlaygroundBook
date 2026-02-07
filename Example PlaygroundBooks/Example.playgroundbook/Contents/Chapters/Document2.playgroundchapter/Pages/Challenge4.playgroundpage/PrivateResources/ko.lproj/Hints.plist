@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>스위치가 배치된 패턴을 살펴보세요. 파악한 패턴을 가지고 함수들을 작성하여 작은 문제를 해결하고 함수들을 조합하여 더 큰 문제를 해결해 보세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

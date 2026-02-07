@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Recoge la gema y lleva a Byte hasta el interruptor (la baldosa que hay al final de la segunda escalera, casi en el centro del rompecabezas). A continuación, activa el interruptor con el comando `toggleSwitch()`.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

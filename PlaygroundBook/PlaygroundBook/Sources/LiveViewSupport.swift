@@ -13,7 +13,7 @@ import PlaygroundSupport
 /// Instantiates a new instance of a live view controller.
 ///
 /// By default, this loads an instance of `LiveViewController` from `LiveView.storyboard`.
-public func instantiateLiveViewController() -> LiveViewController {
+@MainActor public func instantiateLiveViewController() -> LiveViewController {
     let storyboard = UIStoryboard(name: "LiveView", bundle: nil)
 
     guard let viewController = storyboard.instantiateInitialViewController() else {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Je moet een aantal commando's invoeren. Selecteer eerst het gebied voor het bewerken van code en los het raadsel vervolgens op met `moveForward()` en `collectGem()`.
+
+(moveForward = ga vooruit, collectGem = verzamel edelsteen)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

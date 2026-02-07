@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>이전 퍼즐에서 한 것처럼 캐릭터와 전문가를 [초기화](glossary://initialization)하세요. 그런 다음, [인스턴스](glossary://instance)에 [메소드](glossary://method)를 호출하여 퍼즐을 해결합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

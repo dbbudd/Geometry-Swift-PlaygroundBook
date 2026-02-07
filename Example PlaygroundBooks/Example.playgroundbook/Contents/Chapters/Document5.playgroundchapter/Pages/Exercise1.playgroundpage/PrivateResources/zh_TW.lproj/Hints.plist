@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>如果頂部平台上**沒有**寶石，則磚塊處會延伸出一段階梯。使用「如果你的角色不在寶石處」這個條件來決定在此情況下該怎麼做。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

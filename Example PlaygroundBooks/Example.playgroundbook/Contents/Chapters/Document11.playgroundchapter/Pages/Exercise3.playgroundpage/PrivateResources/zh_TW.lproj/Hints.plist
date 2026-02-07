@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>你可以觸碰磚塊來查看其座標值。找到想要作為專家起點的位置，然後觸碰磚塊來找出要將哪一個直欄值和橫列值傳入 `place` 方法。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

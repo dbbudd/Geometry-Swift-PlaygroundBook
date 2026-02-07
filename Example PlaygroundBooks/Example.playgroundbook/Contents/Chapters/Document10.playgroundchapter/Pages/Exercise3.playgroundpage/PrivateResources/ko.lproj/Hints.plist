@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저 전문가와 캐릭터의 [인스턴스](glossary://instance)를 [초기화](glossary://initialization)하세요. 미리 제공된 상수 이름 `character` 및 `expert`는 바꾸지 말아야 합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

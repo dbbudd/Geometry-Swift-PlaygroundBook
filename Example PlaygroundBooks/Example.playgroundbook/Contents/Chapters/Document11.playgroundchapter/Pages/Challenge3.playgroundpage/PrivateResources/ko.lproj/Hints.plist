@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>[의사 코드](glossary://pseudocode)를 사용하여 퍼즐을 해결할 방법을 계획해 보세요. 사용할 수 있는 기술에 대해 생각해 보고 어떻게 시작할지 생각해 보세요. 전략을 찾은 뒤에는 코드를 작성하고 테스트해 보세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>想一想放置開關的模式。你如何利用這個模式來編寫解決小問題的函數，然後再將不同函數組合在一起來解決更大的問題？</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

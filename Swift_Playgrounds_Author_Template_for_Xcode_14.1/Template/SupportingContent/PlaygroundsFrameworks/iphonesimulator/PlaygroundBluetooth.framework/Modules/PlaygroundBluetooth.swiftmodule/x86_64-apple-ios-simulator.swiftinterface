@@ -1,0 +1,128 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PlaygroundBluetooth
+// swift-module-flags-ignorable: -enable-bare-slash-regex -user-module-version 64
+import CoreBluetooth
+import Foundation
+@_exported import PlaygroundBluetooth
+import PlaygroundSupport
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc @_Concurrency.MainActor(unsafe) public class PlaygroundBluetoothConnectionView : UIKit.UIView {
+  public struct Item {
+    public var name: Swift.String
+    public var icon: UIKit.UIImage
+    public var issueIcon: UIKit.UIImage
+    public enum FirmwareStatus {
+      case upToDate
+      case outOfDate
+      public static func == (a: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus, b: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public var firmwareStatus: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus?
+    public var batteryLevel: Swift.Double?
+    public init(name: Swift.String, icon: UIKit.UIImage, issueIcon: UIKit.UIImage, firmwareStatus: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus? = nil, batteryLevel: Swift.Double? = nil)
+  }
+  public enum State {
+    case noConnection
+    case connecting
+    case searchingForPeripherals
+    case selectingPeripherals
+    case connectedPeripheralFirmwareOutOfDate
+    public static func == (a: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.State, b: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.State) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) public init(centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, delegate: PlaygroundBluetooth.PlaygroundBluetoothConnectionViewDelegate? = nil, dataSource: PlaygroundBluetooth.PlaygroundBluetoothConnectionViewDataSource? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) weak public var delegate: PlaygroundBluetooth.PlaygroundBluetoothConnectionViewDelegate? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) weak public var dataSource: PlaygroundBluetooth.PlaygroundBluetoothConnectionViewDataSource?
+  @_Concurrency.MainActor(unsafe) public func setItem(_ item: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item, forPeripheral peripheral: CoreBluetooth.CBPeripheral)
+  @_Concurrency.MainActor(unsafe) public func setName(_ name: Swift.String, forPeripheral peripheral: CoreBluetooth.CBPeripheral)
+  @_Concurrency.MainActor(unsafe) public func setIcon(_ icon: UIKit.UIImage, forPeripheral peripheral: CoreBluetooth.CBPeripheral)
+  @_Concurrency.MainActor(unsafe) public func setIssueIcon(_ issueIcon: UIKit.UIImage, forPeripheral peripheral: CoreBluetooth.CBPeripheral)
+  @_Concurrency.MainActor(unsafe) public func setBatteryLevel(_ batteryLevel: Swift.Double?, forPeripheral peripheral: CoreBluetooth.CBPeripheral)
+  @_Concurrency.MainActor(unsafe) public func setFirmwareStatus(_ firmwareStatus: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus?, forPeripheral peripheral: CoreBluetooth.CBPeripheral)
+  @objc deinit
+}
+public protocol PlaygroundBluetoothConnectionViewDelegate : AnyObject {
+  func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, shouldDisplayDiscovered peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?, rssi: Swift.Double) -> Swift.Bool
+  func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, shouldConnectTo peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?) -> Swift.Bool
+  func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, willDisconnectFrom peripheral: CoreBluetooth.CBPeripheral)
+  func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, titleFor state: PlaygroundBluetooth.PlaygroundBluetoothConnectionView.State) -> Swift.String
+  func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, firmwareUpdateInstructionsFor peripheral: CoreBluetooth.CBPeripheral) -> Swift.String
+}
+extension PlaygroundBluetooth.PlaygroundBluetoothConnectionViewDelegate {
+  public func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, shouldDisplayDiscovered peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?, rssi: Swift.Double) -> Swift.Bool
+  public func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, shouldConnectTo peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?) -> Swift.Bool
+  public func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, willDisconnectFrom peripheral: CoreBluetooth.CBPeripheral)
+}
+public protocol PlaygroundBluetoothConnectionViewDataSource : AnyObject {
+  func connectionView(_ connectionView: PlaygroundBluetooth.PlaygroundBluetoothConnectionView, itemForPeripheral peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?) -> PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item
+}
+extension CoreFoundation.CGFloat {
+  public static func value(_ value: CoreFoundation.CGFloat, scaledWith traitCollection: UIKit.UITraitCollection) -> CoreFoundation.CGFloat
+}
+public class PlaygroundBluetoothCentralManager {
+  public init(services: [CoreBluetooth.CBUUID]?, queue: Dispatch.DispatchQueue = .main)
+  @objc deinit
+  weak public var delegate: PlaygroundBluetooth.PlaygroundBluetoothCentralManagerDelegate?
+  public var state: CoreBluetooth.CBManagerState {
+    get
+  }
+  public var scanning: Swift.Bool {
+    get
+    set
+  }
+  public var connectedPeripherals: [CoreBluetooth.CBPeripheral] {
+    get
+  }
+  public enum ConnectionError : Swift.Error {
+    case timeoutExpired
+    case excessiveConnections
+    case connectionFailed
+    case connectionLost
+    case invalidState
+    public static func == (a: PlaygroundBluetooth.PlaygroundBluetoothCentralManager.ConnectionError, b: PlaygroundBluetooth.PlaygroundBluetoothCentralManager.ConnectionError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func connect(to peripheral: CoreBluetooth.CBPeripheral, timeout: Foundation.TimeInterval? = nil, callback: ((CoreBluetooth.CBPeripheral, Swift.Error?) -> Swift.Void)? = nil)
+  public func connect(toPeripheralWithUUID uuid: Foundation.UUID, timeout: Foundation.TimeInterval = 7, callback: ((CoreBluetooth.CBPeripheral?, Swift.Error?) -> Swift.Void)? = nil)
+  public func connectToLastConnectedPeripheral(timeout: Foundation.TimeInterval = 7.0, callback: ((CoreBluetooth.CBPeripheral?, Swift.Error?) -> Swift.Void)? = nil) -> Swift.Bool
+  public func disconnect(from peripheral: CoreBluetooth.CBPeripheral)
+}
+public protocol PlaygroundBluetoothCentralManagerDelegate : AnyObject {
+  func centralManagerStateDidChange(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager)
+  func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?, rssi: Swift.Double)
+  func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, willConnectTo peripheral: CoreBluetooth.CBPeripheral)
+  func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didConnectTo peripheral: CoreBluetooth.CBPeripheral)
+  func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didFailToConnectTo peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didDisconnectFrom peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+}
+extension PlaygroundBluetooth.PlaygroundBluetoothCentralManagerDelegate {
+  public func centralManagerStateDidChange(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager)
+  public func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, withAdvertisementData advertisementData: [Swift.String : Any]?, rssi: Swift.Double)
+  public func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, willConnectTo peripheral: CoreBluetooth.CBPeripheral)
+  public func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didConnectTo peripheral: CoreBluetooth.CBPeripheral)
+  public func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didFailToConnectTo peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  public func centralManager(_ centralManager: PlaygroundBluetooth.PlaygroundBluetoothCentralManager, didDisconnectFrom peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+}
+extension PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus : Swift.Equatable {}
+extension PlaygroundBluetooth.PlaygroundBluetoothConnectionView.Item.FirmwareStatus : Swift.Hashable {}
+extension PlaygroundBluetooth.PlaygroundBluetoothConnectionView.State : Swift.Equatable {}
+extension PlaygroundBluetooth.PlaygroundBluetoothConnectionView.State : Swift.Hashable {}
+extension PlaygroundBluetooth.PlaygroundBluetoothCentralManager.ConnectionError : Swift.Equatable {}
+extension PlaygroundBluetooth.PlaygroundBluetoothCentralManager.ConnectionError : Swift.Hashable {}

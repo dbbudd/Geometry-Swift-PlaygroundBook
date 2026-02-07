@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>`for` 루프에 `if` 구문을 추가한 다음 첫 번째 조건식을 추가하세요. 단축 메뉴 막대에서 `||` 연산자를 선택하고 두 번째 조건식을 추가하세요. 또한, 두 개의 조건식이 false인 경우 캐릭터를 앞으로 움직이도록 하는 `else` 블록을 생성하세요.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

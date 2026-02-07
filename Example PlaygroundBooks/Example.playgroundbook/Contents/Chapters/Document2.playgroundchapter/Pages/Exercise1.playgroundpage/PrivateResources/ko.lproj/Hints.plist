@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>먼저 오른쪽으로 돌아야 하는 곳까지 캐릭터를 이동시키세요. 그런 다음, 기존의 명령을 활용하여 캐릭터를 오른쪽으로 향하게 해봅니다.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>왼쪽으로 계속해서 돌면 결국 뒤로 돌게 됩니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

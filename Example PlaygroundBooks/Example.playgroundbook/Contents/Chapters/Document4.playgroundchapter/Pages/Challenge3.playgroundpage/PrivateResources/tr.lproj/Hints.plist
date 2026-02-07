@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Merkezdeki yol boyunca bir mücevhere her ulaştığında, sağa doğru inen bir merdiven görünür. Kapalı bir düğmeye her ulaştığında, solda başka bir mücevher vardır.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

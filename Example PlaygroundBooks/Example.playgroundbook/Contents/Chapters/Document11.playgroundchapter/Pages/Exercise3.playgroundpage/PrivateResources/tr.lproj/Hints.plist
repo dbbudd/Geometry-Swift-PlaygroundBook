@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Karonun koordinat değerini görmek için ona dokunabilirsin. Uzmanının başlamasını istediğin konumu bul, sonra `place` metoduna geçirilecek sütun ve satır değerini bulmak için karoya dokun.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

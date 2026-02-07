@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>`totalGems` representa el número total de gemas que se generarán en el rompecabezas. Utiliza esta [constante](glossary://constant), así como una [variable](glossary://variable) de recuento de gemas, para determinar cuándo parar de recoger gemas.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

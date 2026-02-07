@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Bedenk eerst een aantal mogelijke oplossingen voor deze uitdaging. Gebruik voorwaardelijke code en logische operatoren om regels te maken die bepalen hoe je figuurtje door de wereld beweegt. Schrijf daarna de code en test deze! Als het de eerste keer niet lukt, blijf het dan proberen.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

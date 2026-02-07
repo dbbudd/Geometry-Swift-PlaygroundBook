@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>상단 발판에 보석이 **없는** 경우, 해당 타일에서 계단이 내려옵니다. ’캐릭터가 보석 아래에 있지 않은 경우’라는 조건을 사용하여 해당되는 상황에서 수행할 작업을 선택합니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

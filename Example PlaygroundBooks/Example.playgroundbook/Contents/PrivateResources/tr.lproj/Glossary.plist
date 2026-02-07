@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>Boolean</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`true` veya `false` değerine sahip bir tip. Örneğin `9 &lt; 7`, `false` Boole değerini döndürür çünkü `9`, `7`’den küçük değildir.</string>
+				<key>Title</key>
+				<string>Boole</string>
+			</dict>
+		</dict>
+		<key>Int</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Tam sayı (`10` veya `-42` gibi kesirli olmayan bir sayı) saklayan bir tip. </string>
+				<key>Title</key>
+				<string>Int</string>
+			</dict>
+		</dict>
+		<key>String</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`"Merhaba dünya"` veya `"dans eden kedicikler"` gibi karakter dizilerini saklayan bir tip.</string>
+				<key>Title</key>
+				<string>Dizgi</string>
+			</dict>
+		</dict>
+		<key>Swift</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Apple’ın iPhone, iPad, Mac, Apple Watch ve Apple TV için uygulama yazmak amacıyla kullanılan programlama dili. </string>
+				<key>Title</key>
+				<string>Swift</string>
+			</dict>
+		</dict>
+		<key>algorithm</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir sorunu çözmek için kullanılan adım adım yönerge veya kural kümesi. Örneğin bir bardak çay hazırlamak için kullanılan adımların listesi bir algoritma sayılabilir.</string>
+				<key>Title</key>
+				<string>algoritma</string>
+			</dict>
+		</dict>
+		<key>argument</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Davranışını özelleştirmek için fonksiyona geçirilen bir girdi değeri. Örneğin `move(distance: 3)` fonksiyon çağrısında `3`, kaç aralık ileri gidileceğini belirten bir argümandır.</string>
+				<key>Title</key>
+				<string>argüman</string>
+			</dict>
+		</dict>
+		<key>arithmetic operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir veya birden fazla sayıyla temel matematik işlemi gerçekleştiren `+`, `-`, `*` veya `/` gibi bir sembol. Örneğin `42 / 7` ve `17 - 5` aritmetik işleç kullanır.</string>
+				<key>Title</key>
+				<string>aritmetik işleç</string>
+			</dict>
+		</dict>
+		<key>array</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Aynı tipteki öğelerin sıralı listesini saklayan bir koleksiyon. Aynı öğe, farklı konumlarda birden fazla kez görünebilir. Örneğin `highScores = [37, 34, 29, 29, 26]` tam sayılardan oluşan bir dizidir.</string>
+				<key>Title</key>
+				<string>dizi</string>
+			</dict>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Değişkenin veya sabitin değerini ayarlayan bir eylem.</string>
+				<key>Title</key>
+				<string>atama</string>
+			</dict>
+		</dict>
+		<key>assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`=` sembolü, bir değişkenin değerini ayarlamak için kullanılır. Örneğin `greeting = "merhaba"` ifadesi `greeting` değerini “merhaba” olarak ayarlar.</string>
+				<key>Title</key>
+				<string>atama işleci</string>
+			</dict>
+		</dict>
+		<key>bug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kodda uygulamanın beklendiği gibi çalışmasını engelleyen bir sorun. 
+</string>
+				<key>Title</key>
+				<string>hata</string>
+			</dict>
+		</dict>
+		<key>call</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Programa fonksiyonu çalıştırmasını söylemek. Örneğin kodundaki `moveForward()` fonksiyonunun çağrılması, programa o fonksiyonda tanımlanan eylemleri gerçekleştirmesini söyler.</string>
+				<key>Title</key>
+				<string>çağırma</string>
+			</dict>
+		</dict>
+		<key>coding</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir bilgisayar programı yaratmak için komutları, kod yapılarını ve algoritmaları birleştirme eylemi.
+</string>
+				<key>Title</key>
+				<string>kodlama</string>
+			</dict>
+		</dict>
+		<key>command</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Uygulamaya belirli bir eylemi gerçekleştirmesini söyleyen kod. 
+</string>
+				<key>Title</key>
+				<string>komut</string>
+			</dict>
+		</dict>
+		<key>comparison operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>İki değeri karşılaştırmak için kullanılan `==`, `!=`, `&lt;`, `&gt;`, `&lt;=` veya `&gt;=` gibi bir sembol. Karşılaştırma işleci, `if` ifadesinin veya `while` döngüsünün bir koşulundaki karşılaştırmanın `true` (doğru) olup olmadığını belirten bir Boole değeri döndürmek için kullanılabilir. Örneğin `6 &gt; 8`, `6` ile `8`’i karşılaştırır ve `false` (yanlış) değerini döndürür.</string>
+				<key>Title</key>
+				<string>karşılaştırma işleci</string>
+			</dict>
+		</dict>
+		<key>composition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Büyük bir sorunu çözmek için programın küçük parçalarını birleştirme işlemi. 
+</string>
+				<key>Title</key>
+				<string>birleştirme</string>
+			</dict>
+		</dict>
+		<key>compound assignment operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Atamayı (değişkenin değerini ayarlama), toplama veya çıkarma gibi başka bir işlemle birleştiren bir işleç. Örneğin `a`’nın mevcut değeri `1` ise `a += 3` kullanıldığında, `3`’e `1` eklenir ve sonuç `a`’ya atanır, böylece `a`’nın değeri artık `4` olur.</string>
+				<key>Title</key>
+				<string>bileşik atama işleci</string>
+			</dict>
+		</dict>
+		<key>conditional code</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Yalnızca belirli koşullar sağlandığında çalışan kod. Örneğin `if` ifadeleri ve `while` döngüleri yalnızca bir koşul `true` ise (sağlanıyorsa) veya “true” olduğu (sağlandığı) sürece çalışan koşullu kod içerir. </string>
+				<key>Title</key>
+				<string>koşullu kod</string>
+			</dict>
+		</dict>
+		<key>constant</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Değiştirilemeyen bir değer saklayan adlandırılmış bir kapsayıcı.</string>
+				<key>Title</key>
+				<string>sabit</string>
+			</dict>
+		</dict>
+		<key>debug</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kodda uygulamanın doğru çalışmasını engelleyen hataları bulup düzeltmek. </string>
+				<key>Title</key>
+				<string>hata ayıklama</string>
+			</dict>
+		</dict>
+		<key>declaration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Uygulamanda fonksiyon, değişken veya özel tip gibi yeni bir şeyler yaratan kod parçası. Örneğin `let planet = “Dünya”` ifadesi `planet` adında yeni bir sabit bildirir ve ona `“Dünya”` değerini verir.</string>
+				<key>Title</key>
+				<string>bildirim</string>
+			</dict>
+		</dict>
+		<key>decomposition</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Büyük bir sorunu daha küçük ve yönetilebilir parçalara bölme işlemi. </string>
+				<key>Title</key>
+				<string>ayrıştırma</string>
+			</dict>
+		</dict>
+		<key>define</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Fonksiyon, değişken veya özel tip gibi yeni yaratılmış bir kod parçasının açık değerini veya davranışını vermek. Örneğin bir fonksiyonu, fonksiyonun ne yapacağını söylemek amacıyla içinde bir komut kümesi vererek tanımlarsın.</string>
+				<key>Title</key>
+				<string>tanımlama</string>
+			</dict>
+		</dict>
+		<key>dot notation</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir örneğin özelliklerine erişmek veya metotlarını çağırmak için kullanılan söz dizimi biçimi. Örneğin `expert.toggleSwitch()`, `expert` örneğinde `toggleSwitch()` metodunu çağırır. </string>
+				<key>Title</key>
+				<string>nokta notasyonu</string>
+			</dict>
+		</dict>
+		<key>else block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir `if` ifadesindeki son kod öbeği. `else` öbeği, `if` ifadesindeki tüm koşullar `false` ise çalıştırılır. </string>
+				<key>Title</key>
+				<string>else öbeği</string>
+			</dict>
+		</dict>
+		<key>else if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir `if` ifadesinde, `if` öbeği veya başka bir `else if` öbeği tarafından denetlenmeyen bir koşulu denetlemek için kullanılan kod öbeği.</string>
+				<key>Title</key>
+				<string>else if öbeği</string>
+			</dict>
+		</dict>
+		<key>enumeration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Benzersiz ama birbiriyle ilişkili *enum sabiti listesi* olarak adlandırılan değerler kümesini tanımlayan bir tip. Örneğin `Direction` listesi her bir ana yön durumunu tanımlar: `north`, `south`, `east` ve `west`. Listeyi bir değişkene veya sabite atarken her zaman sadece bir durumunu seçersin; örneğin `let compassDirection: Direction = .north`.</string>
+				<key>Title</key>
+				<string>enum sabiti</string>
+			</dict>
+		</dict>
+		<key>for loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Belirli bir sayıda çalıştırılacak yinelenen kod öbeği. </string>
+				<key>Title</key>
+				<string>for döngüsü</string>
+			</dict>
+		</dict>
+		<key>function</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Gereksinim duyulduğunda çalıştırılabilen adlandırılmış komut kümesi.</string>
+				<key>Title</key>
+				<string>fonksiyon</string>
+			</dict>
+		</dict>
+		<key>if block</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir `if` ifadesindeki ilk kod öbeği. `if` öbeği, `if` ifadesindeki koşul `true` ise (sağlanıyorsa) çalıştırılır. </string>
+				<key>Title</key>
+				<string>if öbeği</string>
+			</dict>
+		</dict>
+		<key>if statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir veya birden fazla koşulun değerine bağlı olarak kod çalıştırmak için kullanılan bir kod yapısı. Bir `if` ifadesindeki ilk kod öbeği `if` öbeğidir. `if` ifadesi, `else` öbeği ve `else if` öbeği gibi ek denetimler sağlayan başka öbekler içerebilir.</string>
+				<key>Title</key>
+				<string>if ifadesi</string>
+			</dict>
+		</dict>
+		<key>index</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Öğenin dizi içindeki konumunu temsil eden bir sayı. </string>
+				<key>Title</key>
+				<string>indeks</string>
+			</dict>
+		</dict>
+		<key>index out of range error</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Dizinin aralığı dışında bir indeks kullanarak diziye erişmeye çalışmanın neden olduğu bir hata. Örneğin `2` indeksi şu dizinin aralığı dışındadır: `[17, 42]`.</string>
+				<key>Title</key>
+				<string>indeks aralığın dışında hatası</string>
+			</dict>
+		</dict>
+		<key>initialization</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir tipte, tipin özelliklerinin ilk değerlerini ayarlamayı da içeren, yeni bir örnek yaratma eylemi. </string>
+				<key>Title</key>
+				<string>ilk değer atama</string>
+			</dict>
+		</dict>
+		<key>inner loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Başka bir (dış) döngünün içine yerleştirilmiş yinelenen kod öbeği (döngü).</string>
+				<key>Title</key>
+				<string>iç döngü</string>
+			</dict>
+		</dict>
+		<key>instance</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Belirli bir tipteki değer. Örneğin `let greenPortal = Portal()` ifadesinde `greenPortal`, `Portal` tipinde bir örnektir.</string>
+				<key>Title</key>
+				<string>örnek</string>
+			</dict>
+		</dict>
+		<key>iteration</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir işlemi yineleme eylemi (dizinin her bir öğesinde aynı eylemi gerçekleştirme gibi).</string>
+				<key>Title</key>
+				<string>tekrar</string>
+			</dict>
+		</dict>
+		<key>local variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Fonksiyonun, döngünün veya başka bir ifadenin içinde bildirilen bir değişken. Yerel değişkenlere, tanımlandıkları kodun dışından erişilemez.</string>
+				<key>Title</key>
+				<string>yerel değişken</string>
+			</dict>
+		</dict>
+		<key>logical AND operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kodun tamamının “true” değerine sahip olabilmesi için her iki değerin de “true” olması gerektiği durumlarda iki Boole değerini birleştiren bir sembol (`&amp;&amp;`). Örneğin `a &amp;&amp; b` ifadesi yalnızca hem `a` hem de `b` `true` değerine sahipken “true” olur.</string>
+				<key>Title</key>
+				<string>mantıksal AND işleci</string>
+			</dict>
+		</dict>
+		<key>logical NOT operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir kod parçasının Boole değerini tersine çeviren bir sembol (`!`). Örneğin `a` `true` ise `!a` `false` olur.</string>
+				<key>Title</key>
+				<string>mantıksal NOT işleci</string>
+			</dict>
+		</dict>
+		<key>logical OR operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kodun tamamının “true” değerine sahip olabilmesi için değerlerden yalnızca birinin “true” olması gerektiği durumda iki Boole değerini birleştiren bir sembol (||). Örneğin a || b ifadesi, a veya b (ya da her ikisi birden) “true” iken “true” olur. 
+</string>
+				<key>Title</key>
+				<string>mantıksal OR işleci</string>
+			</dict>
+		</dict>
+		<key>logical operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>`true` ve `false` mantıksal Boole değerlerini değiştiren veya birleştiren `&amp;&amp;`, `||` veya `!` gibi bir sembol.</string>
+				<key>Title</key>
+				<string>mantıksal işleç</string>
+			</dict>
+		</dict>
+		<key>loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Belirli sayıda (örneğin `for` döngüsü) veya bir koşul sağlanana dek (örneğin `while` döngüsü) yinelenen bir kod öbeği.</string>
+				<key>Title</key>
+				<string>döngü</string>
+			</dict>
+		</dict>
+		<key>method</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir [tipin](glossary://type) içinde tanımlanmış fonksiyon veya komut kümesi.</string>
+				<key>Title</key>
+				<string>metot</string>
+			</dict>
+		</dict>
+		<key>nest</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Yinelenen bir kod öbeğini (veya döngüyü) başka bir yinelenen kod öbeğinin içine yerleştirmek.</string>
+				<key>Title</key>
+				<string>iç içe yerleştirme</string>
+			</dict>
+		</dict>
+		<key>operator</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir veya birden fazla değer üzerindeki bir eylemi temsil eden `+`, `-` veya `&amp;&amp;` gibi bir sembol. Örneğin `1 + 2` ifadesinde toplama işleci olan (`+`), `1` ve `2` sayılarını toplar. </string>
+				<key>Title</key>
+				<string>işleç</string>
+			</dict>
+		</dict>
+		<key>outer loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Başka bir (iç) döngü içeren yinelenen kod öbeği (döngü).</string>
+				<key>Title</key>
+				<string>dış döngü</string>
+			</dict>
+		</dict>
+		<key>parameter</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Fonksiyonun girdi değerinin, fonksiyonun tanımında kullanılan adı. Örneğin `move(distance: Int)` için `distance`, Int tipinde değer alan bir parametredir.</string>
+				<key>Title</key>
+				<string>parametre</string>
+			</dict>
+		</dict>
+		<key>pattern</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Yinelenen durum veya veri kümesi. 
+</string>
+				<key>Title</key>
+				<string>örüntü</string>
+			</dict>
+		</dict>
+		<key>property</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bir tipin içinde tanımlanmış bir değişken (değer saklayan adlandırılmış bir kapsayıcı).</string>
+				<key>Title</key>
+				<string>özellik</string>
+			</dict>
+		</dict>
+		<key>pseudocode</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Algoritmanın, genellikle günlük dil ve kod karışımı kullanılarak yazılmış okunabilir bir açıklaması. 
+</string>
+				<key>Title</key>
+				<string>sözde kod</string>
+			</dict>
+		</dict>
+		<key>reusability</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Kodun, program içinde farklı durumlarda kullanılabilmesini sağlayan bir özelliği. 
+</string>
+				<key>Title</key>
+				<string>yeniden kullanılabilirlik</string>
+			</dict>
+		</dict>
+		<key>right-hand rule</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Genellikle labirent çözme algoritmalarında kullanılan ve karakteri, sağ tarafındaki duvar boyunca takip ederek ona labirentte rehberlik eden bir kural.</string>
+				<key>Title</key>
+				<string>sağ el kuralı</string>
+			</dict>
+		</dict>
+		<key>state</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Değişkenin, programın veya sistemin belirli bir zamanda kayıtlı bilgileri.</string>
+				<key>Title</key>
+				<string>durum</string>
+			</dict>
+		</dict>
+		<key>statement</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Programdaki kodu düzenleyen döngü veya `if` ifadesi gibi bir yapı.</string>
+				<key>Title</key>
+				<string>ifade</string>
+			</dict>
+		</dict>
+		<key>syntax</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bilgisayarların anlayıp çalıştırabileceği kod yazma kuralları.</string>
+				<key>Title</key>
+				<string>söz dizimi</string>
+			</dict>
+		</dict>
+		<key>type</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Veri tipindeki özelliklerin (niteliklerin) ve metotların (davranışların) adlandırılmış bir grubu.</string>
+				<key>Title</key>
+				<string>tip</string>
+			</dict>
+		</dict>
+		<key>variable</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Değiştirilebilen bir değer saklayan adlandırılmış bir kapsayıcı. </string>
+				<key>Title</key>
+				<string>değişken</string>
+			</dict>
+		</dict>
+		<key>while loop</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Belirli bir koşul `true` olduğu (sağlandığı) sürece çalıştırılan kod öbeği. Koşul `false` değerine değişirse döngü durdurulur. </string>
+				<key>Title</key>
+				<string>while döngüsü</string>
+			</dict>
+		</dict>
+		<key>wireframe</key>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Definition</key>
+				<string>Bulmaca dünyasında mücevher, düğme veya blok gibi bir öğenin iskeleti. Tel kafes, bulmacanın her çalıştırılışında öğenin rasgele görünme olasılığını belirtmek için kullanılır.</string>
+				<key>Title</key>
+				<string>tel kafes</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

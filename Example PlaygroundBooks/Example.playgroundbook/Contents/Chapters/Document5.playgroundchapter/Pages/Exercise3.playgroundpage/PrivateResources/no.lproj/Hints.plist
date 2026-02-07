@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>Legg til et `if`-uttrykk inni `for`-løkken, og legg deretter til den første betingelsen. Velg `||`-operatoren i snarveilinjen, og legg deretter til den andre betingelsen. Du må også opprette en `else`-blokk for å flytte figuren fremover hvis begge betingelsene er usanne.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

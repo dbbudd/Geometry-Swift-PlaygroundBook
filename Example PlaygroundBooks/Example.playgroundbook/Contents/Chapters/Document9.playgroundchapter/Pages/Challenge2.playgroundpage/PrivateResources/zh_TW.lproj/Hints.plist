@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>花一分鐘來檢視關卡，看看你目前學習的哪些技巧對通過關卡最有用處。解決方法有很多種，試試看你想到的其中一種方法吧！</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

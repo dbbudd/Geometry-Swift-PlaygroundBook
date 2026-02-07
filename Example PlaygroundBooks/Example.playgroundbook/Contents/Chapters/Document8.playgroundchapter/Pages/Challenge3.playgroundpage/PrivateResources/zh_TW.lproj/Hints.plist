@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>在第一個平台上會出現隨機數量的寶石。請檢查每個磚塊並遞增計算寶石數量的變數來追蹤收集的數量。</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>계단을 오르고 보석을 수집하고 뒤를 돌아 중앙으로 다시 돌아오게 하려면 먼저 `solveStair()` 함수를 정의하세요.
+            </string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

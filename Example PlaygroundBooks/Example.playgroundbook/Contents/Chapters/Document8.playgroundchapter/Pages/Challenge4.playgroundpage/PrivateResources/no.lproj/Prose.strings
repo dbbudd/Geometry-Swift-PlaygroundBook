@@ -1,0 +1,1 @@
+"FirstProseBlock" = " **Utfordring:** Hent et tilfeldig antall steiner som representeres av konstanten `totalGems`.\n \nI denne utfordringen får du [konstanten](glossary://constant) `totalGems` som er et tilfeldig tall fra 1 til 12. Bruk denne konstanten til å skrive kode som henter det antall steiner som er definert av `totalGems`, og som stopper når det antallet er oppnådd.";

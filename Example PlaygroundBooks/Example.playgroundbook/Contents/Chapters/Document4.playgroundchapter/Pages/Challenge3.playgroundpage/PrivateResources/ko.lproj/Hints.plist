@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hints</key>
+	<array>
+		<dict>
+			<key>_LOCALIZABLE_</key>
+			<dict>
+				<key>Content</key>
+				<string>중앙에 난 길을 따라 보석을 만나게 되면 계단이 오른쪽으로 향해 나 있습니다. 닫혀있는 스위치를 만나게 되면 왼쪽에 보석이 하나 더 보입니다.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
