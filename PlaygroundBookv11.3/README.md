@@ -15,7 +15,7 @@ In support of this, there are five targets in this Xcode project:
 - **UserModule**: Compiles the *UserModule* user module, a blank user module where users may write code
 - **LiveViewTestApp**: Produces an app which uses the `Book_Sources` module to show the live view similarly to how it would be shown in Swift Playgrounds
 
-This project includes the PlaygroundSupport and PlaygroundBluetooth frameworks from Swift Playgrounds to allow the BookCore, BookAPI, UserModule, and LiveViewTestApp targets to take full advantage of those APIs. The supporting content included with this template, including these frameworks, requires Xcode 11.1 to build. Attempting to use this template with another version of Xcode may result in build errors.
+This project includes the PlaygroundSupport and PlaygroundBluetooth frameworks from Swift Playgrounds to allow the BookCore, BookAPI, UserModule, and LiveViewTestApp targets to take full advantage of those APIs. The supporting content included with this template, including these frameworks, requires Xcode 14.1 to build. Attempting to use this template with another version of Xcode may result in build errors.
 
 For more information about the playground book file format, see the *[Swift Playgrounds authoring documentation](https://developer.apple.com/go/?id=swift-playgroundbook-authoring)*.
 
