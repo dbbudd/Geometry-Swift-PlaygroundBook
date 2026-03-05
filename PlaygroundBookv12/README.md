@@ -186,6 +186,39 @@ Scene {
 }
 ```
 
+## Phase 3 Core Geometry (Centers + Constructions)
+
+Phase 3 introduces:
+- triangle centers: `centroid`, `incenter`, `circumcenter`, `orthocenter`
+- intersections: `intersection(_:_:)`
+- construction helpers: `perpendicularBisector(of:)`, `perpendicularLine(through:to:)`, `angleBisector(at:through:and:)`
+
+```swift
+Scene {
+    let lineWidth = Input(number: 2, label: "Line Width")
+    let baseWidth = Input(decimal: 220, label: "Base Width")
+    let apexHeight = Input(decimal: 170, label: "Apex Height")
+
+    let triangle = Triangle(
+        a: Point(x: 0, y: apexHeight),
+        b: Point(x: -baseWidth / 2, y: -100),
+        c: Point(x: baseWidth / 2, y: -100)
+    )
+
+    addTriangle(triangle, color: .systemBlue, lineWidth: lineWidth, zPosition: 2)
+    addLine(perpendicularBisector(of: Line(start: triangle.b, end: triangle.c), length: 500), color: .systemGray, lineWidth: 1, zPosition: 0)
+
+    let g = centroid(triangle)
+    addPoint(g, color: .systemGreen, radius: 5, zPosition: 5)
+    if let i = incenter(triangle) { addPoint(i, color: .systemOrange, radius: 5, zPosition: 5) }
+    if let o = circumcenter(triangle) {
+        addPoint(o, color: .systemPurple, radius: 5, zPosition: 5)
+        addCircle(Circle(center: o, radius: distance(o, triangle.a)), color: .systemPurple, lineWidth: 1, zPosition: 0)
+    }
+    if let h = orthocenter(triangle) { addPoint(h, color: .systemRed, radius: 5, zPosition: 5) }
+}
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

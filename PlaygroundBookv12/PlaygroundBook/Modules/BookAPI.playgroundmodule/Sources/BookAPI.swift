@@ -183,6 +183,134 @@ public func slope(_ first: Point, _ second: Point) -> Double? {
     return (second.y - first.y) / dx
 }
 
+public func centroid(_ triangle: Triangle) -> Point {
+    Point(
+        x: (triangle.a.x + triangle.b.x + triangle.c.x) / 3,
+        y: (triangle.a.y + triangle.b.y + triangle.c.y) / 3
+    )
+}
+
+public func incenter(_ triangle: Triangle) -> Point? {
+    let sideA = distance(triangle.b, triangle.c)
+    let sideB = distance(triangle.a, triangle.c)
+    let sideC = distance(triangle.a, triangle.b)
+    let perimeter = sideA + sideB + sideC
+    guard perimeter > 0 else { return nil }
+
+    return Point(
+        x: (sideA * triangle.a.x + sideB * triangle.b.x + sideC * triangle.c.x) / perimeter,
+        y: (sideA * triangle.a.y + sideB * triangle.b.y + sideC * triangle.c.y) / perimeter
+    )
+}
+
+public func circumcenter(_ triangle: Triangle) -> Point? {
+    let ax = triangle.a.x
+    let ay = triangle.a.y
+    let bx = triangle.b.x
+    let by = triangle.b.y
+    let cx = triangle.c.x
+    let cy = triangle.c.y
+
+    let d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
+    guard abs(d) > 1e-10 else { return nil }
+
+    let ax2ay2 = ax * ax + ay * ay
+    let bx2by2 = bx * bx + by * by
+    let cx2cy2 = cx * cx + cy * cy
+
+    let ux = (ax2ay2 * (by - cy) + bx2by2 * (cy - ay) + cx2cy2 * (ay - by)) / d
+    let uy = (ax2ay2 * (cx - bx) + bx2by2 * (ax - cx) + cx2cy2 * (bx - ax)) / d
+    return Point(x: ux, y: uy)
+}
+
+public func orthocenter(_ triangle: Triangle) -> Point? {
+    let altitudeFromA = perpendicularLine(
+        through: triangle.a,
+        to: Line(start: triangle.b, end: triangle.c),
+        length: 2000
+    )
+    let altitudeFromB = perpendicularLine(
+        through: triangle.b,
+        to: Line(start: triangle.a, end: triangle.c),
+        length: 2000
+    )
+    return intersection(altitudeFromA, altitudeFromB)
+}
+
+public func intersection(_ first: Line, _ second: Line) -> Point? {
+    let x1 = first.start.x
+    let y1 = first.start.y
+    let x2 = first.end.x
+    let y2 = first.end.y
+    let x3 = second.start.x
+    let y3 = second.start.y
+    let x4 = second.end.x
+    let y4 = second.end.y
+
+    let denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
+    guard abs(denominator) > 1e-10 else { return nil }
+
+    let xNumerator = (x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)
+    let yNumerator = (x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)
+    return Point(x: xNumerator / denominator, y: yNumerator / denominator)
+}
+
+public func perpendicularLine(through point: Point, to line: Line, length: Double = 500) -> Line {
+    let dx = line.end.x - line.start.x
+    let dy = line.end.y - line.start.y
+    let magnitude = hypot(dx, dy)
+
+    guard magnitude > 1e-10 else {
+        return Line(start: point, end: Point(x: point.x, y: point.y + length))
+    }
+
+    let ux = -dy / magnitude
+    let uy = dx / magnitude
+    let half = length / 2
+    return Line(
+        start: Point(x: point.x - ux * half, y: point.y - uy * half),
+        end: Point(x: point.x + ux * half, y: point.y + uy * half)
+    )
+}
+
+public func perpendicularBisector(of line: Line, length: Double = 500) -> Line {
+    let mid = midpoint(line.start, line.end)
+    return perpendicularLine(through: mid, to: line, length: length)
+}
+
+public func angleBisector(
+    at vertex: Point,
+    through firstPoint: Point,
+    and secondPoint: Point,
+    length: Double = 500
+) -> Line? {
+    let v1x = firstPoint.x - vertex.x
+    let v1y = firstPoint.y - vertex.y
+    let v2x = secondPoint.x - vertex.x
+    let v2y = secondPoint.y - vertex.y
+
+    let m1 = hypot(v1x, v1y)
+    let m2 = hypot(v2x, v2y)
+    guard m1 > 1e-10, m2 > 1e-10 else { return nil }
+
+    let u1x = v1x / m1
+    let u1y = v1y / m1
+    let u2x = v2x / m2
+    let u2y = v2y / m2
+
+    let dirX = u1x + u2x
+    let dirY = u1y + u2y
+    let dirMagnitude = hypot(dirX, dirY)
+    guard dirMagnitude > 1e-10 else { return nil }
+
+    let ux = dirX / dirMagnitude
+    let uy = dirY / dirMagnitude
+    return Line(
+        start: vertex,
+        end: Point(x: vertex.x + ux * length, y: vertex.y + uy * length)
+    )
+}
+
 public func translate(_ point: Point, dx: Double, dy: Double) -> Point {
     point.transformed(by: .translation(dx: dx, dy: dy))
 }

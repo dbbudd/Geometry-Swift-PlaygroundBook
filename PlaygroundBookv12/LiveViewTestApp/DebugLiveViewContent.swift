@@ -8,64 +8,47 @@ struct DebugLiveViewContent {
         _ = liveViewController
 
         Scene {
-            _ = Input(text: "Phase 1C Transforms", label: "Demo")
-            let lineWidth = Input(number: 3, label: "Line Width")
-            let angle = Input(decimal: 25, label: "Rotate Degrees")
-            let factor = Input(decimal: 1.2, label: "Scale Factor")
+            _ = Input(text: "Phase 3 Core Geometry", label: "Demo")
+            let lineWidth = Input(number: 2, label: "Line Width")
+            let baseWidth = Input(decimal: 220, label: "Base Width")
+            let apexHeight = Input(decimal: 170, label: "Apex Height")
 
-            let baseTriangle = Triangle(
-                a: Point(x: 0, y: 0),
-                b: Point(x: 120, y: 0),
-                c: Point(x: 60, y: 104)
-            )
-            let pivot = Point(x: 0, y: 0)
-            let transform = Transform2D.identity
-                .concatenating(.rotation(degrees: angle, around: pivot))
-                .concatenating(.scaling(factor: factor, around: pivot))
-            let transformedTriangle = baseTriangle.transformed(by: transform)
-
-            let baseCircle = Circle(center: Point(x: 110, y: 60), radius: 35)
-            let reflectedCircle = baseCircle.transformed(by: .reflectionAcrossY())
-            let movedCircle = baseCircle.transformed(by: .translation(dx: -40, dy: -120))
-
-            addTriangle(
-                baseTriangle,
-                color: .systemRed,
-                lineWidth: lineWidth,
-                zPosition: 1
-            )
-            addTriangle(
-                transformedTriangle,
-                color: .systemBlue,
-                lineWidth: lineWidth,
-                zPosition: 2
+            let triangle = Triangle(
+                a: Point(x: 0, y: apexHeight),
+                b: Point(x: -baseWidth / 2, y: -100),
+                c: Point(x: baseWidth / 2, y: -100)
             )
 
-            addCircle(
-                baseCircle,
-                color: .systemRed,
-                lineWidth: lineWidth,
-                zPosition: 1
-            )
-            addCircle(
-                movedCircle,
-                color: .systemOrange,
-                lineWidth: lineWidth,
-                zPosition: 2
-            )
-            addCircle(
-                reflectedCircle,
-                color: .systemPink,
-                lineWidth: lineWidth,
-                zPosition: 3
-            )
+            addTriangle(triangle, color: .systemBlue, lineWidth: lineWidth, zPosition: 2)
 
-            let m = midpoint(baseTriangle.a, baseTriangle.b)
-            addPoint(m, color: .systemGreen, radius: 4, zPosition: 6)
+            let baseLine = Line(start: triangle.b, end: triangle.c)
+            let baseBisector = perpendicularBisector(of: baseLine, length: 500)
+            addLine(baseBisector, color: .systemGray, lineWidth: 1, zPosition: 0)
 
-            let base = Line(start: baseTriangle.a, end: baseTriangle.b)
-            _ = slope(base.start, base.end)
-            _ = distance(base.start, base.end)
+            if let bisectorA = angleBisector(at: triangle.a, through: triangle.b, and: triangle.c, length: 500) {
+                addLine(bisectorA, color: .systemOrange, lineWidth: 1, zPosition: 1)
+            }
+
+            let g = centroid(triangle)
+            addPoint(g, color: .systemGreen, radius: 5, zPosition: 5)
+
+            if let i = incenter(triangle) {
+                addPoint(i, color: .systemOrange, radius: 5, zPosition: 5)
+            }
+
+            if let o = circumcenter(triangle) {
+                addPoint(o, color: .systemPurple, radius: 5, zPosition: 5)
+                addCircle(
+                    Circle(center: o, radius: distance(o, triangle.a)),
+                    color: .systemPurple,
+                    lineWidth: 1,
+                    zPosition: 0
+                )
+            }
+
+            if let h = orthocenter(triangle) {
+                addPoint(h, color: .systemRed, radius: 5, zPosition: 5)
+            }
         }
     }
 }
