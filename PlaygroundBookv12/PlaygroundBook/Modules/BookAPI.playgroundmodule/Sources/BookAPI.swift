@@ -4,6 +4,160 @@ import BookCore
 
 public typealias Pen = BookCore.Pen
 
+public struct Point: Equatable {
+    public let x: Double
+    public let y: Double
+
+    public init(x: Double, y: Double) {
+        self.x = x
+        self.y = y
+    }
+}
+
+public struct Line: Equatable {
+    public let start: Point
+    public let end: Point
+
+    public init(start: Point, end: Point) {
+        self.start = start
+        self.end = end
+    }
+}
+
+public struct Circle: Equatable {
+    public let center: Point
+    public let radius: Double
+
+    public init(center: Point, radius: Double) {
+        self.center = center
+        self.radius = radius
+    }
+}
+
+public struct Triangle: Equatable {
+    public let a: Point
+    public let b: Point
+    public let c: Point
+
+    public init(a: Point, b: Point, c: Point) {
+        self.a = a
+        self.b = b
+        self.c = c
+    }
+}
+
+public struct Polygon: Equatable {
+    public let vertices: [Point]
+
+    public init(vertices: [Point]) {
+        self.vertices = vertices
+    }
+}
+
+public func distance(_ first: Point, _ second: Point) -> Double {
+    hypot(second.x - first.x, second.y - first.y)
+}
+
+public func midpoint(_ first: Point, _ second: Point) -> Point {
+    Point(x: (first.x + second.x) / 2, y: (first.y + second.y) / 2)
+}
+
+public func slope(_ first: Point, _ second: Point) -> Double? {
+    let dx = second.x - first.x
+    guard dx != 0 else { return nil }
+    return (second.y - first.y) / dx
+}
+
+public func addPoint(
+    _ point: Point,
+    color: UIColor = .systemBlue,
+    radius: Double = 4,
+    zPosition: Int? = nil
+) {
+    var pen = Pen()
+    pen.penColor = color
+    pen.fillColor = color
+    pen.lineWidth = 1
+    pen.zPosition = zPosition
+    pen.goto(x: point.x, y: point.y)
+    pen.drawCircle(radius: CGFloat(radius))
+    addShape(pen: pen)
+}
+
+public func addLine(
+    _ line: Line,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    var pen = Pen()
+    pen.penColor = color
+    pen.lineWidth = lineWidth
+    pen.zPosition = zPosition
+    pen.goto(x: line.start.x, y: line.start.y)
+    pen.drawTo(dx: line.end.x - line.start.x, dy: line.end.y - line.start.y)
+    addShape(pen: pen)
+}
+
+public func addCircle(
+    _ circle: Circle,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    fillColor: UIColor = .clear,
+    zPosition: Int? = nil
+) {
+    var pen = Pen()
+    pen.penColor = color
+    pen.fillColor = fillColor
+    pen.lineWidth = lineWidth
+    pen.zPosition = zPosition
+    pen.goto(x: circle.center.x, y: circle.center.y)
+    pen.drawCircle(radius: CGFloat(circle.radius))
+    addShape(pen: pen)
+}
+
+public func addTriangle(
+    _ triangle: Triangle,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    fillColor: UIColor = .clear,
+    zPosition: Int? = nil
+) {
+    addPolygon(
+        Polygon(vertices: [triangle.a, triangle.b, triangle.c]),
+        color: color,
+        lineWidth: lineWidth,
+        fillColor: fillColor,
+        zPosition: zPosition
+    )
+}
+
+public func addPolygon(
+    _ polygon: Polygon,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    fillColor: UIColor = .clear,
+    zPosition: Int? = nil
+) {
+    guard let first = polygon.vertices.first, polygon.vertices.count > 1 else { return }
+
+    var pen = Pen()
+    pen.penColor = color
+    pen.fillColor = fillColor
+    pen.lineWidth = lineWidth
+    pen.zPosition = zPosition
+    pen.goto(x: first.x, y: first.y)
+
+    for vertex in polygon.vertices.dropFirst() {
+        let current = pen.currentPosition()
+        pen.drawTo(dx: vertex.x - Double(current.x), dy: vertex.y - Double(current.y))
+    }
+
+    let finalPoint = pen.currentPosition()
+    pen.drawTo(dx: first.x - Double(finalPoint.x), dy: first.y - Double(finalPoint.y))
+    addShape(pen: pen)
+}
+
 private enum LiveViewMessageKey {
     static let type = "type"
     static let shapes = "shapes"
