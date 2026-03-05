@@ -347,6 +347,97 @@ Localization support:
 - `Localized(_ key: String)` is available for explicit localized text usage in learner code.
 - This lets you localize control labels via standard `.strings` resources without changing API surface.
 
+## Phase 6A Animation API
+
+Phase 6A introduces a timer-driven animation loop that redraws the scene each frame:
+- `animate(duration:fps:repeats:_:)`
+- `stopAnimation()`
+
+Behavior:
+- The animation closure receives normalized time `t` in the range `0...1`.
+- `repeats: true` loops continuously.
+- `repeats: false` plays once and automatically stops at the end.
+- Calling `Scene { ... }` stops any active animation to avoid mixed render modes.
+
+```swift
+animate(duration: 6.0, fps: 30, repeats: true) { t in
+    let radius = Input(decimal: 130, label: "Orbit Radius")
+    let spin = Input(decimal: 360, label: "Degrees per Cycle")
+    let lineWidth = Input(number: 3, label: "Line Width")
+
+    let orbitDegrees = 360.0 * t
+    let movingPoint = rotate(Point(x: radius, y: 0), degrees: orbitDegrees)
+
+    addCircle(Circle(center: Point(x: 0, y: 0), radius: radius), color: .systemGray2, lineWidth: 1)
+    addLine(Line(start: Point(x: 0, y: 0), end: movingPoint), color: .systemOrange, lineWidth: 2)
+    addPoint(movingPoint, color: .systemOrange, radius: 5)
+
+    let baseTriangle = Triangle(
+        a: Point(x: 0, y: 28),
+        b: Point(x: -24, y: -18),
+        c: Point(x: 24, y: -18)
+    )
+    let transform = Transform2D
+        .rotation(degrees: spin * t, around: Point(x: 0, y: 0))
+        .concatenating(.translation(dx: movingPoint.x, dy: movingPoint.y))
+    addTriangle(baseTriangle.transformed(by: transform), color: .systemBlue, lineWidth: lineWidth)
+}
+```
+
+## Phase 6B Measurement Overlays
+
+Phase 6B adds classroom-friendly visual annotations:
+- `addCoordinateLabel(_:)`
+- `addLengthLabel(_:)`
+- `addAngleMarker(...)`
+
+These overlays are rendered in Cartesian coordinates and stay synchronized with animated geometry.
+
+```swift
+let a = Point(x: 0, y: 0)
+let b = Point(x: 120, y: 80)
+let line = Line(start: a, end: b)
+
+addLine(line, color: .systemOrange, lineWidth: 2)
+addCoordinateLabel(b, decimals: 1, color: .systemIndigo)
+addLengthLabel(line, decimals: 1, color: .systemTeal)
+addAngleMarker(
+    vertex: a,
+    firstPoint: Point(x: 120, y: 0),
+    secondPoint: b,
+    radius: 28,
+    color: .systemPurple,
+    showLabel: true
+)
+```
+
+## Phase 6C Teacher View Toggles
+
+Phase 6C adds API controls for classroom display modes:
+- `setGridVisible(_:)`
+- `setAxesVisible(_:)`
+- `setLabelsVisible(_:)`
+- `setControlsVisible(_:)`
+
+Use these in `Scene` or `animate` blocks to simplify the visual output for specific lessons.
+
+UI workflow:
+- A dedicated Preferences icon (`slider.horizontal.3`) appears in the LiveView.
+- When controls are minimized, both the gear icon (Controls) and slider icon (Preferences) are available.
+- Preferences contains live switches for Grid, Axes, and Labels.
+- These switches now remain responsive even while `animate(...)` is running (unless code explicitly overrides visibility in-frame).
+
+```swift
+let showGrid = Input(number: 1, label: "Show Grid 0/1")
+let showAxes = Input(number: 1, label: "Show Axes 0/1")
+let showLabels = Input(number: 1, label: "Show Labels 0/1")
+
+setGridVisible(showGrid >= 1)
+setAxesVisible(showAxes >= 1)
+setLabelsVisible(showLabels >= 1)
+setControlsVisible(true)
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

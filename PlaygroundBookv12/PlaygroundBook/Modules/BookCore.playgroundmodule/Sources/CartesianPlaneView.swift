@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 public enum PlaneInputKind: String {
     case text
@@ -22,10 +23,25 @@ public struct PlaneShape: Identifiable {
     public let zPosition: Int
 }
 
+public struct PlaneMeasurementOverlay: Identifiable {
+    public let id: String
+    public let text: String
+    public let x: Double
+    public let y: Double
+    public let color: UIColor
+    public let fontSize: CGFloat
+    public let zPosition: Int
+}
+
 @MainActor
 public final class CartesianPlaneModel: ObservableObject {
     @Published public private(set) var shapes: [PlaneShape] = []
     @Published public private(set) var inputs: [PlaneInput] = []
+    @Published public private(set) var measurements: [PlaneMeasurementOverlay] = []
+    @Published public private(set) var isGridVisible: Bool = true
+    @Published public private(set) var isAxesVisible: Bool = true
+    @Published public private(set) var isLabelsVisible: Bool = true
+    @Published public private(set) var isControlsVisible: Bool = true
     @Published private(set) var renderRevision: Int = 0
     private var nextShapeZPosition: Int = 0
 
@@ -43,6 +59,7 @@ public final class CartesianPlaneModel: ObservableObject {
 
     public func clear() {
         shapes.removeAll()
+        measurements.removeAll()
         nextShapeZPosition = 0
         renderRevision += 1
     }
@@ -53,6 +70,55 @@ public final class CartesianPlaneModel: ObservableObject {
         }
         let maxZ = shapes.map(\.zPosition).max() ?? -1
         nextShapeZPosition = maxZ + 1
+        renderRevision += 1
+    }
+
+    public func addMeasurement(_ overlay: PlaneMeasurementOverlay) {
+        measurements.append(overlay)
+        renderRevision += 1
+    }
+
+    public func setMeasurements(_ overlays: [PlaneMeasurementOverlay]) {
+        measurements = overlays
+        renderRevision += 1
+    }
+
+    public func setViewOptions(
+        isGridVisible: Bool,
+        isAxesVisible: Bool,
+        isLabelsVisible: Bool,
+        isControlsVisible: Bool
+    ) {
+        guard
+            self.isGridVisible != isGridVisible ||
+            self.isAxesVisible != isAxesVisible ||
+            self.isLabelsVisible != isLabelsVisible ||
+            self.isControlsVisible != isControlsVisible
+        else {
+            return
+        }
+        self.isGridVisible = isGridVisible
+        self.isAxesVisible = isAxesVisible
+        self.isLabelsVisible = isLabelsVisible
+        self.isControlsVisible = isControlsVisible
+        renderRevision += 1
+    }
+
+    public func setGridVisible(_ visible: Bool) {
+        guard isGridVisible != visible else { return }
+        isGridVisible = visible
+        renderRevision += 1
+    }
+
+    public func setAxesVisible(_ visible: Bool) {
+        guard isAxesVisible != visible else { return }
+        isAxesVisible = visible
+        renderRevision += 1
+    }
+
+    public func setLabelsVisible(_ visible: Bool) {
+        guard isLabelsVisible != visible else { return }
+        isLabelsVisible = visible
         renderRevision += 1
     }
 
@@ -104,6 +170,7 @@ public final class CartesianPlaneModel: ObservableObject {
 public struct CartesianPlaneView: View {
     @ObservedObject private var model: CartesianPlaneModel
     @State private var isInputPanelMinimized = false
+    @State private var isPreferencesPanelVisible = false
 
     private let minorGridColor = Color(red: 0.87, green: 0.90, blue: 0.95)
     private let majorGridColor = Color(red: 0.74, green: 0.79, blue: 0.87)
@@ -122,20 +189,52 @@ public struct CartesianPlaneView: View {
 
             ZStack(alignment: .topTrailing) {
                 Canvas { context, _ in
-                    drawGrid(in: &context, size: size, center: center)
-                    drawAxes(in: &context, size: size, center: center)
+                    if model.isGridVisible {
+                        drawGrid(in: &context, size: size, center: center)
+                    }
+                    if model.isAxesVisible {
+                        drawAxes(in: &context, size: size, center: center)
+                    }
                     drawPens(in: &context, center: center)
                 }
 
-                axisLabels(center: center, size: size)
-                tickLabels(center: center, size: size)
-                if isInputPanelMinimized {
-                    minimizedControlsButton
-                } else {
-                    inputPanel
+                if model.isLabelsVisible {
+                    axisLabels(center: center, size: size)
+                    tickLabels(center: center, size: size)
+                }
+                measurementLabels(center: center)
+                VStack(alignment: .trailing, spacing: 8) {
+                    if model.isControlsVisible {
+                        if isInputPanelMinimized {
+                            minimizedButtons
+                        } else {
+                            inputPanel
+                        }
+                    } else {
+                        preferencesButton
+                    }
+
+                    if isPreferencesPanelVisible {
+                        preferencesPanel
+                    }
                 }
             }
             .background(.white)
+        }
+    }
+
+    @ViewBuilder
+    private func measurementLabels(center: CGPoint) -> some View {
+        ForEach(model.measurements.sorted(by: { $0.zPosition < $1.zPosition })) { overlay in
+            Text(overlay.text)
+                .font(.system(size: overlay.fontSize, weight: .semibold))
+                .foregroundStyle(Color(uiColor: overlay.color))
+                .padding(.horizontal, 6)
+                .padding(.vertical, 2)
+                .background(Color.white.opacity(0.7))
+                .clipShape(RoundedRectangle(cornerRadius: 4))
+                .position(x: center.x + overlay.x, y: center.y - overlay.y)
+                .zIndex(Double(overlay.zPosition))
         }
     }
 
@@ -192,6 +291,15 @@ public struct CartesianPlaneView: View {
                         .foregroundStyle(Color.gray.opacity(0.8))
                 }
                 .buttonStyle(.plain)
+
+                Button {
+                    isPreferencesPanelVisible.toggle()
+                } label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(Color.gray.opacity(0.8))
+                }
+                .buttonStyle(.plain)
             }
             .frame(width: inputControlWidth, alignment: .leading)
             .padding(.bottom, 2)
@@ -211,11 +319,31 @@ public struct CartesianPlaneView: View {
         .padding(.trailing, 12)
     }
 
-    private var minimizedControlsButton: some View {
+    private var minimizedButtons: some View {
+        HStack(spacing: 8) {
+            Button {
+                isInputPanelMinimized = false
+            } label: {
+                Image(systemName: "gearshape.fill")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(Color.white)
+                    .padding(10)
+                    .background(Color.black.opacity(0.6))
+                    .clipShape(Circle())
+            }
+            .buttonStyle(.plain)
+
+            preferencesButton
+        }
+        .padding(.top, 12)
+        .padding(.trailing, 12)
+    }
+
+    private var preferencesButton: some View {
         Button {
-            isInputPanelMinimized = false
+            isPreferencesPanelVisible.toggle()
         } label: {
-            Image(systemName: "gearshape.fill")
+            Image(systemName: "slider.horizontal.3")
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundStyle(Color.white)
                 .padding(10)
@@ -223,7 +351,45 @@ public struct CartesianPlaneView: View {
                 .clipShape(Circle())
         }
         .buttonStyle(.plain)
-        .padding(.top, 12)
+    }
+
+    private var preferencesPanel: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Image(systemName: "slider.horizontal.3")
+                    .font(.system(size: 11, weight: .semibold))
+                    .foregroundStyle(Color.gray.opacity(0.8))
+                Text("Preferences")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(Color.gray.opacity(0.9))
+                Spacer(minLength: 4)
+            }
+            .frame(width: inputControlWidth, alignment: .leading)
+            .padding(.bottom, 2)
+
+            Toggle("Show Grid", isOn: Binding(
+                get: { model.isGridVisible },
+                set: { model.setGridVisible($0) }
+            ))
+            Toggle("Show Axes", isOn: Binding(
+                get: { model.isAxesVisible },
+                set: { model.setAxesVisible($0) }
+            ))
+            Toggle("Show Labels", isOn: Binding(
+                get: { model.isLabelsVisible },
+                set: { model.setLabelsVisible($0) }
+            ))
+        }
+        .font(.system(size: 13, weight: .semibold))
+        .toggleStyle(.switch)
+        .frame(width: inputControlWidth)
+        .padding(10)
+        .background(Color.white.opacity(0.94))
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray.opacity(0.25), lineWidth: 1)
+        )
+        .cornerRadius(10)
         .padding(.trailing, 12)
     }
 

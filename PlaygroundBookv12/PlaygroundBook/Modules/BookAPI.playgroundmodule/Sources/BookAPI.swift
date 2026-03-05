@@ -1060,18 +1060,60 @@ private enum LiveViewMessageKey {
     static let inputText = "inputText"
     static let inputDecimal = "inputDecimal"
     static let inputNumber = "inputNumber"
+    static let addMeasurements = "addMeasurements"
+    static let setMeasurements = "setMeasurements"
+    static let measurements = "measurements"
+    static let measurementID = "measurementID"
+    static let measurementText = "measurementText"
+    static let measurementX = "measurementX"
+    static let measurementY = "measurementY"
+    static let measurementFontSize = "measurementFontSize"
+    static let measurementColor = "measurementColor"
+    static let measurementZPosition = "measurementZPosition"
+    static let setViewOptions = "setViewOptions"
+    static let viewShowGrid = "viewShowGrid"
+    static let viewShowAxes = "viewShowAxes"
+    static let viewShowLabels = "viewShowLabels"
+    static let viewShowControls = "viewShowControls"
+}
+
+private struct MeasurementOverlay {
+    let id: String
+    let text: String
+    let x: Double
+    let y: Double
+    let color: UIColor
+    let fontSize: Double
+    let zPosition: Int
+}
+
+private struct ViewOverlayOptions {
+    var isGridVisible: Bool = true
+    var isAxesVisible: Bool = true
+    var isLabelsVisible: Bool = true
+    var isControlsVisible: Bool = true
 }
 
 private var inputCounter = 0
 private var sceneRenderBlock: (() -> Void)?
+private var animationRenderBlock: ((Double) -> Void)?
+private var animationTimer: Timer?
+private var animationStartDate: Date?
+private var animationDuration: Double = 0
+private var animationRepeats = true
 private var isRenderingScene = false
 private var scenePens: [Pen] = []
+private var sceneMeasurements: [MeasurementOverlay] = []
+private var currentViewOptions = ViewOverlayOptions()
+private var sceneViewOptions = ViewOverlayOptions()
+private var sceneViewOptionsChanged = false
 private var sceneSampleCount = 0
 private var sceneObserverInstalled = false
 private var hasRegisteredInputIDs: Set<String> = []
 private var plotSafetyConfiguration = PlotSafetyConfiguration()
 
 public func Scene(_ content: @escaping () -> Void) {
+    stopAnimation()
     sceneRenderBlock = content
 
     if !sceneObserverInstalled {
@@ -1083,6 +1125,35 @@ public func Scene(_ content: @escaping () -> Void) {
     }
 
     rerenderScene()
+}
+
+public func animate(
+    duration: Double = 2.0,
+    fps: Int = 30,
+    repeats: Bool = true,
+    _ content: @escaping (Double) -> Void
+) {
+    stopAnimation()
+
+    animationRenderBlock = content
+    animationDuration = max(0.0001, duration)
+    animationRepeats = repeats
+    animationStartDate = Date()
+
+    // Draw first frame immediately.
+    rerenderAnimationFrame(time: 0)
+
+    let frameInterval = 1.0 / Double(max(1, fps))
+    animationTimer = Timer.scheduledTimer(withTimeInterval: frameInterval, repeats: true) { _ in
+        tickAnimation()
+    }
+}
+
+public func stopAnimation() {
+    animationTimer?.invalidate()
+    animationTimer = nil
+    animationRenderBlock = nil
+    animationStartDate = nil
 }
 
 public func addShape(pen: Pen) {
@@ -1097,6 +1168,112 @@ public func addShape(pen: Pen) {
     ])
 
     sendToLiveView(message)
+}
+
+public func setGridVisible(_ visible: Bool) {
+    updateViewOptions { $0.isGridVisible = visible }
+}
+
+public func setAxesVisible(_ visible: Bool) {
+    updateViewOptions { $0.isAxesVisible = visible }
+}
+
+public func setLabelsVisible(_ visible: Bool) {
+    updateViewOptions { $0.isLabelsVisible = visible }
+}
+
+public func setControlsVisible(_ visible: Bool) {
+    updateViewOptions { $0.isControlsVisible = visible }
+}
+
+public func addCoordinateLabel(
+    _ point: Point,
+    decimals: Int = 1,
+    color: UIColor = .systemIndigo,
+    fontSize: CGFloat = 12,
+    zPosition: Int = 1000
+) {
+    let format = "%.\(max(0, decimals))f"
+    let xString = String(format: format, point.x)
+    let yString = String(format: format, point.y)
+    addMeasurementLabel(
+        text: "(\(xString), \(yString))",
+        at: point,
+        color: color,
+        fontSize: fontSize,
+        zPosition: zPosition
+    )
+}
+
+public func addLengthLabel(
+    _ line: Line,
+    decimals: Int = 1,
+    color: UIColor = .systemTeal,
+    fontSize: CGFloat = 12,
+    zPosition: Int = 1000
+) {
+    let mid = midpoint(line.start, line.end)
+    let length = distance(line.start, line.end)
+    let format = "%.\(max(0, decimals))f"
+    let text = String(format: format, length)
+    addMeasurementLabel(
+        text: text,
+        at: Point(x: mid.x + 8, y: mid.y + 8),
+        color: color,
+        fontSize: fontSize,
+        zPosition: zPosition
+    )
+}
+
+public func addAngleMarker(
+    vertex: Point,
+    firstPoint: Point,
+    secondPoint: Point,
+    radius: Double = 28,
+    color: UIColor = .systemPurple,
+    lineWidth: CGFloat = 2,
+    showLabel: Bool = true,
+    fontSize: CGFloat = 12,
+    zPosition: Int = 1000
+) {
+    let angle1 = atan2(firstPoint.y - vertex.y, firstPoint.x - vertex.x)
+    let angle2 = atan2(secondPoint.y - vertex.y, secondPoint.x - vertex.x)
+    var delta = angle2 - angle1
+
+    while delta > .pi { delta -= 2 * .pi }
+    while delta < -.pi { delta += 2 * .pi }
+
+    let samples = 40
+    plotParametric(
+        tMin: 0,
+        tMax: 1,
+        samples: samples,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let theta = angle1 + (delta * t)
+        return Point(
+            x: vertex.x + radius * cos(theta),
+            y: vertex.y + radius * sin(theta)
+        )
+    }
+
+    guard showLabel else { return }
+    let midAngle = angle1 + (delta / 2)
+    let labelPoint = Point(
+        x: vertex.x + (radius + 14) * cos(midAngle),
+        y: vertex.y + (radius + 14) * sin(midAngle)
+    )
+    let angleDegrees = abs(delta) * 180 / .pi
+    let text = "\(Int(round(angleDegrees)))°"
+    addMeasurementLabel(
+        text: text,
+        at: labelPoint,
+        color: color,
+        fontSize: fontSize,
+        zPosition: zPosition
+    )
 }
 
 public func Input(text: String, label: String? = nil) -> String {
@@ -1169,8 +1346,46 @@ public func onInputChange(_ handler: @escaping () -> Void) {
 private func rerenderScene() {
     guard let block = sceneRenderBlock else { return }
 
+    rerenderWithRenderBlock {
+        block()
+    }
+}
+
+private func tickAnimation() {
+    guard let start = animationStartDate else {
+        stopAnimation()
+        return
+    }
+
+    let elapsed = Date().timeIntervalSince(start)
+    let time: Double
+    if animationRepeats {
+        time = elapsed.truncatingRemainder(dividingBy: animationDuration) / animationDuration
+    } else {
+        time = min(1, elapsed / animationDuration)
+    }
+
+    rerenderAnimationFrame(time: time)
+
+    if !animationRepeats, elapsed >= animationDuration {
+        stopAnimation()
+    }
+}
+
+private func rerenderAnimationFrame(time: Double) {
+    guard let block = animationRenderBlock else { return }
+
+    rerenderWithRenderBlock {
+        block(time)
+    }
+}
+
+private func rerenderWithRenderBlock(_ block: () -> Void) {
     isRenderingScene = true
     scenePens.removeAll(keepingCapacity: true)
+    sceneMeasurements.removeAll(keepingCapacity: true)
+    sceneViewOptions = currentViewOptions
+    sceneViewOptionsChanged = false
     sceneSampleCount = 0
     block()
     isRenderingScene = false
@@ -1182,6 +1397,18 @@ private func rerenderScene() {
     ])
 
     sendToLiveView(message)
+
+    let encodedMeasurements = sceneMeasurements.map(encodeMeasurement)
+    let measurementMessage: PlaygroundValue = .dictionary([
+        LiveViewMessageKey.type: .string(LiveViewMessageKey.setMeasurements),
+        LiveViewMessageKey.measurements: .array(encodedMeasurements)
+    ])
+    sendToLiveView(measurementMessage)
+
+    if sceneViewOptionsChanged {
+        currentViewOptions = sceneViewOptions
+        sendViewOptions(currentViewOptions)
+    }
 }
 
 private func nextInputID(prefix: String) -> String {
@@ -1202,6 +1429,57 @@ private func registerInputIfNeeded(id: String, title: String, kind: String, payl
     dictionary[payloadKey] = payloadValue
 
     sendToLiveView(.dictionary(dictionary))
+}
+
+private func addMeasurementLabel(
+    text: String,
+    at point: Point,
+    color: UIColor,
+    fontSize: CGFloat,
+    zPosition: Int
+) {
+    let overlay = MeasurementOverlay(
+        id: UUID().uuidString,
+        text: text,
+        x: point.x,
+        y: point.y,
+        color: color,
+        fontSize: Double(fontSize),
+        zPosition: zPosition
+    )
+
+    if isRenderingScene {
+        sceneMeasurements.append(overlay)
+        return
+    }
+
+    let message: PlaygroundValue = .dictionary([
+        LiveViewMessageKey.type: .string(LiveViewMessageKey.addMeasurements),
+        LiveViewMessageKey.measurements: .array([encodeMeasurement(overlay)])
+    ])
+    sendToLiveView(message)
+}
+
+private func updateViewOptions(_ update: (inout ViewOverlayOptions) -> Void) {
+    if isRenderingScene {
+        update(&sceneViewOptions)
+        sceneViewOptionsChanged = true
+        return
+    }
+
+    update(&currentViewOptions)
+    sendViewOptions(currentViewOptions)
+}
+
+private func sendViewOptions(_ options: ViewOverlayOptions) {
+    let message: PlaygroundValue = .dictionary([
+        LiveViewMessageKey.type: .string(LiveViewMessageKey.setViewOptions),
+        LiveViewMessageKey.viewShowGrid: .boolean(options.isGridVisible),
+        LiveViewMessageKey.viewShowAxes: .boolean(options.isAxesVisible),
+        LiveViewMessageKey.viewShowLabels: .boolean(options.isLabelsVisible),
+        LiveViewMessageKey.viewShowControls: .boolean(options.isControlsVisible)
+    ])
+    sendToLiveView(message)
 }
 
 private func localizedInputTitle(_ key: String) -> String {
@@ -1317,5 +1595,17 @@ private func encodeColor(_ color: UIColor) -> PlaygroundValue {
         LiveViewMessageKey.colorGreen: .floatingPoint(Double(green)),
         LiveViewMessageKey.colorBlue: .floatingPoint(Double(blue)),
         LiveViewMessageKey.colorAlpha: .floatingPoint(Double(alpha))
+    ])
+}
+
+private func encodeMeasurement(_ overlay: MeasurementOverlay) -> PlaygroundValue {
+    .dictionary([
+        LiveViewMessageKey.measurementID: .string(overlay.id),
+        LiveViewMessageKey.measurementText: .string(overlay.text),
+        LiveViewMessageKey.measurementX: .floatingPoint(overlay.x),
+        LiveViewMessageKey.measurementY: .floatingPoint(overlay.y),
+        LiveViewMessageKey.measurementFontSize: .floatingPoint(overlay.fontSize),
+        LiveViewMessageKey.measurementColor: encodeColor(overlay.color),
+        LiveViewMessageKey.measurementZPosition: .integer(overlay.zPosition)
     ])
 }

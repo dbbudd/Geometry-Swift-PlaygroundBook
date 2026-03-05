@@ -7,13 +7,11 @@ struct DebugLiveViewContent {
     static func render(on liveViewController: LiveViewController) {
         _ = liveViewController
 
-        Scene {
-            _ = Input(text: "Recursive Pattern: Fractal Tree", label: "Demo")
-            let depthInput = Input(number: 5, label: "Depth (0-8)")
-            let trunkLength = Input(decimal: 120, label: "Trunk Length")
-            let branchAngle = Input(decimal: 28, label: "Branch Angle")
-            let shrinkFactor = Input(decimal: 0.72, label: "Shrink Factor")
-            let lineWidth = Input(number: 1, label: "Line Width")
+        animate(duration: 6.0, fps: 30, repeats: true) { t in
+            _ = Input(text: "Animation Demo: Orbit + Rotation", label: "Demo")
+            let radius = Input(decimal: 130, label: "Orbit Radius")
+            let spin = Input(decimal: 360, label: "Degrees per Cycle")
+            let lineWidth = Input(number: 3, label: "Line Width")
 
             addLine(
                 Line(start: Point(x: -260, y: 0), end: Point(x: 260, y: 0)),
@@ -28,37 +26,45 @@ struct DebugLiveViewContent {
                 zPosition: 0
             )
 
-            let clampedDepth = max(0, min(8, Int(depthInput)))
-            let start = Point(x: 0, y: -180)
-            let safeTrunk = max(20.0, trunkLength)
-            let safeAngle = max(5.0, min(80.0, branchAngle))
-            let safeShrink = max(0.45, min(0.85, shrinkFactor))
+            addCircle(
+                Circle(center: Point(x: 0, y: 0), radius: max(10, radius)),
+                color: .systemGray2,
+                lineWidth: 1,
+                zPosition: 1
+            )
 
-            func drawBranch(from start: Point, length: Double, angleDegrees: Double, depth: Int) {
-                let radians = angleDegrees * .pi / 180.0
-                let end = Point(
-                    x: start.x + (length * cos(radians)),
-                    y: start.y + (length * sin(radians))
-                )
+            let orbitDegrees = 360.0 * t
+            let movingPoint = rotate(Point(x: max(10, radius), y: 0), degrees: orbitDegrees)
+            addPoint(movingPoint, color: .systemOrange, radius: 5, zPosition: 4)
+            let radiusLine = Line(start: Point(x: 0, y: 0), end: movingPoint)
+            addLine(
+                radiusLine,
+                color: .systemOrange,
+                lineWidth: 2,
+                zPosition: 3
+            )
+            addLengthLabel(radiusLine, decimals: 1, color: .systemTeal, zPosition: 9)
+            addCoordinateLabel(movingPoint, decimals: 1, color: .systemIndigo, zPosition: 9)
+            addAngleMarker(
+                vertex: Point(x: 0, y: 0),
+                firstPoint: Point(x: max(10, radius), y: 0),
+                secondPoint: movingPoint,
+                radius: 26,
+                color: .systemPurple,
+                lineWidth: 2,
+                showLabel: true,
+                zPosition: 8
+            )
 
-                addLine(
-                    Line(start: start, end: end),
-                    color: .systemGreen,
-                    lineWidth: max(1, lineWidth - CGFloat(max(0, 5 - depth))),
-                    zPosition: 2
-                )
-
-                if depth == 0 {
-                    return
-                }
-
-                let nextLength = length * safeShrink
-                drawBranch(from: end, length: nextLength, angleDegrees: angleDegrees + safeAngle, depth: depth - 1)
-                drawBranch(from: end, length: nextLength, angleDegrees: angleDegrees - safeAngle, depth: depth - 1)
-            }
-
-            drawBranch(from: start, length: safeTrunk, angleDegrees: 90, depth: clampedDepth)
-            addPoint(start, color: .systemBrown, radius: 4, zPosition: 3)
+            let baseTriangle = Triangle(
+                a: Point(x: 0, y: 28),
+                b: Point(x: -24, y: -18),
+                c: Point(x: 24, y: -18)
+            )
+            let rotationTransform = Transform2D.rotation(degrees: spin * t, around: Point(x: 0, y: 0))
+            let translationTransform = Transform2D.translation(dx: movingPoint.x, dy: movingPoint.y)
+            let animatedTriangle = baseTriangle.transformed(by: rotationTransform.concatenating(translationTransform))
+            addTriangle(animatedTriangle, color: .systemBlue, lineWidth: lineWidth, zPosition: 5)
         }
     }
 }

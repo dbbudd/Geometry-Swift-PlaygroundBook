@@ -29,6 +29,21 @@ private enum LiveViewMessageKey {
     static let inputText = "inputText"
     static let inputDecimal = "inputDecimal"
     static let inputNumber = "inputNumber"
+    static let setViewOptions = "setViewOptions"
+    static let viewShowGrid = "viewShowGrid"
+    static let viewShowAxes = "viewShowAxes"
+    static let viewShowLabels = "viewShowLabels"
+    static let viewShowControls = "viewShowControls"
+    static let addMeasurements = "addMeasurements"
+    static let setMeasurements = "setMeasurements"
+    static let measurements = "measurements"
+    static let measurementID = "measurementID"
+    static let measurementText = "measurementText"
+    static let measurementX = "measurementX"
+    static let measurementY = "measurementY"
+    static let measurementFontSize = "measurementFontSize"
+    static let measurementColor = "measurementColor"
+    static let measurementZPosition = "measurementZPosition"
 }
 
 @objc(BookCore_LiveViewController)
@@ -83,9 +98,67 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
             guard let input = decodeInput(from: dictionary) else { return }
             planeModel.registerInput(input)
 
+        case LiveViewMessageKey.addMeasurements:
+            let measurements = decodeMeasurements(from: dictionary)
+            measurements.forEach { planeModel.addMeasurement($0) }
+
+        case LiveViewMessageKey.setMeasurements:
+            let measurements = decodeMeasurements(from: dictionary)
+            planeModel.setMeasurements(measurements)
+
+        case LiveViewMessageKey.setViewOptions:
+            let showGrid = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowGrid]) ?? true
+            let showAxes = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowAxes]) ?? true
+            let showLabels = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowLabels]) ?? true
+            let showControls = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowControls]) ?? true
+            planeModel.setViewOptions(
+                isGridVisible: showGrid,
+                isAxesVisible: showAxes,
+                isLabelsVisible: showLabels,
+                isControlsVisible: showControls
+            )
+
         default:
             break
         }
+    }
+
+    private func decodeMeasurements(from dictionary: [String: PlaygroundValue]) -> [PlaneMeasurementOverlay] {
+        guard case .array(let measurementValues)? = dictionary[LiveViewMessageKey.measurements] else { return [] }
+        return measurementValues.compactMap(decodeMeasurement(from:))
+    }
+
+    private func decodeBoolean(from value: PlaygroundValue?) -> Bool? {
+        guard let value else { return nil }
+        if case .boolean(let boolValue) = value { return boolValue }
+        if case .integer(let intValue) = value { return intValue != 0 }
+        return nil
+    }
+
+    private func decodeMeasurement(from value: PlaygroundValue) -> PlaneMeasurementOverlay? {
+        guard case .dictionary(let dictionary) = value else { return nil }
+        guard
+            case .string(let id)? = dictionary[LiveViewMessageKey.measurementID],
+            case .string(let text)? = dictionary[LiveViewMessageKey.measurementText],
+            case .floatingPoint(let x)? = dictionary[LiveViewMessageKey.measurementX],
+            case .floatingPoint(let y)? = dictionary[LiveViewMessageKey.measurementY],
+            case .floatingPoint(let fontSize)? = dictionary[LiveViewMessageKey.measurementFontSize],
+            let colorValue = dictionary[LiveViewMessageKey.measurementColor],
+            let color = decodeColor(from: colorValue),
+            case .integer(let zPosition)? = dictionary[LiveViewMessageKey.measurementZPosition]
+        else {
+            return nil
+        }
+
+        return PlaneMeasurementOverlay(
+            id: id,
+            text: text,
+            x: x,
+            y: y,
+            color: color,
+            fontSize: CGFloat(fontSize),
+            zPosition: zPosition
+        )
     }
 
     public func addShapeForDebug(_ pen: Pen) {
