@@ -438,6 +438,42 @@ setLabelsVisible(showLabels >= 1)
 setControlsVisible(true)
 ```
 
+## Phase 6D Fill and Shading
+
+Phase 6D adds region-style rendering helpers for area and composite-shape lessons:
+- `addFilledPolygon(...)`
+- `addFilledTriangle(...)`
+- `addFilledCircle(...)`
+- `addHatchedPolygon(..., crossHatch:)`
+
+`addHatchedPolygon` clips hatch lines to polygon boundaries and supports optional cross-hatching.
+These APIs can be combined with static or animated geometry, depending on lesson goals.
+
+```swift
+let region = Polygon(vertices: [
+    Point(x: -160, y: -120),
+    Point(x: -40, y: -120),
+    Point(x: -70, y: -40),
+    Point(x: -190, y: -60)
+])
+
+addFilledPolygon(
+    region,
+    fillColor: UIColor.systemYellow.withAlphaComponent(0.25),
+    borderColor: .systemYellow,
+    lineWidth: 1.5
+)
+
+addHatchedPolygon(
+    region,
+    spacing: 10,
+    angleDegrees: 35,
+    color: .systemOrange,
+    lineWidth: 1,
+    crossHatch: true
+)
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

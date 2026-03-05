@@ -495,6 +495,76 @@ public func addPolygon(
     addShape(pen: pen)
 }
 
+public func addFilledPolygon(
+    _ polygon: Polygon,
+    fillColor: UIColor,
+    borderColor: UIColor = .clear,
+    lineWidth: CGFloat = 1,
+    zPosition: Int? = nil
+) {
+    addPolygon(
+        polygon,
+        color: borderColor,
+        lineWidth: lineWidth,
+        fillColor: fillColor,
+        zPosition: zPosition
+    )
+}
+
+public func addFilledTriangle(
+    _ triangle: Triangle,
+    fillColor: UIColor,
+    borderColor: UIColor = .clear,
+    lineWidth: CGFloat = 1,
+    zPosition: Int? = nil
+) {
+    addFilledPolygon(
+        Polygon(vertices: [triangle.a, triangle.b, triangle.c]),
+        fillColor: fillColor,
+        borderColor: borderColor,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    )
+}
+
+public func addFilledCircle(
+    _ circle: Circle,
+    fillColor: UIColor,
+    borderColor: UIColor = .clear,
+    lineWidth: CGFloat = 1,
+    zPosition: Int? = nil
+) {
+    addCircle(
+        circle,
+        color: borderColor,
+        lineWidth: lineWidth,
+        fillColor: fillColor,
+        zPosition: zPosition
+    )
+}
+
+public func addHatchedPolygon(
+    _ polygon: Polygon,
+    spacing: Double = 10,
+    angleDegrees: Double = 45,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 1,
+    zPosition: Int? = nil,
+    crossHatch: Bool = false
+) {
+    let hatchLines = computeHatchLines(for: polygon, spacing: spacing, angleDegrees: angleDegrees)
+    for line in hatchLines {
+        addLine(line, color: color, lineWidth: lineWidth, zPosition: zPosition)
+    }
+
+    guard crossHatch else { return }
+
+    let secondaryHatchLines = computeHatchLines(for: polygon, spacing: spacing, angleDegrees: angleDegrees + 90)
+    for line in secondaryHatchLines {
+        addLine(line, color: color, lineWidth: lineWidth, zPosition: zPosition)
+    }
+}
+
 public func plotParametric(
     tMin: Double,
     tMax: Double,
@@ -1031,6 +1101,73 @@ public func addHyperbola(
             )
         }
     }
+}
+
+private func computeHatchLines(for polygon: Polygon, spacing: Double, angleDegrees: Double) -> [Line] {
+    guard polygon.vertices.count >= 3 else { return [] }
+
+    let safeSpacing = max(0.0001, abs(spacing))
+    let radians = angleDegrees * .pi / 180
+    let cosTheta = cos(radians)
+    let sinTheta = sin(radians)
+
+    func rotateToHatchSpace(_ point: Point) -> Point {
+        Point(
+            x: point.x * cosTheta + point.y * sinTheta,
+            y: -point.x * sinTheta + point.y * cosTheta
+        )
+    }
+
+    func rotateToWorldSpace(_ point: Point) -> Point {
+        Point(
+            x: point.x * cosTheta - point.y * sinTheta,
+            y: point.x * sinTheta + point.y * cosTheta
+        )
+    }
+
+    let rotatedVertices = polygon.vertices.map(rotateToHatchSpace)
+    guard
+        let minY = rotatedVertices.map(\.y).min(),
+        let maxY = rotatedVertices.map(\.y).max()
+    else {
+        return []
+    }
+
+    let yStart = floor(minY / safeSpacing) * safeSpacing
+    let yEnd = ceil(maxY / safeSpacing) * safeSpacing
+
+    var lines: [Line] = []
+    var y = yStart
+    while y <= yEnd {
+        var intersections: [Double] = []
+        for index in rotatedVertices.indices {
+            let a = rotatedVertices[index]
+            let b = rotatedVertices[(index + 1) % rotatedVertices.count]
+
+            let minEdgeY = min(a.y, b.y)
+            let maxEdgeY = max(a.y, b.y)
+            guard y >= minEdgeY, y < maxEdgeY, abs(a.y - b.y) > 1e-12 else { continue }
+
+            let t = (y - a.y) / (b.y - a.y)
+            let x = a.x + t * (b.x - a.x)
+            intersections.append(x)
+        }
+
+        intersections.sort()
+        if intersections.count >= 2 {
+            var idx = 0
+            while idx + 1 < intersections.count {
+                let p1 = rotateToWorldSpace(Point(x: intersections[idx], y: y))
+                let p2 = rotateToWorldSpace(Point(x: intersections[idx + 1], y: y))
+                lines.append(Line(start: p1, end: p2))
+                idx += 2
+            }
+        }
+
+        y += safeSpacing
+    }
+
+    return lines
 }
 
 private enum LiveViewMessageKey {

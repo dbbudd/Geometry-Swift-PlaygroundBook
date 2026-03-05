@@ -12,6 +12,7 @@ struct DebugLiveViewContent {
             let radius = Input(decimal: 130, label: "Orbit Radius")
             let spin = Input(decimal: 360, label: "Degrees per Cycle")
             let lineWidth = Input(number: 3, label: "Line Width")
+            let hatchSpacing = Input(decimal: 10, label: "Hatch Spacing")
 
             addLine(
                 Line(start: Point(x: -260, y: 0), end: Point(x: 260, y: 0)),
@@ -65,6 +66,29 @@ struct DebugLiveViewContent {
             let translationTransform = Transform2D.translation(dx: movingPoint.x, dy: movingPoint.y)
             let animatedTriangle = baseTriangle.transformed(by: rotationTransform.concatenating(translationTransform))
             addTriangle(animatedTriangle, color: .systemBlue, lineWidth: lineWidth, zPosition: 5)
+
+            let shadedRegion = Polygon(vertices: [
+                Point(x: -220, y: -170),
+                Point(x: -90, y: -170),
+                Point(x: -120, y: -70),
+                Point(x: -250, y: -90)
+            ])
+            addFilledPolygon(
+                shadedRegion,
+                fillColor: UIColor.systemYellow.withAlphaComponent(0.25),
+                borderColor: .systemYellow,
+                lineWidth: 1.5,
+                zPosition: 1
+            )
+            addHatchedPolygon(
+                shadedRegion,
+                spacing: max(4, hatchSpacing),
+                angleDegrees: 35,
+                color: .systemOrange,
+                lineWidth: 1,
+                zPosition: 2,
+                crossHatch: true
+            )
         }
     }
 }
