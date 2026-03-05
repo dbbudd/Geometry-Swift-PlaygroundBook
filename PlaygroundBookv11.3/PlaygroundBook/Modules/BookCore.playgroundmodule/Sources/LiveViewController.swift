@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PlaygroundSupport
+import BookAPI
 
 @objc(BookCore_LiveViewController)
 public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
@@ -48,3 +48,4 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         // Use this method to decode any messages sent as PlaygroundValue values and respond accordingly.
     }
 }
+

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,11 +24,16 @@
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
 		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
-		C26EEEB62F57E9B300A6980C /* PlaygroundSupportShims.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEB52F57E9B300A6980C /* PlaygroundSupportShims.swift */; };
-		C26EEEB82F57E9F200A6980C /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEB72F57E9F200A6980C /* UIView+AutoLayout.swift */; };
-		C26EEEBA2F57F13100A6980C /* BuildSettingsNotes.md in Resources */ = {isa = PBXBuildFile; fileRef = C26EEEB92F57F13100A6980C /* BuildSettingsNotes.md */; };
-		C2BA21362403518200523108 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = C2BA21352403518200523108 /* cover.png */; };
-		C2BA21382403522A00523108 /* Geography in Resources */ = {isa = PBXBuildFile; fileRef = C2BA21372403522A00523108 /* Geography */; };
+		C26EEEBC2F57FB1100A6980C /* GridPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEBB2F57FB1100A6980C /* GridPaperView.swift */; };
+		C26EEEBF2F57FEB700A6980C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEBE2F57FEB700A6980C /* Shape.swift */; };
+		C26EEEC02F57FEB700A6980C /* Pen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEBD2F57FEB700A6980C /* Pen.swift */; };
+		C26EEEC22F580C6100A6980C /* DebugLiveViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEC12F580C6100A6980C /* DebugLiveViewContent.swift */; };
+		C26EEEC42F58123200A6980C /* CartesianPlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEC32F58123200A6980C /* CartesianPlaneView.swift */; };
+		C26EEEC62F58136100A6980C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEC52F58136100A6980C /* SceneDelegate.swift */; };
+		C26EEEC72F582C8D00A6980C /* libBookAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6F7E612368FB6A008CC191 /* libBookAPI.a */; };
+		C26EEEC82F583E5D00A6980C /* LiveViewMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEC72F583E5D00A6980C /* LiveViewMessageRouter.swift */; };
+		C26EEECA2F583FD500A6980C /* LiveViewInputStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EEEC92F583FD500A6980C /* LiveViewInputStore.swift */; };
+		C26EEECC2F58FB4500A6980C /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = C26EEECB2F58FB4500A6980C /* cover.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -166,11 +171,15 @@
 		5EF2F9AB2054BBF300191409 /* libBookCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBookCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
-		C26EEEB52F57E9B300A6980C /* PlaygroundSupportShims.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundSupportShims.swift; sourceTree = "<group>"; };
-		C26EEEB72F57E9F200A6980C /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		C26EEEB92F57F13100A6980C /* BuildSettingsNotes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BuildSettingsNotes.md; sourceTree = "<group>"; };
-		C2BA21352403518200523108 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cover.png; path = ../../../PlaygroundBook/PlaygroundBook/PrivateResources/cover.png; sourceTree = "<group>"; };
-		C2BA21372403522A00523108 /* Geography */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Geography; path = ../../../../../PlaygroundBook/PlaygroundBook/Sources/Geography; sourceTree = "<group>"; };
+		C26EEEBB2F57FB1100A6980C /* GridPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPaperView.swift; sourceTree = "<group>"; };
+		C26EEEBD2F57FEB700A6980C /* Pen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pen.swift; sourceTree = "<group>"; };
+		C26EEEBE2F57FEB700A6980C /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		C26EEEC12F580C6100A6980C /* DebugLiveViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLiveViewContent.swift; sourceTree = "<group>"; };
+		C26EEEC32F58123200A6980C /* CartesianPlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartesianPlaneView.swift; sourceTree = "<group>"; };
+		C26EEEC52F58136100A6980C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C26EEEC72F583E5D00A6980C /* LiveViewMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewMessageRouter.swift; sourceTree = "<group>"; };
+		C26EEEC92F583FD500A6980C /* LiveViewInputStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewInputStore.swift; sourceTree = "<group>"; };
+		C26EEECB2F58FB4500A6980C /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA2E3D42056F36800416A35 /* libBookCore.a in Frameworks */,
+				C26EEEC72F582C8D00A6980C /* libBookAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,11 +326,14 @@
 		5E70679D23678DA00094BDEF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C2BA21372403522A00523108 /* Geography */,
 				5EF2F9AD2054BBF300191409 /* LiveViewController.swift */,
 				5E3196F22061DEA40077BBD7 /* LiveViewSupport.swift */,
-				C26EEEB52F57E9B300A6980C /* PlaygroundSupportShims.swift */,
-				C26EEEB72F57E9F200A6980C /* UIView+AutoLayout.swift */,
+				C26EEEBB2F57FB1100A6980C /* GridPaperView.swift */,
+				C26EEEBD2F57FEB700A6980C /* Pen.swift */,
+				C26EEEBE2F57FEB700A6980C /* Shape.swift */,
+				C26EEEC32F58123200A6980C /* CartesianPlaneView.swift */,
+				C26EEEC72F583E5D00A6980C /* LiveViewMessageRouter.swift */,
+				C26EEEC92F583FD500A6980C /* LiveViewInputStore.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -356,7 +369,8 @@
 				5EA2E3C82056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard */,
 				5E80DF292342971E00595EB4 /* LiveViewTestApp.entitlements */,
 				5EA2E3CB2056F35B00416A35 /* Info.plist */,
-				C26EEEB92F57F13100A6980C /* BuildSettingsNotes.md */,
+				C26EEEC12F580C6100A6980C /* DebugLiveViewContent.swift */,
+				C26EEEC52F58136100A6980C /* SceneDelegate.swift */,
 			);
 			path = LiveViewTestApp;
 			sourceTree = "<group>";
@@ -390,10 +404,10 @@
 		5EF2F9792054B64800191409 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
-				C2BA21352403518200523108 /* cover.png */,
 				5EF2F97E2054B6E400191409 /* ManifestPlist.strings */,
 				5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */,
 				5E551EC42371FC3F00784365 /* Assets.xcassets */,
+				C26EEECB2F58FB4500A6980C /* cover.png */,
 			);
 			path = PrivateResources;
 			sourceTree = "<group>";
@@ -508,8 +522,9 @@
 		5E2A7ADD204F611300F4E17A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					5E086DBF2051C5A7004D8D25 = {
 						CreatedOnToolsVersion = 9.3;
@@ -560,8 +575,7 @@
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
 				5E086DCA2051DDAE004D8D25 /* LiveView.storyboard in Resources */,
-				C2BA21362403518200523108 /* cover.png in Resources */,
-				C2BA21382403522A00523108 /* Geography in Resources */,
+				C26EEECC2F58FB4500A6980C /* cover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +583,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C26EEEBA2F57F13100A6980C /* BuildSettingsNotes.md in Resources */,
 				5EA2E3CA2056F35B00416A35 /* LiveViewTestAppLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,7 +629,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26EEEC22F580C6100A6980C /* DebugLiveViewContent.swift in Sources */,
 				5EA2E3C02056F35A00416A35 /* AppDelegate.swift in Sources */,
+				C26EEEC62F58136100A6980C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,9 +640,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
-				C26EEEB82F57E9F200A6980C /* UIView+AutoLayout.swift in Sources */,
-				C26EEEB62F57E9B300A6980C /* PlaygroundSupportShims.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
+				C26EEEC42F58123200A6980C /* CartesianPlaneView.swift in Sources */,
+				C26EEECA2F583FD500A6980C /* LiveViewInputStore.swift in Sources */,
+				C26EEEBF2F57FEB700A6980C /* Shape.swift in Sources */,
+				C26EEEC02F57FEB700A6980C /* Pen.swift in Sources */,
+				C26EEEBC2F57FB1100A6980C /* GridPaperView.swift in Sources */,
+				C26EEEC82F583E5D00A6980C /* LiveViewMessageRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,17 +728,19 @@
 			baseConfigurationReference = 5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(PLAYGROUND_BOOK_CONTENT_VERSION)";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JDWG6T23YA;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = JDWG6T23YA;
 				GCC_DYNAMIC_NO_PIC = NO;
 				INFOPLIST_KEY_CFBundleDisplayName = Geometry;
 				INSTALL_PATH = /;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PLAYGROUND_BOOK_CONTENT_IDENTIFIER)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = io.github.dbbudd.Geometry;
 				PRODUCT_NAME = "$(PLAYGROUND_BOOK_FILE_NAME)";
 				SKIP_INSTALL = NO;
 				SUPPORTS_MACCATALYST = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -728,16 +749,18 @@
 			baseConfigurationReference = 5E086DC72051DD03004D8D25 /* BookOverridingBuildSettings.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = "$(PLAYGROUND_BOOK_CONTENT_VERSION)";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JDWG6T23YA;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = JDWG6T23YA;
 				INFOPLIST_KEY_CFBundleDisplayName = Geometry;
 				INSTALL_PATH = /;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PLAYGROUND_BOOK_CONTENT_IDENTIFIER)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = io.github.dbbudd.Geometry;
 				PRODUCT_NAME = "$(PLAYGROUND_BOOK_FILE_NAME)";
 				SKIP_INSTALL = NO;
 				SUPPORTS_MACCATALYST = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -768,6 +791,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -778,6 +802,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -791,13 +816,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.7;
 			};
 			name = Debug;
 		};
@@ -828,6 +854,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -838,6 +865,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -846,12 +874,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.7;
 			};
 			name = Release;
 		};
@@ -886,20 +915,25 @@
 		5EA2E3CC2056F35B00416A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = LiveViewTestApp/LiveViewTestApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JDWG6T23YA;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				INFOPLIST_FILE = LiveViewTestApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_PREFIX).LiveViewTestApp";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = io.github.dbbudd.LiveViewTestApp;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = io.github.dbbudd.LiveViewTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -913,19 +947,24 @@
 		5EA2E3CD2056F35B00416A35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = LiveViewTestApp/LiveViewTestApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JDWG6T23YA;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				INFOPLIST_FILE = LiveViewTestApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_PREFIX).LiveViewTestApp";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = io.github.dbbudd.LiveViewTestApp;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = io.github.dbbudd.LiveViewTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (

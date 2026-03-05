@@ -6,17 +6,25 @@
 //
 
 import UIKit
-
-#if canImport(PlaygroundSupport) && !(arch(arm64) && targetEnvironment(simulator))
 import PlaygroundSupport
-public typealias PlaygroundLiveViewable = PlaygroundSupport.PlaygroundLiveViewable
-#endif
 
 /// Instantiates a new instance of a live view.
 ///
 /// By default, this loads an instance of `LiveViewController` from `LiveView.storyboard`.
 public func instantiateLiveView() -> PlaygroundLiveViewable {
-    let storyboard = UIStoryboard(name: "LiveView", bundle: nil)
+    let candidateBundles: [Bundle] = [
+        Bundle.main,
+        Bundle(for: LiveViewController.self)
+    ]
+
+    guard let storyboardBundle = candidateBundles.first(where: {
+        $0.path(forResource: "LiveView", ofType: "storyboardc") != nil
+    }) else {
+        // LiveViewTestApp can run without copied storyboard resources.
+        return LiveViewController()
+    }
+
+    let storyboard = UIStoryboard(name: "LiveView", bundle: storyboardBundle)
 
     guard let viewController = storyboard.instantiateInitialViewController() else {
         fatalError("LiveView.storyboard does not have an initial scene; please set one or update this function")

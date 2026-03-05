@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import BookAPI
 
 public class GridPaperView : UIView {
     
@@ -267,3 +268,4 @@ public class GridPaperView : UIView {
         case forward
     }
 }
+

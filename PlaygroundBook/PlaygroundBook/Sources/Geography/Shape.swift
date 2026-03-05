@@ -6,6 +6,7 @@
 //  Copyright © 2016 Daniel Budd. All rights reserved.
 //
 import SpriteKit
+import BookAPI
 
 @MainActor public struct ShapeSK {
     public let node = SKShapeNode()
