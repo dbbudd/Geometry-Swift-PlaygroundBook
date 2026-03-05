@@ -54,6 +54,16 @@ public struct Polygon: Equatable {
     }
 }
 
+public enum ParabolaAxis {
+    case vertical
+    case horizontal
+}
+
+public enum HyperbolaAxis {
+    case horizontal
+    case vertical
+}
+
 public struct Transform2D: Equatable {
     public let a: Double
     public let b: Double
@@ -459,6 +469,532 @@ public func addPolygon(
     let finalPoint = pen.currentPosition()
     pen.drawTo(dx: first.x - Double(finalPoint.x), dy: first.y - Double(finalPoint.y))
     addShape(pen: pen)
+}
+
+public func plotParametric(
+    tMin: Double,
+    tMax: Double,
+    samples: Int = 300,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil,
+    equation: (Double) -> Point?
+) {
+    guard samples >= 2, tMax >= tMin else { return }
+
+    var pen = Pen()
+    pen.penColor = color
+    pen.lineWidth = lineWidth
+    pen.zPosition = zPosition
+
+    let step = (tMax - tMin) / Double(samples - 1)
+    var previousPoint: Point?
+
+    for index in 0..<samples {
+        let t = tMin + (Double(index) * step)
+        guard let point = equation(t), point.x.isFinite, point.y.isFinite else {
+            previousPoint = nil
+            continue
+        }
+
+        if let previousPoint {
+            pen.drawTo(dx: point.x - previousPoint.x, dy: point.y - previousPoint.y)
+        } else {
+            pen.goto(x: point.x, y: point.y)
+        }
+
+        previousPoint = point
+    }
+
+    addShape(pen: pen)
+}
+
+public func plotFunction(
+    xMin: Double,
+    xMax: Double,
+    samples: Int = 300,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil,
+    function: (Double) -> Double?
+) {
+    plotParametric(
+        tMin: xMin,
+        tMax: xMax,
+        samples: samples,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { x in
+        guard let y = function(x) else { return nil }
+        return Point(x: x, y: y)
+    }
+}
+
+public func sampleParametric(
+    tMin: Double,
+    tMax: Double,
+    samples: Int = 300,
+    equation: (Double) -> Point?
+) -> [Point] {
+    guard samples >= 2, tMax >= tMin else { return [] }
+
+    let step = (tMax - tMin) / Double(samples - 1)
+    var result: [Point] = []
+    result.reserveCapacity(samples)
+
+    for index in 0..<samples {
+        let t = tMin + (Double(index) * step)
+        guard let point = equation(t), point.x.isFinite, point.y.isFinite else { continue }
+        result.append(point)
+    }
+
+    return result
+}
+
+public func sampleFunction(
+    xMin: Double,
+    xMax: Double,
+    samples: Int = 300,
+    function: (Double) -> Double?
+) -> [Point] {
+    sampleParametric(tMin: xMin, tMax: xMax, samples: samples) { x in
+        guard let y = function(x) else { return nil }
+        return Point(x: x, y: y)
+    }
+}
+
+public func addSamplePoints(
+    _ points: [Point],
+    every stride: Int = 1,
+    color: UIColor = .systemRed,
+    radius: Double = 3,
+    zPosition: Int? = nil
+) {
+    let safeStride = max(1, stride)
+    for (index, point) in points.enumerated() where index % safeStride == 0 {
+        addPoint(point, color: color, radius: radius, zPosition: zPosition)
+    }
+}
+
+public func tangentLineToFunction(
+    atX x: Double,
+    delta: Double = 0.001,
+    length: Double = 140,
+    function: (Double) -> Double?
+) -> Line? {
+    guard
+        let y = function(x),
+        let yMinus = function(x - delta),
+        let yPlus = function(x + delta)
+    else {
+        return nil
+    }
+
+    let dy = yPlus - yMinus
+    let dx = 2 * delta
+    let magnitude = hypot(dx, dy)
+    guard magnitude > 1e-10 else { return nil }
+
+    let ux = dx / magnitude
+    let uy = dy / magnitude
+    let half = length / 2
+    let point = Point(x: x, y: y)
+
+    return Line(
+        start: Point(x: point.x - ux * half, y: point.y - uy * half),
+        end: Point(x: point.x + ux * half, y: point.y + uy * half)
+    )
+}
+
+public func addTangentToFunction(
+    atX x: Double,
+    delta: Double = 0.001,
+    length: Double = 140,
+    color: UIColor = .systemOrange,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil,
+    function: (Double) -> Double?
+) {
+    guard let tangent = tangentLineToFunction(atX: x, delta: delta, length: length, function: function) else { return }
+    addLine(tangent, color: color, lineWidth: lineWidth, zPosition: zPosition)
+}
+
+public func tangentLineToParametric(
+    atT t: Double,
+    delta: Double = 0.001,
+    length: Double = 140,
+    equation: (Double) -> Point?
+) -> Line? {
+    guard
+        let point = equation(t),
+        let pointMinus = equation(t - delta),
+        let pointPlus = equation(t + delta)
+    else {
+        return nil
+    }
+
+    let dx = pointPlus.x - pointMinus.x
+    let dy = pointPlus.y - pointMinus.y
+    let magnitude = hypot(dx, dy)
+    guard magnitude > 1e-10 else { return nil }
+
+    let ux = dx / magnitude
+    let uy = dy / magnitude
+    let half = length / 2
+
+    return Line(
+        start: Point(x: point.x - ux * half, y: point.y - uy * half),
+        end: Point(x: point.x + ux * half, y: point.y + uy * half)
+    )
+}
+
+public func addTangentToParametric(
+    atT t: Double,
+    delta: Double = 0.001,
+    length: Double = 140,
+    color: UIColor = .systemOrange,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil,
+    equation: (Double) -> Point?
+) {
+    guard let tangent = tangentLineToParametric(atT: t, delta: delta, length: length, equation: equation) else { return }
+    addLine(tangent, color: color, lineWidth: lineWidth, zPosition: zPosition)
+}
+
+public func addSpiral(
+    center: Point = Point(x: 0, y: 0),
+    a: Double = 0,
+    growth: Double = 4,
+    turns: Double = 4,
+    samplesPerTurn: Int = 120,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let clampedTurns = max(0, turns)
+    let sampleCount = max(2, Int(clampedTurns * Double(max(16, samplesPerTurn))))
+    let tMax = 2 * Double.pi * clampedTurns
+
+    plotParametric(
+        tMin: 0,
+        tMax: tMax,
+        samples: sampleCount,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let radius = a + (growth * t)
+        let x = center.x + (radius * cos(t))
+        let y = center.y + (radius * sin(t))
+        return Point(x: x, y: y)
+    }
+}
+
+public func addCycloid(
+    origin: Point = Point(x: 0, y: 0),
+    radius: Double = 30,
+    cycles: Double = 3,
+    samplesPerCycle: Int = 180,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let safeRadius = max(0.0001, radius)
+    let clampedCycles = max(0, cycles)
+    let sampleCount = max(2, Int(clampedCycles * Double(max(24, samplesPerCycle))))
+    let tMax = 2 * Double.pi * clampedCycles
+
+    plotParametric(
+        tMin: 0,
+        tMax: tMax,
+        samples: sampleCount,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let x = origin.x + safeRadius * (t - sin(t))
+        let y = origin.y + safeRadius * (1 - cos(t))
+        return Point(x: x, y: y)
+    }
+}
+
+public func addLissajous(
+    center: Point = Point(x: 0, y: 0),
+    amplitudeX: Double = 100,
+    amplitudeY: Double = 100,
+    frequencyX: Double = 3,
+    frequencyY: Double = 2,
+    phase: Double = 0,
+    cycles: Double = 2,
+    samplesPerCycle: Int = 220,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let clampedCycles = max(0, cycles)
+    let sampleCount = max(2, Int(clampedCycles * Double(max(24, samplesPerCycle))))
+    let tMax = 2 * Double.pi * clampedCycles
+
+    plotParametric(
+        tMin: 0,
+        tMax: tMax,
+        samples: sampleCount,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        Point(
+            x: center.x + amplitudeX * sin((frequencyX * t) + phase),
+            y: center.y + amplitudeY * sin(frequencyY * t)
+        )
+    }
+}
+
+public func addRose(
+    center: Point = Point(x: 0, y: 0),
+    radius: Double = 120,
+    petals: Int = 5,
+    cycles: Double = 2,
+    samplesPerCycle: Int = 240,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let k = Double(max(1, petals))
+    let clampedCycles = max(0, cycles)
+    let sampleCount = max(2, Int(clampedCycles * Double(max(24, samplesPerCycle))))
+    let tMax = 2 * Double.pi * clampedCycles
+
+    plotParametric(
+        tMin: 0,
+        tMax: tMax,
+        samples: sampleCount,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let r = radius * cos(k * t)
+        return Point(
+            x: center.x + r * cos(t),
+            y: center.y + r * sin(t)
+        )
+    }
+}
+
+public func addEpicycloid(
+    center: Point = Point(x: 0, y: 0),
+    fixedRadius: Double = 70,
+    rollingRadius: Double = 20,
+    cycles: Double = 1,
+    samplesPerCycle: Int = 360,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let R = max(0.0001, fixedRadius)
+    let r = max(0.0001, rollingRadius)
+    let clampedCycles = max(0, cycles)
+    let sampleCount = max(2, Int(clampedCycles * Double(max(48, samplesPerCycle))))
+    let tMax = 2 * Double.pi * clampedCycles
+
+    plotParametric(
+        tMin: 0,
+        tMax: tMax,
+        samples: sampleCount,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let x = center.x + (R + r) * cos(t) - r * cos(((R + r) / r) * t)
+        let y = center.y + (R + r) * sin(t) - r * sin(((R + r) / r) * t)
+        return Point(x: x, y: y)
+    }
+}
+
+public func addHypocycloid(
+    center: Point = Point(x: 0, y: 0),
+    fixedRadius: Double = 70,
+    rollingRadius: Double = 20,
+    cycles: Double = 1,
+    samplesPerCycle: Int = 360,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let R = max(0.0001, fixedRadius)
+    let r = max(0.0001, rollingRadius)
+    let clampedCycles = max(0, cycles)
+    let sampleCount = max(2, Int(clampedCycles * Double(max(48, samplesPerCycle))))
+    let tMax = 2 * Double.pi * clampedCycles
+
+    plotParametric(
+        tMin: 0,
+        tMax: tMax,
+        samples: sampleCount,
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let x = center.x + (R - r) * cos(t) + r * cos(((R - r) / r) * t)
+        let y = center.y + (R - r) * sin(t) - r * sin(((R - r) / r) * t)
+        return Point(x: x, y: y)
+    }
+}
+
+public func addEllipse(
+    center: Point = Point(x: 0, y: 0),
+    semiMajorAxis a: Double = 120,
+    semiMinorAxis b: Double = 80,
+    rotationDegrees: Double = 0,
+    samples: Int = 360,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let safeA = max(0.0001, a)
+    let safeB = max(0.0001, b)
+    let rotation = rotationDegrees * .pi / 180
+    let cosR = cos(rotation)
+    let sinR = sin(rotation)
+
+    plotParametric(
+        tMin: 0,
+        tMax: 2 * .pi,
+        samples: max(24, samples),
+        color: color,
+        lineWidth: lineWidth,
+        zPosition: zPosition
+    ) { t in
+        let xLocal = safeA * cos(t)
+        let yLocal = safeB * sin(t)
+        let x = center.x + (xLocal * cosR - yLocal * sinR)
+        let y = center.y + (xLocal * sinR + yLocal * cosR)
+        return Point(x: x, y: y)
+    }
+}
+
+public func addParabola(
+    vertex: Point = Point(x: 0, y: 0),
+    coefficient: Double = 0.02,
+    axis: ParabolaAxis = .vertical,
+    domainMin: Double = -150,
+    domainMax: Double = 150,
+    samples: Int = 300,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let safeSamples = max(24, samples)
+    let minDomain = min(domainMin, domainMax)
+    let maxDomain = max(domainMin, domainMax)
+
+    switch axis {
+    case .vertical:
+        plotFunction(
+            xMin: vertex.x + minDomain,
+            xMax: vertex.x + maxDomain,
+            samples: safeSamples,
+            color: color,
+            lineWidth: lineWidth,
+            zPosition: zPosition
+        ) { x in
+            let dx = x - vertex.x
+            return vertex.y + coefficient * dx * dx
+        }
+
+    case .horizontal:
+        plotParametric(
+            tMin: minDomain,
+            tMax: maxDomain,
+            samples: safeSamples,
+            color: color,
+            lineWidth: lineWidth,
+            zPosition: zPosition
+        ) { t in
+            Point(x: vertex.x + coefficient * t * t, y: vertex.y + t)
+        }
+    }
+}
+
+public func addHyperbola(
+    center: Point = Point(x: 0, y: 0),
+    semiTransverseAxis a: Double = 60,
+    semiConjugateAxis b: Double = 30,
+    axis: HyperbolaAxis = .horizontal,
+    tMin: Double = -2.0,
+    tMax: Double = 2.0,
+    samples: Int = 320,
+    color: UIColor = .systemBlue,
+    lineWidth: CGFloat = 2,
+    zPosition: Int? = nil
+) {
+    let safeA = max(0.0001, a)
+    let safeB = max(0.0001, b)
+    let safeSamples = max(24, samples)
+    let minT = min(tMin, tMax)
+    let maxT = max(tMin, tMax)
+    let split = max(2, safeSamples / 2)
+
+    switch axis {
+    case .horizontal:
+        plotParametric(
+            tMin: minT,
+            tMax: maxT,
+            samples: split,
+            color: color,
+            lineWidth: lineWidth,
+            zPosition: zPosition
+        ) { t in
+            Point(
+                x: center.x + safeA * cosh(t),
+                y: center.y + safeB * sinh(t)
+            )
+        }
+
+        plotParametric(
+            tMin: minT,
+            tMax: maxT,
+            samples: split,
+            color: color,
+            lineWidth: lineWidth,
+            zPosition: zPosition
+        ) { t in
+            Point(
+                x: center.x - safeA * cosh(t),
+                y: center.y + safeB * sinh(t)
+            )
+        }
+
+    case .vertical:
+        plotParametric(
+            tMin: minT,
+            tMax: maxT,
+            samples: split,
+            color: color,
+            lineWidth: lineWidth,
+            zPosition: zPosition
+        ) { t in
+            Point(
+                x: center.x + safeB * sinh(t),
+                y: center.y + safeA * cosh(t)
+            )
+        }
+
+        plotParametric(
+            tMin: minT,
+            tMax: maxT,
+            samples: split,
+            color: color,
+            lineWidth: lineWidth,
+            zPosition: zPosition
+        ) { t in
+            Point(
+                x: center.x + safeB * sinh(t),
+                y: center.y - safeA * cosh(t)
+            )
+        }
+    }
 }
 
 private enum LiveViewMessageKey {

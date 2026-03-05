@@ -219,6 +219,112 @@ Scene {
 }
 ```
 
+## Phase 4 Curves and Plotting
+
+Phase 4 adds numeric plotting helpers:
+- `plotParametric(...)`
+- `plotFunction(...)`
+- `addSpiral(...)`
+- `addCycloid(...)`
+- `addLissajous(...)`
+- `addRose(...)`
+- `addEpicycloid(...)`
+- `addHypocycloid(...)`
+- `addEllipse(...)`
+- `addParabola(...)`
+- `addHyperbola(...)`
+
+```swift
+Scene {
+    let lineWidth = Input(number: 2, label: "Line Width")
+    let spiralTurns = Input(decimal: 3.5, label: "Spiral Turns")
+    let spiralGrowth = Input(decimal: 2.0, label: "Spiral Growth")
+    let cycloidRadius = Input(decimal: 20.0, label: "Cycloid Radius")
+
+    plotFunction(
+        xMin: -150,
+        xMax: 150,
+        samples: 400,
+        color: .systemBlue,
+        lineWidth: lineWidth
+    ) { x in
+        40 * sin(x / 30)
+    }
+
+    plotParametric(
+        tMin: 0,
+        tMax: 2 * .pi,
+        samples: 220,
+        color: .systemGreen,
+        lineWidth: lineWidth
+    ) { t in
+        Point(x: 80 * cos(3 * t), y: 80 * sin(2 * t))
+    }
+
+    addSpiral(
+        center: Point(x: -140, y: -90),
+        growth: spiralGrowth,
+        turns: spiralTurns,
+        color: .systemPurple,
+        lineWidth: lineWidth
+    )
+
+    addCycloid(
+        origin: Point(x: -120, y: 20),
+        radius: cycloidRadius,
+        cycles: 2.6,
+        color: .systemOrange,
+        lineWidth: lineWidth
+    )
+
+    addRose(center: Point(x: 150, y: -110), radius: 75, petals: 5, color: .systemPink, lineWidth: lineWidth)
+    addLissajous(center: Point(x: 130, y: 110), amplitudeX: 90, amplitudeY: 60, frequencyX: 3, frequencyY: 2, phase: 0.6, color: .systemIndigo, lineWidth: lineWidth)
+}
+```
+
+Conics example:
+
+```swift
+Scene {
+    let lineWidth = Input(number: 2, label: "Line Width")
+    let ellipseA = Input(decimal: 110, label: "Ellipse a")
+    let ellipseB = Input(decimal: 60, label: "Ellipse b")
+    let parabolaK = Input(decimal: 0.012, label: "Parabola k")
+    let hyperbolaA = Input(decimal: 55, label: "Hyperbola a")
+    let hyperbolaB = Input(decimal: 32, label: "Hyperbola b")
+
+    addEllipse(center: Point(x: -120, y: 90), semiMajorAxis: ellipseA, semiMinorAxis: ellipseB, rotationDegrees: 25, color: .systemPurple, lineWidth: lineWidth)
+    addParabola(vertex: Point(x: 120, y: -100), coefficient: parabolaK, axis: .vertical, domainMin: -180, domainMax: 180, color: .systemOrange, lineWidth: lineWidth)
+    addHyperbola(center: Point(x: -20, y: -20), semiTransverseAxis: hyperbolaA, semiConjugateAxis: hyperbolaB, axis: .horizontal, tMin: -1.8, tMax: 1.8, color: .systemBlue, lineWidth: lineWidth)
+}
+```
+
+## Phase 4D Teaching Helpers
+
+Phase 4D adds classroom-oriented helper APIs:
+- `sampleFunction(...)`
+- `sampleParametric(...)`
+- `addSamplePoints(...)`
+- `tangentLineToFunction(...)` / `addTangentToFunction(...)`
+- `tangentLineToParametric(...)` / `addTangentToParametric(...)`
+
+```swift
+Scene {
+    let lineWidth = Input(number: 2, label: "Line Width")
+    let tangentX = Input(decimal: 30, label: "Tangent X")
+    let sampleStride = Input(number: 20, label: "Sample Every N")
+
+    let functionCurve: (Double) -> Double? = { x in
+        55 * sin(x / 35)
+    }
+
+    plotFunction(xMin: -220, xMax: 220, samples: 480, color: .systemBlue, lineWidth: lineWidth, function: functionCurve)
+    let sampled = sampleFunction(xMin: -220, xMax: 220, samples: 220, function: functionCurve)
+    addSamplePoints(sampled, every: max(1, Int(sampleStride)), color: .systemTeal, radius: 2.5)
+    addTangentToFunction(atX: tangentX, length: 170, color: .systemOrange, lineWidth: lineWidth, function: functionCurve)
+}
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:
