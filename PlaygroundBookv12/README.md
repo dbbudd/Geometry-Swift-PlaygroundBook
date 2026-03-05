@@ -139,6 +139,53 @@ Scene {
 }
 ```
 
+## Phase 1C Transform Helpers
+
+Phase 1C adds direct transform helpers for each geometry type, plus a composable `Transform2D`.
+- `translate(..., dx:dy:)`
+- `rotate(..., around:degrees:)`
+- `scale(..., around:factor:)`
+
+These work with:
+- `Point`
+- `Line`
+- `Circle`
+- `Triangle`
+- `Polygon`
+
+`Transform2D` supports:
+- `Transform2D.identity`
+- `.translation(dx:dy:)`
+- `.rotation(degrees:around:)`
+- `.scaling(factor:around:)`
+- `.reflectionAcrossX()`
+- `.reflectionAcrossY()`
+- composition via `.concatenating(...)`
+- per-type `.transformed(by:)`
+
+```swift
+Scene {
+    let angle = Input(decimal: 25, label: "Rotate Degrees")
+    let factor = Input(decimal: 1.2, label: "Scale Factor")
+    let shiftX = Input(decimal: 140, label: "Translate X")
+
+    let base = Triangle(
+        a: Point(x: -120, y: -80),
+        b: Point(x: 0, y: -80),
+        c: Point(x: -60, y: 24)
+    )
+
+    let pivot = Point(x: -60, y: -30)
+    let transform = Transform2D.identity
+        .concatenating(.translation(dx: shiftX, dy: 0))
+        .concatenating(.rotation(degrees: angle, around: pivot))
+        .concatenating(.scaling(factor: factor, around: pivot))
+
+    addTriangle(base, color: .systemRed, zPosition: 1)
+    addTriangle(base.transformed(by: transform), color: .systemBlue, zPosition: 2)
+}
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

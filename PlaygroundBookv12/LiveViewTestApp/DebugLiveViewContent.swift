@@ -8,47 +8,64 @@ struct DebugLiveViewContent {
         _ = liveViewController
 
         Scene {
-            _ = Input(text: "Phase 1 Objects", label: "Demo")
+            _ = Input(text: "Phase 1C Transforms", label: "Demo")
             let lineWidth = Input(number: 3, label: "Line Width")
-            let side = Input(decimal: 120, label: "Triangle Side")
-            let radius = Input(decimal: 80, label: "Circle Radius")
+            let angle = Input(decimal: 25, label: "Rotate Degrees")
+            let factor = Input(decimal: 1.2, label: "Scale Factor")
 
-            let a = Point(x: 100, y: 100)
-            let b = Point(x: 20, y: -80)
-            let c = Point(x: -80, y: -80 + (sqrt(3) / 2 * side))
+            let baseTriangle = Triangle(
+                a: Point(x: 0, y: 0),
+                b: Point(x: 120, y: 0),
+                c: Point(x: 60, y: 104)
+            )
+            let pivot = Point(x: 0, y: 0)
+            let transform = Transform2D.identity
+                .concatenating(.rotation(degrees: angle, around: pivot))
+                .concatenating(.scaling(factor: factor, around: pivot))
+            let transformedTriangle = baseTriangle.transformed(by: transform)
 
-            let center = midpoint(a, b)
-            let topLine = Line(start: Point(x: -220, y: 140), end: Point(x: 220, y: 140))
+            let baseCircle = Circle(center: Point(x: 110, y: 60), radius: 35)
+            let reflectedCircle = baseCircle.transformed(by: .reflectionAcrossY())
+            let movedCircle = baseCircle.transformed(by: .translation(dx: -40, dy: -120))
 
-            addLine(topLine, color: .systemGray, lineWidth: lineWidth, zPosition: 0)
             addTriangle(
-                Triangle(a: a, b: b, c: c),
+                baseTriangle,
+                color: .systemRed,
+                lineWidth: lineWidth,
+                zPosition: 1
+            )
+            addTriangle(
+                transformedTriangle,
+                color: .systemBlue,
+                lineWidth: lineWidth,
+                zPosition: 2
+            )
+
+            addCircle(
+                baseCircle,
                 color: .systemRed,
                 lineWidth: lineWidth,
                 zPosition: 1
             )
             addCircle(
-                Circle(center: center, radius: radius),
-                color: .systemBlue,
+                movedCircle,
+                color: .systemOrange,
                 lineWidth: lineWidth,
                 zPosition: 2
             )
-            addPoint(a, color: .systemGreen, radius: 20, zPosition: 3)
-            addPoint(b, color: .systemRed, radius: 5, zPosition: 3)
-            addPoint(c, color: .systemGreen, radius: 5, zPosition: 3)
-
-            addPolygon(
-                Polygon(vertices: [
-                    Point(x: 80, y: -150),
-                    Point(x: 220, y: -120),
-                    Point(x: 180, y: 0),
-                    Point(x: 60, y: -20)
-                ]),
-                color: .systemPurple,
+            addCircle(
+                reflectedCircle,
+                color: .systemPink,
                 lineWidth: lineWidth,
-                fillColor: UIColor.systemPurple.withAlphaComponent(0.12),
-                zPosition: 1
+                zPosition: 3
             )
+
+            let m = midpoint(baseTriangle.a, baseTriangle.b)
+            addPoint(m, color: .systemGreen, radius: 4, zPosition: 6)
+
+            let base = Line(start: baseTriangle.a, end: baseTriangle.b)
+            _ = slope(base.start, base.end)
+            _ = distance(base.start, base.end)
         }
     }
 }

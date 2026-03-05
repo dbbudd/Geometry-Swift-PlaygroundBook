@@ -54,6 +54,121 @@ public struct Polygon: Equatable {
     }
 }
 
+public struct Transform2D: Equatable {
+    public let a: Double
+    public let b: Double
+    public let c: Double
+    public let d: Double
+    public let tx: Double
+    public let ty: Double
+
+    public init(a: Double, b: Double, c: Double, d: Double, tx: Double, ty: Double) {
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+        self.tx = tx
+        self.ty = ty
+    }
+
+    public static let identity = Transform2D(a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0)
+
+    public static func translation(dx: Double, dy: Double) -> Transform2D {
+        Transform2D(a: 1, b: 0, c: 0, d: 1, tx: dx, ty: dy)
+    }
+
+    public static func rotation(degrees: Double, around center: Point = Point(x: 0, y: 0)) -> Transform2D {
+        let radians = degrees * .pi / 180
+        let cosTheta = cos(radians)
+        let sinTheta = sin(radians)
+        let tx = center.x - (cosTheta * center.x) + (sinTheta * center.y)
+        let ty = center.y - (sinTheta * center.x) - (cosTheta * center.y)
+        return Transform2D(a: cosTheta, b: sinTheta, c: -sinTheta, d: cosTheta, tx: tx, ty: ty)
+    }
+
+    public static func scaling(factor: Double, around center: Point = Point(x: 0, y: 0)) -> Transform2D {
+        Transform2D(
+            a: factor,
+            b: 0,
+            c: 0,
+            d: factor,
+            tx: center.x * (1 - factor),
+            ty: center.y * (1 - factor)
+        )
+    }
+
+    public static func reflectionAcrossX() -> Transform2D {
+        Transform2D(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: 0)
+    }
+
+    public static func reflectionAcrossY() -> Transform2D {
+        Transform2D(a: -1, b: 0, c: 0, d: 1, tx: 0, ty: 0)
+    }
+
+    public func applying(to point: Point) -> Point {
+        Point(
+            x: (a * point.x) + (c * point.y) + tx,
+            y: (b * point.x) + (d * point.y) + ty
+        )
+    }
+
+    // Returns a transform equivalent to applying `self`, then `next`.
+    public func followed(by next: Transform2D) -> Transform2D {
+        Transform2D(
+            a: (next.a * a) + (next.c * b),
+            b: (next.b * a) + (next.d * b),
+            c: (next.a * c) + (next.c * d),
+            d: (next.b * c) + (next.d * d),
+            tx: (next.a * tx) + (next.c * ty) + next.tx,
+            ty: (next.b * tx) + (next.d * ty) + next.ty
+        )
+    }
+
+    public func concatenating(_ next: Transform2D) -> Transform2D {
+        followed(by: next)
+    }
+}
+
+public extension Point {
+    func transformed(by transform: Transform2D) -> Point {
+        transform.applying(to: self)
+    }
+}
+
+public extension Line {
+    func transformed(by transform: Transform2D) -> Line {
+        Line(
+            start: start.transformed(by: transform),
+            end: end.transformed(by: transform)
+        )
+    }
+}
+
+public extension Circle {
+    func transformed(by transform: Transform2D) -> Circle {
+        let transformedCenter = center.transformed(by: transform)
+        let transformedEdge = Point(x: center.x + radius, y: center.y).transformed(by: transform)
+        let transformedRadius = distance(transformedCenter, transformedEdge)
+        return Circle(center: transformedCenter, radius: transformedRadius)
+    }
+}
+
+public extension Triangle {
+    func transformed(by transform: Transform2D) -> Triangle {
+        Triangle(
+            a: a.transformed(by: transform),
+            b: b.transformed(by: transform),
+            c: c.transformed(by: transform)
+        )
+    }
+}
+
+public extension Polygon {
+    func transformed(by transform: Transform2D) -> Polygon {
+        Polygon(vertices: vertices.map { $0.transformed(by: transform) })
+    }
+}
+
 public func distance(_ first: Point, _ second: Point) -> Double {
     hypot(second.x - first.x, second.y - first.y)
 }
@@ -66,6 +181,66 @@ public func slope(_ first: Point, _ second: Point) -> Double? {
     let dx = second.x - first.x
     guard dx != 0 else { return nil }
     return (second.y - first.y) / dx
+}
+
+public func translate(_ point: Point, dx: Double, dy: Double) -> Point {
+    point.transformed(by: .translation(dx: dx, dy: dy))
+}
+
+public func rotate(_ point: Point, around center: Point = Point(x: 0, y: 0), degrees: Double) -> Point {
+    point.transformed(by: .rotation(degrees: degrees, around: center))
+}
+
+public func scale(_ point: Point, around center: Point = Point(x: 0, y: 0), factor: Double) -> Point {
+    point.transformed(by: .scaling(factor: factor, around: center))
+}
+
+public func translate(_ line: Line, dx: Double, dy: Double) -> Line {
+    line.transformed(by: .translation(dx: dx, dy: dy))
+}
+
+public func rotate(_ line: Line, around center: Point = Point(x: 0, y: 0), degrees: Double) -> Line {
+    line.transformed(by: .rotation(degrees: degrees, around: center))
+}
+
+public func scale(_ line: Line, around center: Point = Point(x: 0, y: 0), factor: Double) -> Line {
+    line.transformed(by: .scaling(factor: factor, around: center))
+}
+
+public func translate(_ circle: Circle, dx: Double, dy: Double) -> Circle {
+    circle.transformed(by: .translation(dx: dx, dy: dy))
+}
+
+public func rotate(_ circle: Circle, around center: Point = Point(x: 0, y: 0), degrees: Double) -> Circle {
+    circle.transformed(by: .rotation(degrees: degrees, around: center))
+}
+
+public func scale(_ circle: Circle, around center: Point = Point(x: 0, y: 0), factor: Double) -> Circle {
+    circle.transformed(by: .scaling(factor: factor, around: center))
+}
+
+public func translate(_ triangle: Triangle, dx: Double, dy: Double) -> Triangle {
+    triangle.transformed(by: .translation(dx: dx, dy: dy))
+}
+
+public func rotate(_ triangle: Triangle, around center: Point = Point(x: 0, y: 0), degrees: Double) -> Triangle {
+    triangle.transformed(by: .rotation(degrees: degrees, around: center))
+}
+
+public func scale(_ triangle: Triangle, around center: Point = Point(x: 0, y: 0), factor: Double) -> Triangle {
+    triangle.transformed(by: .scaling(factor: factor, around: center))
+}
+
+public func translate(_ polygon: Polygon, dx: Double, dy: Double) -> Polygon {
+    polygon.transformed(by: .translation(dx: dx, dy: dy))
+}
+
+public func rotate(_ polygon: Polygon, around center: Point = Point(x: 0, y: 0), degrees: Double) -> Polygon {
+    polygon.transformed(by: .rotation(degrees: degrees, around: center))
+}
+
+public func scale(_ polygon: Polygon, around center: Point = Point(x: 0, y: 0), factor: Double) -> Polygon {
+    polygon.transformed(by: .scaling(factor: factor, around: center))
 }
 
 public func addPoint(
