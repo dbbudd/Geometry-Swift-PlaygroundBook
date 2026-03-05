@@ -4,9 +4,11 @@
 <dict>
 	<key>Name</key>
 	<string>ChapterOneName</string>
-	<key>Pages</key>
+	<key>InitialUserPages</key>
 	<array>
 		<string>PlaygroundPage.playgroundpage</string>
 	</array>
+	<key>TemplatePageFilename</key>
+	<string>Template.playgroundpage</string>
 </dict>
 </plist>

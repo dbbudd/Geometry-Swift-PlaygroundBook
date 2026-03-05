@@ -10,9 +10,12 @@
 Scene {
 //#-end-hidden-code
 
+//: # Geometry with Swift
+//: Welcome to Geometry with Swift. Get started by pressing the **Run My Code** button and exploring the output.
+
     var square = Pen()
     square.penColor = .systemRed
-    square.lineWidth = z
+    square.lineWidth = 4
     square.addLine(distance: 100)
     square.turn(degrees: 90)
     square.addLine(distance: 100)

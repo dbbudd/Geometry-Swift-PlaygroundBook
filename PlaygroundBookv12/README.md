@@ -325,6 +325,28 @@ Scene {
 }
 ```
 
+## Phase 5A Safety + Localization
+
+Phase 5A introduces runtime guardrails for plotting-heavy lessons:
+- `PlotSafetyConfiguration`
+- `setPlotSafetyConfiguration(...)`
+- `currentPlotSafetyConfiguration()`
+
+Defaults:
+- `maxSamplesPerCurve = 4000`
+- `maxTotalSamplesPerScene = 30000`
+- `strictValidation = false`
+
+Behavior:
+- `plotParametric(...)` and `sampleParametric(...)` now normalize domains, clamp sample counts, and enforce a per-scene sample budget during `Scene` rendering.
+- Non-finite domain values are ignored safely (no draw) to avoid crashes from invalid math input.
+- Strict mode optionally triggers assertion failures in debug runs when requests exceed configured limits.
+
+Localization support:
+- `Input(..., label:)` now resolves labels through `NSLocalizedString`.
+- `Localized(_ key: String)` is available for explicit localized text usage in learner code.
+- This lets you localize control labels via standard `.strings` resources without changing API surface.
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

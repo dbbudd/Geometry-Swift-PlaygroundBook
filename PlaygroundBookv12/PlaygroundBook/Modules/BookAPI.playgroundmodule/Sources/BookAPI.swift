@@ -64,6 +64,30 @@ public enum HyperbolaAxis {
     case vertical
 }
 
+public struct PlotSafetyConfiguration: Equatable {
+    public var maxSamplesPerCurve: Int
+    public var maxTotalSamplesPerScene: Int
+    public var strictValidation: Bool
+
+    public init(
+        maxSamplesPerCurve: Int = 4000,
+        maxTotalSamplesPerScene: Int = 30000,
+        strictValidation: Bool = false
+    ) {
+        self.maxSamplesPerCurve = maxSamplesPerCurve
+        self.maxTotalSamplesPerScene = maxTotalSamplesPerScene
+        self.strictValidation = strictValidation
+    }
+}
+
+public func setPlotSafetyConfiguration(_ configuration: PlotSafetyConfiguration) {
+    plotSafetyConfiguration = configuration
+}
+
+public func currentPlotSafetyConfiguration() -> PlotSafetyConfiguration {
+    plotSafetyConfiguration
+}
+
 public struct Transform2D: Equatable {
     public let a: Double
     public let b: Double
@@ -480,18 +504,24 @@ public func plotParametric(
     zPosition: Int? = nil,
     equation: (Double) -> Point?
 ) {
-    guard samples >= 2, tMax >= tMin else { return }
+    guard tMin.isFinite, tMax.isFinite else { return }
+
+    let domainMin = min(tMin, tMax)
+    let domainMax = max(tMin, tMax)
+    let sampleCount = sanitizedSampleCount(samples, minimum: 2, context: "plotParametric")
+    let budgetedSampleCount = reserveSceneSampleBudget(sampleCount)
+    guard budgetedSampleCount >= 2 else { return }
 
     var pen = Pen()
     pen.penColor = color
     pen.lineWidth = lineWidth
     pen.zPosition = zPosition
 
-    let step = (tMax - tMin) / Double(samples - 1)
+    let step = (domainMax - domainMin) / Double(budgetedSampleCount - 1)
     var previousPoint: Point?
 
-    for index in 0..<samples {
-        let t = tMin + (Double(index) * step)
+    for index in 0..<budgetedSampleCount {
+        let t = domainMin + (Double(index) * step)
         guard let point = equation(t), point.x.isFinite, point.y.isFinite else {
             previousPoint = nil
             continue
@@ -537,14 +567,20 @@ public func sampleParametric(
     samples: Int = 300,
     equation: (Double) -> Point?
 ) -> [Point] {
-    guard samples >= 2, tMax >= tMin else { return [] }
+    guard tMin.isFinite, tMax.isFinite else { return [] }
 
-    let step = (tMax - tMin) / Double(samples - 1)
+    let domainMin = min(tMin, tMax)
+    let domainMax = max(tMin, tMax)
+    let sampleCount = sanitizedSampleCount(samples, minimum: 2, context: "sampleParametric")
+    let budgetedSampleCount = reserveSceneSampleBudget(sampleCount)
+    guard budgetedSampleCount >= 2 else { return [] }
+
+    let step = (domainMax - domainMin) / Double(budgetedSampleCount - 1)
     var result: [Point] = []
-    result.reserveCapacity(samples)
+    result.reserveCapacity(budgetedSampleCount)
 
-    for index in 0..<samples {
-        let t = tMin + (Double(index) * step)
+    for index in 0..<budgetedSampleCount {
+        let t = domainMin + (Double(index) * step)
         guard let point = equation(t), point.x.isFinite, point.y.isFinite else { continue }
         result.append(point)
     }
@@ -1030,8 +1066,10 @@ private var inputCounter = 0
 private var sceneRenderBlock: (() -> Void)?
 private var isRenderingScene = false
 private var scenePens: [Pen] = []
+private var sceneSampleCount = 0
 private var sceneObserverInstalled = false
 private var hasRegisteredInputIDs: Set<String> = []
+private var plotSafetyConfiguration = PlotSafetyConfiguration()
 
 public func Scene(_ content: @escaping () -> Void) {
     sceneRenderBlock = content
@@ -1063,7 +1101,7 @@ public func addShape(pen: Pen) {
 
 public func Input(text: String, label: String? = nil) -> String {
     let inputID = label ?? nextInputID(prefix: "text")
-    let inputTitle = label ?? inputID
+    let inputTitle = localizedInputTitle(label ?? inputID)
 
     registerInputIfNeeded(
         id: inputID,
@@ -1078,7 +1116,7 @@ public func Input(text: String, label: String? = nil) -> String {
 
 public func Input(decimal: Double, label: String? = nil) -> Double {
     let inputID = label ?? nextInputID(prefix: "decimal")
-    let inputTitle = label ?? inputID
+    let inputTitle = localizedInputTitle(label ?? inputID)
 
     registerInputIfNeeded(
         id: inputID,
@@ -1093,7 +1131,7 @@ public func Input(decimal: Double, label: String? = nil) -> Double {
 
 public func Input(number: Int, label: String? = nil) -> CGFloat {
     let inputID = label ?? nextInputID(prefix: "number")
-    let inputTitle = label ?? inputID
+    let inputTitle = localizedInputTitle(label ?? inputID)
 
     registerInputIfNeeded(
         id: inputID,
@@ -1104,6 +1142,10 @@ public func Input(number: Int, label: String? = nil) -> CGFloat {
     )
 
     return currentNumberValue(for: inputID, defaultValue: number)
+}
+
+public func Localized(_ key: String) -> String {
+    localizedInputTitle(key)
 }
 
 public func onInputChange(_ handler: @escaping () -> Void) {
@@ -1129,6 +1171,7 @@ private func rerenderScene() {
 
     isRenderingScene = true
     scenePens.removeAll(keepingCapacity: true)
+    sceneSampleCount = 0
     block()
     isRenderingScene = false
 
@@ -1159,6 +1202,37 @@ private func registerInputIfNeeded(id: String, title: String, kind: String, payl
     dictionary[payloadKey] = payloadValue
 
     sendToLiveView(.dictionary(dictionary))
+}
+
+private func localizedInputTitle(_ key: String) -> String {
+    NSLocalizedString(key, comment: "Input control label")
+}
+
+private func sanitizedSampleCount(_ requested: Int, minimum: Int, context: String) -> Int {
+    let requestedAtLeastMinimum = max(minimum, requested)
+    let maxPerCurve = max(minimum, plotSafetyConfiguration.maxSamplesPerCurve)
+    let clamped = min(requestedAtLeastMinimum, maxPerCurve)
+
+    if plotSafetyConfiguration.strictValidation && clamped != requestedAtLeastMinimum {
+        assertionFailure("\(context) requested \(requestedAtLeastMinimum) samples, clamped to \(clamped).")
+    }
+
+    return clamped
+}
+
+private func reserveSceneSampleBudget(_ requested: Int) -> Int {
+    guard isRenderingScene else { return requested }
+
+    let maxTotal = max(0, plotSafetyConfiguration.maxTotalSamplesPerScene)
+    let remaining = max(0, maxTotal - sceneSampleCount)
+    let granted = min(requested, remaining)
+    sceneSampleCount += granted
+
+    if plotSafetyConfiguration.strictValidation && granted != requested {
+        assertionFailure("Scene sample budget exceeded. Requested \(requested), granted \(granted).")
+    }
+
+    return granted
 }
 
 public func Input(text: String, id: String?) -> String {

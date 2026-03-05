@@ -1,0 +1,3 @@
+/* Localized strings for page introduction and runtime copy. */
+"introduction_title" = "Geometry with Swift";
+"introduction_body" = "Welcome to Geometry with Swift. Get started by pressing the Run My Code button and exploring the output.";
