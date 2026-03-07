@@ -8,6 +8,7 @@ struct DebugLiveViewContent {
         _ = liveViewController
 
         animate(duration: 6.0, fps: 30, repeats: true) { t in
+            setValidationFeedbackMode(.overlay)
             _ = Input(text: "Animation Demo: Orbit + Rotation", label: "Demo")
             let radius = Input(decimal: 130, label: "Orbit Radius")
             let spin = Input(decimal: 360, label: "Degrees per Cycle")
@@ -20,6 +21,7 @@ struct DebugLiveViewContent {
                 color: .systemRed,
                 zPosition: 50
             )
+            addHint("Drag red handle to move orbit center")
 
             addLine(
                 Line(start: Point(x: -260, y: 0), end: Point(x: 260, y: 0)),
@@ -117,6 +119,57 @@ struct DebugLiveViewContent {
             addLine(perpendicularLineSample, color: .systemIndigo, lineWidth: 2, zPosition: 6)
             addLine(equalLengthLine, color: .systemBrown, lineWidth: 2, zPosition: 6)
             addCoordinateLabel(midpoint(referenceLine.start, referenceLine.end), decimals: 0, color: .systemPink, zPosition: 9)
+
+            let segment = Line(start: Point(x: -260, y: 180), end: Point(x: -60, y: 180))
+            addLine(segment, color: .systemBlue, lineWidth: 2, zPosition: 6)
+            for divisionPoint in divideSegment(segment, into: 5) {
+                addPoint(divisionPoint, color: .systemBlue, radius: 3, zPosition: 7)
+            }
+
+            if let hex = regularPolygon(center: Point(x: 200, y: 150), sides: 6, radius: 38, rotationDegrees: 30) {
+                addPolygon(hex, color: .systemGreen, lineWidth: 2, zPosition: 6)
+            }
+
+            let p1 = Point(x: 70, y: -20)
+            let p2 = Point(x: 230, y: -10)
+            addPoint(p1, color: .systemRed, radius: 4, zPosition: 7)
+            addPoint(p2, color: .systemRed, radius: 4, zPosition: 7)
+            addLine(Line(start: p1, end: p2), color: .systemRed, lineWidth: 1.5, zPosition: 6)
+            addLine(
+                locusEquidistant(from: p1, and: p2, length: 220),
+                color: .systemPurple,
+                lineWidth: 2,
+                zPosition: 6
+            )
+            addCircle(
+                locusDistance(from: Point(x: 150, y: -110), radius: 44),
+                color: .systemTeal,
+                lineWidth: 2,
+                zPosition: 6
+            )
+
+            let macroSegment = Line(start: Point(x: -40, y: 20), end: Point(x: 40, y: 90))
+            let macroBundle = constructPerpendicularBisector(of: macroSegment, length: 220)
+            renderConstruction(
+                macroBundle,
+                pointColor: .systemPink,
+                lineColor: .systemBlue,
+                circleColor: UIColor.systemTeal.withAlphaComponent(0.5),
+                lineWidth: 1.2,
+                pointRadius: 2.5,
+                zPosition: 5
+            )
+
+            let reflectAxis = Line(start: Point(x: -10, y: -170), end: Point(x: 110, y: -80))
+            addLine(reflectAxis, color: .systemIndigo, lineWidth: 1.5, zPosition: 6)
+            let sourcePoly = Polygon(vertices: [
+                Point(x: -40, y: -170),
+                Point(x: 0, y: -120),
+                Point(x: 45, y: -170)
+            ])
+            addPolygon(sourcePoly, color: .systemRed, lineWidth: 2, zPosition: 6)
+            let reflectedPoly = sourcePoly.transformed(by: reflectionAcross(line: reflectAxis))
+            addPolygon(reflectedPoly, color: .systemGreen, lineWidth: 2, zPosition: 6)
         }
     }
 }

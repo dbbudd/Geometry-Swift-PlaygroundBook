@@ -555,6 +555,124 @@ Notes:
 - Playback supports speed presets in the trace panel.
 - Change-only capture mode avoids storing duplicate consecutive frames.
 
+## Phase 8C Segment and Polygon Utilities
+
+Phase 8 starts with low-risk utility helpers:
+- `point(on:t:)`
+- `divideSegment(_:into:)`
+- `regularPolygon(center:sides:radius:rotationDegrees:)`
+
+```swift
+let segment = Line(start: Point(x: -220, y: 140), end: Point(x: -40, y: 140))
+addLine(segment, color: .systemBlue, lineWidth: 2)
+
+for p in divideSegment(segment, into: 6) {
+    addPoint(p, color: .systemBlue, radius: 3)
+}
+
+let quarter = point(on: segment, t: 0.25)
+addCoordinateLabel(quarter, decimals: 1, color: .systemIndigo)
+
+if let pentagon = regularPolygon(center: Point(x: 150, y: 110), sides: 5, radius: 42, rotationDegrees: 18) {
+    addPolygon(pentagon, color: .systemGreen, lineWidth: 2)
+}
+```
+
+## Phase 8A Loci Helpers
+
+Phase 8A adds locus-focused helpers for construction lessons:
+- `locusEquidistant(from:and:length:)`
+- `locusDistance(from:radius:)`
+- `locusEquidistant(fromLine:andLine:length:)`
+
+```swift
+let a = Point(x: -120, y: -40)
+let b = Point(x: 40, y: 20)
+addLine(Line(start: a, end: b), color: .systemRed, lineWidth: 1.5)
+addLine(locusEquidistant(from: a, and: b, length: 260), color: .systemPurple, lineWidth: 2)
+
+let center = Point(x: 150, y: -90)
+addCircle(locusDistance(from: center, radius: 46), color: .systemTeal, lineWidth: 2)
+
+let l1 = Line(start: Point(x: -220, y: 40), end: Point(x: -40, y: 110))
+let l2 = Line(start: Point(x: -210, y: -40), end: Point(x: -10, y: 20))
+if let bisector = locusEquidistant(fromLine: l1, andLine: l2, length: 320) {
+    addLine(bisector, color: .systemIndigo, lineWidth: 2)
+}
+```
+
+## Phase 8B Compass/Straightedge Macros
+
+Phase 8B introduces reusable construction macros that return full guide geometry:
+- `constructPerpendicularBisector(of:length:)`
+- `constructAngleBisector(vertex:firstPoint:secondPoint:length:)`
+- `constructPerpendicularThroughPoint(point:to:length:)`
+- `constructParallelThroughPoint(point:to:length:)`
+- `renderConstruction(_:)`
+
+Each macro returns `ConstructionBundle` with:
+- `guidePoints`
+- `guideLines`
+- `guideCircles`
+
+```swift
+let segment = Line(start: Point(x: -80, y: 10), end: Point(x: 40, y: 90))
+let construction = constructPerpendicularBisector(of: segment, length: 280)
+
+renderConstruction(
+    construction,
+    pointColor: .systemPink,
+    lineColor: .systemBlue,
+    circleColor: UIColor.systemTeal.withAlphaComponent(0.5),
+    lineWidth: 1.2,
+    pointRadius: 2.5
+)
+```
+
+## Phase 8D Transform Investigations
+
+Phase 8D adds transform helpers for advanced investigations:
+- `reflectionAcross(line:)`
+- `composeTransforms(_:)`
+
+```swift
+let axis = Line(start: Point(x: -20, y: -120), end: Point(x: 110, y: -40))
+let source = Polygon(vertices: [
+    Point(x: -50, y: -140),
+    Point(x: 0, y: -90),
+    Point(x: 40, y: -140)
+])
+
+let reflected = source.transformed(by: reflectionAcross(line: axis))
+addLine(axis, color: .systemIndigo, lineWidth: 1.5)
+addPolygon(source, color: .systemRed, lineWidth: 2)
+addPolygon(reflected, color: .systemGreen, lineWidth: 2)
+
+let composed = composeTransforms([
+    .translation(dx: 80, dy: 20),
+    .rotation(degrees: 25, around: Point(x: 80, y: 20)),
+    .scaling(factor: 1.2, around: Point(x: 80, y: 20))
+])
+addPolygon(source.transformed(by: composed), color: .systemOrange, lineWidth: 2)
+```
+
+## Phase 8E Validation and Teaching UX
+
+Phase 8E adds lightweight feedback and hint overlays:
+- `setValidationFeedbackMode(_:)` (`.none` or `.overlay`)
+- `addHint(_:at:color:fontSize:zPosition:)`
+
+Validation overlays are now emitted for common invalid constructions, including:
+- `divideSegment(_:into:)` with `parts < 1`
+- `regularPolygon(...)` invalid side/radius parameters
+- `constructAngleBisector(...)` degenerate angle inputs
+- `reflectionAcross(line:)` with a degenerate axis
+
+```swift
+setValidationFeedbackMode(.overlay)
+addHint("Try dragging the construction points")
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

@@ -77,6 +77,11 @@ public enum TraceCaptureMode: String {
     case changedOnly
 }
 
+public enum ValidationFeedbackMode {
+    case none
+    case overlay
+}
+
 public struct PlotSafetyConfiguration: Equatable {
     public var maxSamplesPerCurve: Int
     public var maxTotalSamplesPerScene: Int
@@ -267,6 +272,188 @@ public func equalLength(from point: Point, reference line: Line) -> Line {
     )
 }
 
+public func point(on line: Line, t: Double) -> Point {
+    Point(
+        x: line.start.x + ((line.end.x - line.start.x) * t),
+        y: line.start.y + ((line.end.y - line.start.y) * t)
+    )
+}
+
+public func divideSegment(_ line: Line, into parts: Int) -> [Point] {
+    let safeParts = max(1, parts)
+    if parts < 1 {
+        reportValidationIssue(
+            "divideSegment.parts",
+            message: "divideSegment(_:into:) expected parts >= 1. Using 1."
+        )
+    }
+    let step = 1.0 / Double(safeParts)
+    return (0...safeParts).map { index in
+        point(on: line, t: Double(index) * step)
+    }
+}
+
+public func regularPolygon(
+    center: Point,
+    sides: Int,
+    radius: Double,
+    rotationDegrees: Double = 0
+) -> Polygon? {
+    guard sides >= 3 else {
+        reportValidationIssue(
+            "regularPolygon.sides",
+            message: "regularPolygon requires sides >= 3."
+        )
+        return nil
+    }
+    guard radius.isFinite, radius > 0 else {
+        reportValidationIssue(
+            "regularPolygon.radius",
+            message: "regularPolygon requires radius > 0."
+        )
+        return nil
+    }
+    let rotationRadians = rotationDegrees * .pi / 180
+    let vertices: [Point] = (0..<sides).map { index in
+        let theta = (Double(index) * (2 * .pi / Double(sides))) + rotationRadians
+        return Point(
+            x: center.x + radius * cos(theta),
+            y: center.y + radius * sin(theta)
+        )
+    }
+    return Polygon(vertices: vertices)
+}
+
+public func locusEquidistant(
+    from first: Point,
+    and second: Point,
+    length: Double = 500
+) -> Line {
+    perpendicularBisector(of: Line(start: first, end: second), length: length)
+}
+
+public func locusDistance(from center: Point, radius: Double) -> Circle {
+    Circle(center: center, radius: max(0, radius))
+}
+
+public func locusEquidistant(
+    fromLine first: Line,
+    andLine second: Line,
+    length: Double = 500
+) -> Line? {
+    if let vertex = intersection(first, second) {
+        let firstDirectionPoint = point(on: first, t: 1)
+        let secondDirectionPoint = point(on: second, t: 1)
+        return angleBisector(
+            at: vertex,
+            through: firstDirectionPoint,
+            and: secondDirectionPoint,
+            length: length
+        )
+    }
+
+    // Parallel lines: locus is the midline parallel to both.
+    let midStart = midpoint(first.start, second.start)
+    let midEnd = midpoint(first.end, second.end)
+    return parallel(through: midStart, to: Line(start: midStart, end: midEnd), length: length)
+}
+
+public struct ConstructionBundle {
+    public var guidePoints: [Point]
+    public var guideLines: [Line]
+    public var guideCircles: [Circle]
+
+    public init(
+        guidePoints: [Point] = [],
+        guideLines: [Line] = [],
+        guideCircles: [Circle] = []
+    ) {
+        self.guidePoints = guidePoints
+        self.guideLines = guideLines
+        self.guideCircles = guideCircles
+    }
+}
+
+public func constructPerpendicularBisector(of segment: Line, length: Double = 500) -> ConstructionBundle {
+    let radius = distance(segment.start, segment.end)
+    let bisector = perpendicularBisector(of: segment, length: length)
+    return ConstructionBundle(
+        guidePoints: [segment.start, segment.end, midpoint(segment.start, segment.end)],
+        guideLines: [segment, bisector],
+        guideCircles: [
+            Circle(center: segment.start, radius: radius),
+            Circle(center: segment.end, radius: radius)
+        ]
+    )
+}
+
+public func constructAngleBisector(
+    vertex: Point,
+    firstPoint: Point,
+    secondPoint: Point,
+    length: Double = 500
+) -> ConstructionBundle? {
+    guard let bisector = angleBisector(at: vertex, through: firstPoint, and: secondPoint, length: length) else {
+        reportValidationIssue(
+            "constructAngleBisector.degenerate",
+            message: "constructAngleBisector failed: points must form a valid angle."
+        )
+        return nil
+    }
+    return ConstructionBundle(
+        guidePoints: [vertex, firstPoint, secondPoint],
+        guideLines: [
+            Line(start: vertex, end: firstPoint),
+            Line(start: vertex, end: secondPoint),
+            bisector
+        ]
+    )
+}
+
+public func constructPerpendicularThroughPoint(
+    point: Point,
+    to line: Line,
+    length: Double = 500
+) -> ConstructionBundle {
+    let result = perpendicular(through: point, to: line, length: length)
+    return ConstructionBundle(
+        guidePoints: [point, line.start, line.end],
+        guideLines: [line, result]
+    )
+}
+
+public func constructParallelThroughPoint(
+    point: Point,
+    to line: Line,
+    length: Double = 500
+) -> ConstructionBundle {
+    let result = parallel(through: point, to: line, length: length)
+    return ConstructionBundle(
+        guidePoints: [point, line.start, line.end],
+        guideLines: [line, result]
+    )
+}
+
+public func renderConstruction(
+    _ construction: ConstructionBundle,
+    pointColor: UIColor = .systemPink,
+    lineColor: UIColor = .systemBlue,
+    circleColor: UIColor = .systemTeal,
+    lineWidth: CGFloat = 1.5,
+    pointRadius: Double = 3,
+    zPosition: Int? = nil
+) {
+    for circle in construction.guideCircles {
+        addCircle(circle, color: circleColor, lineWidth: lineWidth, zPosition: zPosition)
+    }
+    for line in construction.guideLines {
+        addLine(line, color: lineColor, lineWidth: lineWidth, zPosition: zPosition)
+    }
+    for point in construction.guidePoints {
+        addPoint(point, color: pointColor, radius: pointRadius, zPosition: zPosition)
+    }
+}
+
 public func centroid(_ triangle: Triangle) -> Point {
     Point(
         x: (triangle.a.x + triangle.b.x + triangle.c.x) / 3,
@@ -453,6 +640,41 @@ public func rotate(_ polygon: Polygon, around center: Point = Point(x: 0, y: 0),
 
 public func scale(_ polygon: Polygon, around center: Point = Point(x: 0, y: 0), factor: Double) -> Polygon {
     polygon.transformed(by: .scaling(factor: factor, around: center))
+}
+
+public func reflectionAcross(line axis: Line) -> Transform2D {
+    let dx = axis.end.x - axis.start.x
+    let dy = axis.end.y - axis.start.y
+    let magnitude = hypot(dx, dy)
+    guard magnitude > 1e-10 else {
+        reportValidationIssue(
+            "reflectionAcross.axis",
+            message: "reflectionAcross(line:) requires a non-degenerate axis."
+        )
+        return .identity
+    }
+
+    let ux = dx / magnitude
+    let uy = dy / magnitude
+
+    // Reflection matrix around a line through origin with unit direction (ux, uy):
+    // [2ux^2-1, 2uxuy]
+    // [2uxuy,   2uy^2-1]
+    let rA = 2 * ux * ux - 1
+    let rB = 2 * ux * uy
+    let rC = 2 * ux * uy
+    let rD = 2 * uy * uy - 1
+
+    let originAligned = Transform2D.translation(dx: -axis.start.x, dy: -axis.start.y)
+    let reflection = Transform2D(a: rA, b: rB, c: rC, d: rD, tx: 0, ty: 0)
+    let moveBack = Transform2D.translation(dx: axis.start.x, dy: axis.start.y)
+    return originAligned.concatenating(reflection).concatenating(moveBack)
+}
+
+public func composeTransforms(_ transforms: [Transform2D]) -> Transform2D {
+    transforms.reduce(.identity) { partial, next in
+        partial.concatenating(next)
+    }
 }
 
 public func addPoint(
@@ -1338,6 +1560,9 @@ private var sceneSampleCount = 0
 private var sceneObserverInstalled = false
 private var hasRegisteredInputIDs: Set<String> = []
 private var plotSafetyConfiguration = PlotSafetyConfiguration()
+private var validationFeedbackMode: ValidationFeedbackMode = .overlay
+private var issuedValidationMessages: Set<String> = []
+private var validationOverlayCount = 0
 
 public func Scene(_ content: @escaping () -> Void) {
     stopAnimation()
@@ -1452,6 +1677,26 @@ public func setTraceCaptureMode(_ mode: TraceCaptureMode) {
 
 public func setTracePlaybackSpeed(_ speed: Double) {
     updateViewOptions { $0.tracePlaybackSpeed = max(0.25, min(8, speed)) }
+}
+
+public func setValidationFeedbackMode(_ mode: ValidationFeedbackMode) {
+    validationFeedbackMode = mode
+}
+
+public func addHint(
+    _ text: String,
+    at point: Point = Point(x: -320, y: 220),
+    color: UIColor = .systemBlue,
+    fontSize: CGFloat = 12,
+    zPosition: Int = 1200
+) {
+    addMeasurementLabel(
+        text: text,
+        at: point,
+        color: color,
+        fontSize: fontSize,
+        zPosition: zPosition
+    )
 }
 
 public func DraggablePoint(
@@ -1687,6 +1932,8 @@ private func rerenderWithRenderBlock(_ block: () -> Void) {
     scenePens.removeAll(keepingCapacity: true)
     sceneMeasurements.removeAll(keepingCapacity: true)
     sceneDraggablePoints.removeAll(keepingCapacity: true)
+    issuedValidationMessages.removeAll(keepingCapacity: true)
+    validationOverlayCount = 0
     sceneViewOptions = currentViewOptions
     sceneViewOptionsChanged = false
     sceneSampleCount = 0
@@ -1768,6 +2015,21 @@ private func addMeasurementLabel(
         LiveViewMessageKey.measurements: .array([encodeMeasurement(overlay)])
     ])
     sendToLiveView(message)
+}
+
+private func reportValidationIssue(_ key: String, message: String) {
+    guard validationFeedbackMode == .overlay else { return }
+    guard !issuedValidationMessages.contains(key) else { return }
+    issuedValidationMessages.insert(key)
+    let point = Point(x: -320, y: 220 - Double(validationOverlayCount * 18))
+    validationOverlayCount += 1
+    addMeasurementLabel(
+        text: "Warning: \(message)",
+        at: point,
+        color: .systemOrange,
+        fontSize: 11,
+        zPosition: 1300
+    )
 }
 
 private func updateViewOptions(_ update: (inout ViewOverlayOptions) -> Void) {
