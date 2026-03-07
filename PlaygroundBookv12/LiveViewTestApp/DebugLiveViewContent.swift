@@ -13,31 +13,42 @@ struct DebugLiveViewContent {
             let spin = Input(decimal: 360, label: "Degrees per Cycle")
             let lineWidth = Input(number: 3, label: "Line Width")
             let hatchSpacing = Input(decimal: 10, label: "Hatch Spacing")
+            let center = DraggablePoint(
+                id: "orbit-center",
+                initial: Point(x: 0, y: 0),
+                radius: 9,
+                color: .systemRed,
+                zPosition: 50
+            )
 
             addLine(
                 Line(start: Point(x: -260, y: 0), end: Point(x: 260, y: 0)),
                 color: .systemGray,
-                lineWidth: 1,
+                lineWidth: lineWidth,
                 zPosition: 0
             )
             addLine(
                 Line(start: Point(x: 0, y: -220), end: Point(x: 0, y: 220)),
                 color: .systemGray,
-                lineWidth: 1,
+                lineWidth: lineWidth,
                 zPosition: 0
             )
 
             addCircle(
-                Circle(center: Point(x: 0, y: 0), radius: max(10, radius)),
+                Circle(center: center, radius: max(10, radius)),
                 color: .systemGray2,
-                lineWidth: 1,
+                lineWidth: lineWidth,
                 zPosition: 1
             )
 
             let orbitDegrees = 360.0 * t
-            let movingPoint = rotate(Point(x: max(10, radius), y: 0), degrees: orbitDegrees)
+            let movingPoint = rotate(
+                Point(x: center.x + max(10, radius), y: center.y),
+                around: center,
+                degrees: orbitDegrees
+            )
             addPoint(movingPoint, color: .systemOrange, radius: 5, zPosition: 4)
-            let radiusLine = Line(start: Point(x: 0, y: 0), end: movingPoint)
+            let radiusLine = Line(start: center, end: movingPoint)
             addLine(
                 radiusLine,
                 color: .systemOrange,
@@ -47,8 +58,8 @@ struct DebugLiveViewContent {
             addLengthLabel(radiusLine, decimals: 1, color: .systemTeal, zPosition: 9)
             addCoordinateLabel(movingPoint, decimals: 1, color: .systemIndigo, zPosition: 9)
             addAngleMarker(
-                vertex: Point(x: 0, y: 0),
-                firstPoint: Point(x: max(10, radius), y: 0),
+                vertex: center,
+                firstPoint: Point(x: center.x + max(10, radius), y: center.y),
                 secondPoint: movingPoint,
                 radius: 26,
                 color: .systemPurple,
@@ -89,6 +100,23 @@ struct DebugLiveViewContent {
                 zPosition: 2,
                 crossHatch: true
             )
+
+            let referenceLine = Line(
+                start: Point(x: 120, y: -170),
+                end: Point(x: 230, y: -120)
+            )
+            let parallelLine = parallel(through: Point(x: 170, y: -70), to: referenceLine, length: 170)
+            let perpendicularLineSample = perpendicular(through: Point(x: 170, y: -70), to: referenceLine, length: 130)
+            let equalLengthLine = equalLength(
+                from: Point(x: 50, y: -150),
+                reference: Line(start: Point(x: 120, y: -170), end: Point(x: 230, y: -120))
+            )
+
+            addLine(referenceLine, color: .systemPink, lineWidth: 2, zPosition: 6)
+            addLine(parallelLine, color: .systemMint, lineWidth: 2, zPosition: 6)
+            addLine(perpendicularLineSample, color: .systemIndigo, lineWidth: 2, zPosition: 6)
+            addLine(equalLengthLine, color: .systemBrown, lineWidth: 2, zPosition: 6)
+            addCoordinateLabel(midpoint(referenceLine.start, referenceLine.end), decimals: 0, color: .systemPink, zPosition: 9)
         }
     }
 }

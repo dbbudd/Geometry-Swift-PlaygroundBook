@@ -474,6 +474,87 @@ addHatchedPolygon(
 )
 ```
 
+## Phase 7A Constraint Helpers
+
+Phase 7A adds construction helpers for congruency and similarity demonstrations:
+- `parallel(through:to:length:)`
+- `perpendicular(through:to:length:)`
+- `equalLength(from:reference:)`
+
+Notes:
+- `parallel` and `perpendicular` return centered construction lines through the specified point.
+- `equalLength` returns a line starting at `from` with the same length and direction as the reference line.
+
+```swift
+let reference = Line(start: Point(x: -80, y: -40), end: Point(x: 40, y: 20))
+let p = Point(x: 100, y: 60)
+
+let pLine = parallel(through: p, to: reference, length: 180)
+let nLine = perpendicular(through: p, to: reference, length: 140)
+let sameLength = equalLength(from: Point(x: -180, y: -120), reference: reference)
+
+addLine(reference, color: .systemPink, lineWidth: 2)
+addLine(pLine, color: .systemMint, lineWidth: 2)
+addLine(nLine, color: .systemIndigo, lineWidth: 2)
+addLine(sameLength, color: .systemBrown, lineWidth: 2)
+```
+
+## Phase 7B Draggable Points (Interactive Geometry)
+
+Phase 7B adds direct manipulation points in the live view:
+- `DraggablePoint(id:initial:radius:color:zPosition:enabled:)`
+- `setHandlesVisible(_:)`
+- `setHandlesLocked(_:)`
+- `setHandleAppearance(radius:color:)`
+- `setHandleSnapMode(_:gridSpacing:)`
+
+Behavior:
+- Draggable points are opt-in (only points declared with `DraggablePoint(...)` are interactive).
+- A global Preferences toggle controls handle visibility and lock state.
+- Drag updates feed back into scene state so `Scene`/`animate` rerenders use current point positions.
+- Snap modes: `.none`, `.grid`, `.xAxis`, `.yAxis`, `.axes`.
+
+```swift
+animate(duration: 6, fps: 30, repeats: true) { t in
+    let center = DraggablePoint(
+        id: "orbit-center",
+        initial: Point(x: 0, y: 0),
+        radius: 9,
+        color: .systemRed
+    )
+
+    setHandlesVisible(true)
+    setHandlesLocked(false)
+
+    let r = Input(decimal: 130, label: "Orbit Radius")
+    let moving = rotate(Point(x: center.x + r, y: center.y), around: center, degrees: 360 * t)
+    addCircle(Circle(center: center, radius: r), color: .systemGray2, lineWidth: 1)
+    addLine(Line(start: center, end: moving), color: .systemOrange, lineWidth: 2)
+}
+```
+
+## Phase 7C Trace and Playback (MVP)
+
+Phase 7C adds a built-in trace timeline in LiveView for step-by-step replay.
+
+What it does:
+- Captures frame snapshots (pens, measurements, draggable points) while scenes render.
+- Provides playback controls in the UI: back, play/pause, forward, reset, clear.
+- Supports deterministic step navigation for construction walkthroughs.
+
+API helpers:
+- `setTraceControlsVisible(_:)`
+- `setTraceCaptureEnabled(_:)`
+- `setTraceCaptureMode(_:)` (`.allFrames` or `.changedOnly`)
+- `setTracePlaybackSpeed(_:)`
+
+Notes:
+- Capture is bounded (`maxTraceFrames = 600`) to avoid unbounded growth.
+- During active playback, incoming render updates are ignored until playback is paused/reset.
+- Trace capture is off by default; enabling capture also reveals the trace controls panel.
+- Playback supports speed presets in the trace panel.
+- Change-only capture mode avoids storing duplicate consecutive frames.
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

@@ -64,6 +64,19 @@ public enum HyperbolaAxis {
     case vertical
 }
 
+public enum HandleSnapMode: String {
+    case none
+    case grid
+    case xAxis
+    case yAxis
+    case axes
+}
+
+public enum TraceCaptureMode: String {
+    case allFrames
+    case changedOnly
+}
+
 public struct PlotSafetyConfiguration: Equatable {
     public var maxSamplesPerCurve: Int
     public var maxTotalSamplesPerScene: Int
@@ -215,6 +228,43 @@ public func slope(_ first: Point, _ second: Point) -> Double? {
     let dx = second.x - first.x
     guard dx != 0 else { return nil }
     return (second.y - first.y) / dx
+}
+
+public func parallel(through point: Point, to line: Line, length: Double = 500) -> Line {
+    let dx = line.end.x - line.start.x
+    let dy = line.end.y - line.start.y
+    let magnitude = hypot(dx, dy)
+
+    guard magnitude > 1e-10 else {
+        return Line(start: point, end: Point(x: point.x + length, y: point.y))
+    }
+
+    let ux = dx / magnitude
+    let uy = dy / magnitude
+    let half = length / 2
+    return Line(
+        start: Point(x: point.x - ux * half, y: point.y - uy * half),
+        end: Point(x: point.x + ux * half, y: point.y + uy * half)
+    )
+}
+
+public func perpendicular(through point: Point, to line: Line, length: Double = 500) -> Line {
+    perpendicularLine(through: point, to: line, length: length)
+}
+
+public func equalLength(from point: Point, reference line: Line) -> Line {
+    let dx = line.end.x - line.start.x
+    let dy = line.end.y - line.start.y
+    let magnitude = hypot(dx, dy)
+
+    guard magnitude > 1e-10 else {
+        return Line(start: point, end: point)
+    }
+
+    return Line(
+        start: point,
+        end: Point(x: point.x + dx, y: point.y + dy)
+    )
 }
 
 public func centroid(_ triangle: Triangle) -> Point {
@@ -1212,6 +1262,25 @@ private enum LiveViewMessageKey {
     static let viewShowAxes = "viewShowAxes"
     static let viewShowLabels = "viewShowLabels"
     static let viewShowControls = "viewShowControls"
+    static let viewShowHandles = "viewShowHandles"
+    static let viewLockHandles = "viewLockHandles"
+    static let viewHandleRadius = "viewHandleRadius"
+    static let viewHandleColor = "viewHandleColor"
+    static let viewHandleSnapMode = "viewHandleSnapMode"
+    static let viewHandleSnapGridSpacing = "viewHandleSnapGridSpacing"
+    static let viewShowTraceControls = "viewShowTraceControls"
+    static let viewTraceCaptureEnabled = "viewTraceCaptureEnabled"
+    static let viewTraceCaptureOnlyOnChange = "viewTraceCaptureOnlyOnChange"
+    static let viewTracePlaybackSpeed = "viewTracePlaybackSpeed"
+    static let setDraggablePoints = "setDraggablePoints"
+    static let draggablePoints = "draggablePoints"
+    static let draggablePointID = "draggablePointID"
+    static let draggablePointX = "draggablePointX"
+    static let draggablePointY = "draggablePointY"
+    static let draggablePointRadius = "draggablePointRadius"
+    static let draggablePointColor = "draggablePointColor"
+    static let draggablePointZPosition = "draggablePointZPosition"
+    static let draggablePointEnabled = "draggablePointEnabled"
 }
 
 private struct MeasurementOverlay {
@@ -1229,6 +1298,26 @@ private struct ViewOverlayOptions {
     var isAxesVisible: Bool = true
     var isLabelsVisible: Bool = true
     var isControlsVisible: Bool = true
+    var isHandlesVisible: Bool = true
+    var isHandlesLocked: Bool = false
+    var handleRadius: Double = 8
+    var handleColor: UIColor = .systemBlue
+    var handleSnapMode: HandleSnapMode = .none
+    var handleSnapGridSpacing: Double = 10
+    var isTraceControlsVisible: Bool = false
+    var isTraceCaptureEnabled: Bool = false
+    var traceCaptureOnlyOnChange: Bool = true
+    var tracePlaybackSpeed: Double = 1
+}
+
+private struct DraggableOverlay {
+    let id: String
+    let x: Double
+    let y: Double
+    let radius: Double
+    let color: UIColor
+    let zPosition: Int
+    let isEnabled: Bool
 }
 
 private var inputCounter = 0
@@ -1241,6 +1330,7 @@ private var animationRepeats = true
 private var isRenderingScene = false
 private var scenePens: [Pen] = []
 private var sceneMeasurements: [MeasurementOverlay] = []
+private var sceneDraggablePoints: [DraggableOverlay] = []
 private var currentViewOptions = ViewOverlayOptions()
 private var sceneViewOptions = ViewOverlayOptions()
 private var sceneViewOptionsChanged = false
@@ -1321,6 +1411,81 @@ public func setLabelsVisible(_ visible: Bool) {
 
 public func setControlsVisible(_ visible: Bool) {
     updateViewOptions { $0.isControlsVisible = visible }
+}
+
+public func setHandlesVisible(_ visible: Bool) {
+    updateViewOptions { $0.isHandlesVisible = visible }
+}
+
+public func setHandlesLocked(_ locked: Bool) {
+    updateViewOptions { $0.isHandlesLocked = locked }
+}
+
+public func setHandleAppearance(radius: Double = 8, color: UIColor = .systemBlue) {
+    updateViewOptions {
+        $0.handleRadius = max(2, radius)
+        $0.handleColor = color
+    }
+}
+
+public func setHandleSnapMode(_ mode: HandleSnapMode, gridSpacing: Double = 10) {
+    updateViewOptions {
+        $0.handleSnapMode = mode
+        $0.handleSnapGridSpacing = max(1, gridSpacing)
+    }
+}
+
+public func setTraceControlsVisible(_ visible: Bool) {
+    updateViewOptions { $0.isTraceControlsVisible = visible }
+}
+
+public func setTraceCaptureEnabled(_ enabled: Bool) {
+    updateViewOptions {
+        $0.isTraceCaptureEnabled = enabled
+        $0.isTraceControlsVisible = enabled
+    }
+}
+
+public func setTraceCaptureMode(_ mode: TraceCaptureMode) {
+    updateViewOptions { $0.traceCaptureOnlyOnChange = (mode == .changedOnly) }
+}
+
+public func setTracePlaybackSpeed(_ speed: Double) {
+    updateViewOptions { $0.tracePlaybackSpeed = max(0.25, min(8, speed)) }
+}
+
+public func DraggablePoint(
+    id: String,
+    initial: Point,
+    radius: Double? = nil,
+    color: UIColor? = nil,
+    zPosition: Int = 2000,
+    enabled: Bool = true
+) -> Point {
+    let currentPoint = currentDraggablePoint(for: id, defaultValue: initial)
+    let resolvedRadius = max(2, radius ?? currentViewOptions.handleRadius)
+    let resolvedColor = color ?? currentViewOptions.handleColor
+    let overlay = DraggableOverlay(
+        id: id,
+        x: currentPoint.x,
+        y: currentPoint.y,
+        radius: resolvedRadius,
+        color: resolvedColor,
+        zPosition: zPosition,
+        isEnabled: enabled
+    )
+
+    if isRenderingScene {
+        sceneDraggablePoints.append(overlay)
+    } else {
+        let message: PlaygroundValue = .dictionary([
+            LiveViewMessageKey.type: .string(LiveViewMessageKey.setDraggablePoints),
+            LiveViewMessageKey.draggablePoints: .array([encodeDraggablePoint(overlay)])
+        ])
+        sendToLiveView(message)
+    }
+
+    return currentPoint
 }
 
 public func addCoordinateLabel(
@@ -1521,6 +1686,7 @@ private func rerenderWithRenderBlock(_ block: () -> Void) {
     isRenderingScene = true
     scenePens.removeAll(keepingCapacity: true)
     sceneMeasurements.removeAll(keepingCapacity: true)
+    sceneDraggablePoints.removeAll(keepingCapacity: true)
     sceneViewOptions = currentViewOptions
     sceneViewOptionsChanged = false
     sceneSampleCount = 0
@@ -1541,6 +1707,13 @@ private func rerenderWithRenderBlock(_ block: () -> Void) {
         LiveViewMessageKey.measurements: .array(encodedMeasurements)
     ])
     sendToLiveView(measurementMessage)
+
+    let encodedDraggablePoints = sceneDraggablePoints.map(encodeDraggablePoint)
+    let draggableMessage: PlaygroundValue = .dictionary([
+        LiveViewMessageKey.type: .string(LiveViewMessageKey.setDraggablePoints),
+        LiveViewMessageKey.draggablePoints: .array(encodedDraggablePoints)
+    ])
+    sendToLiveView(draggableMessage)
 
     if sceneViewOptionsChanged {
         currentViewOptions = sceneViewOptions
@@ -1614,7 +1787,17 @@ private func sendViewOptions(_ options: ViewOverlayOptions) {
         LiveViewMessageKey.viewShowGrid: .boolean(options.isGridVisible),
         LiveViewMessageKey.viewShowAxes: .boolean(options.isAxesVisible),
         LiveViewMessageKey.viewShowLabels: .boolean(options.isLabelsVisible),
-        LiveViewMessageKey.viewShowControls: .boolean(options.isControlsVisible)
+        LiveViewMessageKey.viewShowControls: .boolean(options.isControlsVisible),
+        LiveViewMessageKey.viewShowHandles: .boolean(options.isHandlesVisible),
+        LiveViewMessageKey.viewLockHandles: .boolean(options.isHandlesLocked),
+        LiveViewMessageKey.viewHandleRadius: .floatingPoint(options.handleRadius),
+        LiveViewMessageKey.viewHandleColor: encodeColor(options.handleColor),
+        LiveViewMessageKey.viewHandleSnapMode: .string(options.handleSnapMode.rawValue),
+        LiveViewMessageKey.viewHandleSnapGridSpacing: .floatingPoint(options.handleSnapGridSpacing),
+        LiveViewMessageKey.viewShowTraceControls: .boolean(options.isTraceControlsVisible),
+        LiveViewMessageKey.viewTraceCaptureEnabled: .boolean(options.isTraceCaptureEnabled),
+        LiveViewMessageKey.viewTraceCaptureOnlyOnChange: .boolean(options.traceCaptureOnlyOnChange),
+        LiveViewMessageKey.viewTracePlaybackSpeed: .floatingPoint(options.tracePlaybackSpeed)
     ])
     sendToLiveView(message)
 }
@@ -1677,6 +1860,16 @@ private func currentDecimalValue(for id: String, defaultValue: Double) -> Double
 private func currentNumberValue(for id: String, defaultValue: Int) -> CGFloat {
     MainActor.assumeIsolated {
         CGFloat(LiveViewInputStore.shared.inputValue(for: id)?.numberValue ?? defaultValue)
+    }
+}
+
+private func currentDraggablePoint(for id: String, defaultValue: Point) -> Point {
+    MainActor.assumeIsolated {
+        if let value = LiveViewInputStore.shared.draggablePointValue(for: id) {
+            return Point(x: value.x, y: value.y)
+        }
+        LiveViewInputStore.shared.upsertDraggablePoint(id: id, x: defaultValue.x, y: defaultValue.y)
+        return defaultValue
     }
 }
 
@@ -1744,5 +1937,17 @@ private func encodeMeasurement(_ overlay: MeasurementOverlay) -> PlaygroundValue
         LiveViewMessageKey.measurementFontSize: .floatingPoint(overlay.fontSize),
         LiveViewMessageKey.measurementColor: encodeColor(overlay.color),
         LiveViewMessageKey.measurementZPosition: .integer(overlay.zPosition)
+    ])
+}
+
+private func encodeDraggablePoint(_ point: DraggableOverlay) -> PlaygroundValue {
+    .dictionary([
+        LiveViewMessageKey.draggablePointID: .string(point.id),
+        LiveViewMessageKey.draggablePointX: .floatingPoint(point.x),
+        LiveViewMessageKey.draggablePointY: .floatingPoint(point.y),
+        LiveViewMessageKey.draggablePointRadius: .floatingPoint(point.radius),
+        LiveViewMessageKey.draggablePointColor: encodeColor(point.color),
+        LiveViewMessageKey.draggablePointZPosition: .integer(point.zPosition),
+        LiveViewMessageKey.draggablePointEnabled: .boolean(point.isEnabled)
     ])
 }

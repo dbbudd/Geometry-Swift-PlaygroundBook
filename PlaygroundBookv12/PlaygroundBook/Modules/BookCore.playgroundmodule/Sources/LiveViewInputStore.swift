@@ -5,6 +5,7 @@ public final class LiveViewInputStore {
     public static let shared = LiveViewInputStore()
 
     private var values: [String: PlaneInput] = [:]
+    private var draggablePointValues: [String: (x: Double, y: Double)] = [:]
     private var observers: [() -> Void] = []
 
     private init() {}
@@ -36,6 +37,19 @@ public final class LiveViewInputStore {
 
     public func addObserver(_ observer: @escaping () -> Void) {
         observers.append(observer)
+    }
+
+    public func upsertDraggablePoint(id: String, x: Double, y: Double) {
+        if let existing = draggablePointValues[id], existing.x == x, existing.y == y {
+            return
+        }
+
+        draggablePointValues[id] = (x: x, y: y)
+        notifyObservers()
+    }
+
+    public func draggablePointValue(for id: String) -> (x: Double, y: Double)? {
+        draggablePointValues[id]
     }
 
     private func notifyObservers() {

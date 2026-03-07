@@ -34,6 +34,25 @@ private enum LiveViewMessageKey {
     static let viewShowAxes = "viewShowAxes"
     static let viewShowLabels = "viewShowLabels"
     static let viewShowControls = "viewShowControls"
+    static let viewShowHandles = "viewShowHandles"
+    static let viewLockHandles = "viewLockHandles"
+    static let viewHandleRadius = "viewHandleRadius"
+    static let viewHandleColor = "viewHandleColor"
+    static let viewHandleSnapMode = "viewHandleSnapMode"
+    static let viewHandleSnapGridSpacing = "viewHandleSnapGridSpacing"
+    static let viewShowTraceControls = "viewShowTraceControls"
+    static let viewTraceCaptureEnabled = "viewTraceCaptureEnabled"
+    static let viewTraceCaptureOnlyOnChange = "viewTraceCaptureOnlyOnChange"
+    static let viewTracePlaybackSpeed = "viewTracePlaybackSpeed"
+    static let setDraggablePoints = "setDraggablePoints"
+    static let draggablePoints = "draggablePoints"
+    static let draggablePointID = "draggablePointID"
+    static let draggablePointX = "draggablePointX"
+    static let draggablePointY = "draggablePointY"
+    static let draggablePointRadius = "draggablePointRadius"
+    static let draggablePointColor = "draggablePointColor"
+    static let draggablePointZPosition = "draggablePointZPosition"
+    static let draggablePointEnabled = "draggablePointEnabled"
     static let addMeasurements = "addMeasurements"
     static let setMeasurements = "setMeasurements"
     static let measurements = "measurements"
@@ -106,16 +125,41 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
             let measurements = decodeMeasurements(from: dictionary)
             planeModel.setMeasurements(measurements)
 
+        case LiveViewMessageKey.setDraggablePoints:
+            let points = decodeDraggablePoints(from: dictionary)
+            planeModel.setDraggablePoints(points)
+
         case LiveViewMessageKey.setViewOptions:
             let showGrid = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowGrid]) ?? true
             let showAxes = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowAxes]) ?? true
             let showLabels = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowLabels]) ?? true
             let showControls = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowControls]) ?? true
+            let showHandles = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowHandles]) ?? true
+            let lockHandles = decodeBoolean(from: dictionary[LiveViewMessageKey.viewLockHandles]) ?? false
+            let handleRadius = decodeDouble(from: dictionary[LiveViewMessageKey.viewHandleRadius]) ?? 8
+            let handleColorValue = dictionary[LiveViewMessageKey.viewHandleColor]
+            let handleColor = handleColorValue.flatMap(decodeColor(from:)) ?? .systemBlue
+            let handleSnapMode = decodeString(from: dictionary[LiveViewMessageKey.viewHandleSnapMode]) ?? "none"
+            let handleSnapGridSpacing = decodeDouble(from: dictionary[LiveViewMessageKey.viewHandleSnapGridSpacing]) ?? 10
+            let showTraceControls = decodeBoolean(from: dictionary[LiveViewMessageKey.viewShowTraceControls]) ?? false
+            let traceCaptureEnabled = decodeBoolean(from: dictionary[LiveViewMessageKey.viewTraceCaptureEnabled]) ?? false
+            let traceCaptureOnlyOnChange = decodeBoolean(from: dictionary[LiveViewMessageKey.viewTraceCaptureOnlyOnChange]) ?? true
+            let tracePlaybackSpeed = decodeDouble(from: dictionary[LiveViewMessageKey.viewTracePlaybackSpeed]) ?? 1
             planeModel.setViewOptions(
                 isGridVisible: showGrid,
                 isAxesVisible: showAxes,
                 isLabelsVisible: showLabels,
-                isControlsVisible: showControls
+                isControlsVisible: showControls,
+                isHandlesVisible: showHandles,
+                isHandlesLocked: lockHandles,
+                handleRadius: handleRadius,
+                handleColor: handleColor,
+                handleSnapMode: handleSnapMode,
+                handleSnapGridSpacing: handleSnapGridSpacing,
+                isTraceControlsVisible: showTraceControls,
+                isTraceCaptureEnabled: traceCaptureEnabled,
+                traceCaptureOnlyOnChange: traceCaptureOnlyOnChange,
+                tracePlaybackSpeed: tracePlaybackSpeed
             )
 
         default:
@@ -128,10 +172,28 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         return measurementValues.compactMap(decodeMeasurement(from:))
     }
 
+    private func decodeDraggablePoints(from dictionary: [String: PlaygroundValue]) -> [PlaneDraggablePoint] {
+        guard case .array(let pointValues)? = dictionary[LiveViewMessageKey.draggablePoints] else { return [] }
+        return pointValues.compactMap(decodeDraggablePoint(from:))
+    }
+
     private func decodeBoolean(from value: PlaygroundValue?) -> Bool? {
         guard let value else { return nil }
         if case .boolean(let boolValue) = value { return boolValue }
         if case .integer(let intValue) = value { return intValue != 0 }
+        return nil
+    }
+
+    private func decodeDouble(from value: PlaygroundValue?) -> Double? {
+        guard let value else { return nil }
+        if case .floatingPoint(let floatValue) = value { return floatValue }
+        if case .integer(let intValue) = value { return Double(intValue) }
+        return nil
+    }
+
+    private func decodeString(from value: PlaygroundValue?) -> String? {
+        guard let value else { return nil }
+        if case .string(let stringValue) = value { return stringValue }
         return nil
     }
 
@@ -158,6 +220,32 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
             color: color,
             fontSize: CGFloat(fontSize),
             zPosition: zPosition
+        )
+    }
+
+    private func decodeDraggablePoint(from value: PlaygroundValue) -> PlaneDraggablePoint? {
+        guard case .dictionary(let dictionary) = value else { return nil }
+        guard
+            case .string(let id)? = dictionary[LiveViewMessageKey.draggablePointID],
+            case .floatingPoint(let x)? = dictionary[LiveViewMessageKey.draggablePointX],
+            case .floatingPoint(let y)? = dictionary[LiveViewMessageKey.draggablePointY],
+            case .floatingPoint(let radius)? = dictionary[LiveViewMessageKey.draggablePointRadius],
+            let colorValue = dictionary[LiveViewMessageKey.draggablePointColor],
+            let color = decodeColor(from: colorValue),
+            case .integer(let zPosition)? = dictionary[LiveViewMessageKey.draggablePointZPosition]
+        else {
+            return nil
+        }
+
+        let isEnabled = decodeBoolean(from: dictionary[LiveViewMessageKey.draggablePointEnabled]) ?? true
+        return PlaneDraggablePoint(
+            id: id,
+            x: x,
+            y: y,
+            radius: radius,
+            color: color,
+            zPosition: zPosition,
+            isEnabled: isEnabled
         )
     }
 
