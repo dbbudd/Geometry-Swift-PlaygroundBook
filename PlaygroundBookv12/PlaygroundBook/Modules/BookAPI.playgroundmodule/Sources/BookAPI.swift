@@ -54,6 +54,147 @@ public struct Polygon: Equatable {
     }
 }
 
+public struct GroupLine {
+    public let line: Line
+    public let color: UIColor
+    public let lineWidth: CGFloat
+    public let zPosition: Int
+
+    public init(line: Line, color: UIColor = .systemBlue, lineWidth: CGFloat = 2, zPosition: Int = 1) {
+        self.line = line
+        self.color = color
+        self.lineWidth = lineWidth
+        self.zPosition = zPosition
+    }
+}
+
+public struct GroupCircle {
+    public let circle: Circle
+    public let color: UIColor
+    public let lineWidth: CGFloat
+    public let zPosition: Int
+
+    public init(circle: Circle, color: UIColor = .systemBlue, lineWidth: CGFloat = 2, zPosition: Int = 1) {
+        self.circle = circle
+        self.color = color
+        self.lineWidth = lineWidth
+        self.zPosition = zPosition
+    }
+}
+
+public struct GroupTriangle {
+    public let triangle: Triangle
+    public let color: UIColor
+    public let lineWidth: CGFloat
+    public let zPosition: Int
+
+    public init(triangle: Triangle, color: UIColor = .systemBlue, lineWidth: CGFloat = 2, zPosition: Int = 1) {
+        self.triangle = triangle
+        self.color = color
+        self.lineWidth = lineWidth
+        self.zPosition = zPosition
+    }
+}
+
+public struct GroupPolygon {
+    public let polygon: Polygon
+    public let color: UIColor
+    public let lineWidth: CGFloat
+    public let zPosition: Int
+    public let fillColor: UIColor?
+
+    public init(
+        polygon: Polygon,
+        color: UIColor = .systemBlue,
+        lineWidth: CGFloat = 2,
+        zPosition: Int = 1,
+        fillColor: UIColor? = nil
+    ) {
+        self.polygon = polygon
+        self.color = color
+        self.lineWidth = lineWidth
+        self.zPosition = zPosition
+        self.fillColor = fillColor
+    }
+}
+
+public struct GeometryGroup {
+    public var lines: [GroupLine]
+    public var circles: [GroupCircle]
+    public var triangles: [GroupTriangle]
+    public var polygons: [GroupPolygon]
+
+    public init(
+        lines: [GroupLine] = [],
+        circles: [GroupCircle] = [],
+        triangles: [GroupTriangle] = [],
+        polygons: [GroupPolygon] = []
+    ) {
+        self.lines = lines
+        self.circles = circles
+        self.triangles = triangles
+        self.polygons = polygons
+    }
+
+    public mutating func addLine(_ line: Line, color: UIColor = .systemBlue, lineWidth: CGFloat = 2, zPosition: Int = 1) {
+        lines.append(GroupLine(line: line, color: color, lineWidth: lineWidth, zPosition: zPosition))
+    }
+
+    public mutating func addCircle(_ circle: Circle, color: UIColor = .systemBlue, lineWidth: CGFloat = 2, zPosition: Int = 1) {
+        circles.append(GroupCircle(circle: circle, color: color, lineWidth: lineWidth, zPosition: zPosition))
+    }
+
+    public mutating func addTriangle(_ triangle: Triangle, color: UIColor = .systemBlue, lineWidth: CGFloat = 2, zPosition: Int = 1) {
+        triangles.append(GroupTriangle(triangle: triangle, color: color, lineWidth: lineWidth, zPosition: zPosition))
+    }
+
+    public mutating func addPolygon(
+        _ polygon: Polygon,
+        color: UIColor = .systemBlue,
+        lineWidth: CGFloat = 2,
+        zPosition: Int = 1,
+        fillColor: UIColor? = nil
+    ) {
+        polygons.append(
+            GroupPolygon(
+                polygon: polygon,
+                color: color,
+                lineWidth: lineWidth,
+                zPosition: zPosition,
+                fillColor: fillColor
+            )
+        )
+    }
+}
+
+public struct Bounds2D: Equatable {
+    public let minX: Double
+    public let maxX: Double
+    public let minY: Double
+    public let maxY: Double
+
+    public init(minX: Double, maxX: Double, minY: Double, maxY: Double) {
+        self.minX = minX
+        self.maxX = maxX
+        self.minY = minY
+        self.maxY = maxY
+    }
+
+    public var width: Double { maxX - minX }
+    public var height: Double { maxY - minY }
+    public var center: Point { Point(x: (minX + maxX) / 2, y: (minY + maxY) / 2) }
+}
+
+public struct CameraFrame: Equatable {
+    public let center: Point
+    public let zoom: Double
+
+    public init(center: Point, zoom: Double = 1) {
+        self.center = center
+        self.zoom = max(0.0001, zoom)
+    }
+}
+
 public enum ParabolaAxis {
     case vertical
     case horizontal
@@ -75,6 +216,76 @@ public enum HandleSnapMode: String {
 public enum TraceCaptureMode: String {
     case allFrames
     case changedOnly
+}
+
+public enum EasingCurve: String {
+    case linear
+    case easeIn
+    case easeOut
+    case easeInOut
+    case smoothStep
+}
+
+public struct ScalarKeyframe {
+    public let time: Double
+    public let value: Double
+
+    public init(time: Double, value: Double) {
+        self.time = time
+        self.value = value
+    }
+}
+
+public struct PointKeyframe {
+    public let time: Double
+    public let point: Point
+
+    public init(time: Double, point: Point) {
+        self.time = time
+        self.point = point
+    }
+}
+
+public enum GeometryStylePresetName: String {
+    case classic
+    case blueprint
+    case chalkboard
+    case sunset
+}
+
+public enum GeometryStyleRole {
+    case primary
+    case secondary
+    case accent
+    case guide
+}
+
+public struct GeometryStylePreset {
+    public let primaryColor: UIColor
+    public let secondaryColor: UIColor
+    public let accentColor: UIColor
+    public let guideColor: UIColor
+    public let lineWidth: CGFloat
+    public let guideLineWidth: CGFloat
+    public let pointRadius: CGFloat
+
+    public init(
+        primaryColor: UIColor,
+        secondaryColor: UIColor,
+        accentColor: UIColor,
+        guideColor: UIColor,
+        lineWidth: CGFloat = 2,
+        guideLineWidth: CGFloat = 1.5,
+        pointRadius: CGFloat = 4
+    ) {
+        self.primaryColor = primaryColor
+        self.secondaryColor = secondaryColor
+        self.accentColor = accentColor
+        self.guideColor = guideColor
+        self.lineWidth = lineWidth
+        self.guideLineWidth = guideLineWidth
+        self.pointRadius = pointRadius
+    }
 }
 
 public enum ValidationFeedbackMode {
@@ -221,8 +432,491 @@ public extension Polygon {
     }
 }
 
+public extension GeometryGroup {
+    func transformed(by transform: Transform2D) -> GeometryGroup {
+        GeometryGroup(
+            lines: lines.map {
+                GroupLine(
+                    line: $0.line.transformed(by: transform),
+                    color: $0.color,
+                    lineWidth: $0.lineWidth,
+                    zPosition: $0.zPosition
+                )
+            },
+            circles: circles.map {
+                GroupCircle(
+                    circle: $0.circle.transformed(by: transform),
+                    color: $0.color,
+                    lineWidth: $0.lineWidth,
+                    zPosition: $0.zPosition
+                )
+            },
+            triangles: triangles.map {
+                GroupTriangle(
+                    triangle: $0.triangle.transformed(by: transform),
+                    color: $0.color,
+                    lineWidth: $0.lineWidth,
+                    zPosition: $0.zPosition
+                )
+            },
+            polygons: polygons.map {
+                GroupPolygon(
+                    polygon: $0.polygon.transformed(by: transform),
+                    color: $0.color,
+                    lineWidth: $0.lineWidth,
+                    zPosition: $0.zPosition,
+                    fillColor: $0.fillColor
+                )
+            }
+        )
+    }
+}
+
+public func makeGroup(_ build: (inout GeometryGroup) -> Void) -> GeometryGroup {
+    var group = GeometryGroup()
+    build(&group)
+    return group
+}
+
+public func mergeGroups(_ groups: [GeometryGroup]) -> GeometryGroup {
+    groups.reduce(into: GeometryGroup()) { merged, group in
+        merged.lines.append(contentsOf: group.lines)
+        merged.circles.append(contentsOf: group.circles)
+        merged.triangles.append(contentsOf: group.triangles)
+        merged.polygons.append(contentsOf: group.polygons)
+    }
+}
+
+public func renderGroup(_ group: GeometryGroup) {
+    for line in group.lines {
+        addLine(line.line, color: line.color, lineWidth: line.lineWidth, zPosition: line.zPosition)
+    }
+    for circle in group.circles {
+        addCircle(circle.circle, color: circle.color, lineWidth: circle.lineWidth, zPosition: circle.zPosition)
+    }
+    for triangle in group.triangles {
+        addTriangle(
+            triangle.triangle,
+            color: triangle.color,
+            lineWidth: triangle.lineWidth,
+            zPosition: triangle.zPosition
+        )
+    }
+    for polygon in group.polygons {
+        if let fillColor = polygon.fillColor {
+            addFilledPolygon(
+                polygon.polygon,
+                fillColor: fillColor,
+                borderColor: polygon.color,
+                lineWidth: polygon.lineWidth,
+                zPosition: polygon.zPosition
+            )
+        } else {
+            addPolygon(
+                polygon.polygon,
+                color: polygon.color,
+                lineWidth: polygon.lineWidth,
+                zPosition: polygon.zPosition
+            )
+        }
+    }
+}
+
+public func translate(group: GeometryGroup, dx: Double, dy: Double) -> GeometryGroup {
+    group.transformed(by: .translation(dx: dx, dy: dy))
+}
+
+public func rotate(group: GeometryGroup, around center: Point, degrees: Double) -> GeometryGroup {
+    group.transformed(by: .rotation(degrees: degrees, around: center))
+}
+
+public func scale(group: GeometryGroup, around center: Point, factor: Double) -> GeometryGroup {
+    group.transformed(by: .scaling(factor: factor, around: center))
+}
+
+public func bounds(of points: [Point]) -> Bounds2D? {
+    guard let first = points.first else { return nil }
+    var minX = first.x
+    var maxX = first.x
+    var minY = first.y
+    var maxY = first.y
+
+    for point in points.dropFirst() {
+        minX = Swift.min(minX, point.x)
+        maxX = Swift.max(maxX, point.x)
+        minY = Swift.min(minY, point.y)
+        maxY = Swift.max(maxY, point.y)
+    }
+
+    return Bounds2D(minX: minX, maxX: maxX, minY: minY, maxY: maxY)
+}
+
+public func bounds(of line: Line) -> Bounds2D {
+    Bounds2D(
+        minX: Swift.min(line.start.x, line.end.x),
+        maxX: Swift.max(line.start.x, line.end.x),
+        minY: Swift.min(line.start.y, line.end.y),
+        maxY: Swift.max(line.start.y, line.end.y)
+    )
+}
+
+public func bounds(of circle: Circle) -> Bounds2D {
+    Bounds2D(
+        minX: circle.center.x - circle.radius,
+        maxX: circle.center.x + circle.radius,
+        minY: circle.center.y - circle.radius,
+        maxY: circle.center.y + circle.radius
+    )
+}
+
+public func bounds(of triangle: Triangle) -> Bounds2D {
+    bounds(of: [triangle.a, triangle.b, triangle.c])!
+}
+
+public func bounds(of polygon: Polygon) -> Bounds2D? {
+    bounds(of: polygon.vertices)
+}
+
+public func bounds(of group: GeometryGroup) -> Bounds2D? {
+    var allPoints: [Point] = []
+    for line in group.lines {
+        allPoints.append(line.line.start)
+        allPoints.append(line.line.end)
+    }
+    for circle in group.circles {
+        let b = bounds(of: circle.circle)
+        allPoints.append(Point(x: b.minX, y: b.minY))
+        allPoints.append(Point(x: b.maxX, y: b.maxY))
+    }
+    for triangle in group.triangles {
+        allPoints.append(triangle.triangle.a)
+        allPoints.append(triangle.triangle.b)
+        allPoints.append(triangle.triangle.c)
+    }
+    for polygon in group.polygons {
+        allPoints.append(contentsOf: polygon.polygon.vertices)
+    }
+
+    return bounds(of: allPoints)
+}
+
+public func mergeBounds(_ boundsValues: [Bounds2D]) -> Bounds2D? {
+    guard let first = boundsValues.first else { return nil }
+    var minX = first.minX
+    var maxX = first.maxX
+    var minY = first.minY
+    var maxY = first.maxY
+
+    for item in boundsValues.dropFirst() {
+        minX = Swift.min(minX, item.minX)
+        maxX = Swift.max(maxX, item.maxX)
+        minY = Swift.min(minY, item.minY)
+        maxY = Swift.max(maxY, item.maxY)
+    }
+
+    return Bounds2D(minX: minX, maxX: maxX, minY: minY, maxY: maxY)
+}
+
+public func fitCamera(
+    to bounds: Bounds2D,
+    viewportSize: CGSize,
+    padding: Double = 24
+) -> CameraFrame {
+    let width = max(1, bounds.width)
+    let height = max(1, bounds.height)
+    let availableWidth = max(1, Double(viewportSize.width) - (padding * 2))
+    let availableHeight = max(1, Double(viewportSize.height) - (padding * 2))
+    let zoomX = availableWidth / width
+    let zoomY = availableHeight / height
+    return CameraFrame(center: bounds.center, zoom: min(zoomX, zoomY))
+}
+
+public func cameraTransform(_ camera: CameraFrame) -> Transform2D {
+    Transform2D.identity
+        .concatenating(.translation(dx: -camera.center.x, dy: -camera.center.y))
+        .concatenating(.scaling(factor: camera.zoom))
+}
+
+public func applyCamera(to point: Point, camera: CameraFrame) -> Point {
+    point.transformed(by: cameraTransform(camera))
+}
+
+public func applyCamera(to line: Line, camera: CameraFrame) -> Line {
+    line.transformed(by: cameraTransform(camera))
+}
+
+public func applyCamera(to circle: Circle, camera: CameraFrame) -> Circle {
+    circle.transformed(by: cameraTransform(camera))
+}
+
+public func applyCamera(to triangle: Triangle, camera: CameraFrame) -> Triangle {
+    triangle.transformed(by: cameraTransform(camera))
+}
+
+public func applyCamera(to polygon: Polygon, camera: CameraFrame) -> Polygon {
+    polygon.transformed(by: cameraTransform(camera))
+}
+
+public func applyCamera(to group: GeometryGroup, camera: CameraFrame) -> GeometryGroup {
+    group.transformed(by: cameraTransform(camera))
+}
+
+public func GroupAnchor(
+    id: String,
+    initial: Point,
+    radius: Double? = nil,
+    color: UIColor? = nil,
+    zPosition: Int = 2000,
+    enabled: Bool = true
+) -> Point {
+    DraggablePoint(
+        id: id,
+        initial: initial,
+        radius: radius,
+        color: color,
+        zPosition: zPosition,
+        enabled: enabled
+    )
+}
+
+public func DraggableGroup(
+    id: String,
+    initialAnchor: Point,
+    group: GeometryGroup,
+    radius: Double? = nil,
+    color: UIColor? = nil,
+    zPosition: Int = 2000,
+    enabled: Bool = true
+) -> GeometryGroup {
+    let anchor = GroupAnchor(
+        id: id,
+        initial: initialAnchor,
+        radius: radius,
+        color: color,
+        zPosition: zPosition,
+        enabled: enabled
+    )
+
+    return translate(
+        group: group,
+        dx: anchor.x - initialAnchor.x,
+        dy: anchor.y - initialAnchor.y
+    )
+}
+
+public func setGroupHandlesVisible(_ visible: Bool) {
+    setHandlesVisible(visible)
+}
+
+public func setGroupHandlesLocked(_ locked: Bool) {
+    setHandlesLocked(locked)
+}
+
 public func distance(_ first: Point, _ second: Point) -> Double {
     hypot(second.x - first.x, second.y - first.y)
+}
+
+public func clamp(_ value: Double, min minValue: Double = 0, max maxValue: Double = 1) -> Double {
+    Swift.max(minValue, Swift.min(maxValue, value))
+}
+
+public func mix(_ start: Double, _ end: Double, t: Double) -> Double {
+    start + ((end - start) * t)
+}
+
+public func mix(_ start: Point, _ end: Point, t: Double) -> Point {
+    Point(
+        x: mix(start.x, end.x, t: t),
+        y: mix(start.y, end.y, t: t)
+    )
+}
+
+public func eased(_ t: Double, curve: EasingCurve = .linear) -> Double {
+    let x = clamp(t)
+    switch curve {
+    case .linear:
+        return x
+    case .easeIn:
+        return x * x
+    case .easeOut:
+        let inv = 1 - x
+        return 1 - (inv * inv)
+    case .easeInOut:
+        if x < 0.5 {
+            return 2 * x * x
+        }
+        let inv = -2 * x + 2
+        return 1 - (inv * inv / 2)
+    case .smoothStep:
+        return x * x * (3 - (2 * x))
+    }
+}
+
+public func timelineProgress(
+    _ t: Double,
+    start: Double,
+    end: Double,
+    curve: EasingCurve = .linear
+) -> Double {
+    guard end > start else { return t >= end ? 1 : 0 }
+    let normalized = (t - start) / (end - start)
+    return eased(normalized, curve: curve)
+}
+
+public func pingPong(_ t: Double) -> Double {
+    let wrapped = t - floor(t)
+    return wrapped < 0.5 ? wrapped * 2 : (1 - wrapped) * 2
+}
+
+public func keyframedValue(
+    at t: Double,
+    keyframes: [ScalarKeyframe],
+    curve: EasingCurve = .linear
+) -> Double {
+    guard !keyframes.isEmpty else { return 0 }
+    let sorted = keyframes.sorted { $0.time < $1.time }
+    if t <= sorted[0].time { return sorted[0].value }
+    if t >= sorted[sorted.count - 1].time { return sorted[sorted.count - 1].value }
+
+    for index in 0..<(sorted.count - 1) {
+        let left = sorted[index]
+        let right = sorted[index + 1]
+        guard t >= left.time, t <= right.time else { continue }
+        let local = timelineProgress(t, start: left.time, end: right.time, curve: curve)
+        return mix(left.value, right.value, t: local)
+    }
+
+    return sorted[sorted.count - 1].value
+}
+
+public func keyframedPoint(
+    at t: Double,
+    keyframes: [PointKeyframe],
+    curve: EasingCurve = .linear
+) -> Point {
+    guard !keyframes.isEmpty else { return Point(x: 0, y: 0) }
+    let sorted = keyframes.sorted { $0.time < $1.time }
+    if t <= sorted[0].time { return sorted[0].point }
+    if t >= sorted[sorted.count - 1].time { return sorted[sorted.count - 1].point }
+
+    for index in 0..<(sorted.count - 1) {
+        let left = sorted[index]
+        let right = sorted[index + 1]
+        guard t >= left.time, t <= right.time else { continue }
+        let local = timelineProgress(t, start: left.time, end: right.time, curve: curve)
+        return mix(left.point, right.point, t: local)
+    }
+
+    return sorted[sorted.count - 1].point
+}
+
+public func geometryStyle(_ preset: GeometryStylePresetName) -> GeometryStylePreset {
+    switch preset {
+    case .classic:
+        return GeometryStylePreset(
+            primaryColor: .systemBlue,
+            secondaryColor: .systemGreen,
+            accentColor: .systemOrange,
+            guideColor: .systemGray
+        )
+    case .blueprint:
+        return GeometryStylePreset(
+            primaryColor: UIColor(red: 0.10, green: 0.65, blue: 1.00, alpha: 1.00),
+            secondaryColor: UIColor(red: 0.45, green: 0.85, blue: 1.00, alpha: 1.00),
+            accentColor: UIColor(red: 1.00, green: 0.86, blue: 0.35, alpha: 1.00),
+            guideColor: UIColor(red: 0.60, green: 0.74, blue: 0.90, alpha: 1.00),
+            lineWidth: 2.2,
+            guideLineWidth: 1.2,
+            pointRadius: 4
+        )
+    case .chalkboard:
+        return GeometryStylePreset(
+            primaryColor: UIColor(red: 0.83, green: 0.96, blue: 0.92, alpha: 1.00),
+            secondaryColor: UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00),
+            accentColor: UIColor(red: 1.00, green: 0.76, blue: 0.62, alpha: 1.00),
+            guideColor: UIColor(red: 0.72, green: 0.79, blue: 0.76, alpha: 1.00),
+            lineWidth: 2.0,
+            guideLineWidth: 1.2,
+            pointRadius: 4
+        )
+    case .sunset:
+        return GeometryStylePreset(
+            primaryColor: UIColor(red: 0.93, green: 0.34, blue: 0.38, alpha: 1.00),
+            secondaryColor: UIColor(red: 0.98, green: 0.59, blue: 0.31, alpha: 1.00),
+            accentColor: UIColor(red: 0.98, green: 0.81, blue: 0.30, alpha: 1.00),
+            guideColor: UIColor(red: 0.62, green: 0.56, blue: 0.70, alpha: 1.00),
+            lineWidth: 2.3,
+            guideLineWidth: 1.2,
+            pointRadius: 4
+        )
+    }
+}
+
+public func styleColor(_ style: GeometryStylePreset, role: GeometryStyleRole) -> UIColor {
+    switch role {
+    case .primary:
+        return style.primaryColor
+    case .secondary:
+        return style.secondaryColor
+    case .accent:
+        return style.accentColor
+    case .guide:
+        return style.guideColor
+    }
+}
+
+public func addStyledLine(
+    _ line: Line,
+    style: GeometryStylePreset,
+    role: GeometryStyleRole = .primary,
+    zPosition: Int = 1
+) {
+    let lineWidth = role == .guide ? style.guideLineWidth : style.lineWidth
+    addLine(line, color: styleColor(style, role: role), lineWidth: lineWidth, zPosition: zPosition)
+}
+
+public func addStyledCircle(
+    _ circle: Circle,
+    style: GeometryStylePreset,
+    role: GeometryStyleRole = .primary,
+    zPosition: Int = 1
+) {
+    let lineWidth = role == .guide ? style.guideLineWidth : style.lineWidth
+    addCircle(circle, color: styleColor(style, role: role), lineWidth: lineWidth, zPosition: zPosition)
+}
+
+public func addStyledTriangle(
+    _ triangle: Triangle,
+    style: GeometryStylePreset,
+    role: GeometryStyleRole = .primary,
+    zPosition: Int = 1
+) {
+    let lineWidth = role == .guide ? style.guideLineWidth : style.lineWidth
+    addTriangle(triangle, color: styleColor(style, role: role), lineWidth: lineWidth, zPosition: zPosition)
+}
+
+public func addStyledPolygon(
+    _ polygon: Polygon,
+    style: GeometryStylePreset,
+    role: GeometryStyleRole = .primary,
+    zPosition: Int = 1
+) {
+    let lineWidth = role == .guide ? style.guideLineWidth : style.lineWidth
+    addPolygon(polygon, color: styleColor(style, role: role), lineWidth: lineWidth, zPosition: zPosition)
+}
+
+public func addStyledPoint(
+    _ point: Point,
+    style: GeometryStylePreset,
+    role: GeometryStyleRole = .accent,
+    zPosition: Int = 1
+) {
+    addPoint(
+        point,
+        color: styleColor(style, role: role),
+        radius: style.pointRadius,
+        zPosition: zPosition
+    )
 }
 
 public func midpoint(_ first: Point, _ second: Point) -> Point {

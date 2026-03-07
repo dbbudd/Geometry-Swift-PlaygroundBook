@@ -673,6 +673,134 @@ setValidationFeedbackMode(.overlay)
 addHint("Try dragging the construction points")
 ```
 
+## Phase 9A Grouping and Group Transforms
+
+Phase 9A introduces a lightweight grouping layer in `BookAPI` for composing and transforming related geometry together.
+
+New types:
+- `GeometryGroup`
+- `GroupLine`
+- `GroupCircle`
+- `GroupTriangle`
+- `GroupPolygon`
+
+New helpers:
+- `makeGroup(_:)`
+- `mergeGroups(_:)`
+- `renderGroup(_:)`
+- `translate(group:dx:dy:)`
+- `rotate(group:around:degrees:)`
+- `scale(group:around:factor:)`
+- `GroupAnchor(...)` (draggable anchor point via existing draggable-handle system)
+
+```swift
+let anchor = GroupAnchor(id: "demo-group", initial: Point(x: -180, y: 120))
+
+var group = makeGroup { g in
+    g.addLine(Line(start: Point(x: -40, y: 0), end: Point(x: 40, y: 0)), color: .systemBlue)
+    g.addLine(Line(start: Point(x: 0, y: -40), end: Point(x: 0, y: 40)), color: .systemBlue)
+    g.addCircle(Circle(center: Point(x: 0, y: 0), radius: 22), color: .systemMint)
+}
+
+group = rotate(group: group, around: Point(x: 0, y: 0), degrees: 30)
+group = translate(group: group, dx: anchor.x, dy: anchor.y)
+renderGroup(group)
+```
+
+## Phase 9B Draggable Groups
+
+Phase 9B adds a direct group-level drag helper:
+- `DraggableGroup(id:initialAnchor:group:radius:color:zPosition:enabled:) -> GeometryGroup`
+
+This binds one draggable handle to the entire group and returns the translated group for rendering.
+
+Additional aliases:
+- `setGroupHandlesVisible(_:)`
+- `setGroupHandlesLocked(_:)`
+
+```swift
+var group = makeGroup { g in
+    g.addTriangle(
+        Triangle(
+            a: Point(x: -40, y: -20),
+            b: Point(x: 40, y: -20),
+            c: Point(x: 0, y: 40)
+        ),
+        color: .systemBlue
+    )
+}
+
+group = DraggableGroup(
+    id: "triangle-group",
+    initialAnchor: Point(x: -180, y: 120),
+    group: group,
+    radius: 8,
+    color: .systemPink
+)
+
+renderGroup(group)
+```
+
+## Phase 9C Timeline and Choreography Helpers
+
+Phase 9C adds reusable timing primitives for animation sequencing:
+- `EasingCurve` (`.linear`, `.easeIn`, `.easeOut`, `.easeInOut`, `.smoothStep`)
+- `timelineProgress(_:start:end:curve:)`
+- `pingPong(_:)`
+- `keyframedValue(at:keyframes:curve:)`
+- `keyframedPoint(at:keyframes:curve:)`
+
+```swift
+let p = timelineProgress(t, start: 0.2, end: 0.8, curve: .easeInOut)
+let x = keyframedValue(
+    at: pingPong(t),
+    keyframes: [
+        ScalarKeyframe(time: 0.0, value: -80),
+        ScalarKeyframe(time: 0.5, value: 80),
+        ScalarKeyframe(time: 1.0, value: -80)
+    ],
+    curve: .smoothStep
+)
+```
+
+## Phase 9D Style Presets
+
+Phase 9D adds style presets for consistent visual language across lessons:
+- `GeometryStylePresetName` (`.classic`, `.blueprint`, `.chalkboard`, `.sunset`)
+- `geometryStyle(_:)`
+- `styleColor(_:role:)`
+- styled draw helpers:
+  - `addStyledLine`
+  - `addStyledCircle`
+  - `addStyledTriangle`
+  - `addStyledPolygon`
+  - `addStyledPoint`
+
+```swift
+let style = geometryStyle(.blueprint)
+addStyledLine(Line(start: Point(x: -120, y: 0), end: Point(x: 120, y: 0)), style: style, role: .guide)
+addStyledPoint(Point(x: 0, y: 0), style: style, role: .accent)
+```
+
+## Phase 9E Camera and Framing Utilities
+
+Phase 9E adds camera/framing helpers for composing scenes and mini-views:
+- `Bounds2D`
+- `CameraFrame`
+- `bounds(of:)` for points/line/circle/triangle/polygon/group
+- `mergeBounds(_:)`
+- `fitCamera(to:viewportSize:padding:)`
+- `cameraTransform(_:)`
+- `applyCamera(to:camera:)` for point/line/circle/triangle/polygon/group
+
+```swift
+if let b = bounds(of: group) {
+    let camera = fitCamera(to: b, viewportSize: CGSize(width: 260, height: 180), padding: 20)
+    let framed = applyCamera(to: group, camera: camera)
+    renderGroup(translate(group: framed, dx: 180, dy: 100))
+}
+```
+
 ## LiveView Testing Workflow
 
 Use `LiveViewTestApp` for fast iteration:

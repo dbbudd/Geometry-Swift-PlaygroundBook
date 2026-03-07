@@ -170,6 +170,94 @@ struct DebugLiveViewContent {
             addPolygon(sourcePoly, color: .systemRed, lineWidth: 2, zPosition: 6)
             let reflectedPoly = sourcePoly.transformed(by: reflectionAcross(line: reflectAxis))
             addPolygon(reflectedPoly, color: .systemGreen, lineWidth: 2, zPosition: 6)
+
+            var teachableGroup = makeGroup { group in
+                group.addLine(
+                    Line(start: Point(x: -40, y: 0), end: Point(x: 40, y: 0)),
+                    color: .systemBlue,
+                    lineWidth: 2,
+                    zPosition: 6
+                )
+                group.addLine(
+                    Line(start: Point(x: 0, y: -40), end: Point(x: 0, y: 40)),
+                    color: .systemBlue,
+                    lineWidth: 2,
+                    zPosition: 6
+                )
+                group.addCircle(
+                    Circle(center: Point(x: 0, y: 0), radius: 22),
+                    color: .systemMint,
+                    lineWidth: 2,
+                    zPosition: 6
+                )
+            }
+            teachableGroup = rotate(group: teachableGroup, around: Point(x: 0, y: 0), degrees: spin * t * 0.5)
+            teachableGroup = DraggableGroup(
+                id: "group-anchor",
+                initialAnchor: Point(x: -210, y: 115),
+                group: teachableGroup,
+                radius: 8,
+                color: .systemPink,
+                zPosition: 60
+            )
+            renderGroup(teachableGroup)
+
+            let style = geometryStyle(.blueprint)
+            let cameraCenter = keyframedPoint(
+                at: pingPong(t),
+                keyframes: [
+                    PointKeyframe(time: 0.0, point: Point(x: -30, y: -20)),
+                    PointKeyframe(time: 0.5, point: Point(x: 30, y: 20)),
+                    PointKeyframe(time: 1.0, point: Point(x: -30, y: -20))
+                ],
+                curve: .easeInOut
+            )
+            let cameraZoom = keyframedValue(
+                at: pingPong(t),
+                keyframes: [
+                    ScalarKeyframe(time: 0.0, value: 0.8),
+                    ScalarKeyframe(time: 0.5, value: 1.4),
+                    ScalarKeyframe(time: 1.0, value: 0.8)
+                ],
+                curve: .smoothStep
+            )
+
+            var cameraDemoGroup = makeGroup { group in
+                group.addLine(
+                    Line(start: Point(x: -70, y: 0), end: Point(x: 70, y: 0)),
+                    color: styleColor(style, role: .guide),
+                    lineWidth: style.guideLineWidth,
+                    zPosition: 6
+                )
+                group.addLine(
+                    Line(start: Point(x: 0, y: -50), end: Point(x: 0, y: 50)),
+                    color: styleColor(style, role: .guide),
+                    lineWidth: style.guideLineWidth,
+                    zPosition: 6
+                )
+                group.addTriangle(
+                    Triangle(
+                        a: Point(x: -36, y: -20),
+                        b: Point(x: 38, y: -18),
+                        c: Point(x: 2, y: 42)
+                    ),
+                    color: styleColor(style, role: .primary),
+                    lineWidth: style.lineWidth,
+                    zPosition: 7
+                )
+                group.addCircle(
+                    Circle(center: Point(x: 2, y: 2), radius: 20),
+                    color: styleColor(style, role: .accent),
+                    lineWidth: style.lineWidth,
+                    zPosition: 7
+                )
+            }
+            cameraDemoGroup = applyCamera(
+                to: cameraDemoGroup,
+                camera: CameraFrame(center: cameraCenter, zoom: cameraZoom)
+            )
+            cameraDemoGroup = translate(group: cameraDemoGroup, dx: 210, dy: 130)
+            renderGroup(cameraDemoGroup)
         }
     }
 }
